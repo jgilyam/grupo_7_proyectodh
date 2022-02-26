@@ -16,7 +16,7 @@ Una breve descripción de los integrantes del equipo.
 
 Iñaki
 
-Julieta
+Julieta Rosales vivo en Buenos Aires (CABA) , trabajo como administrativa hace varios años, soy Técnica Radióloga(no ejerzo).Hobby: Impresión 3D.
 
 Magui
 
