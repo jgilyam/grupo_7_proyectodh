@@ -18,7 +18,7 @@ Iñaki
 
 Julieta Rosales vivo en Buenos Aires (CABA) , trabajo como administrativa hace varios años, soy Técnica Radióloga(no ejerzo).Hobby: Impresión 3D.
 
-Magui
+Magui vivo en Buenos Aires (CABA), trabajo como administrativa en el Hospital Italiano hace varios años, soy chef (lo hice mas por un hobby que para ejercer, pero quizas en algun momento me gustaria hacer un emprendimiento de algo de eso)
 
 Jose Maria
 
