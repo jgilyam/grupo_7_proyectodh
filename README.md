@@ -14,7 +14,7 @@ sitio. También agregar una breve descripción del público al que apunta el sit
 
 Una breve descripción de los integrantes del equipo.
 
-Iñaki
+Iñaki Unzaga vivo en Neuquen capital, trabajo como comerciante en una santeria/regaleria.Hobby: Pescar y cripto/mineria
 
 Julieta Rosales vivo en Buenos Aires (CABA) , trabajo como administrativa hace varios años, soy Técnica Radióloga(no ejerzo).Hobby: Impresión 3D.
 
