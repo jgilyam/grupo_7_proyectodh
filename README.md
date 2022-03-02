@@ -2,15 +2,12 @@
 
 Proyecto Integrador DH
 
-¿Qué productos o servicios brindará nuestro sitio?
-
-¿Quién será nuestra audiencia
-objetivo?
-
-¿Cómo ajustaremos nuestra oferta a ese público?
-
 Una breve descripción de la oferta de productos y/o servicios ofrecidos por su
 sitio. También agregar una breve descripción del público al que apunta el sitio.
+
+Nuestro sitio web es un e-commerce de tablas de madera artesanales.
+Nuestros productos estan realizados con maderas de tipo: Cancharana, Laurel, Guatambú, Persiguero, Cedro rosa, Paraíso, Zoita,Lenga,Guaica,Petiribi,Marmelero,etc.
+Nuestra objetivo es llegar a toda aquella persona que quiera darse un gusto/mimo en la parrilla o cocina y para las personas que desean obsequiar un presente único y original.
 
 Una breve descripción de los integrantes del equipo.
 
