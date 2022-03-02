@@ -1,4 +1,4 @@
-# grupo_7_proyectodh
+# Pato Crearte
 
 Proyecto Integrador DH
 
