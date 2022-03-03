@@ -17,7 +17,7 @@ Julieta Rosales vivo en Buenos Aires (CABA) , trabajo como administrativa hace v
 
 Magui vivo en Buenos Aires (CABA), trabajo como administrativa en el Hospital Italiano hace varios años, soy chef (lo hice mas por un hobby que para ejercer, pero quizas en algun momento me gustaria hacer un emprendimiento de algo de eso)
 
-Jose Maria
+Jose Maria vivo en Buenos Aires (CABA), trabajo en un local que vende ropa y mi pasatiempo es jugar videojuegos.
 
 Juampi
 Vivo de San Juan, soy ingeniero electrónico y trabajo com ingeniero de procesos en una industria de cartón corrugado. Siempre me gusto la progrmación pero por cuestiones de la vida mi carrera se perfilo hacia otro rumbo. Me gusta jugar al hockey sobre patines y hacer mountain bike.
