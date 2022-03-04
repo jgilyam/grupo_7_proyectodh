@@ -44,3 +44,7 @@ Tablas de madera, mala conbinación de colores, estructura para mostrar listado 
 Magibu
 https://tiendamabigu.com.ar/?gclid=EAIaIQobChMIhsX-h8iZ9gIVjA-RCh2v0AznEAAYAiAAEgJWZ_D_BwE
 Bazar en general, sitio moderno, excelente estetica y estructura. Buenas fotografias. Muchos detalles en la interacción con usuarios (hover sobre productos o categorias muy agradables)
+
+Sodimac
+https://www.sodimac.com.ar/ 
+Es una compañía comercial enfocada en el abastecimiento de hogar,tanto sea bazar,pintura,madera,herramientas,etc.Buena estructura de pagina, listado de productos poco estetica y muy reducido el tamaño.Carrito de compras bien detallado.
