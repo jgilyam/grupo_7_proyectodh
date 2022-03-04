@@ -35,7 +35,6 @@ indicando brevemente por qué fueron elegidos.
 Nuestro eCommerce se inspiro en algunos referentes del mercado, algunos de ellos son.
 
 [TdM](https://www.tablasdemadera.com.ar/)
-
 Elegimos este sitio ya que además de tener una estética muy agradable a la vista, trabajan el mismo producto que el nuestro.
 La página de inicio esta bien lograda y llamativa, inspira un lugar de confiable y de buena calidad
 
