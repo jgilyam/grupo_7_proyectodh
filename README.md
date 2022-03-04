@@ -25,8 +25,7 @@ Vivo en Buenos Aires (CABA), trabajo como administrativa en el Hospital Italiano
 
 #### Jose Maria
 
-#### Juampi
-
+#### Juampi  
 Vivo de San Juan, soy ingeniero electrónico y trabajo com ingeniero de procesos en una industria de cartón corrugado. Siempre me gusto la progrmación pero por cuestiones de la vida mi carrera se perfilo hacia otro rumbo. Me gusta jugar al hockey sobre patines y hacer mountain bike.
 
 En el README.md agregar un listado de al menos 5 sitios de referencia
