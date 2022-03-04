@@ -4,14 +4,13 @@
 
 ### Proyecto Integrador DH
 
-Una breve descripción de la oferta de productos y/o servicios ofrecidos por su
-sitio. También agregar una breve descripción del público al que apunta el sitio.
+Nuestro sitio web es un **_e-commerce_** de tablas de madera artesanales.
 
-Nuestro sitio web es un e-commerce de tablas de madera artesanales.
-Nuestros productos estan realizados con maderas de tipo: Cancharana, Laurel, Guatambú, Persiguero, Cedro rosa, Paraíso, Zoita,Lenga,Guaica,Petiribi,Marmelero,etc.
-Nuestra objetivo es llegar a toda aquella persona que quiera darse un gusto/mimo en la parrilla o cocina y para las personas que desean obsequiar un presente único y original.
+Nuestros productos estan realizados con maderas de tipo: Cancharana, Laurel, Guatambú, Persiguero, Cedro rosa, Paraíso, Zoita, Lenga, Guaica, Petiribi, Marmelero, etc.
 
-Nuestro equipo esta compuesto por:
+Nuestro **objetivo** es llegar a toda aquella persona que quiera darse un gusto/mimo en la parrilla o cocina y para las personas que desean obsequiar un presente único y original.
+
+**Nuestro equipo esta compuesto por:**
 
 #### Iñaki Unzaga
 
@@ -34,7 +33,7 @@ Vivo de San Juan, soy ingeniero electrónico y trabajo com ingeniero de procesos
 En el README.md agregar un listado de al menos 5 sitios de referencia
 indicando brevemente por qué fueron elegidos.
 
-Nuestro eCommerce se inspiro en algunos referentes del mercado, algunos de ellos son.
+Nuestro **_eCommerce_** se inspiro en algunos referentes del mercado, algunos de ellos son.
 
 [TdM](https://www.tablasdemadera.com.ar/)
 
