@@ -26,6 +26,8 @@ Vivo en Buenos Aires (CABA), trabajo como administrativa en el Hospital Italiano
 
 #### Jose Maria
 
+Vivo en Buenos Aires (CABA), trabajo en un local que vende ropa y mi pasatiempo es jugar videojuegos.
+
 #### Juampi
 
 Vivo en San Juan, soy ingeniero electrónico y trabajo com ingeniero de procesos en una industria de cartón corrugado. Siempre me gusto la programación pero por cuestiones de la vida mi carrera se perfilo hacia otro rumbo. Me gusta jugar al hockey sobre patines y hacer mountain bike.
