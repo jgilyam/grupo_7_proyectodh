@@ -9,7 +9,7 @@ Nuestro sitio web es un e-commerce de tablas de madera artesanales.
 Nuestros productos estan realizados con maderas de tipo: Cancharana, Laurel, Guatambú, Persiguero, Cedro rosa, Paraíso, Zoita,Lenga,Guaica,Petiribi,Marmelero,etc.
 Nuestra objetivo es llegar a toda aquella persona que quiera darse un gusto/mimo en la parrilla o cocina y para las personas que desean obsequiar un presente único y original.
 
-Una breve descripción de los integrantes del equipo.
+Nuestro equipo esta compuesto por:
 
 #### Iñaki Unzaga
 
