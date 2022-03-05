@@ -1,6 +1,6 @@
 # Pato Crearte
 
-![Logo](/design/20220131_094326_0000.png)
+![Logo](/design/62e2365f-b45e-4434-9386-0bbdd4a3e5ea.jpg)
 
 ### Proyecto Integrador DH
 
