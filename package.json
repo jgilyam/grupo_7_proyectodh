@@ -1,0 +1,27 @@
+{
+  "name": "grupo_7_proyectodh",
+  "version": "1.0.0",
+  "description": "Proyecto integrador Digital House. Grupo 7",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgilyam/grupo_7_proyectodh.git"
+  },
+  "keywords": [
+    "e-commerce"
+  ],
+  "author": "Grupo 7 DH",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jgilyam/grupo_7_proyectodh/issues"
+  },
+  "homepage": "https://github.com/jgilyam/grupo_7_proyectodh#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15"
+  }
+}
