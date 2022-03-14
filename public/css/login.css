@@ -1,0 +1,203 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+.barra-que-desaparece {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 13px;
+  height: 2.5rem;
+  align-items: center;
+  padding: 20px;
+  display: none;
+}
+
+.info {
+  text-decoration: none;
+  padding: 10px;
+  color: black;
+}
+
+.barra-que-desaparece ul {
+  list-style: none;
+  display: flex;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #e5890a;
+  padding: 10px;
+  align-items: center;
+}
+.navbar li a {
+  color: white;
+  display: none;
+}
+
+.navbar li a:hover {
+  color: black;
+}
+
+.burger-container {
+  display: flex;
+  height: 30px;
+  margin-left: 20px;
+  display: flex;
+}
+.img-nav {
+  width: 30px;
+  cursor: pointer;
+}
+
+#buscador {
+  display: flex;
+}
+.buscador-barra {
+  height: 30px;
+  display: flex;
+}
+.iniciar-sesion {
+  padding: 10px;
+  display: none;
+}
+.carrito-de-compra {
+  padding-left: 20px;
+}
+.logo-patocrearte {
+  width: 50px;
+  border-radius: 100%;
+}
+.imagen-pato {
+  display: flex;
+}
+.nav-medio {
+  display: none;
+  align-items: center;
+  font-size: 20px;
+  margin: auto;
+}
+
+.nav-medio-ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-medio-li {
+  list-style: none;
+  display: flex;
+  padding: 15px;
+  justify-content: center;
+}
+
+.navbar-derecho {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+/* ---------------------------- */
+.form-login {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+.container-input {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.input1,
+.input2 {
+  width: 200px;
+  height: 40px;
+  background-color: #e8e8e8;
+  border: none;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 20px;
+  padding-right: 45px;
+}
+.input2-group {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.img-ojo {
+  position: absolute;
+  right: 12px;
+  width: 30px;
+  height: 30px;
+}
+
+.container-preguntas {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+}
+.not-usuario {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.not-usuario-text {
+  padding: 0px 10px;
+}
+
+.btn-enviar-formulario {
+  display: flex;
+  border-radius: 10px;
+  padding: 10px 45px;
+  background-color: #e5890a;
+  border: none;
+  color: #fff;
+  margin: 40px 0px;
+}
+
+@media (min-width: 361px) {
+  .nav-medio {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 769px) {
+  .barra-que-desaparece {
+    display: flex;
+  }
+  .logo-patocrearte {
+    width: 100px;
+    border-radius: 100%;
+  }
+  .navbar {
+    padding: 1rem;
+  }
+  .navbar li a {
+    display: flex;
+  }
+
+  .nav-medio {
+    display: flex;
+  }
+  .burger-container {
+    display: none;
+  }
+  .iniciar-sesion {
+    display: flex;
+  }
+  #buscador {
+    padding: 10px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .imagen-pato {
+    margin-right: 150px;
+  }
+}

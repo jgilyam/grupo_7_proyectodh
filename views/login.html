@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lato:ital,wght@0,400;1,700&family=Poppins:ital,wght@0,100;0,300;0,400;1,200;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="barra-que-desaparece">
+        <ul class="barra-que-desaparece-izquierdo">
+          <li><a class="info" href="#">pato.crearte@gmail.com</a></li>
+          <li><a class="info" href="#">029423493493</a></li>
+        </ul>
+        <ul class="barra-que-desaparece-derecho">
+          <li><a class="info" href="#">NOSOTROS</a></li>
+          <li><a class="info" href="#">PREGUNTAS FRECUENTES</a></li>
+          <li><a class="info" href="#">CONTACTO</a></li>
+        </ul>
+      </nav>
+      <nav class="navbar">
+        <div class="imagen-pato">
+          <img
+            src="/img/logo.jpg"
+            alt="logo de la empresa"
+            class="logo-patocrearte"
+          />
+        </div>
+        <div class="nav-medio">
+          <ul class="nav-medio-ul">
+            <li class="nav-medio-li"><a href="#">INICIO</a></li>
+            <li class="nav-medio-li"><a href="#">PRODUCTOS</a></li>
+            <li class="nav-medio-li">
+              <a href="#"> CORPORATIVO</a>
+            </li>
+          </ul>
+        </div>
+        <div class="navbar-derecho">
+          <div id="buscador">
+            <input type="search" class="buscador-barra" />
+            <img src="/img/lupa.png" alt="lupita buscador" class="img-nav" />
+          </div>
+          <div class="burger-container">
+            <img src="/img/burger-menu.png" alt="burger">
+          </div>
+          <div class="iniciar-sesion">
+            <img src="/img/usuario.png" alt="iniciar sesion" class="img-nav" />
+          </div>
+          <div class="carrito-de-compra">
+            <img
+              src="/img/carrito-de-compras.png"
+              alt="carrito de compra"
+              class="img-nav"
+            />
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <form class="form-login">
+        <div class="container-input">
+          <div class="input1-group">
+            <input type="email" placeholder="Email@email.com" class="input1" />
+          </div>
+          <div class="input2-group">
+            <input type="password" placeholder="Contraseña" class="input2" />
+            <img src="/img/ojo.png" alt=""  class="img-ojo"/>
+          </div>
+          </div>
+        </div>
+        <div class="container-preguntas">
+        <div class="contraseña-olvidada">
+          <a href="#">¿Olvidaste tu contraseña?</a>
+        </div>
+        <button type="submit" class="btn-enviar-formulario">INICIAR SEIÓN</button>
+        <div class="not-usuario">
+          <p class="not-usuario-text">¿No eres usuario aún?</p>
+          <a href="#">Registrate</a>
+        </div>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
