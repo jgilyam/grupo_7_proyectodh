@@ -13,6 +13,23 @@ app.get("/", (req, res) => {
   res.sendFile(path.resolve(__dirname, "./views/index.html"));
 });
 
+//Rutas nuevas
+app.get("/register", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "./views/register.html"));
+});
+
+app.get("/login", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "./views/login.html"));
+});
+
+app.get("/product-cart", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "./views/productCart.html"));
+});
+
+app.get("/product-detail", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "./views/productDetail.html"));
+});
+
 //Se levanta el servidor
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en puerto ${PORT}`);
