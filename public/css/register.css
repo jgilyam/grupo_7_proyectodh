@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+p {
+  font-size: 12px;
+}
+
+.logins a {
+  border: solid 3px black;
+  margin: 10px;
+  border-width: 1px;
+  width: 20%;
+  padding: 3px;
+}
+
+.campo,
+.campo-fecha,
+.repetir-password,
+.password {
+  padding: 2px;
+}
+
+.noticias-condiciones {
+  padding-bottom: 4px;
+}

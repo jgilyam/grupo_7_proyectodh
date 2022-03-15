@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulario de registro</title>
+    <link rel="stylesheet" href="/css/register.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -12,43 +13,68 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link href="https: //fonts.googleapis.com/css2? family= Roboto:ital,wght@1,300 & display=swap" rel="stylesheet"></link>
   </head>
   <body>
     <header>//Aca va el header</header>
     <main>
-      <div class="Register">
-        <h1>Registrate</h1>
-        <p>Registrate con</p>
-        <div class="Facebook">
-          <p>
-            <a
-              href="https://es-la.facebook.com/login/device-based/regular/login/"
-            >
-              Facebook <i class="fa-brands fa-facebook"></i>
+         <h1>Registrate</h1>
+          <p>Registrate con</p>
+          <div class="logins">
+              <a
+                href="https://es-la.facebook.com/login/device-based/regular/login/"
+              >
+                Facebook <i class="fa-brands fa-facebook"></i>
+              </a>
+            <a href="https://mail.google.com/">
+              Google <i class="fa-brands fa-google"></i>
             </a>
-          </p>
         </div>
-      </div>
-      <div class="Google">
-        <p>
-          <a
-            href="https://mail.google.com/"
-          >
-            Google <i class="fa-brands fa-google"></i>
-          </a>
-        </p>
-      </div>
-      <p>O</p>
-      <h2>Tu Nombre</h2>
-      <div class="nombre">
-          <p>Nombre*:</p>
-      </div>
-      <div class="apellido">
-          <p>Apellido*:</p>
-      </div>
-      <h2>Fecha de nacimiento</h2>
-      <h2>Datos de acceso</h2>
-    </div>
+        <p>O</p>
+        <div class="datos-usuario" class="registro caja clearfix">
+        <h2>Tu Nombre</h2>
+        <form class="registro" action="index.html" method="post">
+            <div class="Register">
+        <div id="datos_usuario" class="registro caja clearfix">
+            <div class="campo">
+              <label for="nombre">Nombre:</label>
+              <input type="text" name="nombre" id="nombre" placeholder="Juan">
+            </div>
+            <div class="campo">
+              <label for="apellido">Apellido:</label>
+              <input type="text" name="apellido" id="apellido" placeholder="Perez">
+            </div>
+            <div class="campo-fecha">
+          <h2>Fecha de Nacimiento</h2>
+          <label for="date"></label>
+          <input type="date" name="date" id="date" placeholder="dd">
+            </div>
+                    <p>Recopilamos la fecha de nacimiento de acuerdo a nuestra politica de privacidad. Te haremos un regalo!</p>
+                      </div>
+            <div class="campo">
+                <h2>Datos de Acceso</h2>
+                <div class="email">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" placeholder="juanperez@gmail.com">
+                </div>
+                <div class="password">
+              <label for="password">Contraseña:</label>
+              <input type="password" id="password" name="password">
+              </div>
+              <div class="repetir-password">
+              <label for="password">Repetir contraseña:</label>
+              <input type="password" id="password" name="password">
+              </div>
+              <p>Debe usar como minimo 8 caracteres y contener una mayuscula</p>
+            </div>
+            <div class="noticias-condiciones">
+                <input type="checkbox">He leido y acepto los terminos y condiciones</input>
+            </div>
+                <div class="noticias-condiciones">
+                <input type="checkbox">Me gustaria recibir noticias</input>
+            </div>
+                <input type="submit" value="ENVIAR">
+      </form>
     </main>
     <footer>//Aca va el footer</footer>
   </body>
