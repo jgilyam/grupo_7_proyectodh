@@ -104,6 +104,7 @@ body {
   width: 100%;
   flex-direction: column;
   align-items: center;
+  margin: 45px 0px;
 }
 .container-input {
   display: flex;
@@ -113,12 +114,12 @@ body {
 
 .input1,
 .input2 {
-  width: 200px;
-  height: 40px;
+  width: 300px;
+  height: 50px;
   background-color: #e8e8e8;
   border: none;
   border-radius: 10px;
-  margin: 5px;
+  margin: 15px;
   padding: 20px;
   padding-right: 45px;
 }
@@ -130,7 +131,7 @@ body {
 
 .img-ojo {
   position: absolute;
-  right: 12px;
+  right: 25px;
   width: 30px;
   height: 30px;
 }
