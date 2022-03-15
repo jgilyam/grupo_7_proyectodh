@@ -64,3 +64,18 @@
   height: 150px;
   width: 350px;
 }
+
+@media (min-width: 361px) {
+  .parte-inferior-footer {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+}
+@media (min-width: 769px) {
+  .parte-inferior-footer {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+}
