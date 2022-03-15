@@ -1,0 +1,27 @@
+.img-footer-insta,
+.img-footer-face,
+.img-footer-whatsap {
+  height: 60px;
+  width: 60px;
+  padding: 10px;
+}
+
+.parte-superior-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  border-top: 2px solid black;
+  margin-top: 50px;
+}
+.sugerencia-footer {
+  position: absolute;
+  top: -9px;
+  background-color: white;
+  padding: 0px 15px;
+  font-size: 18px;
+}
+.container-img-footer {
+  margin-top: 20px;
+}
