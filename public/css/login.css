@@ -136,6 +136,17 @@ body {
   height: 30px;
 }
 
+.contra-olvidada {
+  text-decoration: none;
+  color: black;
+}
+
+.registro-login {
+  text-decoration: none;
+  color: #e5890a;
+  cursor: pointer;
+}
+
 .container-preguntas {
   width: 100%;
   display: flex;
