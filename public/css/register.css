@@ -124,8 +124,12 @@ fieldset {
   border-radius: 10px;
   padding: 20px;
   text-decoration: none;
-  background-color: #e5890a;
-  color: #fff;
+  background-color: #e8e8e8;
+  color: gray;
+}
+
+a:hover {
+  color: #e5890a;
 }
 
 input {
