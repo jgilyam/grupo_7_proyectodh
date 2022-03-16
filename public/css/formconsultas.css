@@ -1,0 +1,115 @@
+.main-formulario {
+  width: 100%;
+}
+
+.container-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-sugerencia {
+  background-color: #b8b5b5;
+  padding: 30px;
+}
+
+.section-formulario {
+  margin: 0 20px;
+}
+
+.section-sugerencia {
+  display: flex;
+  justify-content: center;
+  margin: 0 20px;
+  margin-bottom: 10px;
+}
+.form {
+  background-color: #b8b5b5;
+  padding: 30px;
+}
+.form-group {
+  display: flex;
+  width: 100%;
+}
+
+.form-name {
+  margin-right: 5px;
+  width: 50%;
+}
+
+.form-apellido {
+  width: 50%;
+}
+.input-name,
+.input-apellido {
+  width: 100%;
+}
+
+.form-email,
+.form-num {
+  width: 100%;
+  resize: none;
+}
+
+h3 {
+  text-transform: uppercase;
+  text-decoration: underline;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.textarea {
+  width: 100%;
+  overflow: scroll;
+  resize: none;
+}
+
+.section-formulario input,
+.section-formulario textarea {
+  background-color: #e8e8e8;
+  border: none;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+.container-btn {
+  display: flex;
+  justify-content: center;
+}
+.btn-enviar-consulta {
+  border-radius: 10px;
+  padding: 10px 45px;
+  background-color: #e5890a;
+  border: none;
+  color: #fff;
+  margin: 20px 0px;
+}
+
+@media (min-width: 361px) {
+  .section-sugerencia,
+  .section-formulario {
+    margin: 0 10%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 769px) {
+  .container-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 50px 100px;
+  }
+
+  .section-sugerencia {
+    display: flex;
+    align-items: center;
+    margin: 0px 20px;
+    width: 40%;
+  }
+
+  .section-formulario {
+    width: 50%;
+  }
+}
