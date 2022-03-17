@@ -16,11 +16,15 @@ body {
 }
 .main-pd h2 {
   padding: 10px 0;
+  font-size: 20px;
 }
 .main-detail {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  border-bottom: #e5890a 3px solid;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .main-detail h2 {
@@ -33,9 +37,7 @@ img {
   width: 100%;
 }
 /*EN versión mobile desaperece la descrición*/
-.main-detail-product p {
-  display: none;
-}
+
 h1 {
   font-size: 22px;
   padding: 10px 0px;
@@ -75,7 +77,6 @@ h1 {
 }
 .main-detail-lateral i {
   color: #e5890a;
-  margin: 0px 10px;
 }
 /*bloque 2*/
 .main-detail-info-buy {
@@ -128,8 +129,9 @@ h1 {
   padding-left: 5px;
 }
 .main-detail-info-ship p {
-  margin-top: 15px;
+  margin-top: 9px;
   font-size: 14px;
+  width: 100%;
 }
 .main-detail-info-ship i {
   color: #e5890a;
@@ -137,17 +139,35 @@ h1 {
 
 /*Clases de la sección te recomendamos*/
 .main-recomend {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  max-width: 90vw;
 }
 
 .main-recomend-product {
-  max-width: 300px;
 }
 
 @media (min-width: 361px) {
-  img {
-    max-width: 360px;
+  .main-detail-product,
+  .main-detail-lateral {
+    max-width: 550px;
+  }
+}
+@media (min-width: 769px) {
+  .main-detail-product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    box-shadow: 0px 0px 3px rgb(100, 100, 100);
+  }
+  .main-recomend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: #e5890a 1px dotted;
+  }
+  .main-recomend-product {
+    max-width: 270px;
+
+    padding: 10px;
+    box-shadow: 0px 0px 3px rgb(100, 100, 100);
   }
 }
