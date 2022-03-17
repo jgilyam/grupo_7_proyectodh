@@ -4,6 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/detail.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lato:ital,wght@0,400;1,700&family=Poppins:ital,wght@0,100;0,300;0,400;1,200;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <title>Pato Crearte</title>
   </head>
   <body>
@@ -11,50 +22,66 @@
       <!-- En este div, va el header -->
       <div></div>
     </header>
-    <main class="main">
+    <main class="main-pd">
       <!-- Detalle de producto -->
-      <section class="main-detalle">
-        <h2>Ruta/del/producto</h2>
-        <article class="main-detalle-producto">
+      <h2>Ruta/del/producto</h2>
+      <section class="main-detail">
+        <article class="main-detail-product">
           <img src="img/tabla5.jpg" alt="Foto-Producto" />
           <p>Descripción del producto</p>
         </article>
-        <div class="main-detalle-info-pago">
-          <h1>Nombre del producto</h1>
-          <p>$3000</p>
-          <p>Medios de pago</p>
-        </div>
-        <div class="main-detalle-info-compra">
-          <p>Cantidad</p>
-          <input type="number" />
-          <p>Stock</p>
-          <button>Comprar</button>
-        </div>
-        <div class="main-detalle-info-envio">
-          <p>Calcula tu envio</p>
-          <input type="text" />
-          <button>Calcular</button>
+        <div class="main-detail-lateral">
+          <div class="main-detail-info-pay">
+            <h1>Nombre del producto</h1>
+            <p class="detail-price">$3000</p>
+            <p class="detail-discount">%10</p>
+            <p>Medios de pago</p>
+          </div>
+          <form
+            name="compra"
+            class="main-detail-info-buy"
+            action="#"
+            method="POST"
+          >
+            <p>2 disponibles</p>
+            <input
+              class="input-cant"
+              type="number"
+              value="cantidad"
+              min="0"
+              max="10"
+            />
+
+            <button type="submit" class="button-submit">
+              Agregar al carrito
+            </button>
+          </form>
+          <div class="main-detail-info-ship">
+            <p>Calcula tu envio</p>
+            <input type="text" />
+            <button class="button-submit">Calcular</button>
+          </div>
         </div>
       </section>
       <!-- Articulos que te recomendamos -->
-      <section class="main-recomendado">
-        <h2>Te recomendamos</h2>
-        <article class="main-recomendado-producto">
+      <h2>Te recomendamos</h2>
+      <section class="main-recomend">
+        <article class="main-recomend-product">
           <img src="img/tabla1.jpg" alt="Producto1" />
           <h3>Producto 1</h3>
           <p>$2500</p>
         </article>
-        <article class="main-recomendado-producto">
+        <article class="main-recomend-product">
           <img src="img/tabla2.jpg" alt="Producto2" />
           <h3>Producto 1</h3>
           <p>$2500</p>
         </article>
-        <article class="main-recomendado-producto">
+        <article class="main-recomend-product">
           <img src="img/tabla3.jpg" alt="Producto3" />
           <h3>Producto 1</h3>
           <p>$2500</p>
         </article>
-        <article class="main-recomendado-producto">
+        <article class="main-recomend-product">
           <img src="img/tabla4.jpg" alt="Producto4" />
           <h3>Producto 1</h3>
           <p>$2500</p>

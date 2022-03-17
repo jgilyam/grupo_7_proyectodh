@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+/*Clases de la sección detalle de producto*/
+
+.main-pd {
+  width: 90vw;
+  margin: auto;
+}
+.main-pd h2 {
+  padding: 10px 0;
+}
+.main-detail {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.main-detail h2 {
+  color: red;
+}
+.main-detail-product {
+  max-width: 90vw;
+  border: red 1px dotted;
+}
+img {
+  width: 100%;
+}
+/*EN versión mobile desaperece la descrición*/
+.main-detail-product p {
+  display: none;
+}
+h1 {
+  font-size: 22px;
+  padding: 10px 0px;
+}
+.detail-price {
+  font-size: 30px;
+  color: #e5890a;
+}
+/*Clases sección lateral*/
+.main-detail-info-pay,
+.main-detail-lateral,
+.main-detail-info-buy,
+.main-detail-info-ship {
+  border: red 1px dotted;
+}
+
+.main-detail-lateral {
+  width: 100%;
+  padding: 10px;
+}
+.main-detail-info-buy {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 0px;
+}
+.main-detail-info-buy p {
+  width: 100%;
+}
+
+.button-submit {
+  border-radius: 10px;
+  padding: 10px 45px;
+  background-color: #e5890a;
+  border: none;
+  color: #fff;
+  width: 80%;
+  font-size: 16px;
+}
+.input-cant {
+  width: 20%;
+  text-align: center;
+  font-size: 16px;
+}
+.main-detail-info-ship button {
+  width: 100%;
+}
+/*Clases de la sección te recomendamos*/
+.main-recomend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.main-recomend-product {
+  max-width: 300px;
+  border: red 1px dotted;
+}
+
+@media (min-width: 361px) {
+  img {
+    max-width: 360px;
+  }
+}
