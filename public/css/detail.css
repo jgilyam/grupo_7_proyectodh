@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+/*Clases de la sección detalle de producto*/
+
+.main-pd {
+  width: 90vw;
+  margin: auto;
+}
+.main-pd h2 {
+  padding: 10px 0;
+}
+.main-detail {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.main-detail h2 {
+  color: red;
+}
+.main-detail-product {
+  max-width: 90vw;
+}
+img {
+  width: 100%;
+}
+/*EN versión mobile desaperece la descrición*/
+.main-detail-product p {
+  display: none;
+}
+h1 {
+  font-size: 22px;
+  padding: 10px 0px;
+  width: 100%;
+}
+/*Clases sección lateral*/
+.main-detail-info-pay,
+.main-detail-lateral,
+.main-detail-info-buy,
+.main-detail-info-ship {
+}
+
+.main-detail-info-pay {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.detail-price {
+  font-family: "Roboto", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  margin: 5px 0px;
+  width: 40%;
+}
+.detail-discount {
+  color: #e5890a;
+  align-self: center;
+  width: 60%;
+}
+.detail-finance {
+  color: #e5890a;
+  margin: 0px 10px;
+}
+.main-detail-lateral {
+  width: 100%;
+  padding: 10px;
+}
+.main-detail-lateral i {
+  color: #e5890a;
+  margin: 0px 10px;
+}
+/*bloque 2*/
+.main-detail-info-buy {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 0px;
+  justify-content: space-between;
+}
+.main-detail-info-buy p {
+  width: 100%;
+  font-size: 14px;
+}
+.main-detail-info-buy p i {
+  color: darkgreen;
+  padding: 5px;
+}
+
+.button-submit {
+  border-radius: 10px;
+  padding: 10px 20px;
+  background-color: #e5890a;
+  border: none;
+  color: #fff;
+  width: 70%;
+  font-size: 16px;
+}
+.input-cant {
+  width: 20%;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 0;
+  background-color: #eee;
+}
+
+/*bloque 3*/
+.main-detail-info-ship {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 0px;
+  justify-content: space-between;
+}
+.main-detail-info-ship button {
+  width: 40%;
+}
+.main-select {
+  width: 40%;
+  border: 0;
+  border-radius: 10px;
+  padding-left: 5px;
+}
+.main-detail-info-ship p {
+  margin-top: 15px;
+  font-size: 14px;
+}
+.main-detail-info-ship i {
+  color: #e5890a;
+}
+
+/*Clases de la sección te recomendamos*/
+.main-recomend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.main-recomend-product {
+  max-width: 300px;
+}
+
+@media (min-width: 361px) {
+  img {
+    max-width: 360px;
+  }
+}

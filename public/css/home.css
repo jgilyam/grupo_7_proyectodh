@@ -1,0 +1,59 @@
+main section.container-metodos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 27px;
+}
+
+main section div.metodos {
+  display: flex;
+  align-items: center;
+}
+
+main section div img {
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+}
+
+main section div p {
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+main section.container-ofertemp {
+
+}
+
+main section div.container-ofertemp-hijos {
+
+}
+
+main section div div.ofertemp-img1 {
+
+}
+
+
+
+
+
+
+@media (min-width: 361px) {
+  main section.container-metodos {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (min-width: 760px) {
+  main section div.metodos2 {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  main section.container-metodos {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+  }
+}
