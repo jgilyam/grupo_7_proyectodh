@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/index.css" />
     <link rel="stylesheet" href="/css/detail.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lato:ital,wght@0,400;1,700&family=Poppins:ital,wght@0,100;0,300;0,400;1,200;1,300;1,400&display=swap"
@@ -14,13 +16,69 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap"
+      rel="stylesheet"
+    />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      src="https://kit.fontawesome.com/e9aab52371.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Pato Crearte</title>
   </head>
   <body>
-    <header>
-      <!-- En este div, va el header -->
-      <div></div>
+    <header class="header">
+      <nav class="barra-que-desaparece">
+        <ul class="barra-que-desaparece-izquierdo">
+          <li><a class="info" href="#">pato.crearte@gmail.com</a></li>
+          <li><a class="info" href="#">029423493493</a></li>
+        </ul>
+        <ul class="barra-que-desaparece-derecho">
+          <li><a class="info" href="#">NOSOTROS</a></li>
+          <li><a class="info" href="#">PREGUNTAS FRECUENTES</a></li>
+          <li><a class="info" href="#">CONTACTO</a></li>
+        </ul>
+      </nav>
+      <nav class="navbar">
+        <div class="imagen-pato">
+          <img
+            src="/img/logo.jpg"
+            alt="logo de la empresa"
+            class="logo-patocrearte"
+          />
+        </div>
+        <div class="nav-medio">
+          <ul class="nav-medio-ul">
+            <li class="nav-medio-li"><a href="#">INICIO</a></li>
+            <li class="nav-medio-li"><a href="#">PRODUCTOS</a></li>
+            <li class="nav-medio-li">
+              <a href="#"> CORPORATIVO</a>
+            </li>
+          </ul>
+        </div>
+        <div class="navbar-derecho">
+          <div id="buscador">
+            <input type="search" class="buscador-barra" />
+            <img src="/img/lupa.png" alt="lupita buscador" class="img-nav" />
+          </div>
+          <div class="burger-container">
+            <img src="/img/burger-menu.png" alt="burger" />
+          </div>
+          <div class="iniciar-sesion">
+            <img src="/img/usuario.png" alt="iniciar sesion" class="img-nav" />
+          </div>
+          <div class="carrito-de-compra">
+            <img
+              src="/img/carrito-de-compras.png"
+              alt="carrito de compra"
+              class="img-nav"
+            />
+          </div>
+        </div>
+      </nav>
     </header>
     <main class="main-pd">
       <!-- Detalle de producto -->
@@ -32,10 +90,13 @@
         </article>
         <div class="main-detail-lateral">
           <div class="main-detail-info-pay">
-            <h1>Nombre del producto</h1>
+            <h1>Tabla 30 x 20</h1>
             <p class="detail-price">$3000</p>
-            <p class="detail-discount">%10</p>
-            <p>Medios de pago</p>
+            <p class="detail-discount">10%OFF</p>
+            <p>en</p>
+            <p class="detail-finance">
+              12x $300 sin interés <i class="fa-solid fa-credit-card"></i>
+            </p>
           </div>
           <form
             name="compra"
@@ -43,7 +104,7 @@
             action="#"
             method="POST"
           >
-            <p>2 disponibles</p>
+            <p><i class="fa fas fa-circle-check"></i>2 disponibles</p>
             <input
               class="input-cant"
               type="number"
@@ -56,11 +117,18 @@
               Agregar al carrito
             </button>
           </form>
-          <div class="main-detail-info-ship">
-            <p>Calcula tu envio</p>
-            <input type="text" />
+          <form class="main-detail-info-ship">
+            <select class="main-select" name="provincia">
+              <option value="sanJuan">San Juan</option>
+              <option value="caba">CABA</option>
+              <option value="cordoba">Córdoba</option>
+            </select>
             <button class="button-submit">Calcular</button>
-          </div>
+            <p>
+              <i class="fa-solid fa-truck"></i> Llega el martes 19 de abril por
+              $700
+            </p>
+          </form>
         </div>
       </section>
       <!-- Articulos que te recomendamos -->
@@ -88,6 +156,58 @@
         </article>
       </section>
     </main>
-    <footer></footer>
+    <footer class="footer">
+      <div class="parte-superior-footer">
+        <p class="sugerencia-footer">SEGUINOS</p>
+        <div class="container-img-footer">
+          <a href="https://www.instagram.com/pato.crearte/" target="_blank"
+            ><img
+              class="img-footer-insta"
+              src="/img/instagram.png"
+              alt="logo instagram"
+          /></a>
+          <a
+            href="https://www.facebook.com/Patocrearte-1450234635107774/"
+            target="_blank"
+            ><img
+              class="img-footer-face"
+              src="/img/facebook.png"
+              alt="logo facebook"
+          /></a>
+          <a href="#" target="_blank"
+            ><img
+              class="img-footer-whatsap"
+              src="/img/whatsapp.png"
+              alt="logo de whatsap"
+          /></a>
+        </div>
+      </div>
+      <div class="parte-inferior-footer">
+        <div class="parte-inferior-1">
+          <img src="/img/logo.jpg" alt="logo" class="img-footer-logo" />
+          <img
+            src="/img/camion.png"
+            alt="logo de camion de envio"
+            class="img-envio"
+          />
+          <p>Nos encontramos en NEUQUÉN CAPITAL</p>
+          <p>Argentina</p>
+        </div>
+        <div class="parte-inferior-2">
+          <h3>Sobre Nosotros</h3>
+          <a href="#">¿Quienes Somos?</a>
+          <a href="#">Preguntas Frecuentes</a>
+          <a href="#">Contacto</a>
+        </div>
+        <div class="parte-inferior-3">
+          <h3>Trabajamos con</h3>
+          <img
+            src="/img/mercadopago.png"
+            alt="logo mercadopago"
+            class="img-mercadopago"
+          />
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
