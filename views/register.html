@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulario de registro</title>
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/index.css" />
     <link rel="stylesheet" href="/css/register.css" />
     <link rel="stylesheet" href="/css/footer.css">
     <link
@@ -14,10 +16,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link href="https: //fonts.googleapis.com/css2? family= Roboto:ital,wght@1,300 & display=swap" rel="stylesheet"></link>
+    <link href="https: //fonts.googleapis.com/css2? family= Roboto:ital,wght@1,300 & display=swap" rel="stylesheet">
   </head>
   <body>
-    <header>
+    <header class="header">
       <nav class="barra-que-desaparece">
         <ul class="barra-que-desaparece-izquierdo">
           <li><a class="info" href="#">pato.crearte@gmail.com</a></li>
@@ -52,7 +54,7 @@
             <img src="/img/lupa.png" alt="lupita buscador" class="img-nav" />
           </div>
           <div class="burger-container">
-            <img src="/img/burger-menu.png" alt="burger">
+            <img src="/img/burger-menu.png" alt="burger" />
           </div>
           <div class="iniciar-sesion">
             <img src="/img/usuario.png" alt="iniciar sesion" class="img-nav" />
@@ -68,66 +70,66 @@
       </nav>
     </header>
     <main>
-         <h1>Registrate</h1>
-          <h5>Registrate con</h5>
-          <div class="logins">
-              <a
-                href="https://es-la.facebook.com/login/device-based/regular/login/"
-              >
-                Facebook <i class="fa-brands fa-facebook"></i>
-              </a>
-            <a href="https://mail.google.com/">
-              Google <i class="fa-brands fa-google"></i>
-            </a>
-        </div>
-        <h5>O Completando tus datos</h5>
-        <div class="datos-usuario" class="registro caja clearfix">
+      <h1>Registrate</h1>
+      <h5>Registrate con</h5>
+      <div class="logins">
+           <a
+             href="https://es-la.facebook.com/login/device-based/regular/login/"
+           >
+             Facebook <i class="fa-brands fa-facebook"></i>
+           </a>
+         <a href="https://mail.google.com/">
+           Google <i class="fa-brands fa-google"></i>
+         </a>
+       </div>
+       <h5>O Completando tus datos</h5>
+       <div class="datos-usuario" class="registro caja clearfix"></div>
         <fieldset>
-            <legend>Personal data</legend>
-            <h2>Tu Nombre</h2>
-        <form class="registro" action="index.html" method="post">
-            <div class="Register">
-        <div id="datos_usuario" class="registro caja clearfix">
-            <div class="campo">
-              <label for="nombre"></label>
-              <input type="text" name="nombre" id="nombre" placeholder="Nombre">
-            </div>
-            <div class="campo">
-              <label for="apellido"></label>
-              <input type="text" name="apellido" id="apellido" placeholder="Apellido">
-            </div>
-            <div class="campo-fecha">
-          <h2>Fecha de Nacimiento</h2>
-          <label for="date"></label>
-          <input type="date" name="date" id="date" placeholder="dd">
-            </div>
-                    <p>Recopilamos la fecha de nacimiento de acuerdo a nuestra politica de privacidad. Te haremos un regalo!</p>
-                      </div>
-                <h2>Datos de Acceso</h2>
-                <div class="user-info">
-                <div class="email campo1">
-              <label for="email"></label>
-              <input type="email" id="email" name="email" placeholder="email@gmail.com">
-                </div>
-                <div class="password campo1">
-              <label for="password"></label>
-              <input type="password" id="password" name="password" placeholder="Contraseña">
-              </div>
-              <div class="repetir-password campo1">
-              <label for="password"></label>
-              <input type="password" id="password" name="password" placeholder="Repetir contraseña">
-              </div>
-              <p>Debe usar como minimo 8 caracteres y contener una mayuscula</p>
-            </div>
-            <div class="noticias-condiciones">
-                <input type="checkbox">He leido y acepto los terminos y condiciones</input>
-            </div>
-                <div class="noticias-condiciones">
-                <input type="checkbox">Me gustaria recibir noticias</input>
-            </div>
-                <input type="submit" value="ENVIAR">
-      </form>
-        </fieldset>
+         <legend>Personal data</legend>
+         <h2>Tu Nombre</h2>
+     <form class="registro" action="index.html" method="post">
+         <div class="Register">
+     <div id="datos_usuario" class="registro caja clearfix">
+         <div class="campo">
+           <label for="nombre"></label>
+           <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+         </div>
+         <div class="campo">
+           <label for="apellido"></label>
+           <input type="text" name="apellido" id="apellido" placeholder="Apellido">
+         </div>
+         <div class="campo-fecha">
+       <h2>Fecha de Nacimiento</h2>
+       <label for="date"></label>
+       <input type="date" name="date" id="date" placeholder="dd">
+         </div>
+                 <p>Recopilamos la fecha de nacimiento de acuerdo a nuestra politica de privacidad. Te haremos un regalo!</p>
+                   </div>
+             <h2>Datos de Acceso</h2>
+             <div class="user-info">
+             <div class="email campo1">
+           <label for="email"></label>
+           <input type="email" id="email" name="email" placeholder="email@gmail.com">
+             </div>
+             <div class="password campo1">
+           <label for="password"></label>
+           <input type="password" id="password" name="password" placeholder="Contraseña">
+           </div>
+           <div class="repetir-password campo1">
+           <label for="password"></label>
+           <input type="password" id="password" name="password" placeholder="Repetir contraseña">
+           </div>
+           <p>Debe usar como minimo 8 caracteres y contener una mayuscula</p>
+         </div>
+         <div class="noticias-condiciones">
+             <input type="checkbox">He leido y acepto los terminos y condiciones>
+         </div>
+             <div class="noticias-condiciones">
+             <input type="checkbox">Me gustaria recibir noticias>
+         </div>
+             <input type="submit" value="ENVIAR">
+    </form>
+     </fieldset>
     </main>
     <footer class="footer">
       <div class="parte-superior-footer">

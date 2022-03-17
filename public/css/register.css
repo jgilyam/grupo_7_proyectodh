@@ -104,14 +104,38 @@ p {
   font-size: 12px;
 }
 
+h1 {
+  font-size: 45px;
+  margin: 5px;
+}
+
+h5 {
+  font-size: 25px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  margin: 5px;
+}
+
+h2 {
+  font-size: 30px;
+  margin-top: 7px;
+  margin: 5px;
+}
+
 fieldset {
+  display: flex;
+  flex-wrap: wrap;
   border-radius: 5px;
   border: 1px solid black;
   padding: 5px 20px;
   width: 600px;
+  margin: 5px;
 }
 
 .logins {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
   padding: 10px;
 }
 
@@ -133,6 +157,7 @@ a:hover {
 }
 
 input {
+  display: flex;
   width: 300px;
   height: 50px;
   padding: 20px;
@@ -141,6 +166,8 @@ input {
   background-color: #e8e8e8;
   border-radius: 10px;
   width: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 input[type="submit"] {
@@ -180,4 +207,44 @@ input[type="submit"] {
   padding-bottom: 4px;
   display: flex;
   align-items: center;
+}
+
+@media (min-width: 361px) {
+  .nav-medio {
+    font-size: 15px;
+  }
+}
+@media (min-width: 769px) {
+  .barra-que-desaparece {
+    display: flex;
+  }
+  .logo-patocrearte {
+    width: 100px;
+    border-radius: 100%;
+  }
+  .navbar {
+    padding: 1rem;
+  }
+  .navbar li a {
+    display: flex;
+  }
+
+  .nav-medio {
+    display: flex;
+  }
+  .burger-container {
+    display: none;
+  }
+  .iniciar-sesion {
+    display: flex;
+  }
+  #buscador {
+    padding: 10px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .imagen-pato {
+    margin-right: 150px;
+  }
 }
