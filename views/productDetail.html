@@ -14,7 +14,17 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap"
+      rel="stylesheet"
+    />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      src="https://kit.fontawesome.com/e9aab52371.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Pato Crearte</title>
   </head>
   <body>
@@ -32,10 +42,13 @@
         </article>
         <div class="main-detail-lateral">
           <div class="main-detail-info-pay">
-            <h1>Nombre del producto</h1>
+            <h1>Tabla 30 x 20</h1>
             <p class="detail-price">$3000</p>
-            <p class="detail-discount">%10</p>
-            <p>Medios de pago</p>
+            <p class="detail-discount">10%OFF</p>
+            <p>en</p>
+            <p class="detail-finance">
+              12x $300 sin interés <i class="fa-solid fa-credit-card"></i>
+            </p>
           </div>
           <form
             name="compra"
@@ -43,7 +56,7 @@
             action="#"
             method="POST"
           >
-            <p>2 disponibles</p>
+            <p><i class="fa fas fa-circle-check"></i>2 disponibles</p>
             <input
               class="input-cant"
               type="number"
@@ -56,11 +69,18 @@
               Agregar al carrito
             </button>
           </form>
-          <div class="main-detail-info-ship">
-            <p>Calcula tu envio</p>
-            <input type="text" />
+          <form class="main-detail-info-ship">
+            <select class="main-select" name="provincia">
+              <option value="sanJuan">San Juan</option>
+              <option value="caba">CABA</option>
+              <option value="cordoba">Córdoba</option>
+            </select>
             <button class="button-submit">Calcular</button>
-          </div>
+            <p>
+              <i class="fa-solid fa-truck"></i> Llega el martes 19 de abril por
+              $700
+            </p>
+          </form>
         </div>
       </section>
       <!-- Articulos que te recomendamos -->
