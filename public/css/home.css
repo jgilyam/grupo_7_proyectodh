@@ -35,9 +35,9 @@ main section div.container-ofertemp-hijo {
   width: 100%;
 }
 main section div div.fotos-ofertemp {
-  height: 150px;
-  width: 180px;
-  padding: 10px;
+   height: 300px;
+    width: 300px;
+    padding: 5px;
 }
 main section div div img.ofertas {
   width: 100%;
