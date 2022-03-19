@@ -13,15 +13,16 @@ body {
 .main-pd {
   width: 90vw;
   margin: auto;
+  background-color: white;
 }
 .main-pd h2 {
-  padding: 10px 0;
+  padding: 10px;
   font-size: 20px;
 }
 .main-detail {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: left;
   border-bottom: #e5890a 3px solid;
   padding-bottom: 20px;
   margin-bottom: 20px;
@@ -32,9 +33,28 @@ body {
 }
 .main-detail-product {
   max-width: 90vw;
+  position: relative;
 }
 img {
   width: 100%;
+  padding: 10px;
+}
+.share {
+  display: block;
+  font-size: 16px;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #9ea59f;
+  color: #242424;
+  background: #fff;
+  background-color: #e9eeea2a;
+  border-radius: 50%;
+  position: absolute;
+  right: 15px;
+  top: 17px;
+  transition: 0.2s ease;
+  box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.08);
 }
 /*EN versión mobile desaperece la descrición*/
 
@@ -101,7 +121,12 @@ h1 {
   border: none;
   color: #fff;
   width: 70%;
+  font-weight: 500;
   font-size: 16px;
+}
+.button-submit i {
+  color: white;
+  margin-left: 10px;
 }
 .input-cant {
   width: 20%;
@@ -146,9 +171,11 @@ h1 {
 }
 
 @media (min-width: 361px) {
-  .main-detail-product,
+  .main-detail-product {
+    max-width: 500px;
+  }
   .main-detail-lateral {
-    max-width: 550px;
+    max-width: 400px;
   }
 }
 @media (min-width: 769px) {
@@ -162,12 +189,29 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    border: #e5890a 1px dotted;
   }
   .main-recomend-product {
     max-width: 270px;
 
     padding: 10px;
     box-shadow: 0px 0px 3px rgb(100, 100, 100);
+  }
+  .main-recomend-product {
+    max-width: 50%;
+  }
+  .main-detail-lateral {
+    margin-left: 30px;
+  }
+}
+@media (min-width: 1200px) {
+  body {
+    background-color: #f1ebe4;
+  }
+  .main-pd {
+    padding: 30px;
+  }
+
+  .main-recomend-product {
+    max-width: 24%;
   }
 }
