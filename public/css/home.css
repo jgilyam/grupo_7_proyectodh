@@ -16,36 +16,61 @@ main section div img.iconos {
   padding: 10px;
 }
 
-main section div p {
+main section div p.metodos-de-pago {
   font-size: 18px;
   padding-left: 10px;
 }
 
 /* segunda tercera parte */
 
-/* falta hacer el responsive del desktop */
-main section.container-ofertemp {
-  width: 100%;
-  display: flex;
+.container-ofertemp {
+  height: 100%;
 }
-main section div.container-ofertemp-hijo {
+.container-ofertemp-hijo {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-evenly;
-  width: 100%;
 }
-main section div div.fotos-ofertemp {
-   height: 300px;
-    width: 300px;
-    padding: 5px;
+.lala {
+  width: 300px;
+  height: 100%;
+  margin: 20px;
 }
-main section div div img.ofertas {
+.ofertas {
   width: 100%;
   height: 100%;
+   margin-bottom: 7px;
+}
+h3 {
+  font-size: 30px;
+  margin: 10px;
 }
 
 /* tercera parte */
 
+.h2-insta{
+      text-align: center;
+    margin: 30px;
+}
+.instagram-fast{
+height: 100%;
+}
+.instagram-fast2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.instagram-fast3{
+    width: 180px;
+    height: 183px;
+    padding: 2px;
+    border: 1.2px solid black;
+}
+.instagram-img{
+width: 100%;
+height: 100%;
+}
 
 
 
@@ -54,10 +79,7 @@ main section div div img.ofertas {
 
 
 
-
-
-
-
+/* media query */
 @media (min-width: 361px) {
   main section.container-metodos {
     flex-direction: column;
