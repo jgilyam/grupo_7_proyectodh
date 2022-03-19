@@ -8,6 +8,30 @@ body {
   font-size: 16px;
 }
 
+/*Clases para el header, modificaciones*/
+.carrito-de-compra,
+.iniciar-sesion,
+.burger-container,
+.ico-nav,
+.navbar-derecho {
+  border: red 1px dotted;
+}
+.ico-nav {
+  height: 30px;
+  background-color: #e8e8e8;
+  border: none;
+  border-radius: 10px;
+  margin: 15px;
+  padding: 20px;
+}
+
+.navbar-derecho {
+  flex-wrap: wrap;
+  border: blue 1px dotted;
+}
+
+/*-------------------------------------*/
+
 /*Clases de la sección detalle de producto*/
 
 .main-pd {
@@ -35,7 +59,7 @@ body {
   max-width: 90vw;
   position: relative;
 }
-img {
+.img-detail {
   width: 100%;
   padding: 10px;
 }
