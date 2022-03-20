@@ -1,8 +1,8 @@
-body{
+body {
   background-color: #ebebeb;
   height: 100%;
 }
-footer{
+footer {
   background-color: white;
 }
 main section.container-metodos {
@@ -45,6 +45,9 @@ main section div p.metodos-de-pago {
   height: 100%;
   margin: 20px;
   text-align: center;
+  background: white;
+  padding: 12px;
+  border: 1px solid black;
 }
 .ofertas {
   width: 100%;
@@ -69,12 +72,12 @@ h3 {
 .bbb {
   margin: 8px 0px;
   font-size: 20px;
-      width: 33%;
+  width: 33%;
 }
-.bbb2{
-      font-size: 18px;
-    margin: 8px 0px;
-    color: orange;
+.bbb2 {
+  font-size: 18px;
+  margin: 8px 0px;
+  color: orange;
 }
 .ccc {
   font-size: 16px;
