@@ -150,6 +150,12 @@ body {
   margin: auto;
   align-items: center;
 }
+
+.container-recordar {
+  padding-top: 40px;
+  margin-right: 40px;
+  font-weight: 200;
+}
 .not-usuario {
   display: flex;
   align-items: center;
@@ -166,7 +172,7 @@ body {
   background-color: #e5890a;
   border: none;
   color: #fff;
-  margin: 40px 0px;
+  margin: 20px 0px;
 }
 
 .btn-enviar-formulario:hover {
