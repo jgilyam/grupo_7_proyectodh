@@ -139,6 +139,10 @@ body {
   cursor: pointer;
 }
 
+.registro-login:hover {
+  color: #ff9500;
+}
+
 .container-preguntas {
   width: 100%;
   display: flex;
@@ -163,6 +167,10 @@ body {
   border: none;
   color: #fff;
   margin: 40px 0px;
+}
+
+.btn-enviar-formulario:hover {
+  background-color: #ff9500;
 }
 
 @media (min-width: 361px) {
