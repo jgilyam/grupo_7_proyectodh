@@ -58,7 +58,7 @@ h2 {
 }
 
 .logins a {
-  height: 50px;
+  height: 40px;
   margin: 10px 15px;
   border: 1px solid #e5890a;
   border-radius: 10px;
@@ -82,13 +82,13 @@ input:focus {
   display: flex;
   width: 80%;
   padding: 15px;
-  padding-right: 30px;
+  padding-right: 40px;
   border: none;
   background-color: #e8e8e8;
   border-radius: 10px;
   width: auto;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 3px;
+  margin-bottom: 3px;
 }
 
 input[type="submit"] {
@@ -109,17 +109,6 @@ input[type="submit"] {
 .repetir-password,
 .password {
   padding: 2px;
-}
-
-.campo1 {
-  display: flex;
-  align-items: center;
-  margin: 5px 0;
-}
-
-.campo1 input {
-  flex: 1;
-  margin-left: 10px;
 }
 
 .noticias-condiciones {
