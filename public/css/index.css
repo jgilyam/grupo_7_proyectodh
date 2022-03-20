@@ -73,6 +73,9 @@ body {
 .navbar-derecho div:hover {
   color: #686767;
 }
+.navbar-derecho div a:hover {
+  color: #686767;
+}
 
 .img-nav {
   width: 30px;
@@ -95,7 +98,11 @@ body {
 .iniciar-sesion {
   display: none;
 }
-
+.ancla-login,
+.ancla-carrito {
+  color: black;
+  text-decoration: none;
+}
 .ico-nav,
 .burger-container,
 .iniciar-sesion,
