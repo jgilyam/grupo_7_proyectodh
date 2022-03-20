@@ -25,7 +25,6 @@ app.get("/login", (req, res) => {
   res.sendFile(path.resolve(__dirname, "./views/login.html"));
 });
 
-
 app.get("/product-cart", (req, res) => {
   res.sendFile(path.resolve(__dirname, "./views/productCart.html"));
 });
@@ -34,9 +33,17 @@ app.get("/product-detail", (req, res) => {
   res.sendFile(path.resolve(__dirname, "./views/productDetail.html"));
 });
 
-app.get("/formconsultas",(req, res) => {
-  res.sendFile(path.resolve(__dirname, "./views/formconsultas.html"))
-})
+app.get("/formconsultas", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "./views/formconsultas.html"));
+});
+
+app.get("/nosotros", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "./views/nosotros.html"));
+});
+
+app.get("/preguntas-frecuentes", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "./views/pregFrecuentes.html"));
+});
 //Se levanta el servidor
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en puerto ${PORT}`);
