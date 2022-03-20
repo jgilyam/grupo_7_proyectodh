@@ -68,7 +68,10 @@ body {
 }
 
 .navbar li a:hover {
-  color: black;
+  color: #686767;
+}
+.navbar-derecho div:hover {
+  color: #686767;
 }
 
 .img-nav {
@@ -91,6 +94,13 @@ body {
 }
 .iniciar-sesion {
   display: none;
+}
+
+.ico-nav,
+.burger-container,
+.iniciar-sesion,
+.carrito-de-compra {
+  cursor: pointer;
 }
 .logo-patocrearte {
   width: 50px;
