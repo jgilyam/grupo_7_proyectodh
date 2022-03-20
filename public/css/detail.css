@@ -14,20 +14,30 @@ body {
 .burger-container,
 .ico-nav,
 .navbar-derecho {
-  border: red 1px dotted;
 }
 .ico-nav {
-  height: 30px;
   background-color: #e8e8e8;
   border: none;
-  border-radius: 10px;
-  margin: 15px;
-  padding: 20px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: 40px;
+  width: 40px;
+  font-size: 16px;
+  color: #686767;
+  margin-left: 1px;
+  box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.08);
+}
+.carrito-de-compra,
+.iniciar-sesion,
+.burger-container {
+  font-size: 20px;
+  color: black;
 }
 
 .navbar-derecho {
   flex-wrap: wrap;
-  border: blue 1px dotted;
+  width: 300px;
+  justify-content: space-around;
 }
 
 /*-------------------------------------*/
@@ -63,23 +73,7 @@ body {
   width: 100%;
   padding: 10px;
 }
-.share {
-  display: block;
-  font-size: 16px;
-  padding: 5px;
-  width: 30px;
-  height: 30px;
-  border: 1px solid #9ea59f;
-  color: #242424;
-  background: #fff;
-  background-color: #e9eeea2a;
-  border-radius: 50%;
-  position: absolute;
-  right: 15px;
-  top: 17px;
-  transition: 0.2s ease;
-  box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.08);
-}
+
 /*EN versión mobile desaperece la descrición*/
 
 h1 {
@@ -88,11 +82,6 @@ h1 {
   width: 100%;
 }
 /*Clases sección lateral*/
-.main-detail-info-pay,
-.main-detail-lateral,
-.main-detail-info-buy,
-.main-detail-info-ship {
-}
 
 .main-detail-info-pay {
   display: flex;
@@ -189,9 +178,6 @@ h1 {
 /*Clases de la sección te recomendamos*/
 .main-recomend {
   max-width: 90vw;
-}
-
-.main-recomend-product {
 }
 
 @media (min-width: 361px) {
