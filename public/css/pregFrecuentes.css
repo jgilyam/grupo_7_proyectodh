@@ -44,7 +44,11 @@ h3 {
   line-height: initial;
   font-weight: 200;
 }
-
+.mapa {
+  display: flex;
+  width: 100%;
+  margin-top: 60px;
+}
 @media (min-width: 769px) {
   .container-preguntas {
     margin-top: 50px;
