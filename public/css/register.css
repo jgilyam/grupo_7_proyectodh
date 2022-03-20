@@ -5,163 +5,84 @@
 body {
   font-family: "Poppins", sans-serif;
 }
-.barra-que-desaparece {
+
+.register {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: column;
   width: 100%;
-  font-size: 13px;
-  height: 2.5rem;
-  align-items: center;
-  padding: 20px;
-  display: none;
 }
 
-.info {
-  text-decoration: none;
-  padding: 10px;
-  color: black;
-}
-
-.barra-que-desaparece ul {
-  list-style: none;
-  display: flex;
-}
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  background-color: #e5890a;
-  padding: 10px;
-  align-items: center;
-}
-.navbar li a {
-  color: white;
-  display: none;
-}
-
-.navbar li a:hover {
-  color: black;
-}
-
-.burger-container {
-  display: flex;
-  height: 30px;
-  margin-left: 20px;
-  display: flex;
-}
-.img-nav {
-  width: 30px;
-  cursor: pointer;
-}
-
-#buscador {
-  display: flex;
-}
-.buscador-barra {
-  height: 30px;
-  display: flex;
-}
-.iniciar-sesion {
-  padding: 10px;
-  display: none;
-}
-.carrito-de-compra {
-  padding-left: 20px;
-}
-.logo-patocrearte {
-  width: 50px;
-  border-radius: 100%;
-}
-.imagen-pato {
-  display: flex;
-}
-.nav-medio {
-  display: none;
-  align-items: center;
-  font-size: 20px;
-  margin: auto;
-}
-
-.nav-medio-ul {
-  display: flex;
-  justify-content: space-around;
-}
-
-.nav-medio-li {
-  list-style: none;
-  display: flex;
-  padding: 15px;
-  justify-content: center;
-}
-
-.navbar-derecho {
-  display: flex;
-  align-items: center;
-  box-sizing: border-box;
-}
-
-/*  Empieza el register  */
 p {
   font-size: 12px;
 }
 
 h1 {
-  font-size: 45px;
+  font-size: 35px;
   margin: 5px;
 }
 
-h5 {
-  font-size: 25px;
+h3 {
+  font-size: 15px;
   margin-top: 20px;
   margin-bottom: 5px;
   margin: 5px;
+  font-weight: 700;
+}
+.container1 {
+  margin-top: 15px;
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 25px;
   margin-top: 7px;
   margin: 5px;
 }
 
-fieldset {
+.fieldset {
   display: flex;
   flex-wrap: wrap;
   border-radius: 5px;
   border: 1px solid black;
   padding: 5px 20px;
-  width: 600px;
+  width: auto;
   margin: 5px;
+  margin-top: 10px;
 }
 
 .logins {
   display: flex;
   flex-wrap: wrap;
-  width: 50%;
+  width: 100%;
   padding: 10px;
 }
 
 .logins a {
-  width: 300px;
   height: 50px;
-  border: solid 3px black;
-  margin: 15px;
-  border-width: 1px;
+  margin: 10px 15px;
+  border: 1px solid #e5890a;
   border-radius: 10px;
-  padding: 20px;
+  padding: 15px;
   text-decoration: none;
-  background-color: #e8e8e8;
-  color: gray;
+  background-color: #e58a0a6e;
+  color: rgb(46, 44, 44);
+  font-size: 15px;
 }
 
 a:hover {
   color: #e5890a;
 }
 
-input {
+input:focus {
+  outline: none;
+  border: 2px solid #e5890a !important;
+}
+
+.datos-usuario input {
   display: flex;
-  width: 300px;
-  height: 50px;
-  padding: 20px;
-  padding-right: 45px;
+  width: 80%;
+  padding: 15px;
+  padding-right: 30px;
   border: none;
   background-color: #e8e8e8;
   border-radius: 10px;
@@ -179,6 +100,8 @@ input[type="submit"] {
   border-radius: 5px;
   background-color: #e5890a;
   color: #fff;
+  justify-content: center;
+  align-items: center;
 }
 
 .campo,
@@ -186,10 +109,6 @@ input[type="submit"] {
 .repetir-password,
 .password {
   padding: 2px;
-}
-
-.user-info {
-  width: 400px;
 }
 
 .campo1 {
@@ -210,41 +129,22 @@ input[type="submit"] {
 }
 
 @media (min-width: 361px) {
-  .nav-medio {
-    font-size: 15px;
-  }
 }
-@media (min-width: 769px) {
-  .barra-que-desaparece {
-    display: flex;
-  }
-  .logo-patocrearte {
-    width: 100px;
-    border-radius: 100%;
-  }
-  .navbar {
-    padding: 1rem;
-  }
-  .navbar li a {
-    display: flex;
-  }
 
-  .nav-medio {
+@media (min-width: 769px) {
+  .datos-usuario {
     display: flex;
+    justify-content: center;
   }
-  .burger-container {
-    display: none;
-  }
-  .iniciar-sesion {
+  .container1 {
     display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  #buscador {
-    padding: 10px;
+  .logins {
+    justify-content: center;
   }
 }
 
 @media (min-width: 1000px) {
-  .imagen-pato {
-    margin-right: 150px;
-  }
 }
