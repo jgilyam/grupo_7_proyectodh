@@ -21,10 +21,11 @@ main section div p.metodos-de-pago {
   padding-left: 10px;
 }
 
-/* segunda tercera parte */
+/* segunda y tercera parte */
 
 .container-ofertemp {
   height: 100%;
+  margin-bottom:20px;
 }
 .container-ofertemp-hijo {
   display: flex;
@@ -32,7 +33,7 @@ main section div p.metodos-de-pago {
   flex-direction: row;
   justify-content: space-evenly;
 }
-.lala {
+.container-ofertemp-hijo-2 {
   width: 300px;
   height: 100%;
   margin: 20px;
@@ -40,43 +41,69 @@ main section div p.metodos-de-pago {
 .ofertas {
   width: 100%;
   height: 100%;
-   margin-bottom: 7px;
+  margin-bottom: 7px;
 }
 h3 {
   font-size: 30px;
   margin: 10px;
 }
-
-/* tercera parte */
-
-.h2-insta{
-      text-align: center;
-    margin: 30px;
+.aaa{
+   margin: 6px 0px;
+    font-size: 18px;
 }
-.instagram-fast{
-height: 100%;
+.bbb{
+     margin: 8px 0px;
+    font-size: 20px;
 }
-.instagram-fast2{
-    display: flex;
+.ccc{
+font-size: 16px;
+}
+
+
+/* cuarta parte... 3 cuadros */
+.cuadros3 {
+    margin-bottom: 20px;
+}
+.cuadros3-2 {
+        display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
 }
-.instagram-fast3{
-    width: 180px;
-    height: 183px;
-    padding: 2px;
-    border: 1.2px solid black;
+.cuadros3-3 {
+          width: 326px;
+    height: 350px;
+    padding: 15px;
 }
-.instagram-img{
+.cuadros3-img {
 width: 100%;
 height: 100%;
 }
 
+/* quinta  parte de instagram */
 
-
-
-
-
+.h2-insta {
+  text-align: center;
+  margin: 30px;
+}
+.instagram-fast {
+  height: 100%;
+}
+.instagram-fast2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.instagram-fast3 {
+  width: 180px;
+  height: 183px;
+  padding: 2px;
+  border: 1.2px solid black;
+}
+.instagram-img {
+  width: 100%;
+  height: 100%;
+}
 
 
 /* media query */
@@ -86,6 +113,7 @@ height: 100%;
     align-items: center;
   }
 }
+/* tablet */
 @media (min-width: 760px) {
   main section div.metodos2 {
     display: flex;
@@ -98,4 +126,28 @@ height: 100%;
     justify-content: flex-start;
     width: 100%;
   }
+  .cuadros3-3 {
+    width: 33%;
+    height: 100%;
+    padding: 5px;
+}
+.cuadros3-2 {
+    
+    justify-content: space-evenly;
+}
+}
+
+@media (min-width:1024px){
+  .cuadros3-2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.container-ofertemp-hijo{
+justify-content: flex-start;
+}
+.ofertas {
+    width: 86%;
+}
 }
