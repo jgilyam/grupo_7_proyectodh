@@ -15,9 +15,13 @@
       href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lato:ital,wght@0,400;1,700&family=Poppins:ital,wght@0,100;0,300;0,400;1,200;1,300;1,400&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/e9aab52371.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <header>
+    <header class="header">
       <nav class="barra-que-desaparece">
         <ul class="barra-que-desaparece-izquierdo">
           <li><a class="info" href="#">pato.crearte@gmail.com</a></li>
@@ -48,25 +52,28 @@
         </div>
         <div class="navbar-derecho">
           <div id="buscador">
-            <input type="search" class="buscador-barra" />
-            <img src="/img/lupa.png" alt="lupita buscador" class="img-nav" />
+            <input
+              type="search"
+              class="buscador-barra"
+              placeholder="tabla de asado, pizza ,picadas"
+            />
+            <button type="submit" class="ico-nav">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
           </div>
           <div class="burger-container">
-            <img src="/img/burger-menu.png" alt="burger" />
+            <i class="fa-solid fa-bars"></i>
           </div>
           <div class="iniciar-sesion">
-            <img src="/img/usuario.png" alt="iniciar sesion" class="img-nav" />
+            <i class="fa-solid fa-user"></i>
           </div>
           <div class="carrito-de-compra">
-            <img
-              src="/img/carrito-de-compras.png"
-              alt="carrito de compra"
-              class="img-nav"
-            />
+            <i class="fa-solid fa-cart-arrow-down"></i>
           </div>
         </div>
       </nav>
     </header>
+
     <main>
       <!-- <section> carrusel</section> -->
       <section class="container-metodos">
