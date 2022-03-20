@@ -42,12 +42,6 @@ body {
   color: black;
 }
 
-.burger-container {
-  display: flex;
-  height: 30px;
-  margin-left: 20px;
-  display: flex;
-}
 .img-nav {
   width: 30px;
   cursor: pointer;
@@ -64,9 +58,7 @@ body {
   padding: 10px;
   display: none;
 }
-.carrito-de-compra {
-  padding-left: 20px;
-}
+
 .logo-patocrearte {
   width: 50px;
   border-radius: 100%;

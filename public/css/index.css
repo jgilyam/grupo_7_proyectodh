@@ -5,6 +5,34 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+/*Modificaiones*/
+.ico-nav {
+  background-color: #e8e8e8;
+  border: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: 40px;
+  width: 40px;
+  font-size: 16px;
+  color: #686767;
+  margin-left: 1px;
+  box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.08);
+}
+.carrito-de-compra,
+.iniciar-sesion,
+.burger-container {
+  font-size: 20px;
+  color: black;
+}
+
+.navbar-derecho {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 300px;
+  justify-content: space-around;
+}
+/*Modificaciones*/
 
 .barra-que-desaparece {
   display: flex;
@@ -93,8 +121,6 @@ body {
 }
 
 .navbar-derecho {
-  display: flex;
-  align-items: center;
 }
 
 @media (min-width: 361px) {
