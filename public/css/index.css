@@ -71,8 +71,6 @@ body {
   color: black;
 }
 
-.burger-container {
-}
 .img-nav {
   width: 30px;
   cursor: pointer;
@@ -118,9 +116,6 @@ body {
   display: flex;
   padding: 15px;
   justify-content: center;
-}
-
-.navbar-derecho {
 }
 
 @media (min-width: 361px) {
