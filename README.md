@@ -57,3 +57,8 @@ Bazar en general, sitio moderno, excelente estetica y estructura. Buenas fotogra
 [Sodimac](https://www.sodimac.com.ar/)
 
 Es una compañía comercial enfocada en el abastecimiento de hogar,tanto sea bazar,pintura,madera,herramientas,etc. Buena estructura de pagina, listado de productos poco estetica y muy reducido el tamaño. Carrito de compras bien detallado.
+
+#### Tablero de tareas
+
+Sr utilizo el siguiente tablero para gestionar y dividir las tareas del equipo
+[Trello](https://trello.com/b/242yhpDi/proyecto-dh)
