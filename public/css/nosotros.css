@@ -19,6 +19,7 @@
   font-weight: 200;
   padding: 20px;
   box-shadow: 0px 0px 3px rgb(100 100 100);
+  background-color: #fafafa;
 }
 
 @media (min-width: 361px) {
@@ -32,6 +33,7 @@
   }
   .titulo-nosotros {
     font-size: 25px;
+    margin-top: 0px;
   }
 
   .parrafo-nosotros {
