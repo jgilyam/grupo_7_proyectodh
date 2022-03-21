@@ -21,11 +21,6 @@
   box-shadow: 0px 0px 3px rgb(100 100 100);
   background-color: #fafafa;
 }
-.mapa {
-  display: flex;
-  width: 100%;
-  margin-top: 60px;
-}
 
 @media (min-width: 361px) {
 }
