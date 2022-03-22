@@ -1,0 +1,232 @@
+* {
+  box-sizing: border-box;
+}
+
+h3 {
+  display: flex;
+  margin: 20px;
+  justify-content: center;
+  font-size: 25px;
+  text-decoration: underline;
+  font-weight: bold;
+}
+section {
+  background-color: rgb(252, 237, 237);
+  width: 90%;
+  margin: 20px 5% 20px 5%;
+  border-radius: 10px;
+}
+
+.producto-prueba-1 i {
+  font-size: 25px;
+  padding-left: 5px;
+  align-self: center;
+}
+
+.tabla-cabezera {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  border-bottom: 2px solid rgb(185, 179, 170);
+  background-color: #e5890a;
+  border-radius: 5px;
+}
+.tabla-producto {
+  display: flex;
+  border-right: 1px solid rgb(179, 179, 179);
+  width: 42%;
+  padding: 5px 40px 5px 5px;
+  justify-content: center;
+  font-weight: bold;
+}
+.tabla-subtitulo {
+  border-right: 1px solid rgb(179, 179, 179);
+  width: 15%;
+  padding: 5px;
+  font-weight: bold;
+}
+.tabla-subtotal {
+  width: 15%;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.parrafo1 {
+  width: 170px;
+  line-height: 28px;
+  font-size: 18px;
+  text-decoration: none;
+  color: #e5890a;
+  align-self: center;
+}
+.caja1 {
+  display: inline-block;
+  width: 40%;
+  padding-left: 30px;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 10px;
+}
+.caja1-precio {
+  display: inline-block;
+  width: 18%;
+  text-align: center;
+  font-size: 20px;
+  padding-left: 10px;
+}
+.producto-prueba-1 {
+  margin: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.caja1-cantidad {
+  display: inline-block;
+  text-align: center;
+  width: 18%;
+  font-size: 20px;
+}
+.caja1-cantidad input {
+  width: 25%;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 5px;
+  border-color: #e5890a;
+}
+.caja1-subtotal {
+  display: inline-block;
+  text-align: center;
+  width: 19%;
+  font-size: 20px;
+}
+.imagen-1 {
+  padding: 0px 10px 0px 20px;
+}
+.total-carrito {
+  background-color: rgb(252, 237, 237);
+  width: 50%;
+  margin: 20px 5% 20px 45%;
+  border-radius: 10px;
+}
+.total-carrito-titulo {
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  border-bottom: 2px solid rgb(185, 179, 170);
+  background-color: #e5890a;
+  font-size: 25px;
+  font-weight: bold;
+}
+.bloque-a {
+  width: 40%;
+  padding: 5px;
+  display: inline-block;
+}
+.total-subtotal {
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+}
+.total-envio {
+  text-align: center;
+  width: 40%;
+  display: inline-block;
+  font-weight: bold;
+}
+.total-envio-opc {
+  text-align: end;
+  width: 50%;
+  display: inline-block;
+  padding: 5px;
+}
+.total {
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+}
+.total-monto {
+  display: inline-block;
+  width: 40%;
+  text-align: end;
+  padding: 10px;
+}
+.bloque {
+  border-bottom: 1px solid rgb(185, 179, 170);
+  border-top: 1px solid rgb(185, 179, 170);
+  line-height: 2.5em;
+}
+.fin {
+  width: 100%;
+}
+.fin a {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  background-color: #e5890a;
+  border-radius: 5px;
+  color: white;
+  text-transform: bold;
+  font-size: 25px;
+  text-decoration: none;
+}
+.linea {
+  border-bottom: 1px solid rgb(185, 179, 170);
+  width: 95%;
+  margin: 0px 3% 0px 3%;
+}
+.cambiar-direccion {
+  color: #e5890a;
+  font-size: 20px;
+  text-decoration: none;
+}
+.deleted {
+  color: rgb(184, 173, 173);
+}
+.bloque {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  h3 {
+    display: block;
+    text-align: left;
+    padding: 10px;
+  }
+  .parrafo1 {
+    width: 40%;
+    font-size: 15px;
+    line-height: 20px;
+  }
+  .producto-prueba-1 {
+    justify-content: center;
+  }
+  .total-envio {
+    display: flex;
+    align-items: stretch;
+    height: 7.5em;
+    justify-content: center;
+  }
+  .total-envio-opc {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .total-envio-opc form ol li {
+    font-size: 15px;
+    line-height: 35px;
+  }
+  .cambiar-direccion {
+    font-size: 16px;
+  }
+  .total-carrito-titulo {
+    padding: 18px;
+    font-size: 20px;
+  }
+  .fin a {
+    padding: 16px;
+    font-size: 23px;
+  }
+}

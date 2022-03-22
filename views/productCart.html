@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProductCart</title>
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/productCart.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lato:ital,wght@0,400;1,700&family=Poppins:ital,wght@0,100;0,300;0,400;1,200;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/f5385f7e1e.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="barra-que-desaparece">
+        <ul class="barra-que-desaparece-izquierdo">
+          <li><a class="info" href="#">pato.crearte@gmail.com</a></li>
+          <li><a class="info" href="#">029423493493</a></li>
+        </ul>
+        <ul class="barra-que-desaparece-derecho">
+          <li><a class="info" href="/nosotros">NOSOTROS</a></li>
+          <li>
+            <a class="info" href="/preguntas-frecuentes"
+              >PREGUNTAS FRECUENTES</a
+            >
+          </li>
+          <li><a class="info" href="/formconsultas">CONTACTO</a></li>
+        </ul>
+      </nav>
+      <nav class="navbar">
+        <div class="imagen-pato">
+          <img
+            src="/img/logo.jpg"
+            alt="logo de la empresa"
+            class="logo-patocrearte"
+          />
+        </div>
+        <div class="nav-medio">
+          <ul class="nav-medio-ul">
+            <li class="nav-medio-li"><a href="/">INICIO</a></li>
+            <li class="nav-medio-li"><a href="#">PRODUCTOS</a></li>
+            <li class="nav-medio-li">
+              <a href="#"> CORPORATIVO</a>
+            </li>
+          </ul>
+        </div>
+        <div class="navbar-derecho">
+          <div id="buscador">
+            <input
+              type="search"
+              class="buscador-barra"
+              placeholder="tabla de asado, pizza ,picadas"
+            />
+            <button type="submit" class="ico-nav">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <div class="burger-container">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <div class="iniciar-sesion">
+            <a href="/login" class="ancla-login">
+              <i class="fa-solid fa-user"></i>
+            </a>
+          </div>
+          <div class="carrito-de-compra">
+            <a href="/product-cart" class="ancla-carrito"><i class="fa-solid fa-cart-arrow-down"></i></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <h3>CARRITO DE COMPRAS</h3>
+    <section>
+        <div class="tabla-cabezera">
+            <p class="tabla-producto">PRODUCTO</p>
+            <p class="tabla-subtitulo">PRECIO</p>
+            <p class="tabla-subtitulo">CANTIDAD</p>
+            <p class="tabla-subtotal">SUBTOTAL</p>
+        </div>
+       <!-- PRODUCTO PRUEBA 1 -->
+       <div class="caja1">
+          <div class="producto-prueba-1">
+            <a class="deleted" href="#"><i class="far   fa-times-circle"></i></a>   
+               <div class="imagen-1"><img src="/img/muchosPlatos.jpg" alt="plato" width="130px">
+              </div>
+            <a class="parrafo1" href="#">Plato de algarrobo 24cm</a>
+          </div> 
+        </div>
+        <div class="caja1-precio">
+          <p>$900</p>
+        </div>
+        <div class="caja1-cantidad">
+          <form action="">
+            <input type="number"  min="0" max="9" value="1" >
+          </form>   
+        </div>
+        <div class="caja1-subtotal">
+          <p>$900</p>
+        </div>
+<!-- Linea -->
+      <div class="linea">
+        <p> </p>
+      </div>
+<!-- Linea -->
+<!-- PRODUCTO PRUEBA 2 -->
+        <div class="caja1">
+          <div class="producto-prueba-1">
+              <a class="deleted" href="#"><i class="far fa-times-circle"></i></a>   
+              <div class="imagen-1"><img src="/img/tabla5.jpg" alt="tabla" width="130px">
+              </div>
+              <a class="parrafo1" href="#">Tabla de madera de cancharana 39 x 30 x 2 cm</a>
+          </div> 
+      </div>
+      <div class="caja1-precio">
+          <p>$6.000</p>
+          </div>
+      <div class="caja1-cantidad">
+        <form action="">
+          <input type="number"  min="0" max="9" value="1" >
+        </form>   
+      </div>
+      <div class="caja1-subtotal">
+        <p>$6.000</p>
+      </div>
+<!-- Linea -->
+      <div class="linea">
+        <p> </p>
+      </div>
+<!-- Linea -->
+<!-- PRODUCTO PRUEBA 3 -->
+      <div class="caja1">
+        <div class="producto-prueba-1">
+          <a class="deleted" href="#"><i class="far fa-times-circle"></i></a> 
+              
+             <div class="imagen-1"><img src="/img/tabla4.jpg" alt="tabla" width="130px">
+             </div>
+             <a class="parrafo1" href="#"> Tabla de madera con canaleta y agarradera 44 x 30 x 2 cm</a>
+        </div> 
+      </div>
+          <div class="caja1-precio">
+            <p>$6.800</p>
+          </div>
+      <div class="caja1-cantidad">
+        <form action="">
+          <label for=""></label>
+          <input type="number"  min="0" max="9" value="1">
+        </form>
+        
+      </div>
+      <div class="caja1-subtotal">
+        <p>$6.800</p>
+      </div>
+  </section>
+  <!-- TOTAL CARRITO -->
+  <nav class="total-carrito">
+    <p class="total-carrito-titulo">Total del carrito</p>
+    <div class="bloque-a">
+      <p class="total-subtotal">SUBTOTAL</p> 
+    </div>
+    <p class="total-monto">$13.700</p>
+    <div class="bloque">
+      <p class="total-envio">ENVIO</p>
+      <div class="total-envio-opc">
+        <form action="">
+          <ol>
+            <li>
+              <label for="#"></label>
+                <input type="radio" name="envio"> Retiro en el local             
+            </li>
+            <li>
+              <label for="#"></label>
+                <input type="radio" name="envio">A domicilio (calcular) 
+            </li>
+          </ol>
+        </form>
+        <form action="">
+          <a class="cambiar-direccion" href="#">Cambiar dirección</a>
+        </form>
+      </div>
+    </div>
+    <div class="bloque-a">
+      <P class="total">TOTAL</P>
+    </div>
+    <p class="total-monto">$13.700</p>
+    <div class="fin">
+      <a href="#">Finalizar Compra</a>
+    </div>
+  </nav>
+    <footer class="footer">
+      <div class="parte-superior-footer">
+        <p class="sugerencia-footer">SEGUINOS</p>
+        <div class="container-img-footer">
+          <a href="https://www.instagram.com/pato.crearte/" target="_blank"
+            ><img
+              class="img-footer-insta"
+              src="/img/instagram.png"
+              alt="logo instagram"
+          /></a>
+          <a
+            href="https://www.facebook.com/Patocrearte-1450234635107774/"
+            target="_blank"
+            ><img
+              class="img-footer-face"
+              src="/img/facebook.png"
+              alt="logo facebook"
+          /></a>
+          <a href="#" target="_blank"
+            ><img
+              class="img-footer-whatsap"
+              src="/img/whatsapp.png"
+              alt="logo de whatsap"
+          /></a>
+        </div>
+      </div>
+      <div class="parte-inferior-footer">
+        <div class="parte-inferior-1">
+          <img src="/img/logo.jpg" alt="logo" class="img-footer-logo" />
+          <img
+            src="/img/camion.png"
+            alt="logo de camion de envio"
+            class="img-envio"
+          />
+          <p>Nos encontramos en NEUQUÉN CAPITAL</p>
+          <p>Argentina</p>
+        </div>
+        <div class="parte-inferior-2">
+          <h3>Sobre Nosotros</h3>
+          <a href="#">¿Quienes Somos?</a>
+          <a href="#">Preguntas Frecuentes</a>
+          <a href="#">Contacto</a>
+        </div>
+        <div class="parte-inferior-3">
+          <h3>Trabajamos con</h3>
+          <img
+            src="/img/mercadopago.png"
+            alt="logo mercadopago"
+            class="img-mercadopago"
+          />
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
