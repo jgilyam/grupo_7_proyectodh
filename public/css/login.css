@@ -5,7 +5,7 @@
 body {
   font-family: "Poppins", sans-serif;
 }
-.barra-que-desaparece {
+/* .barra-que-desaparece {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -46,17 +46,13 @@ body {
   width: 30px;
   cursor: pointer;
 }
-
+ */
 #buscador {
   display: flex;
 }
 .buscador-barra {
   height: 30px;
   display: flex;
-}
-.iniciar-sesion {
-  padding: 10px;
-  display: none;
 }
 
 .logo-patocrearte {
@@ -65,7 +61,7 @@ body {
 }
 .imagen-pato {
   display: flex;
-}
+}/* 
 .nav-medio {
   display: none;
   align-items: center;
@@ -83,7 +79,7 @@ body {
   display: flex;
   padding: 15px;
   justify-content: center;
-}
+} */
 
 .navbar-derecho {
   display: flex;
@@ -173,6 +169,7 @@ body {
   border: none;
   color: #fff;
   margin: 20px 0px;
+  cursor: pointer;
 }
 
 .btn-enviar-formulario:hover {
@@ -193,16 +190,16 @@ body {
     width: 100px;
     border-radius: 100%;
   }
-  .navbar {
+ /*  .navbar {
     padding: 1rem;
-  }
+  } */
   .navbar li a {
     display: flex;
   }
 
-  .nav-medio {
+  /* .nav-medio {
     display: flex;
-  }
+  }  */
   .burger-container {
     display: none;
   }
