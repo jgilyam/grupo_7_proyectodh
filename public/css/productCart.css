@@ -10,11 +10,16 @@ h3 {
   text-decoration: underline;
   font-weight: bold;
 }
-section {
+.section-desktop {
+  display: none;
+}
+
+.section-mobile {
+  width: 100%;
+  padding: 20px;
+  margin: 0;
+  margin-bottom: 20px;
   background-color: rgb(252, 237, 237);
-  width: 90%;
-  margin: 20px 5% 20px 5%;
-  border-radius: 10px;
 }
 
 .producto-prueba-1 i {
@@ -51,14 +56,6 @@ section {
   font-weight: bold;
 }
 
-.parrafo1 {
-  width: 170px;
-  line-height: 28px;
-  font-size: 18px;
-  text-decoration: none;
-  color: #e5890a;
-  align-self: center;
-}
 .caja1 {
   display: inline-block;
   width: 40%;
@@ -103,11 +100,13 @@ section {
   padding: 0px 10px 0px 20px;
 }
 .total-carrito {
-  background-color: rgb(252, 237, 237);
-  width: 50%;
-  margin: 20px 5% 20px 45%;
+  width: 100%;
+  margin: 20px 0;
   border-radius: 10px;
+  padding: 20px;
+  background-color: rgb(252, 237, 237);
 }
+
 .total-carrito-titulo {
   text-align: center;
   width: 100%;
@@ -189,13 +188,69 @@ section {
   display: flex;
 }
 
-@media (max-width: 768px) {
+/* -------agrego juli- */
+.article {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid grey;
+}
+
+#clouse {
+  font-size: 25px;
+  display: flex;
+  justify-content: flex-end;
+  color: grey;
+  cursor: pointer;
+}
+.container-img {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.img-carrito {
+  width: 40%;
+}
+
+.producto-descripcion,
+.precio,
+.cantidad,
+.total-individual {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border: 1px solid grey;
+}
+
+.container-article > div > h2 {
+  color: #e5890a;
+}
+
+.producto-descripcion > a {
+  padding-left: 20px;
+}
+
+@media (min-width: 768px) {
+  .section-mobile {
+    display: none;
+  }
+  .section-desktop {
+    display: block;
+  }
   h3 {
     display: block;
     text-align: left;
     padding: 10px;
   }
+
   .parrafo1 {
+    width: 170px;
+    line-height: 28px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #e5890a;
+    align-self: center;
     width: 40%;
     font-size: 15px;
     line-height: 20px;
@@ -228,5 +283,18 @@ section {
   .fin a {
     padding: 16px;
     font-size: 23px;
+  }
+  section {
+    background-color: rgb(252, 237, 237);
+    width: 90%;
+    margin: 20px 5% 20px 5%;
+    border-radius: 10px;
+  }
+
+  .total-carrito {
+    background-color: rgb(252, 237, 237);
+    width: 50%;
+    margin: 20px 5% 20px 45%;
+    border-radius: 10px;
   }
 }
