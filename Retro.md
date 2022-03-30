@@ -4,6 +4,8 @@ Comenzar a utilizar un tablero de trabajo para ordenar las tareas y responsables
 Comenzar a utilizar una nomenclatura para css llamada bem.
 Comenzar a comentar las líneas de código.
 Se planificaron reuniones de seguimiento martes y jueves de 18.15 a 19. Se planificará una reunión semanal (viernes, sábado o domingo) para ver temas más extensos.
+SPRINT 2
+Crear mas bruncH
 
 Hacer mas:
 
