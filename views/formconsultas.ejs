@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de consulta</title>
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/formconsultas.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lato:ital,wght@0,400;1,700&family=Poppins:ital,wght@0,100;0,300;0,400;1,200;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/e9aab52371.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <%- include("./partials/header") %>
+    <main class="main-formulario">
+      <div class="container-section">
+        <section class="section-sugerencia">
+          <div class="container-sugerencia">
+            <h3>contactanos</h3>
+            <p class="parrafo">
+              No dudes en consultar por los productos producto que desees, al
+              hacerlo, nosotros contestaremos tus inquietudes a la brevedad, sin
+              compromiso alguno. También podés pedirnos un presupuesto mediante
+              este formulario o nuestros datos de contacto. ¡Muchas gracias por
+              confiar en nosotros!
+            </p>
+          </div>
+        </section>
+        <section class="section-formulario">
+          <form action="" class="form">
+            <h3>Hacenos tu consulta</h3>
+            <div class="form-group">
+              <div class="form-name">
+                <input
+                  type="text"
+                  name="form-name"
+                  class="input-name"
+                  id="name"
+                  placeholder="Nombre *"
+                  required="required"
+                />
+              </div>
+              <div class="form-apellido">
+                <input
+                  type="text"
+                  name="form-apellido"
+                  class="input-apellido"
+                  id="apellido"
+                  placeholder="Apellido *"
+                  required="required"
+                />
+              </div>
+            </div>
+            <div class="form-email">
+              <input
+                type="email"
+                name="form-email"
+                id="form-email"
+                class="form-email"
+                placeholder="Email *"
+                required="required"
+              />
+            </div>
+            <div class="form-num">
+              <input
+                type="number"
+                name="form-num"
+                id="form-num"
+                class="form-num"
+                placeholder="Telefono"
+              />
+            </div>
+            <textarea
+              name="textarea"
+              id="textarea"
+              class="textarea"
+              cols="30"
+              rows="10"
+              placeholder="Mensaje"
+              required="required"
+            ></textarea>
+            <div class="container-btn">
+              <button type="submit" class="btn-enviar-consulta">ENVIAR</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6710.934708269583!2d-68.08550197698129!3d-38.94843847532579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a33bb825dd51f%3A0xbd1db0299eb38e2b!2sDelvas%2C%20Neuqu%C3%A9n!5e0!3m2!1ses-419!2sar!4v1647808163290!5m2!1ses-419!2sar"
+      width="600"
+      height="450"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      class="mapa"
+    ></iframe>
+    <%- include ("./partials/footer") %>
+  </body>
+</html>

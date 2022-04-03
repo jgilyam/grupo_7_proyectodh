@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/login.css" />
+    <link rel="stylesheet" href="/css/index.css" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lato:ital,wght@0,400;1,700&family=Poppins:ital,wght@0,100;0,300;0,400;1,200;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+    src="https://kit.fontawesome.com/e9aab52371.js"
+    crossorigin="anonymous"
+  ></script>
+  </head>
+  <body>
+    <%- include("./partials/header") %>
+    <main>
+      <form class="form-login">
+        <div class="container-input">
+          <div class="input1-group">
+            <input type="email" placeholder="Email@email.com" class="input1" />
+          </div>
+          <div class="input2-group">
+            <input type="password" placeholder="Contraseña" class="input2" required
+            pattern="[a-z]{8}"
+            maxlength="8" title="8 letras minusculas"/>
+            <img src="/img/ojo.png" alt=""  class="img-ojo"/>
+          </div>
+          </div>
+        </div>
+        <div class="container-preguntas">
+        <div class="container-contra-olvidada">
+          <a href="#" class="contra-olvidada">¿Olvidaste tu contraseña?</a>
+        </div>
+        <div class="container-recordar">
+          <input
+              type="checkbox"
+              name="recordar"
+              value="recordar"
+              id="recordar"
+            />
+          <label for="recordar">
+            Recordar usuario y contraseña
+          </label>
+        </div>
+        <button type="submit" class="btn-enviar-formulario">INICIAR SEIÓN</button>
+        <div class="not-usuario">
+          <p class="not-usuario-text">¿No eres usuario aún?</p>
+          <a href="/register" class="registro-login">Registrate</a>
+        </div>
+        </div>
+      </form>
+    </main>
+    <%- include ("./partials/footer") %>
+  </body>
+</html>
