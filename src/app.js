@@ -3,6 +3,9 @@ const express = require("express");
 const app = express();
 const path = require("path");
 
+//motor de plantillas ejs
+app.set("view engine", "ejs");
+
 //agrego los require de las nuevas rutas
 const routeMain = require("../src/routes/index.routes");
 const routeProducts = require("../src/routes/products.routes");
