@@ -42,11 +42,6 @@ footer {
 
 /*Clases de la sección detalle de producto*/
 
-.main-pd {
-  width: 90vw;
-  margin: auto;
-  background-color: white;
-}
 .main-pd h2 {
   padding: 10px;
   font-size: 20px;
@@ -148,9 +143,6 @@ h1 {
 }
 
 /*Clases de la sección te recomendamos*/
-.main-recomend {
-  max-width: 90vw;
-}
 
 @media (min-width: 361px) {
   .main-detail-product {
@@ -167,11 +159,6 @@ h1 {
     justify-content: space-around;
     box-shadow: 0px 0px 3px rgb(100, 100, 100);
   }
-  .main-recomend {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
 
   .main-detail-lateral {
     margin-left: 30px;
@@ -180,8 +167,5 @@ h1 {
 @media (min-width: 1200px) {
   body {
     background-color: #ebebeb;
-  }
-  .main-pd {
-    padding: 30px;
   }
 }

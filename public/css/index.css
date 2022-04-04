@@ -5,6 +5,12 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+.main-pd {
+  width: 90vw;
+  margin: auto;
+  background-color: white;
+}
+
 /*Modificaiones*/
 .ico-nav {
   background-color: #e8e8e8;
@@ -151,10 +157,15 @@ body {
 /* 
 se agregan estilos comunies de detalle de producto
 */
+.main-recomend {
+  max-width: 90vw;
+}
 .main-recomend-product {
   display: flex;
   flex-wrap: wrap;
   padding: 10px;
+  background-color: white;
+  margin-bottom: 20px;
 }
 .main-recomend-product h3 {
   width: 100%;
@@ -204,9 +215,19 @@ se agregan estilos comunies de detalle de producto
   margin-left: 10px;
 }
 
+.main-recomend-product:hover .button-submit {
+  display: block;
+}
+.main-recomend-product:hover {
+  box-shadow: 0px 0px 10px rgb(100 100 100);
+}
+
 @media (min-width: 361px) {
   .nav-medio {
     font-size: 15px;
+  }
+  .main-recomend-product {
+    max-width: 80%;
   }
 }
 
@@ -345,6 +366,21 @@ se agregan estilos comunies de detalle de producto
   .carrito-de-compra:hover i {
     padding: 10px;
   }
+
+  /*se agregan estilos comunes de detalle de producto*/
+  .main-recomend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .main-recomend-product {
+    max-width: 45%;
+    padding: 10px;
+    box-shadow: 0px 0px 3px rgb(100, 100, 100);
+  }
+  .main-pd {
+    padding: 30px;
+  }
 }
 
 .ico-nav:hover {
@@ -352,13 +388,6 @@ se agregan estilos comunies de detalle de producto
   transform: scale(1.1);
   background-color: #e8e8e8;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-}
-
-/*se agregan estilos comunes de detalle de producto*/
-.main-recomend-product {
-  max-width: 50%;
-  padding: 10px;
-  box-shadow: 0px 0px 3px rgb(100, 100, 100);
 }
 
 @media (min-width: 1200px) {
