@@ -1,0 +1,19 @@
+<article class="main-recomend-product">
+  <img
+    src="img/<%= productRecomen[i].img%>.jpg"
+    alt="Producto1"
+    class="img-detail"
+  />
+  <h3><%= productRecomen[i].title%></h3>
+  <p class="detail-price2">$<%= productRecomen[i].price%></p>
+  <p class="detail-discount"><%= productRecomen[i].descuento%>%OFF</p>
+  <p>en</p>
+  <p class="detail-finance">
+    <%= productRecomen[i].cuotas%>x $<%= productRecomen[i].valorCuota()%> sin
+    interés
+    <i class="fa-solid fa-credit-card"></i>
+  </p>
+  <button type="submit" class="button-submit">
+    Agregar al carrito<i class="fa-solid fa-cart-arrow-down"></i>
+  </button>
+</article>
