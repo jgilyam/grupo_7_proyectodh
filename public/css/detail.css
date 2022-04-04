@@ -67,10 +67,6 @@ footer {
   max-width: 90vw;
   position: relative;
 }
-.img-detail {
-  width: 100%;
-  padding: 10px;
-}
 
 /*EN versión mobile desaperece la descrición*/
 
@@ -93,15 +89,7 @@ h1 {
   margin: 5px 0px;
   width: 40%;
 }
-.detail-discount {
-  color: #e5890a;
-  align-self: center;
-  width: 60%;
-}
-.detail-finance {
-  color: #e5890a;
-  margin: 0px 10px;
-}
+
 .main-detail-lateral {
   width: 100%;
   padding: 10px;
@@ -125,20 +113,6 @@ h1 {
   padding: 5px;
 }
 
-.button-submit {
-  border-radius: 10px;
-  padding: 10px 20px;
-  background-color: #e5890a;
-  border: none;
-  color: #fff;
-  width: 70%;
-  font-weight: 500;
-  font-size: 16px;
-}
-.button-submit i {
-  color: white;
-  margin-left: 10px;
-}
 .input-cant {
   width: 20%;
   text-align: center;
@@ -177,30 +151,7 @@ h1 {
 .main-recomend {
   max-width: 90vw;
 }
-.main-recomend-product {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 10px;
-}
-.detail-price2 {
-  font-family: "Roboto", sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-  margin: 5px 0px;
-  width: 30%;
-}
-.main-recomend-product h3 {
-  width: 100%;
-  font-size: 18px;
-  font-weight: 400;
-}
-.main-recomend-product .detail-discount {
-  width: 70%;
-}
-.main-recomend-product .button-submit {
-  width: 100%;
-  margin-top: 10px;
-}
+
 @media (min-width: 361px) {
   .main-detail-product {
     max-width: 500px;
@@ -221,11 +172,6 @@ h1 {
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  .main-recomend-product {
-    max-width: 50%;
-    padding: 10px;
-    box-shadow: 0px 0px 3px rgb(100, 100, 100);
-  }
 
   .main-detail-lateral {
     margin-left: 30px;
@@ -237,9 +183,5 @@ h1 {
   }
   .main-pd {
     padding: 30px;
-  }
-
-  .main-recomend-product {
-    max-width: 24%;
   }
 }

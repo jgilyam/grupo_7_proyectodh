@@ -148,6 +148,61 @@ body {
   padding: 15px;
   justify-content: center;
 } */
+/* 
+se agregan estilos comunies de detalle de producto
+*/
+.main-recomend-product {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+.main-recomend-product h3 {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 400;
+}
+.main-recomend-product .detail-discount {
+  width: 70%;
+}
+.main-recomend-product .button-submit {
+  width: 100%;
+  margin-top: 10px;
+}
+.img-detail {
+  width: 100%;
+  padding: 10px;
+}
+.detail-price2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 5px 0px;
+  width: 30%;
+}
+
+.detail-discount {
+  color: #e5890a;
+  align-self: center;
+  width: 60%;
+}
+.detail-finance {
+  color: #e5890a;
+  margin: 0px 10px;
+}
+.button-submit {
+  border-radius: 10px;
+  padding: 10px 20px;
+  background-color: #e5890a;
+  border: none;
+  color: #fff;
+  width: 70%;
+  font-weight: 500;
+  font-size: 16px;
+}
+.button-submit i {
+  color: white;
+  margin-left: 10px;
+}
 
 @media (min-width: 361px) {
   .nav-medio {
@@ -299,8 +354,19 @@ body {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
-@media (min-width: 1000px) {
+/*se agregan estilos comunes de detalle de producto*/
+.main-recomend-product {
+  max-width: 50%;
+  padding: 10px;
+  box-shadow: 0px 0px 3px rgb(100, 100, 100);
+}
+
+@media (min-width: 1200px) {
   .imagen-pato {
     margin-right: 150px;
+  }
+
+  .main-recomend-product {
+    max-width: 24%;
   }
 }
