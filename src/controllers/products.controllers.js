@@ -7,7 +7,7 @@ productControllers.cart = (req, res) => {
 };
 
 productControllers.detail = (req, res) => {
-  res.sendFile(path.resolve(__dirname, "../views/productDetail.html"));
+  res.render(path.resolve(__dirname, "../views/productDetail"));
 };
 
 module.exports = productControllers;
