@@ -3,19 +3,19 @@ const path = require("path");
 const controllersUser = {};
 
 controllersUser.login = (req, res) => {
-  res.sendFile(path.resolve(__dirname, "../views/login.html"));
+  res.render(path.resolve(__dirname, "../views/login.ejs"));
 };
 
 controllersUser.register = (req, res) => {
-  res.sendFile(path.resolve(__dirname, "../views/register.html"));
+  res.render(path.resolve(__dirname, "../views/register.ejs"));
 };
 
 controllersUser.formconsultas = (req, res) => {
-  res.sendFile(path.resolve(__dirname, "../views/formconsultas.html"));
+  res.render(path.resolve(__dirname, "../views/formconsultas.ejs"));
 };
 
 controllersUser.preguntasFrecuentes = (req, res) => {
-  res.sendFile(path.resolve(__dirname, "../views/pregFrecuentes.html"));
+  res.render(path.resolve(__dirname, "../views/pregFrecuentes.ejs"));
 };
 
 module.exports = controllersUser;
