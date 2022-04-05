@@ -3,7 +3,7 @@ const productRecomen = require("./baseProducts");
 const productControllers = {};
 
 productControllers.cart = (req, res) => {
-  res.sendFile(path.resolve(__dirname, "../views/productCart.html"));
+  res.render(path.resolve(__dirname, "../views/productCart.ejs"));
 };
 
 productControllers.detail = (req, res) => {
