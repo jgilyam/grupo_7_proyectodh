@@ -1,5 +1,5 @@
 const path = require("path");
-const productRecomen = require("./baseProducts");
+const productRecomen = require("../models/baseProducts");
 
 const controllerPrincipal = {};
 
