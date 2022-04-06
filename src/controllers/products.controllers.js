@@ -3,13 +3,13 @@ const productRecomen = require("./baseProducts");
 const productControllers = {};
 
 productControllers.cart = (req, res) => {
-  res.render(path.resolve(__dirname, "../views/productCart.ejs"));
+  res.render("productCart");
 };
 
 productControllers.detail = (req, res) => {
-  res.render(path.resolve(__dirname, "../views/productDetail"), {
+  res.render("productDetail"), {
     productRecomen: productRecomen,
-  });
+  };
 };
 
 module.exports = productControllers;
