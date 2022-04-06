@@ -8,9 +8,9 @@ controllerPrincipal.index = (req, res) => {
 };
 
 controllerPrincipal.home = (req, res) => {
-  res.render("home")/* , {
+  res.render("home"), {
     productRecomen: productRecomen,
-  }; */
+  };
 };
 controllerPrincipal.nosotros = (req, res) => {
   res.render("nosotros")
