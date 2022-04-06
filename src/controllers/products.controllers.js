@@ -7,9 +7,9 @@ productControllers.cart = (req, res) => {
 };
 
 productControllers.detail = (req, res) => {
-  res.render("productDetail"), {
+  res.render("productDetail", {
     productRecomen: productRecomen,
-  };
+  });
 };
 
 module.exports = productControllers;

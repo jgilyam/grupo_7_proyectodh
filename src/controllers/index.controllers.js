@@ -4,16 +4,16 @@ const productRecomen = require("./baseProducts");
 const controllerPrincipal = {};
 
 controllerPrincipal.index = (req, res) => {
-  res.render("index")
+  res.render("index");
 };
 
 controllerPrincipal.home = (req, res) => {
-  res.render("home"), {
+  res.render("home", {
     productRecomen: productRecomen,
-  };
+  });
 };
 controllerPrincipal.nosotros = (req, res) => {
-  res.render("nosotros")
+  res.render("nosotros");
 };
 
 module.exports = controllerPrincipal;
