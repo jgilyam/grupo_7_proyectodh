@@ -155,12 +155,18 @@ h3 {
   width: 326px;
   height: 350px;
   padding: 15px;
+  overflow: hidden;
+  transition:  all 500ms ease;
 }
 .cuadros3-img {
   width: 100%;
   height: 100%;
+  transition: all 500ms ease;
 }
 
+.cuadros3-img:hover{
+  transform: scale(1.2);
+}
 /* quinta  parte de instagram */
 
 .h2-insta {
