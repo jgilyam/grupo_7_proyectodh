@@ -32,10 +32,11 @@
       <div class="datos-usuario">
         <fieldset class="fieldset">
           <legend>Personal data</legend>
-          <h3>Tu Nombre</h3>
+          
           <form class="register" action="index.html" method="post">
             <div class="Register">
               <div>
+                <h3>Tu Nombre</h3>
                 <div class="campo">
                   <label for="nombre"></label>
                   <input
@@ -59,7 +60,7 @@
                   <label for="date"></label>
                   <input type="date" name="date" id="date" placeholder="dd" />
                 </div>
-                <p>
+                <p class="texto">
                   Recopilamos la fecha de nacimiento de acuerdo a nuestra
                   politica de privacidad. Te haremos un regalo!
                 </p>
@@ -99,7 +100,7 @@
                     required
                   />
                 </div>
-                <p>
+                <p class="texto">
                   Debe usar como minimo 8 caracteres y contener una mayuscula
                 </p>
               </div>
@@ -110,7 +111,8 @@
               <div class="noticias-condiciones">
                 <input type="checkbox" />Me gustaria recibir noticias
               </div>
-              <input type="submit" value="ENVIAR" />
+              <div class="boton-enviar"><input type="submit" value="ENVIAR"/></div>
+              
             </div>
           </form>
         </fieldset>
