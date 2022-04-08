@@ -3,9 +3,9 @@ const productRecomen = require("../models/baseProducts");
 
 const controllerPrincipal = {};
 
-controllerPrincipal.index = (req, res) => {
+/* controllerPrincipal.index = (req, res) => {
   res.render("index");
-};
+}; */
 
 controllerPrincipal.home = (req, res) => {
   res.render("home", {
