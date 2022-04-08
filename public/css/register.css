@@ -10,7 +10,9 @@ body {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  width: 100%;
+  width: 80%;
+  margin: auto;
+
 }
 
 p {
@@ -80,13 +82,12 @@ input:focus {
 
 .datos-usuario input {
   display: flex;
-  width: 80%;
+  width: 100%;
   padding: 15px;
   padding-right: 40px;
   border: none;
   background-color: #e8e8e8;
   border-radius: 10px;
-  width: auto;
   margin-top: 3px;
   margin-bottom: 3px;
 }
@@ -110,13 +111,23 @@ input[type="submit"] {
 .password {
   padding: 2px;
 }
-
+.texto{
+  padding-top: 5px;
+  padding-bottom: 20px;
+  padding-left: 10px
+}
 .noticias-condiciones {
-  padding-bottom: 4px;
+  padding-bottom: 15px;
   display: flex;
   align-items: center;
 }
+.noticias-condiciones > input{
+  width: auto;
+}
 
+.boton-enviar > input{
+  width: 100%;
+}
 @media (min-width: 361px) {
 }
 
@@ -133,7 +144,45 @@ input[type="submit"] {
   .logins {
     justify-content: center;
   }
+
+  .fieldset{
+    width: 50%;
+  }
+
+  .datos-usuario input{
+    width: 60%;
+  }
+
+  .noticias-condiciones > input{
+    width: auto;
+  }
+
+  .texto{
+    padding:  0 10px;
+    width: 60%;
+    padding-bottom: 15px;
+    padding-top: 5px;
+
+  }
+
+  .register{
+  display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 80%;
+    margin-left: 25%;
 }
 
+.boton-enviar{
+  width: 100%;
+  margin-left: 10px;
+}
+
+
+.noticias-condiciones{
+  width: 60%;
+  padding-bottom: 15px;
+}
+}
 @media (min-width: 1000px) {
 }
