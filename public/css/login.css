@@ -47,7 +47,7 @@ body {
   cursor: pointer;
 }
  */
-#buscador {
+/* #buscador {
   display: flex;
 }
 .buscador-barra {
@@ -61,7 +61,7 @@ body {
 }
 .imagen-pato {
   display: flex;
-}/* 
+} *//* 
 .nav-medio {
   display: none;
   align-items: center;
@@ -186,10 +186,10 @@ body {
   .barra-que-desaparece {
     display: flex;
   }
-  .logo-patocrearte {
+  /* .logo-patocrearte {
     width: 100px;
     border-radius: 100%;
-  }
+  } */
  /*  .navbar {
     padding: 1rem;
   } */
