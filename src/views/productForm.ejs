@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("./partials/head") %>
+<link rel="stylesheet" href="/css/productForm.css">
+
+</head>
+<body>
+    <%- include("./partials/header") %>
+    
+    <div class="admin">Administrador</div>
+    <div class="contenedor">
+        <nav class="nav-list">
+            <ul>
+                <li><a href="#">Administrar Pedido</a></li>
+                <li><a href="#">Administrar Usuarios</a></li>
+                <li><a href="#">Crear Producto</a></li>
+                <li><a href="#">Administrar Producto</a></li>
+                <li><a href="#">Cerrar sesión <i class="fas fa-sign-in"></i></a></li>
+            </ul>
+        </nav>
+    <div class="contenedor-form">   
+        <form class="form" action="">
+            <div class="titulo-form">
+                <h1>Crear producto</h1>
+             </div>
+            <div class="contenedor-hijo">
+                <label class="titulo" for="">Nombre del Producto</label>
+                <input type="text" placeholder="NombreProducto" maxlength="15">
+            </div>
+            <div class="contenedor-hijo">
+                <label class="titulo" for="">Breve descripción</label>
+                <div class="descripcion">
+                    <textarea name="descripcion" id="" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+            <div class="contenedor-hijo">
+                <label class="titulo" for="">Imagen del producto</label>
+                <img src="./img/tabla2.jpg" alt="">
+                <input class="boton-img" type="file" name="imagen">
+            </div>
+            <div class="contenedor-hijo-a">
+                <label class="titulo" for="">Categoria</label>
+                <div>
+                    <input type="radio" name="categoria" value="Asado">Asado
+                </div>
+                <div>
+                    <input type="radio" name="categoria" value="Pizzera">Pizzera</div>
+                <div>
+                    <input type="radio" name="categoria" value="Cuencos">Cuencos</div>
+                <div>
+                    <input type="radio" name="categoria" value="Posa vasos">Posa vasos</div>
+                <div>
+                    <input type="radio" name="categoria" value="Platos">Platos</div>       
+            </div>
+            <div class="contenedor-hijo-b">
+                <label class="titulo" for="">Precio</label>
+                <input class="precio" type="number" placeholder="100" min="1.00">$
+            </div>
+            <div class="contenedor-hijo-c">
+                <input type="submit" value="Agregar">
+                <input type="reset" value="Cancelar">
+            </div>
+            </form>
+        </div>
+    </div>
+
+    <%- include ("./partials/footer") %>
+</body>
+</html>

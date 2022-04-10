@@ -12,4 +12,8 @@ productControllers.detail = (req, res) => {
   });
 };
 
+productControllers.form = (req, res) => {
+  res.render('productForm');
+}
+
 module.exports = productControllers;
