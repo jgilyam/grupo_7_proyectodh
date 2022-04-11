@@ -3,7 +3,6 @@ Comenzar a hacer:
 Comenzar a utilizar un tablero de trabajo para ordenar las tareas y responsables. Se utilizará trello.
 Comenzar a utilizar una nomenclatura para css llamada bem.
 Comenzar a comentar las líneas de código.
-Se planificaron reuniones de seguimiento martes y jueves de 18.15 a 19. Se planificará una reunión semanal (viernes, sábado o domingo) para ver temas más extensos.
 
 Hacer mas:
 
@@ -15,3 +14,19 @@ Buena comunicación y participación en el grupo de trabajo. Colaboración de to
 
 Hacer menos, Dejar de hacer:
 En dos semanas de trabajo no pudimos detectar algun punto en estos temas
+
+Sprint 3
+Comenzar a hacer,
+Se planificaron reuniones de seguimiento martes y jueves de 18.15 a 19. Se planificará una reunión semanal (viernes, sábado o domingo) para ver temas más extensos.
+
+Hacer más,
+Utilizar más trello, se uso poco , aunque las tareas se completaron.
+
+Continuar haciendo
+Seguir con comunicación fluida, y compromiso para completar las tereas del proyecto.
+
+Hacer menos.
+Tratar de no pisar el código esctrito por otros.
+
+Dejar de hacer
+Por el momento no pudimos detectar nada
