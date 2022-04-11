@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-   <%- include ("./partials/head") %>
+    <%- include ("./partials/head") %>
     <title>Login</title>
     <link rel="stylesheet" href="/css/login.css" />
   </head>
@@ -11,36 +11,47 @@
       <form class="form-login">
         <div class="container-input">
           <div class="input1-group">
-            <input type="email" placeholder="Email@email.com" class="input1" required />
+            <input
+              type="email"
+              placeholder="Email@email.com"
+              class="input1"
+              required
+            />
           </div>
           <div class="input2-group">
-            <input type="password" placeholder="Contraseña" class="input2" required
-            pattern="[a-z]{8}"
-            maxlength="8" title="8 letras minusculas"/>
-            <img src="/img/ojo.png" alt=""  class="img-ojo"/>
-          </div>
+            <input
+              type="password"
+              placeholder="Contraseña"
+              class="input2"
+              required
+              pattern="[a-z]{8}"
+              maxlength="8"
+              title="8 letras minusculas"
+            />
+            <img src="/img/ojo.png" alt="" class="img-ojo" />
           </div>
         </div>
+
         <div class="container-preguntas">
-        <div class="container-contra-olvidada">
-          <a href="#" class="contra-olvidada">¿Olvidaste tu contraseña?</a>
-        </div>
-        <div class="container-recordar">
-          <input
+          <div class="container-contra-olvidada">
+            <a href="#" class="contra-olvidada">¿Olvidaste tu contraseña?</a>
+          </div>
+          <div class="container-recordar">
+            <input
               type="checkbox"
               name="recordar"
               value="recordar"
               id="recordar"
             />
-          <label for="recordar">
-            Recordar usuario y contraseña
-          </label>
-        </div>
-        <button type="submit" class="btn-enviar-formulario">INICIAR SEIÓN</button>
-        <div class="not-usuario">
-          <p class="not-usuario-text">¿No eres usuario aún?</p>
-          <a href="/register" class="registro-login">Registrate</a>
-        </div>
+            <label for="recordar"> Recordar usuario y contraseña </label>
+          </div>
+          <button type="submit" class="btn-enviar-formulario">
+            INICIAR SEIÓN
+          </button>
+          <div class="not-usuario">
+            <p class="not-usuario-text">¿No eres usuario aún?</p>
+            <a href="/register" class="registro-login">Registrate</a>
+          </div>
         </div>
       </form>
     </main>
