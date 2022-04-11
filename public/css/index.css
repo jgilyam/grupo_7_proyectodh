@@ -166,6 +166,7 @@ se agregan estilos comunies de detalle de producto
   padding: 10px;
   background-color: white;
   margin-bottom: 20px;
+  position: relative;
 }
 .main-recomend-product h3 {
   width: 100%;
@@ -209,6 +210,7 @@ se agregan estilos comunies de detalle de producto
   width: 70%;
   font-weight: 500;
   font-size: 16px;
+
   visibility: hidden;
 }
 .button-submit i {
@@ -216,9 +218,23 @@ se agregan estilos comunies de detalle de producto
   margin-left: 10px;
 }
 
+@keyframes flotar {
+  0% {
+    transform: scale(0.5) translate(0%, 100%);
+  }
+  100% {
+    transform: scale(1) translate(0%, 0%);
+  }
+}
+
 .main-recomend-product:hover .button-submit {
   visibility: visible;
+  animation: flotar;
+  animation-duration: 400ms;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
 }
+
 .main-recomend-product:hover {
   box-shadow: 0px 0px 10px rgb(100 100 100);
 }
