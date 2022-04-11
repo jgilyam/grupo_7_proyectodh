@@ -165,16 +165,27 @@ se agregan estilos comunies de detalle de producto
   flex-wrap: wrap;
   padding: 10px;
   background-color: white;
+  margin: auto;
   margin-bottom: 20px;
-  position: relative;
 }
 .main-recomend-product h3 {
   width: 100%;
   font-size: 18px;
+  font-weight: 600;
+  margin: 5px 10px;
+}
+.main-recomend-product p {
+  margin-left: 10px;
+}
+.main-recomend-product h4 {
+  width: 100%;
+  font-size: 14px;
+  color: darkgrey;
   font-weight: 400;
+  margin-left: 10px;
 }
 .main-recomend-product .detail-discount {
-  width: 70%;
+  width: 60%;
 }
 .main-recomend-product .button-submit {
   width: 100%;
@@ -190,6 +201,7 @@ se agregan estilos comunies de detalle de producto
   font-weight: 600;
   margin: 5px 0px;
   width: 30%;
+  color: #e5890a;
 }
 
 .detail-discount {

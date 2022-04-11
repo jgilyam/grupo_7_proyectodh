@@ -4,7 +4,7 @@ let productRecomen = [
     title: "Producto 1",
     price: 3000,
     cuotas: 6,
-    descuento: 10,
+    descuento: 0,
     valorCuota() {
       return this.price / this.cuotas;
     },

@@ -4,15 +4,18 @@
     alt="Producto1"
     class="img-detail"
   />
+  <h4>Platos</h4>
   <h3><%= productRecomen[i].title%></h3>
   <p class="detail-price2">$<%= productRecomen[i].price%></p>
+  <% if (productRecomen[i].descuento!==0) { %>
   <p class="detail-discount"><%= productRecomen[i].descuento%>%OFF</p>
-  <p>en</p>
   <p class="detail-finance">
-    <%= productRecomen[i].cuotas%>x $<%= productRecomen[i].valorCuota()%> sin
+    en <%= productRecomen[i].cuotas%>x $<%= productRecomen[i].valorCuota()%> sin
     interés
     <i class="fa-solid fa-credit-card"></i>
   </p>
+  <% } %>
+
   <button type="submit" class="button-submit">
     Agregar al carrito<i class="fa-solid fa-cart-arrow-down"></i>
   </button>
