@@ -168,11 +168,16 @@ se agregan estilos comunies de detalle de producto
   margin: auto;
   margin-bottom: 20px;
 }
-.main-recomend-product h3 {
+.main-recomend-product a {
   width: 100%;
   font-size: 18px;
   font-weight: 600;
   margin: 5px 10px;
+  text-decoration: none;
+  color: black;
+}
+.main-recomend-product a:hover {
+  color: darkgreen;
 }
 .main-recomend-product p {
   margin-left: 10px;
@@ -197,7 +202,7 @@ se agregan estilos comunies de detalle de producto
 }
 .detail-price2 {
   font-family: "Roboto", sans-serif;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 600;
   margin: 5px 0px;
   width: 30%;
