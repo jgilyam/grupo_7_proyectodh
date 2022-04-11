@@ -1,3 +1,4 @@
+Sprint 2
 Comenzar a hacer:
 
 Comenzar a utilizar un tablero de trabajo para ordenar las tareas y responsables. Se utilizará trello.
