@@ -209,6 +209,7 @@ se agregan estilos comunies de detalle de producto
   width: 70%;
   font-weight: 500;
   font-size: 16px;
+  visibility: hidden;
 }
 .button-submit i {
   color: white;
@@ -216,7 +217,7 @@ se agregan estilos comunies de detalle de producto
 }
 
 .main-recomend-product:hover .button-submit {
-  display: block;
+  visibility: visible;
 }
 .main-recomend-product:hover {
   box-shadow: 0px 0px 10px rgb(100 100 100);
