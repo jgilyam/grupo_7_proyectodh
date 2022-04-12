@@ -6,19 +6,23 @@
 
 </head>
 <body>
-    <%- include("./partials/header") %>
     
-    <div class="admin">Administrador</div>
     <div class="contenedor">
-        <nav class="nav-list">
-            <ul>
-                <li><a href="#">Administrar Pedido</a></li>
-                <li><a href="#">Administrar Usuarios</a></li>
-                <li><a href="#">Crear Producto</a></li>
-                <li><a href="#">Administrar Producto</a></li>
-                <li><a href="#">Cerrar sesión <i class="fas fa-sign-in"></i></a></li>
-            </ul>
-        </nav>
+        
+            <nav class="nav-list">
+                <div class="admin">Administrador</div>
+                <ul class="menu-items">
+                    <li><a href="#">Administrar Pedido</a></li>
+                    <li><a href="#">Administrar Usuarios</a></li>
+                    <li><a href="#">Crear Producto</a></li>
+                    <li><a href="#">Modificar Producto</a></li>
+                    <li><a href="#">Cerrar sesión <i class="fas fa-sign-in"></i></a></li>
+                </ul>
+                <span class="burguer">
+                    <i class="fas fa-bars"></i>
+                </span>
+            </nav>
+        
     <div class="contenedor-form">   
         <form class="form" action="">
             <div class="titulo-form">
@@ -64,7 +68,5 @@
             </form>
         </div>
     </div>
-
-    <%- include ("./partials/footer") %>
 </body>
 </html>
