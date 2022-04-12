@@ -18,9 +18,9 @@ const PORT = 4000; //puerto en el que el servidor escuchara
 app.use(express.static(path.resolve(__dirname, "../public"))); // se decalra la carpeta public para servir archivos estaticos
 
 // agrego routes
-app.use(routeMain);
-app.use(routeProducts);
-app.use(routeUsers);
+app.use("/",routeMain);
+app.use("/",routeProducts);
+app.use("/",routeUsers);
 
 //Se levanta el servidor
 app.listen(PORT, () => {
