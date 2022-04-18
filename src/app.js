@@ -19,8 +19,8 @@ app.use(express.static(path.resolve(__dirname, "../public"))); // se decalra la 
 
 // agrego routes
 app.use("/",routeMain);
-app.use("/",routeProducts);
-app.use("/",routeUsers);
+app.use("/producto",routeProducts);
+app.use("/user",routeUsers);
 
 //Se levanta el servidor
 app.listen(PORT, () => {

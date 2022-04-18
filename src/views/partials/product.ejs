@@ -1,11 +1,12 @@
 <article class="main-recomend-product">
-  <img
-    src="img/<%= productRecomen[i].img%>.jpg"
+  <a href="/producto/detalle"><img
+    src="/img/<%= productRecomen[i].img%>.jpg"
     alt="Producto1"
     class="img-detail"
   />
+  </a>
   <h4>Platos</h4>
-  <a href="/product-detail"><h3><%= productRecomen[i].title%></h3></a>
+  <a href="/producto/detalle"><h3><%= productRecomen[i].title%></h3></a>
   <p class="detail-price2">$<%= productRecomen[i].price%></p>
   <% if (productRecomen[i].descuento!==0) { %>
   <p class="detail-discount"><%= productRecomen[i].descuento%>%OFF</p>

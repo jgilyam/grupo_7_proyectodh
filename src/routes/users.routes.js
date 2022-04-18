@@ -8,6 +8,6 @@ router.get("/login", controllersUser.login);
 
 router.get("/formconsultas", controllersUser.formconsultas);
 
-router.get("/preguntas-frecuentes", controllersUser.preguntasFrecuentes);
+router.get("/pregFrecuentes", controllersUser.preguntasFrecuentes);
 
 module.exports = router;
