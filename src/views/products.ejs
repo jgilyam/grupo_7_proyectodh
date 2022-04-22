@@ -7,7 +7,23 @@
   <body>
     <%- include("./partials/header") %>
     <main>
-      <section class="main-recomend"></section>
+      <h3 class="titulos">Nuevos Productos!</h3>
+      <section class="main-recomend">
+        <% productsNew.forEach(product => { %>
+        <%-include("./partials/product2",{product:product}) %> <% }); %>
+      </section>
+      <h3 class="titulos">Productos en oferta!</h3>
+      <section class="main-recomend">
+        <% productsInSale.forEach(product => { %>
+        <%-include("./partials/product2",{product:product}) %> <% }); %>
+      </section>
+      <h3 class="titulos">
+        No te quedes sin tu tabla, mira nuestros productos más vendidos!
+      </h3>
+      <section class="main-recomend">
+        <% productsTopSale.forEach(product => { %>
+        <%-include("./partials/product2",{product:product}) %> <% }); %>
+      </section>
     </main>
     <%- include ("./partials/footer") %>
   </body>
