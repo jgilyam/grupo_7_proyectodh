@@ -6,6 +6,7 @@ const fs = require("fs");
 
 //modulos propios
 const productRecomen = require("../models/baseProducts");
+const extractRandom = require("../utils/extractRandom");
 
 //controloador a exportar
 const productControllers = {};
@@ -31,14 +32,10 @@ productControllers.index = (req, res) => {
   //lectura de base de datos JSON
   const products = JSON.parse(fs.readFileSync(basePath, "utf-8"));
   //generación de 3 arrays separados en categorias.
-  let productsNew = products.filter((product) => product.category == "nuevo");
-  let productsInSale = products.filter(
-    (product) => product.category == "ofertas"
-  );
-  let productsVisit = products.filter(
-    (product) => product.category == "visited"
-  );
+  let productsNew = extractRandom(products, 4, "nuevo");
+  let productsInSale = extractRandom(products, 4, "ofertas");
+  let productsTopSale = extractRandom(products, 4, "masVendido");
 
-  res.render("products", { productsNew, productsInSale, productsVisit });
+  res.render("products", { productsNew, productsInSale, productsTopSale });
 };
 module.exports = productControllers;
