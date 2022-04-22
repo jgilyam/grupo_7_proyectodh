@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include ("./partials/head") %>
+    <title>Productos</title>
+  </head>
+  <body>
+    <%- include("./partials/header") %>
+    <main>
+      <h3 class="titulos">Nuevos Productos!</h3>
+      <section class="main-recomend">
+        <% productsNew.forEach(product => { %>
+        <%-include("./partials/product2",{product:product}) %> <% }); %>
+      </section>
+
+      <nav>
+        <a href="#page-1">1</a>
+        <a href="#page-2">2</a>
+        <a href="#page-3">3</a>
+      </nav>
+      <scroll-container>
+        <scroll-page id="page-1">1</scroll-page>
+        <scroll-page id="page-2">2</scroll-page>
+        <scroll-page id="page-3">3</scroll-page>
+      </scroll-container>
+
+      <div class="anchor-pages">
+        <a href="/producto/1">Inicio</a>
+        <% pages.forEach(page => { %>
+        <a href="/producto/<%= page %> "><%= page %> </a>
+        <% }) %>
+      </div>
+      <h3 id="oferta" class="titulos">Productos en oferta!</h3>
+      <section class="main-recomend">
+        <% productsInSale.forEach(product => { %>
+        <%-include("./partials/product2",{product:product}) %> <% }); %>
+      </section>
+      <h3 class="titulos">
+        No te quedes sin tu tabla, mira nuestros productos más vendidos!
+      </h3>
+      <section class="main-recomend">
+        <% productsTopSale.forEach(product => { %>
+        <%-include("./partials/product2",{product:product}) %> <% }); %>
+      </section>
+    </main>
+    <%- include ("./partials/footer") %>
+  </body>
+</html>

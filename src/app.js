@@ -1,28 +1,33 @@
-// modulos requeridos
-const express = require("express");
-const app = express();
+// modulos nativos requeridos
 const path = require("path");
 
-//motor de plantillas ejs
-app.set("view engine", "ejs")
-app.set("views", path.join(__dirname , "/views"));
+//modulos de terceros
+const express = require("express");
 
-//agrego los require de las nuevas rutas
+//modulos propios
 const routeMain = require("../src/routes/index.routes");
 const routeProducts = require("../src/routes/products.routes");
 const routeUsers = require("../src/routes/users.routes");
 
+//instancia express
+const app = express();
+
 //Inicialización de variables
 const PORT = 4000; //puerto en el que el servidor escuchara
 
-app.use(express.static(path.resolve(__dirname, "../public"))); // se decalra la carpeta public para servir archivos estaticos
+//-----Configuración de express
+// se decalra la carpeta public para servir archivos estaticos
+app.use(express.static(path.resolve(__dirname, "../public")));
+//motor de plantillas ejs
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "/views"));
 
-// agrego routes
-app.use("/",routeMain);
-app.use("/producto",routeProducts);
-app.use("/user",routeUsers);
+// Manejadores de rutas
+app.use("/", routeMain);
+app.use("/producto", routeProducts);
+app.use("/user", routeUsers);
 
-//Se levanta el servidor
+//Servidor
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en puerto ${PORT}`);
 });
