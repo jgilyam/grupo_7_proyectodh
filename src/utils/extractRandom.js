@@ -1,3 +1,6 @@
+/*función que permite extraer un cantidad determinada (cant) de elementos de un array (unArray)
+en base al filtro (filtro) que se usa en la propiedad category
+*/
 const extractRandom = (unArray, cant, filtro) => {
   let result = [];
   let arrayFilter = unArray.filter((product) => product.category == filtro);
