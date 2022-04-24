@@ -15,6 +15,8 @@ const productControllers = {};
 //manejo de archivos para levantar base JSON
 const basePath = path.resolve(__dirname, "../data/products_DATA.json");
 
+const products = JSON.parse(fs.readFileSync(basePath, "utf-8"));
+
 productControllers.cart = (req, res) => {
   res.render("productCart");
 };
@@ -59,6 +61,15 @@ productControllers.page = (req, res) => {
     productsTopSale,
     pages,
   });
+};
+
+// GET-EDIT
+
+productControllers.edit = (req, res) => {
+  const productId = req.params.id;
+  const productToEdit = products.find((p) => p.id === Number(productId));
+
+  res.render("product-edit-form", { productToEdit });
 };
 
 module.exports = productControllers;
