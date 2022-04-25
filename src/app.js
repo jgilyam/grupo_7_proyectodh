@@ -5,6 +5,7 @@ const path = require("path");
 const express = require("express");
 const methodOverride = require("method-override");
 
+
 //modulos propios
 const routeMain = require("../src/routes/index.routes");
 const routeProducts = require("../src/routes/products.routes");
@@ -23,6 +24,7 @@ app.use(express.static(path.resolve(__dirname, "../public")));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/views"));
 app.use(methodOverride("_method"));
+
 
 
 // Manejadores de rutas

@@ -73,8 +73,23 @@ productControllers.edit = (req, res) => {
 };
 
 productControllers.update = (req, res) => {
- res.send("hola")
-
+  let productoss = JSON.parse(
+    fs.readFileSync(path.resolve(__dirname, "../data/products_DATA.json"))
+  );
+  req.body.id = req.params.id;
+  req.body.imagen = req.file ? req.file.name : req.body.oldImagen;
+  let productosUpdate = productoss.map((p) => {
+    if (p.id == req.body.id) {
+      return (p = req.body);
+    }
+    return p;
+  });
+  let productosActualizar = JSON.stringify(productosUpdate, null, 2);
+  fs.writeFileSync(
+    path.resolve(__dirname, "../data/products_DATA.json"),
+    productosActualizar
+  );
+  res.redirect("/home")
 };
 
 module.exports = productControllers;
