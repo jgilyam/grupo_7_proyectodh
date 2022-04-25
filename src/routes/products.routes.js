@@ -23,6 +23,7 @@ router.get("/:page", productControllers.page);
 router.get("/edit/:id", productControllers.edit);
 
 ///products/:id (PUT) Acción de edición (a donde se envía el formulario):
+router.put("/edit/:id", productControllers.update)
 
 ///products/:id (DELETE) Acción de borrado
 

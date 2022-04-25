@@ -8,7 +8,7 @@ const fs = require("fs");
 const productRecomen = require("../models/baseProducts");
 const extractRandom = require("../utils/extractRandom");
 const paginar = require("../utils/paginar");
-
+const productosJson = path.join(__dirname, "../data/products_DATA");
 //controloador a exportar
 const productControllers = {};
 
@@ -70,6 +70,11 @@ productControllers.edit = (req, res) => {
   const productToEdit = products.find((p) => p.id === Number(productId));
 
   res.render("product-edit-form", { productToEdit });
+};
+
+productControllers.update = (req, res) => {
+ res.send("hola")
+
 };
 
 module.exports = productControllers;

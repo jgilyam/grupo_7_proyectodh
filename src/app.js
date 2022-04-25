@@ -3,6 +3,7 @@ const path = require("path");
 
 //modulos de terceros
 const express = require("express");
+const methodOverride = require("method-override");
 
 //modulos propios
 const routeMain = require("../src/routes/index.routes");
@@ -21,11 +22,14 @@ app.use(express.static(path.resolve(__dirname, "../public")));
 //motor de plantillas ejs
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/views"));
+app.use(methodOverride("_method"));
+
 
 // Manejadores de rutas
 app.use("/", routeMain);
 app.use("/producto", routeProducts);
 app.use("/user", routeUsers);
+
 
 //Servidor
 app.listen(PORT, () => {

@@ -23,7 +23,7 @@
       </nav>
 
       <div class="contenedor-form">
-        <form class="form" action="">
+        <form class="form" action="/producto/edit/<%= productToEdit.id %>?_method=PUT " enctype="multipart/form-data" method="post">
           <div class="titulo-form">
             <h1>
               Estás editando: <br />
@@ -32,19 +32,19 @@
           </div>
           <div class="contenedor-hijo">
             <label class="titulo" for="">Nombre del Producto</label>
-            <input type="text" placeholder="NombreProducto" maxlength="15" />
+            <input type="text"   value="<%= productToEdit.name %> " />
           </div>
           <div class="contenedor-hijo">
             <label class="titulo" for="">Breve descripción</label>
             <div class="descripcion">
-              <textarea name="descripcion" id="" cols="30" rows="10"></textarea>
+              <textarea name="descripcion" id="" cols="30" rows="10" > <%=  productToEdit.description %> </textarea>
             </div>
           </div>
-          <div class="contenedor-hijo">
+          <!-- <div class="contenedor-hijo">
             <label class="titulo" for="">Imagen del producto</label>
             <img src="./img/tabla2.jpg" alt="" />
             <input class="boton-img" type="file" name="imagen" />
-          </div>
+          </div> -->
           <!-- <div class="contenedor-hijo-a">
             <label class="titulo" for="">Seccion</label>
             <div>
@@ -86,11 +86,11 @@
           </div>
           <div class="contenedor-hijo-b">
             <label class="titulo" for="">Precio</label>
-            <input class="precio" type="number" placeholder="100" min="1.00" />$
+            <input class="precio" type="number"  placeholder="<%=  productToEdit.price%>">
           </div>
           <div class="contenedor-hijo-c">
-            <input type="submit" value="Guardar" />
-            <input type="reset" value="Cancelar" />
+            <button type="submit" >Guardar producto</button>
+            <button type="reset" >borrar</button>
           </div>
         </form>
       </div>
