@@ -23,7 +23,12 @@
       </nav>
 
       <div class="contenedor-form">
-        <form class="form" action="/producto/edit/<%= productToEdit.id %>?_method=PUT " enctype="multipart/form-data" method="post">
+        <form
+          class="form"
+          action="/producto/edit/<%= productToEdit.id %>?_method=PUT "
+          enctype="multipart/form-data"
+          method="post"
+        >
           <div class="titulo-form">
             <h1>
               Estás editando: <br />
@@ -32,70 +37,81 @@
           </div>
           <div class="contenedor-hijo">
             <label class="titulo" for="">Nombre del Producto</label>
-            <input type="text"  name="name" value="<%= productToEdit.name %> " />
+            <input type="text" name="name" value="<%= productToEdit.name %> " />
           </div>
           <div class="contenedor-hijo">
             <label class="titulo" for="">Breve descripción</label>
             <div class="descripcion">
-              <textarea name="descripcion" id="" cols="30" rows="10" name="description" > <%=  productToEdit.description %> </textarea>
+              <textarea
+                name="descripcion"
+                id=""
+                cols="30"
+                rows="10"
+                name="description"
+              >
+ <%=  productToEdit.description %> </textarea
+              >
             </div>
           </div>
           <div class="contenedor-hijo">
-            <input type="hidden" name="oldImage" value="<%= productToEdit.image %>">
+            <input
+              type="hidden"
+              name="oldImage"
+              value="<%= productToEdit.image %>"
+            />
             <label class="titulo" for="">Imagen del producto</label>
             <input class="boton-img" type="file" name="imagen" />
-          </div> 
-          <!-- <div class="contenedor-hijo-a">
-            <label class="titulo" for="">Seccion</label>
-            <div>
-              <input type="radio" name="categoria" value="Asado" />Asado
-            </div>
-            <div>
-              <input type="radio" name="categoria" value="Pizzera" />Pizzera
-            </div>
-            <div>
-              <input type="radio" name="categoria" value="Cuencos" />Cuencos
-            </div>
-            <div>
-              <input type="radio" name="categoria" value="Posa vasos" />Posa
-              vasos
-            </div>
-            <div>
-              <input type="radio" name="categoria" value="Platos" />Platos
-            </div>
-          </div> -->
+          </div>
           <div class="col-12 col-md-6">
             <label for="category" class="form-label">Categoría:</label>
             <select name="category" id="category" class="form-input">
-              <option value="">Elegí</option>
-              <option value="Nuevo">Nuevo</option>
-              <option value="Oferta">Oferta</option>
-              <option value="Mas vendido">Mas vendido</option>
+              <option value=""selected="<%= productToEdit.category == "" %>">Elegí</option>
+              <option value="nuevo" selected="<%= productToEdit.category == "nuevo" %>">Nuevo</option>
+              <option value="ofertas" selected="<%= productToEdit.category == "ofertas" %>">Oferta</option>
+              <option value="Mas vendido" selected="<%= productToEdit.category == "masVendido" %>">Mas vendido</option>
             </select>
           </div>
           <div class="col-12 col-md-6">
             <label for="types" class="form-label">Seccion:</label>
             <select name="types" id="types" class="form-input">
-              <option value="">Elegí</option>
-              <option value="Cuencos">Cuencos</option>
-              <option value="Posa vasos">Posa vasos</option>
-              <option value="Platos">Platos</option>
-              <option value="Pizzera">Pizzera</option>
-              <option value="Asado">Asado</option>
+              <option value=""selected="<%= productToEdit.types == "" %>">Elegí</option>
+              <option value="bowls" selected="<%= productToEdit.types == "bowls" %>">Bowls</option>
+              <option value="posa vasos" selected="<%= productToEdit.types == "posa vasos" %>">Posa vasos</option>
+              <option value="platos" selected="<%= productToEdit.types == "platos" %>">Platos</option>
+              <option value="pizzera" selected="<%= productToEdit.types == "pizzera" %>">Pizzera</option>
+              <option value="Asado" selected="<%= productToEdit.types == "asado" %>">Asado</option>
+              <option value="tabla_corta" selected="<%= productToEdit.types == "tabla_corta" %>">Tabla_corta</option>
+              <option value="tabla_larga" selected="<%= productToEdit.types == "tabla_larga" %>">Tabla_larga</option>
             </select>
           </div>
           <div class="contenedor-hijo-b">
             <label class="titulo" for="price">Precio</label>
-            <input class="precio" type="number"  name="price" id="price" placeholder="<%=  productToEdit.price%>">
+            <input
+              class="precio"
+              type="text"
+              name="price"
+              id="price"
+              value="<%=  productToEdit.price%>"
+            />
           </div>
           <div>
             <label for="discount">Descuento</label>
-            <input type="number" name="discount" id="discount">
+            <input
+              type="text"
+              name="discount"
+              id="discount"
+              value="<%=  productToEdit.discount%>"
+            />
           </div>
           <div class="contenedor-hijo-c">
-            <button type="submit" >Guardar producto</button>
-            <button type="reset" >borrar</button>
+            <button type="submit">Guardar producto</button>
           </div>
+        </form>
+        <form
+          action="/producto/<%= productToEdit.id %>?_method=DELETE"
+          method="POST"
+        >
+          <button type>ELIMINAR</button>
         </form>
       </div>
     </div>
