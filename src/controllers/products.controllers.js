@@ -8,7 +8,9 @@ const fs = require("fs");
 const productRecomen = require("../models/baseProducts");
 const extractRandom = require("../utils/extractRandom");
 const paginar = require("../utils/paginar");
+
 const productosJson = path.join(__dirname, "../data/products_DATA");
+
 //controloador a exportar
 const productControllers = {};
 
@@ -73,22 +75,25 @@ productControllers.edit = (req, res) => {
 };
 
 productControllers.update = (req, res) => {
-  let productoss = JSON.parse(
-    fs.readFileSync(path.resolve(__dirname, "../data/products_DATA.json"))
-  );
-  req.body.id = req.params.id;
-  req.body.imagen = req.file ? req.file.name : req.body.oldImagen;
-  let productosUpdate = productoss.map((p) => {
-    if (p.id == req.body.id) {
-      return (p = req.body);
+  const productId = Number(req.params.id);
+  let productToEdit = products.find((p) => p.id === productId);
+
+  let image = productToEdit.image;
+  if (req.file) {
+    image = req.file.filename;
+  }
+  productToEdit = {
+    id: productId,
+    ...req.body,
+    image,
+  };
+  const updateProducts = products.map((p) => {
+    if (p.id === productToEdit.id) {
+      return (p = { ...productToEdit });
     }
     return p;
   });
-  let productosActualizar = JSON.stringify(productosUpdate, null, 2);
-  fs.writeFileSync(
-    path.resolve(__dirname, "../data/products_DATA.json"),
-    productosActualizar
-  );
+  fs.writeFileSync(basePath, JSON.stringify(updateProducts), "utf-8");
   res.redirect("/home");
 };
 
