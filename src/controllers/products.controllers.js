@@ -89,7 +89,15 @@ productControllers.update = (req, res) => {
     path.resolve(__dirname, "../data/products_DATA.json"),
     productosActualizar
   );
-  res.redirect("/home")
+  res.redirect("/home");
 };
 
+// ELIMINAR
+productControllers.destroy = (req, res) => {
+  const productAeliminar = req.params.id;
+  const finalProducts = products.filter((p) => p.id != productAeliminar);
+
+  fs.writeFileSync(basePath, JSON.stringify(finalProducts), "utf-8");
+  res.redirect("/");
+};
 module.exports = productControllers;
