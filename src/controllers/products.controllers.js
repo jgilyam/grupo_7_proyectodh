@@ -64,6 +64,23 @@ productControllers.page = (req, res) => {
     pages,
   });
 };
+// CREAT
+productControllers.store = (req, res) => {
+  let id = products[products.length -1].id +1;
+  let image = "default-image.png";
+  if(req.file){
+    image = req.file.filename;
+  }
+
+  let newProduct = {
+    id,
+    ...req.body,
+    image,
+  }
+  products.push(newProduct);
+  fs.writeFileSync(basePath, JSON.stringify(products));
+  res.redirect("producto")
+};
 
 // GET-EDIT
 

@@ -33,6 +33,7 @@ router.get("/:page", productControllers.page);
 ///products/:id (GET) Detalle de un producto particular
 
 //products (POST) Acción de creación (a donde se envía el formulario)
+router.post("/", upload.single("image"), productControllers.store);
 
 ///products/:id/edit (GET) Formulario de edición de productos
 router.get("/edit/:id", productControllers.edit);
