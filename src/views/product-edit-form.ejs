@@ -39,7 +39,7 @@
             <label class="titulo" for="">Nombre del Producto</label>
             <input type="text" name="name" value="<%= productToEdit.name %> " />
           </div>
-          <div class="contenedor-hijo">
+          <div class="contenedor-hijo-descripcion">
             <label class="titulo" for="">Breve descripción</label>
             <div class="descripcion">
               <textarea
@@ -57,7 +57,8 @@
             <label class="titulo" for="">Imagen del producto</label>
             <input class="boton-img" type="file" name="imagen" />
           </div>
-          <div class="col-12 col-md-6">
+        <div class="contenedor-opc">
+          <div class="col-12-col-md-6">
             <label for="category" class="form-label">Categoría:</label>
             <select name="category" id="category" class="form-input">
               <option value=""selected="<%= productToEdit.category == "" %>">Elegí</option>
@@ -66,8 +67,8 @@
               <option value="Mas vendido" selected="<%= productToEdit.category == "masVendido" %>">Mas vendido</option>
             </select>
           </div>
-          <div class="col-12 col-md-6">
-            <label for="types" class="form-label">Seccion:</label>
+          <div class="col-12-col-md-6">
+            <label for="types" class="form-label">Sección:</label>
             <select name="types" id="types" class="form-input">
               <option value=""selected="<%= productToEdit.types == "" %>">Elegí</option>
               <option value="bowls" selected="<%= productToEdit.types == "bowls" %>">Bowls</option>
@@ -79,34 +80,39 @@
               <option value="tabla_larga" selected="<%= productToEdit.types == "tabla_larga" %>">Tabla_larga</option>
             </select>
           </div>
+        </div>
+        <section class="precio-final">
           <div class="contenedor-hijo-b">
-            <label class="titulo" for="price">Precio</label>
+            <label class="titulo" for="price">Precio:</label>
             <input
               class="precio"
               type="text"
-              name="price"
               id="price"
+              name="price"
               value="<%=  productToEdit.price%>"
-            />
+            />$
           </div>
-          <div>
-            <label for="discount">Descuento</label>
+          <div class="contenedor-hijo-b">
+            <label class="titulo" for="discount">Descuento:</label>
             <input
+              class="precio"
               type="text"
-              name="discount"
               id="discount"
+              name="discount"
+              
               value="<%=  productToEdit.discount%>"
-            />
+            />%
           </div>
+        </section>
           <div class="contenedor-hijo-c">
             <button type="submit">Guardar producto</button>
           </div>
         </form>
         <form
           action="/producto/<%= productToEdit.id %>?_method=DELETE"
-          method="POST"
+          method="POST" class="delete"
         >
-          <button type>ELIMINAR</button>
+          <button type>Eliminar</button>
         </form>
       </div>
     </div>
