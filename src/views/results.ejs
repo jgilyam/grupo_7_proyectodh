@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include ("./partials/head") %>
+    <title>Productos</title>
+  </head>
+  <body>
+    <%- include("./partials/header") %>
+    <main>
+      <h3 class="titulos">Resltado de busqueda para: <%= keyword %></h3>
+      <section class="main-recomend">
+        <% results.forEach(product => { %>
+        <%-include("./partials/product2",{product:product}) %> <% }); %>
+      </section>
+    </main>
+    <%- include ("./partials/footer") %>
+  </body>
+</html>

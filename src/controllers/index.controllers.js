@@ -24,4 +24,12 @@ controllerPrincipal.nosotros = (req, res) => {
   res.render("nosotros");
 };
 
+controllerPrincipal.search = (req, res) => {
+  let keyword = req.query.keywords;
+  const results = products.filter((product) => {
+    return product.name.toLowerCase().indexOf(keyword.toLowerCase()) > -1;
+  });
+  res.render("results", { results, keyword });
+};
+
 module.exports = controllerPrincipal;
