@@ -26,8 +26,8 @@ productControllers.cart = (req, res) => {
 productControllers.detail = (req, res) => {
   const productId = req.params.id;
   const product = products.find((p) => p.id === Number(productId));
+
   let productsInSale = extractRandom(products, 4, "ofertas");
-  console.log("llegue al controlador del detail");
   res.render("productDetail", { product, productsInSale });
 };
 

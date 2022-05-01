@@ -77,8 +77,8 @@
       </section>
       <h3 class="titulos">Ofertas</h3>
       <section class="main-recomend">
-        <%for(let i = 0; i<4;i++){%> <%- include("./partials/product",{i:i}) %>
-        <%}%>
+        <% productsInSale.forEach(product => { %>
+        <%-include("./partials/product2",{product:product}) %> <% }); %>
       </section>
       <h3 class="titulos">Categorias</h3>
       <section class="cuadros3">
@@ -106,8 +106,8 @@
       </section>
       <h3 class="titulos">Lo mas vendido!</h3>
       <section class="main-recomend">
-        <%for(let i = 0; i<4;i++){%> <%- include("./partials/product",{i:i}) %>
-        <%}%>
+        <% productsTopSale.forEach(product => { %>
+        <%-include("./partials/product2",{product:product}) %> <% }); %>
       </section>
       <section class="instagram-fast">
         <h2 class="titulos">instagram</h2>
