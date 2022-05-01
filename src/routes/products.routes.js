@@ -1,9 +1,15 @@
-const express = require("express");
+//modulos nativos
 const path = require("path");
+
+//modulos de terceros
+const express = require("express");
 const router = express.Router();
 const multer = require("multer");
+
+//modulos propios
 const productControllers = require("../controllers/products.controllers");
 
+//------------configuración de multer
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     let folder = path.join(__dirname, "../../public/img");
@@ -16,13 +22,12 @@ const storage = multer.diskStorage({
 });
 
 const upload = multer({ storage: storage });
+//------------configuración de multer
 
 router.get("/carrito", productControllers.cart);
 
 ///products (GET) Listado de productos
 router.get("/", productControllers.index);
-
-//router.get("/:page", productControllers.page);
 
 ///products/create (GET) Formulario de creación de productos
 router.get("/create", productControllers.form);
