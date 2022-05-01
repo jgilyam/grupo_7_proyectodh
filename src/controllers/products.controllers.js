@@ -36,14 +36,7 @@ productControllers.form = (req, res) => {
 productControllers.index = (req, res) => {
   //lectura de base de datos JSON
   const products = JSON.parse(fs.readFileSync(basePath, "utf-8"));
-  //
-
-  //generación de 3 arrays separados en categorias.
-  let productsNew = extractRandom(products, 12, "nuevo");
-  let productsInSale = extractRandom(products, 12, "ofertas");
-  let productsTopSale = extractRandom(products, 12, "masVendido");
-
-  res.render("products", { productsNew, productsInSale, productsTopSale });
+  res.render("products", { products });
 };
 
 productControllers.page = (req, res) => {
@@ -66,9 +59,9 @@ productControllers.page = (req, res) => {
 };
 // CREAT
 productControllers.store = (req, res) => {
-  let id = products[products.length -1].id +1;
+  let id = products[products.length - 1].id + 1;
   let image = "default-image.png";
-  if(req.file){
+  if (req.file) {
     image = req.file.filename;
   }
 
@@ -76,10 +69,10 @@ productControllers.store = (req, res) => {
     id,
     ...req.body,
     image,
-  }
+  };
   products.push(newProduct);
   fs.writeFileSync(basePath, JSON.stringify(products));
-  res.redirect("producto")
+  res.redirect("producto");
 };
 
 // GET-EDIT
