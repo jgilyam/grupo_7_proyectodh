@@ -31,3 +31,19 @@ Tratar de no pisar el código esctrito por otros.
 
 Dejar de hacer
 Por el momento no pudimos detectar nada
+
+Sprint 4
+
+Comenzar a hacer:
+Entre dos del equipo van a juntarse primero y transformar los puntos del sprint en tareas y asignarlos a los otros participantes.
+
+Hacer más:
+A la hora de planificar las tareas, tratar de definir un tiempo, para que las tareas que sean correlativas puedan realizarse sin problema.
+
+Continuar haciendo
+Seguir con comunicación fluida, y compromiso para completar las tereas del proyecto.
+
+Hacer menos.
+
+Dejar de hacer:
+No adelantarse tanto a la tarea asignada.
