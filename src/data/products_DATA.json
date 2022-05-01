@@ -474,7 +474,7 @@
   },
   {
     "id": 44,
-    "name": "600SEL",
+    "name": "Excursion2",
     "description": "In congue. Etiam justo. Etiam pretium iaculis justo.",
     "image": "tabla5.jpg",
     "category": "masVendido",
@@ -548,5 +548,15 @@
     "price": 3541,
     "discount": null,
     "stock": 14
+  },
+  {
+    "id": 51,
+    "name": "Tabla pizzera",
+    "description": "La mejor tabla para la mejor pizza",
+    "category": "ofertas",
+    "types": "pizzera",
+    "price": "2300",
+    "discount": "10",
+    "image": "1651420409772-mem2.png"
   }
 ]

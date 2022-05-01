@@ -19,14 +19,13 @@ const upload = multer({ storage: storage });
 
 router.get("/carrito", productControllers.cart);
 
-router.get("/administrador", productControllers.form);
-
 ///products (GET) Listado de productos
 router.get("/", productControllers.index);
 
 //router.get("/:page", productControllers.page);
 
 ///products/create (GET) Formulario de creación de productos
+router.get("/create", productControllers.form);
 
 ///products/:id (GET) Detalle de un producto particular
 router.get("/:id", productControllers.detail);
@@ -41,7 +40,6 @@ router.get("/edit/:id", productControllers.edit);
 router.put("/edit/:id", upload.single("imagen"), productControllers.update);
 
 ///products/:id (DELETE) Acción de borrado
-
 router.delete("/:id", productControllers.destroy);
 
 module.exports = router;
