@@ -1,13 +1,13 @@
 [
   {
     "id": 1,
-    "name": "Aromat Spice / Seasoning",
-    "description": "magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi",
-    "image": "eros vestibulum ac est lacinia nisi venenatis tristique fusce",
+    "name": "Super tabla",
+    "descripcion": "Esta tabla es una masa",
     "category": "nuevo",
-    "types": "tabla_corta",
-    "price": "$6356.36",
-    "discount": 68
+    "types": "pizzera",
+    "price": "$6856.36",
+    "discount": "10",
+    "image": "1651364103972-mem1.png"
   },
   {
     "id": 2,
