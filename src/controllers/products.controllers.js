@@ -22,11 +22,13 @@ const products = JSON.parse(fs.readFileSync(basePath, "utf-8"));
 productControllers.cart = (req, res) => {
   res.render("productCart");
 };
-
+//conotrolador que se encarga de mostrar el producto elegido por id en detalle
 productControllers.detail = (req, res) => {
-  res.render("productDetail", {
-    productRecomen: productRecomen,
-  });
+  const productId = req.params.id;
+  const product = products.find((p) => p.id === Number(productId));
+  let productsInSale = extractRandom(products, 4, "ofertas");
+  console.log("llegue al controlador del detail");
+  res.render("productDetail", { product, productsInSale });
 };
 
 productControllers.form = (req, res) => {

@@ -14,16 +14,20 @@
 
     <main class="main-pd">
       <!-- Detalle de producto -->
-      <h2>Ruta/del/producto</h2>
+      <h2><%= product.types %>/<%= product.name %></h2>
       <section class="main-detail">
         <article class="main-detail-product">
-          <img src="/img/tabla14.jpg" alt="Foto-Producto" class="img-detail" />
+          <img
+            src="/img/<%= product.image %>"
+            alt="Foto-Producto"
+            class="img-detail"
+          />
         </article>
         <div class="main-detail-lateral">
           <div class="main-detail-info-pay">
-            <h1>Tabla 30 x 20</h1>
-            <p class="detail-price">$3000</p>
-            <p class="detail-discount">10%OFF</p>
+            <h1><%= product.name %></h1>
+            <p class="detail-price">$<%= product.price %></p>
+            <p class="detail-discount"><%= product.discount %>%OFF</p>
 
             <p class="detail-finance">
               en 12x $300 sin interés <i class="fa-solid fa-credit-card"></i>
@@ -35,7 +39,10 @@
             action="#"
             method="POST"
           >
-            <p><i class="fa fas fa-circle-check"></i>2 disponibles</p>
+            <p>
+              <i class="fa fas fa-circle-check"></i><%= product.stock %>
+              disponibles
+            </p>
             <input
               class="input-cant"
               type="number"
@@ -44,7 +51,7 @@
               max="10"
             />
 
-            <button type="submit" class="button-submit">
+            <button type="submit" class="button-submit-estatico">
               Agregar al carrito<i class="fa-solid fa-cart-arrow-down"></i>
             </button>
           </form>
@@ -54,17 +61,13 @@
               <option value="caba">CABA</option>
               <option value="cordoba">Córdoba</option>
             </select>
-            <button class="button-submit">Calcular</button>
+            <button class="button-submit-estatico">Calcular</button>
             <p>
               <i class="fa-solid fa-truck"></i> Llega el martes 19 de abril por
               $700
             </p>
             <p>Descripción del producto</p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Faucibus ornare suspendisse sed nisi lacus sed viverra.
-            </p>
+            <p><%= product.description %></p>
           </form>
         </div>
       </section>
@@ -72,8 +75,8 @@
       <h2>Te recomendamos</h2>
 
       <section class="main-recomend">
-        <%for(let i = 0; i<4;i++){%> <%- include("./partials/product",{i:i}) %>
-        <%}%>
+        <% productsInSale.forEach(product => { %>
+        <%-include("./partials/product2",{product:product}) %> <% }); %>
       </section>
     </main>
     <%- include ("./partials/footer") %>

@@ -230,6 +230,16 @@ se agregan estilos comunies de detalle de producto
   color: #e5890a;
   margin: 0px 10px;
 }
+.button-submit-estatico{
+  border-radius: 10px;
+  padding: 10px 20px;
+  background-color: #e5890a;
+  border: none;
+  color: #fff;
+  width: 70%;
+  font-weight: 500;
+  font-size: 16px;
+}
 .button-submit {
   border-radius: 10px;
   padding: 10px 20px;
