@@ -25,6 +25,7 @@ productControllers.cart = (req, res) => {
 //conotrolador que se encarga de mostrar el producto elegido por id en detalle
 productControllers.detail = (req, res) => {
   const productId = req.params.id;
+  const products = JSON.parse(fs.readFileSync(basePath, "utf-8"));
   const product = products.find((p) => p.id === Number(productId));
 
   let productsInSale = extractRandom(products, 4, "ofertas");
