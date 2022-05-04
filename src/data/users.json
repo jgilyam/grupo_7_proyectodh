@@ -5,6 +5,7 @@
     "last_name": "Littledyke",
     "email": "jlittledyke0@seesaa.net",
     "contraseña": "19h0ZkHg",
+    "categoria":"user",
     "imagen": "http://dummyimage.com/201x63.png/dddddd/000000"
   },
   {
@@ -13,6 +14,7 @@
     "last_name": "Brockley",
     "email": "nbrockley1@weebly.com",
     "contraseña": "rcTGzxHU",
+    "categoria":"user",
     "imagen": "http://dummyimage.com/157x109.png/dddddd/000000"
   },
   {
@@ -21,6 +23,7 @@
     "last_name": "Couronne",
     "email": "rcouronne2@wikipedia.org",
     "contraseña": "AGw62qW",
+    "categoria":"user",
     "imagen": "http://dummyimage.com/73x195.png/ff4444/ffffff"
   },
   {
@@ -29,6 +32,7 @@
     "last_name": "Skey",
     "email": "vskey3@eventbrite.com",
     "contraseña": "2fSHKa",
+    "categoria":"user",
     "imagen": "http://dummyimage.com/126x171.png/dddddd/000000"
   },
   {
@@ -37,6 +41,7 @@
     "last_name": "Agass",
     "email": "eagass4@ovh.net",
     "contraseña": "TrY0OypZe0J6",
+    "categoria":"user",
     "imagen": "http://dummyimage.com/106x129.png/ff4444/ffffff"
   },
   {
@@ -45,6 +50,7 @@
     "last_name": "Heathcoat",
     "email": "eheathcoat5@google.cn",
     "contraseña": "vn2E6BQS9",
+    "categoria":"user",
     "imagen": "http://dummyimage.com/237x137.png/ff4444/ffffff"
   },
   {
@@ -53,6 +59,7 @@
     "last_name": "Bourgourd",
     "email": "lbourgourd6@guardian.co.uk",
     "contraseña": "a3g0GXaAqUh",
+    "categoria":"admin",
     "imagen": "http://dummyimage.com/250x221.png/5fa2dd/ffffff"
   },
   {
@@ -61,6 +68,7 @@
     "last_name": "Mingaye",
     "email": "fmingaye7@mapquest.com",
     "contraseña": "tCO8MTqUiibV",
+    "categoria":"user",
     "imagen": "http://dummyimage.com/74x197.png/5fa2dd/ffffff"
   },
   {
@@ -69,6 +77,7 @@
     "last_name": "Farndon",
     "email": "afarndon8@weather.com",
     "contraseña": "UdtGE1xzh",
+    "categoria":"user",
     "imagen": "http://dummyimage.com/58x59.png/5fa2dd/ffffff"
   },
   {
@@ -77,726 +86,16 @@
     "last_name": "Suett",
     "email": "csuett9@cnet.com",
     "contraseña": "40NYFi",
+    "categoria":"user",
     "imagen": "http://dummyimage.com/217x245.png/cc0000/ffffff"
   },
   {
     "id": 11,
-    "first_name": "Adele",
-    "last_name": "Ewin",
-    "email": "aewina@mtv.com",
-    "contraseña": "Z66QqCBvUi6Z",
-    "imagen": "http://dummyimage.com/60x178.png/cc0000/ffffff"
-  },
-  {
-    "id": 12,
-    "first_name": "Shadow",
-    "last_name": "Ashleigh",
-    "email": "sashleighb@comcast.net",
-    "contraseña": "y9ZGzR3fQmCS",
-    "imagen": "http://dummyimage.com/115x88.png/ff4444/ffffff"
-  },
-  {
-    "id": 13,
-    "first_name": "Latisha",
-    "last_name": "Benedicto",
-    "email": "lbenedictoc@naver.com",
-    "contraseña": "gEOtaTNTdGp",
-    "imagen": "http://dummyimage.com/177x70.png/dddddd/000000"
-  },
-  {
-    "id": 14,
-    "first_name": "Huey",
-    "last_name": "Thatcher",
-    "email": "hthatcherd@google.com.au",
-    "contraseña": "BXC2nTc",
-    "imagen": "http://dummyimage.com/86x214.png/dddddd/000000"
-  },
-  {
-    "id": 15,
-    "first_name": "Rudolph",
-    "last_name": "Devonish",
-    "email": "rdevonishe@si.edu",
-    "contraseña": "UcV1YW5dw",
-    "imagen": "http://dummyimage.com/221x178.png/cc0000/ffffff"
-  },
-  {
-    "id": 16,
-    "first_name": "Adair",
-    "last_name": "Antonias",
-    "email": "aantoniasf@sakura.ne.jp",
-    "contraseña": "zTcEEg",
-    "imagen": "http://dummyimage.com/193x167.png/dddddd/000000"
-  },
-  {
-    "id": 17,
-    "first_name": "Merrill",
-    "last_name": "Burtwell",
-    "email": "mburtwellg@macromedia.com",
-    "contraseña": "YpTLX9ZOChKj",
-    "imagen": "http://dummyimage.com/167x144.png/dddddd/000000"
-  },
-  {
-    "id": 18,
-    "first_name": "Ashlan",
-    "last_name": "Shinton",
-    "email": "ashintonh@vinaora.com",
-    "contraseña": "DgNCFrTik87E",
-    "imagen": "http://dummyimage.com/59x62.png/dddddd/000000"
-  },
-  {
-    "id": 19,
-    "first_name": "Ceil",
-    "last_name": "Bernier",
-    "email": "cbernieri@cbsnews.com",
-    "contraseña": "mXgI5akP",
-    "imagen": "http://dummyimage.com/195x201.png/dddddd/000000"
-  },
-  {
-    "id": 20,
-    "first_name": "Maggie",
-    "last_name": "Marjanovic",
-    "email": "mmarjanovicj@macromedia.com",
-    "contraseña": "zPCtn68L",
-    "imagen": "http://dummyimage.com/242x169.png/ff4444/ffffff"
-  },
-  {
-    "id": 21,
-    "first_name": "Ana",
-    "last_name": "Dugmore",
-    "email": "adugmorek@taobao.com",
-    "contraseña": "Eopue15ira",
-    "imagen": "http://dummyimage.com/249x179.png/ff4444/ffffff"
-  },
-  {
-    "id": 22,
-    "first_name": "Brier",
-    "last_name": "Lombard",
-    "email": "blombardl@usnews.com",
-    "contraseña": "vp3cJgei",
-    "imagen": "http://dummyimage.com/155x55.png/cc0000/ffffff"
-  },
-  {
-    "id": 23,
-    "first_name": "Sapphire",
-    "last_name": "Derdes",
-    "email": "sderdesm@ameblo.jp",
-    "contraseña": "gAznnzSL",
-    "imagen": "http://dummyimage.com/58x231.png/5fa2dd/ffffff"
-  },
-  {
-    "id": 24,
-    "first_name": "Lionel",
-    "last_name": "Adamov",
-    "email": "ladamovn@yelp.com",
-    "contraseña": "iK4gop",
-    "imagen": "http://dummyimage.com/113x203.png/5fa2dd/ffffff"
-  },
-  {
-    "id": 25,
-    "first_name": "Noelle",
-    "last_name": "Zamora",
-    "email": "nzamorao@dailymotion.com",
-    "contraseña": "WSJgC1TssDo",
-    "imagen": "http://dummyimage.com/169x62.png/cc0000/ffffff"
-  },
-  {
-    "id": 26,
-    "first_name": "Kimbra",
-    "last_name": "Sare",
-    "email": "ksarep@nsw.gov.au",
-    "contraseña": "2cjupZLjCdPR",
-    "imagen": "http://dummyimage.com/168x156.png/cc0000/ffffff"
-  },
-  {
-    "id": 27,
-    "first_name": "Gardy",
-    "last_name": "Leafe",
-    "email": "gleafeq@facebook.com",
-    "contraseña": "lFjI62MJzHEO",
-    "imagen": "http://dummyimage.com/157x222.png/ff4444/ffffff"
-  },
-  {
-    "id": 28,
-    "first_name": "Adah",
-    "last_name": "Gedney",
-    "email": "agedneyr@netscape.com",
-    "contraseña": "gP3YJhZRTHe",
-    "imagen": "http://dummyimage.com/140x187.png/5fa2dd/ffffff"
-  },
-  {
-    "id": 29,
-    "first_name": "Silas",
-    "last_name": "Willatts",
-    "email": "swillattss@webnode.com",
-    "contraseña": "XhJCxy9HZzX3",
-    "imagen": "http://dummyimage.com/66x221.png/5fa2dd/ffffff"
-  },
-  {
-    "id": 30,
-    "first_name": "Lani",
-    "last_name": "Gallyon",
-    "email": "lgallyont@gravatar.com",
-    "contraseña": "oPICFhQPYaD",
-    "imagen": "http://dummyimage.com/228x56.png/cc0000/ffffff"
-  },
-  {
-    "id": 31,
-    "first_name": "Trudi",
-    "last_name": "Danilchenko",
-    "email": "tdanilchenkou@taobao.com",
-    "contraseña": "h8Kqp5A7rD",
-    "imagen": "http://dummyimage.com/231x148.png/cc0000/ffffff"
-  },
-  {
-    "id": 32,
-    "first_name": "Celene",
-    "last_name": "Quinsee",
-    "email": "cquinseev@independent.co.uk",
-    "contraseña": "McEN14",
-    "imagen": "http://dummyimage.com/247x121.png/ff4444/ffffff"
-  },
-  {
-    "id": 33,
-    "first_name": "Rasia",
-    "last_name": "Ivie",
-    "email": "riview@alexa.com",
-    "contraseña": "0JOiLuQuHD",
-    "imagen": "http://dummyimage.com/174x68.png/5fa2dd/ffffff"
-  },
-  {
-    "id": 34,
-    "first_name": "Dorisa",
-    "last_name": "Ege",
-    "email": "degex@blogspot.com",
-    "contraseña": "zYzSag",
-    "imagen": "http://dummyimage.com/143x66.png/5fa2dd/ffffff"
-  },
-  {
-    "id": 35,
-    "first_name": "Kamilah",
-    "last_name": "Pickvance",
-    "email": "kpickvancey@stumbleupon.com",
-    "contraseña": "VWuz1r8g5kF",
-    "imagen": "http://dummyimage.com/60x150.png/ff4444/ffffff"
-  },
-  {
-    "id": 36,
-    "first_name": "Ninette",
-    "last_name": "Raye",
-    "email": "nrayez@livejournal.com",
-    "contraseña": "6Ta3skQro2Cc",
-    "imagen": "http://dummyimage.com/95x122.png/dddddd/000000"
-  },
-  {
-    "id": 37,
-    "first_name": "Hercule",
-    "last_name": "Scandrite",
-    "email": "hscandrite10@yolasite.com",
-    "contraseña": "XHgHyIyO",
-    "imagen": "http://dummyimage.com/218x146.png/cc0000/ffffff"
-  },
-  {
-    "id": 38,
-    "first_name": "Peggie",
-    "last_name": "Poxton",
-    "email": "ppoxton11@photobucket.com",
-    "contraseña": "mWD1UfZUoNA",
-    "imagen": "http://dummyimage.com/186x85.png/ff4444/ffffff"
-  },
-  {
-    "id": 39,
-    "first_name": "Obadias",
-    "last_name": "Oganian",
-    "email": "ooganian12@tripadvisor.com",
-    "contraseña": "uzt9zcnyFwr",
-    "imagen": "http://dummyimage.com/76x94.png/5fa2dd/ffffff"
-  },
-  {
-    "id": 40,
-    "first_name": "Tiffy",
-    "last_name": "Code",
-    "email": "tcode13@google.it",
-    "contraseña": "9xV07i4nR0",
-    "imagen": "http://dummyimage.com/246x155.png/5fa2dd/ffffff"
-  },
-  {
-    "id": 41,
-    "first_name": "Agatha",
-    "last_name": "Stonall",
-    "email": "astonall14@gizmodo.com",
-    "contraseña": "pn9jUrNcL8",
-    "imagen": "http://dummyimage.com/242x207.png/5fa2dd/ffffff"
-  },
-  {
-    "id": 42,
-    "first_name": "Sophronia",
-    "last_name": "Hurry",
-    "email": "shurry15@irs.gov",
-    "contraseña": "0h1NUtg",
-    "imagen": "http://dummyimage.com/123x160.png/ff4444/ffffff"
-  },
-  {
-    "id": 43,
-    "first_name": "Shepperd",
-    "last_name": "Hiddy",
-    "email": "shiddy16@shinystat.com",
-    "contraseña": "4b3E0iM",
-    "imagen": "http://dummyimage.com/243x228.png/5fa2dd/ffffff"
-  },
-  {
-    "id": 44,
-    "first_name": "Benni",
-    "last_name": "Riggert",
-    "email": "briggert17@vimeo.com",
-    "contraseña": "HBOhv1om9",
-    "imagen": "http://dummyimage.com/226x175.png/5fa2dd/ffffff"
-  },
-  {
-    "id": 45,
-    "first_name": "Mata",
-    "last_name": "Richards",
-    "email": "mrichards18@ucoz.ru",
-    "contraseña": "OHHLxwbvW",
-    "imagen": "http://dummyimage.com/122x213.png/dddddd/000000"
-  },
-  {
-    "id": 46,
-    "first_name": "Mavra",
-    "last_name": "Pickvance",
-    "email": "mpickvance19@columbia.edu",
-    "contraseña": "hGVPSL4c1",
-    "imagen": "http://dummyimage.com/242x220.png/ff4444/ffffff"
-  },
-  {
-    "id": 47,
-    "first_name": "Lefty",
-    "last_name": "Ezzell",
-    "email": "lezzell1a@sbwire.com",
-    "contraseña": "TPHFEoG",
-    "imagen": "http://dummyimage.com/67x74.png/dddddd/000000"
-  },
-  {
-    "id": 48,
-    "first_name": "Willey",
-    "last_name": "Lamden",
-    "email": "wlamden1b@tumblr.com",
-    "contraseña": "fayiQcTlU",
-    "imagen": "http://dummyimage.com/139x110.png/cc0000/ffffff"
-  },
-  {
-    "id": 49,
-    "first_name": "Nan",
-    "last_name": "Vanini",
-    "email": "nvanini1c@w3.org",
-    "contraseña": "4UEJi0tcs",
-    "imagen": "http://dummyimage.com/70x50.png/cc0000/ffffff"
-  },
-  {
-    "id": 50,
-    "first_name": "Gaven",
-    "last_name": "Beardsley",
-    "email": "gbeardsley1d@epa.gov",
-    "contraseña": "qnXIB36QD",
-    "imagen": "http://dummyimage.com/185x168.png/5fa2dd/ffffff"
-  },
-  {
-    "id": 51,
-    "first_name": "Archibald",
-    "last_name": "Dyter",
-    "email": "adyter1e@google.ca",
-    "contraseña": "5yO9lskK",
-    "imagen": "http://dummyimage.com/201x98.png/cc0000/ffffff"
-  },
-  {
-    "id": 52,
-    "first_name": "Kiele",
-    "last_name": "Coggon",
-    "email": "kcoggon1f@example.com",
-    "contraseña": "WcueZHf",
-    "imagen": "http://dummyimage.com/222x113.png/cc0000/ffffff"
-  },
-  {
-    "id": 53,
-    "first_name": "Bernadine",
-    "last_name": "McCoy",
-    "email": "bmccoy1g@chicagotribune.com",
-    "contraseña": "pPTBq6H8r",
-    "imagen": "http://dummyimage.com/210x233.png/5fa2dd/ffffff"
-  },
-  {
-    "id": 54,
-    "first_name": "Gerhard",
-    "last_name": "McCoveney",
-    "email": "gmccoveney1h@wordpress.org",
-    "contraseña": "ofbKDWeanR",
-    "imagen": "http://dummyimage.com/139x136.png/cc0000/ffffff"
-  },
-  {
-    "id": 55,
-    "first_name": "Dorothee",
-    "last_name": "Stoad",
-    "email": "dstoad1i@toplist.cz",
-    "contraseña": "ZEFW3Vyr3LiH",
-    "imagen": "http://dummyimage.com/50x58.png/ff4444/ffffff"
-  },
-  {
-    "id": 56,
-    "first_name": "Audra",
-    "last_name": "Liddicoat",
-    "email": "aliddicoat1j@amazon.co.uk",
-    "contraseña": "YsiJCIfZQ",
-    "imagen": "http://dummyimage.com/133x64.png/5fa2dd/ffffff"
-  },
-  {
-    "id": 57,
-    "first_name": "Lyndsay",
-    "last_name": "Pasek",
-    "email": "lpasek1k@vimeo.com",
-    "contraseña": "crV4i5",
-    "imagen": "http://dummyimage.com/122x108.png/cc0000/ffffff"
-  },
-  {
-    "id": 58,
-    "first_name": "Engelbert",
-    "last_name": "Kopps",
-    "email": "ekopps1l@wikia.com",
-    "contraseña": "72MKIjr",
-    "imagen": "http://dummyimage.com/152x191.png/ff4444/ffffff"
-  },
-  {
-    "id": 59,
-    "first_name": "Tamas",
-    "last_name": "Drought",
-    "email": "tdrought1m@jiathis.com",
-    "contraseña": "oitGNG3hHK",
-    "imagen": "http://dummyimage.com/65x200.png/5fa2dd/ffffff"
-  },
-  {
-    "id": 60,
-    "first_name": "Eulalie",
-    "last_name": "Fines",
-    "email": "efines1n@google.de",
-    "contraseña": "H6ornoB",
-    "imagen": "http://dummyimage.com/87x54.png/5fa2dd/ffffff"
-  },
-  {
-    "id": 61,
-    "first_name": "Worden",
-    "last_name": "Stobbe",
-    "email": "wstobbe1o@un.org",
-    "contraseña": "I15qKJx",
-    "imagen": "http://dummyimage.com/242x110.png/ff4444/ffffff"
-  },
-  {
-    "id": 62,
-    "first_name": "Darrell",
-    "last_name": "Rawstorn",
-    "email": "drawstorn1p@infoseek.co.jp",
-    "contraseña": "yVazAbIp",
-    "imagen": "http://dummyimage.com/201x67.png/5fa2dd/ffffff"
-  },
-  {
-    "id": 63,
-    "first_name": "Janina",
-    "last_name": "Tregensoe",
-    "email": "jtregensoe1q@goo.gl",
-    "contraseña": "0OrsCXbWv",
-    "imagen": "http://dummyimage.com/123x162.png/cc0000/ffffff"
-  },
-  {
-    "id": 64,
-    "first_name": "Sven",
-    "last_name": "Tesyro",
-    "email": "stesyro1r@state.tx.us",
-    "contraseña": "TGwnBsHToXnT",
-    "imagen": "http://dummyimage.com/213x243.png/5fa2dd/ffffff"
-  },
-  {
-    "id": 65,
-    "first_name": "Roma",
-    "last_name": "Fereday",
-    "email": "rfereday1s@goo.ne.jp",
-    "contraseña": "armbKwWV",
-    "imagen": "http://dummyimage.com/91x221.png/5fa2dd/ffffff"
-  },
-  {
-    "id": 66,
-    "first_name": "Valentia",
-    "last_name": "Wint",
-    "email": "vwint1t@sfgate.com",
-    "contraseña": "ayRZYeb",
-    "imagen": "http://dummyimage.com/228x94.png/cc0000/ffffff"
-  },
-  {
-    "id": 67,
-    "first_name": "Nolie",
-    "last_name": "Dobeson",
-    "email": "ndobeson1u@house.gov",
-    "contraseña": "DYf3c30y6",
-    "imagen": "http://dummyimage.com/126x106.png/ff4444/ffffff"
-  },
-  {
-    "id": 68,
-    "first_name": "Marina",
-    "last_name": "Hembry",
-    "email": "mhembry1v@istockphoto.com",
-    "contraseña": "PI1za9G73ZM",
-    "imagen": "http://dummyimage.com/139x111.png/ff4444/ffffff"
-  },
-  {
-    "id": 69,
-    "first_name": "Sigvard",
-    "last_name": "Braley",
-    "email": "sbraley1w@skyrock.com",
-    "contraseña": "aeNNq2L2bK",
-    "imagen": "http://dummyimage.com/206x145.png/ff4444/ffffff"
-  },
-  {
-    "id": 70,
-    "first_name": "Michaeline",
-    "last_name": "Gally",
-    "email": "mgally1x@economist.com",
-    "contraseña": "VHDy8tHpQ",
-    "imagen": "http://dummyimage.com/99x196.png/ff4444/ffffff"
-  },
-  {
-    "id": 71,
-    "first_name": "Dolph",
-    "last_name": "Earles",
-    "email": "dearles1y@e-recht24.de",
-    "contraseña": "s1ADRA2",
-    "imagen": "http://dummyimage.com/179x222.png/5fa2dd/ffffff"
-  },
-  {
-    "id": 72,
-    "first_name": "Carroll",
-    "last_name": "Crimp",
-    "email": "ccrimp1z@printfriendly.com",
-    "contraseña": "6WiIYOB7P",
-    "imagen": "http://dummyimage.com/205x142.png/5fa2dd/ffffff"
-  },
-  {
-    "id": 73,
-    "first_name": "Bernice",
-    "last_name": "Uwins",
-    "email": "buwins20@istockphoto.com",
-    "contraseña": "ejweP3Gvh",
-    "imagen": "http://dummyimage.com/132x179.png/dddddd/000000"
-  },
-  {
-    "id": 74,
-    "first_name": "Tracee",
-    "last_name": "Gras",
-    "email": "tgras21@kickstarter.com",
-    "contraseña": "g96lMf11PGod",
-    "imagen": "http://dummyimage.com/167x82.png/dddddd/000000"
-  },
-  {
-    "id": 75,
-    "first_name": "Nadiya",
-    "last_name": "Crone",
-    "email": "ncrone22@csmonitor.com",
-    "contraseña": "yJGmQgKCA0",
-    "imagen": "http://dummyimage.com/250x52.png/5fa2dd/ffffff"
-  },
-  {
-    "id": 76,
-    "first_name": "Flemming",
-    "last_name": "Garland",
-    "email": "fgarland23@comcast.net",
-    "contraseña": "Pxo2rgrH",
-    "imagen": "http://dummyimage.com/110x64.png/cc0000/ffffff"
-  },
-  {
-    "id": 77,
-    "first_name": "Jacklyn",
-    "last_name": "Goggen",
-    "email": "jgoggen24@de.vu",
-    "contraseña": "ItX3JRW",
-    "imagen": "http://dummyimage.com/197x132.png/dddddd/000000"
-  },
-  {
-    "id": 78,
-    "first_name": "Frannie",
-    "last_name": "Ashall",
-    "email": "fashall25@godaddy.com",
-    "contraseña": "5MDoA6YIyM",
-    "imagen": "http://dummyimage.com/54x69.png/5fa2dd/ffffff"
-  },
-  {
-    "id": 79,
-    "first_name": "Kerry",
-    "last_name": "Ridgeway",
-    "email": "kridgeway26@youtu.be",
-    "contraseña": "c1p0IQGFF4",
-    "imagen": "http://dummyimage.com/212x95.png/ff4444/ffffff"
-  },
-  {
-    "id": 80,
-    "first_name": "Madelin",
-    "last_name": "Megroff",
-    "email": "mmegroff27@state.tx.us",
-    "contraseña": "AyVQfkP6u",
-    "imagen": "http://dummyimage.com/165x225.png/cc0000/ffffff"
-  },
-  {
-    "id": 81,
-    "first_name": "Willa",
-    "last_name": "Cheales",
-    "email": "wcheales28@unicef.org",
-    "contraseña": "uTc4St0QIN",
-    "imagen": "http://dummyimage.com/200x210.png/cc0000/ffffff"
-  },
-  {
-    "id": 82,
-    "first_name": "Helene",
-    "last_name": "Trevallion",
-    "email": "htrevallion29@unblog.fr",
-    "contraseña": "GpnfQix09",
-    "imagen": "http://dummyimage.com/185x70.png/ff4444/ffffff"
-  },
-  {
-    "id": 83,
-    "first_name": "Maximilianus",
-    "last_name": "Gilkison",
-    "email": "mgilkison2a@cmu.edu",
-    "contraseña": "pprJXHtc342",
-    "imagen": "http://dummyimage.com/134x152.png/ff4444/ffffff"
-  },
-  {
-    "id": 84,
-    "first_name": "Clim",
-    "last_name": "Dollman",
-    "email": "cdollman2b@samsung.com",
-    "contraseña": "enTTfQ0KpTW",
-    "imagen": "http://dummyimage.com/224x54.png/5fa2dd/ffffff"
-  },
-  {
-    "id": 85,
-    "first_name": "Beryl",
-    "last_name": "Ninotti",
-    "email": "bninotti2c@mail.ru",
-    "contraseña": "mXhHnBnCC",
-    "imagen": "http://dummyimage.com/63x225.png/ff4444/ffffff"
-  },
-  {
-    "id": 86,
-    "first_name": "Lilith",
-    "last_name": "Rossey",
-    "email": "lrossey2d@nytimes.com",
-    "contraseña": "nI6laKxngk",
-    "imagen": "http://dummyimage.com/188x215.png/cc0000/ffffff"
-  },
-  {
-    "id": 87,
-    "first_name": "Liana",
-    "last_name": "Friday",
-    "email": "lfriday2e@tiny.cc",
-    "contraseña": "4bEoT0uKCo4B",
-    "imagen": "http://dummyimage.com/232x67.png/5fa2dd/ffffff"
-  },
-  {
-    "id": 88,
-    "first_name": "Lynnea",
-    "last_name": "Scully",
-    "email": "lscully2f@cargocollective.com",
-    "contraseña": "X5VyMG16RV",
-    "imagen": "http://dummyimage.com/179x136.png/ff4444/ffffff"
-  },
-  {
-    "id": 89,
-    "first_name": "Calhoun",
-    "last_name": "Chancellor",
-    "email": "cchancellor2g@washington.edu",
-    "contraseña": "3JkidOw",
-    "imagen": "http://dummyimage.com/106x95.png/5fa2dd/ffffff"
-  },
-  {
-    "id": 90,
-    "first_name": "Nadean",
-    "last_name": "MacMorland",
-    "email": "nmacmorland2h@mail.ru",
-    "contraseña": "HPXuHQO",
-    "imagen": "http://dummyimage.com/210x73.png/ff4444/ffffff"
-  },
-  {
-    "id": 91,
-    "first_name": "Brigida",
-    "last_name": "MacVaugh",
-    "email": "bmacvaugh2i@bing.com",
-    "contraseña": "y9xX46PdqceF",
-    "imagen": "http://dummyimage.com/79x125.png/5fa2dd/ffffff"
-  },
-  {
-    "id": 92,
-    "first_name": "Randi",
-    "last_name": "Blant",
-    "email": "rblant2j@gnu.org",
-    "contraseña": "XhkbhIGR4",
-    "imagen": "http://dummyimage.com/153x62.png/cc0000/ffffff"
-  },
-  {
-    "id": 93,
-    "first_name": "Darn",
-    "last_name": "Izzat",
-    "email": "dizzat2k@berkeley.edu",
-    "contraseña": "ut6kb5",
-    "imagen": "http://dummyimage.com/63x76.png/cc0000/ffffff"
-  },
-  {
-    "id": 94,
-    "first_name": "Tobiah",
-    "last_name": "Snepp",
-    "email": "tsnepp2l@icq.com",
-    "contraseña": "M4pM2xIJFP",
-    "imagen": "http://dummyimage.com/63x139.png/cc0000/ffffff"
-  },
-  {
-    "id": 95,
-    "first_name": "Zacharias",
-    "last_name": "Ackrill",
-    "email": "zackrill2m@springer.com",
-    "contraseña": "yxJYX9Rmz",
-    "imagen": "http://dummyimage.com/205x237.png/cc0000/ffffff"
-  },
-  {
-    "id": 96,
-    "first_name": "Ermanno",
-    "last_name": "Druce",
-    "email": "edruce2n@instagram.com",
-    "contraseña": "HaSSfhAGl",
-    "imagen": "http://dummyimage.com/93x228.png/dddddd/000000"
-  },
-  {
-    "id": 97,
-    "first_name": "Alica",
-    "last_name": "O' Shea",
-    "email": "aoshea2o@princeton.edu",
-    "contraseña": "it3rlaty0",
-    "imagen": "http://dummyimage.com/195x119.png/dddddd/000000"
-  },
-  {
-    "id": 98,
-    "first_name": "Toby",
-    "last_name": "Sampson",
-    "email": "tsampson2p@csmonitor.com",
-    "contraseña": "HhdWEiH",
-    "imagen": "http://dummyimage.com/167x126.png/5fa2dd/ffffff"
-  },
-  {
-    "id": 99,
-    "first_name": "Vera",
-    "last_name": "Wincott",
-    "email": "vwincott2q@posterous.com",
-    "contraseña": "WjY27UaEC",
-    "imagen": "http://dummyimage.com/95x188.png/5fa2dd/ffffff"
-  },
-  {
-    "id": 100,
     "first_name": "Suzie",
     "last_name": "Knivett",
     "email": "sknivett2r@wikia.com",
     "contraseña": "iwX3wJK",
+    "categoria":"admin",
     "imagen": "http://dummyimage.com/148x77.png/dddddd/000000"
   }
 ]
