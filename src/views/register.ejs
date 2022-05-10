@@ -32,17 +32,22 @@
       <div class="datos-usuario">
         <fieldset class="fieldset">
           <legend>Personal data</legend>
-          
-          <form class="register" action="index.html" method="post">
+
+          <form
+            class="register"
+            action="/user/register"
+            method="POST"
+            enctype="multipart/form-data"
+          >
             <div class="Register">
               <div>
                 <h3>Tu Nombre</h3>
                 <div class="campo">
                   <label for="nombre"></label>
                   <input
+                    name="first_name"
                     type="text"
-                    name="nombre"
-                    id="nombre"
+                    id="first_name"
                     placeholder="Nombre"
                   />
                 </div>
@@ -50,8 +55,8 @@
                   <label for="apellido"></label>
                   <input
                     type="text"
-                    name="apellido"
-                    id="apellido"
+                    name="last_name"
+                    id="last_name"
                     placeholder="Apellido"
                   />
                 </div>
@@ -65,6 +70,11 @@
                   politica de privacidad. Te haremos un regalo!
                 </p>
               </div>
+              <h3>Imagen de avatar</h3>
+              <div>
+                <input type="file" name="image" id="image" />
+              </div>
+
               <h3>Datos de Acceso</h3>
               <div class="user-info">
                 <div class="email campo1">
@@ -77,11 +87,11 @@
                   />
                 </div>
                 <div class="password campo1">
-                  <label for="password"></label>
+                  <label for="contraseña"></label>
                   <input
                     type="password"
                     id="password"
-                    name="password"
+                    name="contraseña"
                     placeholder="Contraseña"
                     pattern=".{8,}"
                     title="8 letras minusculas"
@@ -93,7 +103,7 @@
                   <input
                     type="password"
                     id="password"
-                    name="password"
+                    name="contraseña"
                     placeholder="Repetir contraseña"
                     pattern=".{8,}"
                     title="8 letras minusculas"
@@ -111,8 +121,9 @@
               <div class="noticias-condiciones">
                 <input type="checkbox" />Me gustaria recibir noticias
               </div>
-              <div class="boton-enviar"><input type="submit" value="ENVIAR"/></div>
-              
+              <div class="boton-enviar">
+                <input type="submit" value="ENVIAR" />
+              </div>
             </div>
           </form>
         </fieldset>

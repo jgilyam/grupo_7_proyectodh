@@ -20,6 +20,9 @@ const PORT = 4000; //puerto en el que el servidor escuchara
 
 // se decalra la carpeta public para servir archivos estaticos
 app.use(express.static(path.resolve(__dirname, "../public")));
+app.use(express.urlencoded({extended:false}));
+app.use(express.json());
+
 //motor de plantillas ejs
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/views"));
