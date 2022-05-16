@@ -1,10 +1,13 @@
 const path = require("path");
-const fs = require('fs');
+const fs = require("fs");
 
 //RUTA DE ARCHIVO JSON-USER
 const userFilePath = path.join(__dirname, "../data/users.json");
 //PASANDO ARCHIVO JSON-USER A ARRAY
 const users = JSON.parse(fs.readFileSync(userFilePath, "utf-8"));
+
+//requiero express-validator
+const { validationResult, body } = require("express-validator");
 
 const controllersUser = {};
 
@@ -23,10 +26,18 @@ controllersUser.formconsultas = (req, res) => {
 controllersUser.preguntasFrecuentes = (req, res) => {
   res.render("pregFrecuentes");
 };
-controllersUser.createUser = (req, res)=>{
-    
+controllersUser.createUser = (req, res) => {
+  let resultValidation = validationResult(req);
+  console.log("body Result:", resultValidation);
+  if (resultValidation.errors.length > 0) {
+    return res.render("register", {
+      errors: resultValidation.mapped(),
+      oldData: req.body,
+    });
+  }
   let id = users[users.length - 1].id + 1;
-  let image = "default-image.png"
+
+  let image = "default-image.png";
 
   if (req.file) {
     image = req.file.filename;
@@ -35,12 +46,12 @@ controllersUser.createUser = (req, res)=>{
   let createUser = {
     id,
     ...req.body,
-    image
+    image,
   };
 
-  const usersData = fs.readFileSync(userFilePath, 'utf-8');
+  const usersData = fs.readFileSync(userFilePath, "utf-8");
   let user;
-  if(usersData == ''){
+  if (usersData == "") {
     user = [];
   } else {
     user = JSON.parse(usersData);
@@ -48,8 +59,8 @@ controllersUser.createUser = (req, res)=>{
   user.push(createUser);
   usersJSON = JSON.stringify(user);
   fs.writeFileSync(userFilePath, usersJSON);
-  
-  res.redirect('../home')
-}
+
+  res.redirect("../home");
+};
 
 module.exports = controllersUser;

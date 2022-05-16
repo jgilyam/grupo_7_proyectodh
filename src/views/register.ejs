@@ -50,6 +50,9 @@
                     id="first_name"
                     placeholder="Nombre"
                   />
+                  <% if (locals.errors && errors.first_name) { %>
+                  <div class="text-denger"><% errors.first_name.msg %></div>
+                  <% } %>
                 </div>
                 <div class="campo">
                   <label for="apellido"></label>
@@ -59,11 +62,17 @@
                     id="last_name"
                     placeholder="Apellido"
                   />
+                  <% if (locals.errors && errors.last_name) { %>
+                  <div class="text-denger"><% errors.last_name.msg %></div>
+                  <% } %>
                 </div>
                 <div class="campo-fecha">
                   <h3>Fecha de Nacimiento</h3>
                   <label for="date"></label>
                   <input type="date" name="date" id="date" placeholder="dd" />
+                  <% if (locals.errors && errors.date) { %>
+                  <div class="text-denger"><% errors.date.msg %></div>
+                  <% } %>
                 </div>
                 <p class="texto">
                   Recopilamos la fecha de nacimiento de acuerdo a nuestra
@@ -85,6 +94,9 @@
                     name="email"
                     placeholder="email@gmail.com"
                   />
+                  <% if (locals.errors && errors.email) { %>
+                  <div class="text-denger"><% errors.email.msg %></div>
+                  <% } %>
                 </div>
                 <div class="password campo1">
                   <label for="contraseña"></label>
@@ -97,6 +109,9 @@
                     title="8 letras minusculas"
                     required
                   />
+                  <% if (locals.errors && errors.contraseña) { %>
+                  <div class="text-denger"><% errors.contraseña.msg %></div>
+                  <% } %>
                 </div>
                 <div class="repetir-password campo1">
                   <label for="password"></label>
@@ -109,6 +124,9 @@
                     title="8 letras minusculas"
                     required
                   />
+                  <% if (locals.errors && errors.contraseña) { %>
+                  <div class="text-denger"><% errors.contraseña.msg %></div>
+                  <% } %>
                 </div>
                 <p class="texto">
                   Debe usar como minimo 8 caracteres y contener una mayuscula
