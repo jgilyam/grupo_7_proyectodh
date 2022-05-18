@@ -49,7 +49,7 @@
                     type="text"
                     id="first_name"
                     placeholder="Nombre"
-                    value="<%= locals.oldData ? oldData.first_name : null %> "
+                    value="<%= locals.oldData && oldData.first_name %>"
                   />
                   <% if (locals.errors && errors.first_name) { %>
                   <div class="text-denger"><%= errors.first_name.msg %></div>
@@ -62,6 +62,7 @@
                     name="last_name"
                     id="last_name"
                     placeholder="Apellido"
+                    value="<%= locals.oldData && oldData.last_name %>"
                   />
                   <% if (locals.errors && errors.last_name) { %>
                   <div class="text-denger"><%= errors.last_name.msg %></div>
@@ -70,7 +71,13 @@
                 <div class="campo-fecha">
                   <h3>Fecha de Nacimiento</h3>
                   <label for="date"></label>
-                  <input type="date" name="date" id="date" placeholder="dd" />
+                  <input
+                    type="date"
+                    name="date"
+                    id="date"
+                    placeholder="dd"
+                    value="<%= locals.oldData && oldData.data %>"
+                  />
                   <% if (locals.errors && errors.date) { %>
                   <div class="text-denger"><%= errors.date.msg %></div>
                   <% } %>
@@ -97,6 +104,7 @@
                     id="email"
                     name="email"
                     placeholder="email@gmail.com"
+                    value="<%= locals.oldData && oldData.email %>"
                   />
                   <% if (locals.errors && errors.email) { %>
                   <div class="text-denger"><%= errors.email.msg %></div>
