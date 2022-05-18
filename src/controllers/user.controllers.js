@@ -1,6 +1,8 @@
 const path = require("path");
 const fs = require("fs");
 
+const user = require("../models/user.js");
+
 //RUTA DE ARCHIVO JSON-USER
 const userFilePath = path.join(__dirname, "../data/users.json");
 //PASANDO ARCHIVO JSON-USER A ARRAY
@@ -26,41 +28,16 @@ controllersUser.formconsultas = (req, res) => {
 controllersUser.preguntasFrecuentes = (req, res) => {
   res.render("pregFrecuentes");
 };
-controllersUser.createUser = (req, res) => {
+controllersUser.processRegister = (req, res) => {
   let resultValidation = validationResult(req);
-  console.log("body Result:", resultValidation);
   if (resultValidation.errors.length > 0) {
     return res.render("register", {
       errors: resultValidation.mapped(),
       oldData: req.body,
     });
+    return res.send("Perfil creado con exito!");
   }
-  let id = users[users.length - 1].id + 1;
-
-  let image = "default-image.png";
-
-  if (req.file) {
-    image = req.file.filename;
-  }
-
-  let createUser = {
-    id,
-    ...req.body,
-    image,
-  };
-
-  const usersData = fs.readFileSync(userFilePath, "utf-8");
-  let user;
-  if (usersData == "") {
-    user = [];
-  } else {
-    user = JSON.parse(usersData);
-  }
-  user.push(createUser);
-  usersJSON = JSON.stringify(user);
-  fs.writeFileSync(userFilePath, usersJSON);
-
-  res.redirect("../home");
+  user.create(req.body, req.file);
 };
 
 module.exports = controllersUser;
