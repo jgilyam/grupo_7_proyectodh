@@ -35,18 +35,18 @@ const validations = [
   body("contraseña").notEmpty().withMessage("Debe escirbir su contraseña"),
   body("image").custom((value, { req }) => {
     let file = req.file;
-    //*let acceptedExtensions = [".jpg", ".png", ".gif"]; //fijarse esto!!
+    let acceptedExtensions = [".jpg", ".png", ".gif"];
 
     if (!file) {
       throw new Error("Debes subir una imagen");
-    } /*else {
+    } else {
       let fileExtensions = path.extname(file.originalname);
       if (!acceptedExtensions.includes(fileExtensions)) {
         throw new Error(
           `Las extensiones permitidas son ${acceptedExtensions.join(",")}`
         );
       }
-    }*/
+    }
     return true;
   }),
 ];
