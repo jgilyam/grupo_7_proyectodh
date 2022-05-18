@@ -49,9 +49,10 @@
                     type="text"
                     id="first_name"
                     placeholder="Nombre"
+                    value="<%= locals.oldData ? oldData.first_name : null %> "
                   />
                   <% if (locals.errors && errors.first_name) { %>
-                  <div class="text-denger"><% errors.first_name.msg %></div>
+                  <div class="text-denger"><%= errors.first_name.msg %></div>
                   <% } %>
                 </div>
                 <div class="campo">
@@ -63,7 +64,7 @@
                     placeholder="Apellido"
                   />
                   <% if (locals.errors && errors.last_name) { %>
-                  <div class="text-denger"><% errors.last_name.msg %></div>
+                  <div class="text-denger"><%= errors.last_name.msg %></div>
                   <% } %>
                 </div>
                 <div class="campo-fecha">
@@ -71,7 +72,7 @@
                   <label for="date"></label>
                   <input type="date" name="date" id="date" placeholder="dd" />
                   <% if (locals.errors && errors.date) { %>
-                  <div class="text-denger"><% errors.date.msg %></div>
+                  <div class="text-denger"><%= errors.date.msg %></div>
                   <% } %>
                 </div>
                 <p class="texto">
@@ -82,6 +83,9 @@
               <h3>Imagen de avatar</h3>
               <div>
                 <input type="file" name="image" id="image" />
+                <% if (locals.errors && errors.image) { %>
+                <div class="text-denger"><%= errors.image.msg %></div>
+                <% } %>
               </div>
 
               <h3>Datos de Acceso</h3>
@@ -95,7 +99,7 @@
                     placeholder="email@gmail.com"
                   />
                   <% if (locals.errors && errors.email) { %>
-                  <div class="text-denger"><% errors.email.msg %></div>
+                  <div class="text-denger"><%= errors.email.msg %></div>
                   <% } %>
                 </div>
                 <div class="password campo1">
@@ -107,10 +111,9 @@
                     placeholder="Contraseña"
                     pattern=".{8,}"
                     title="8 letras minusculas"
-                    required
                   />
                   <% if (locals.errors && errors.contraseña) { %>
-                  <div class="text-denger"><% errors.contraseña.msg %></div>
+                  <div class="text-denger"><%= errors.contraseña.msg %></div>
                   <% } %>
                 </div>
                 <div class="repetir-password campo1">
@@ -122,10 +125,9 @@
                     placeholder="Repetir contraseña"
                     pattern=".{8,}"
                     title="8 letras minusculas"
-                    required
                   />
                   <% if (locals.errors && errors.contraseña) { %>
-                  <div class="text-denger"><% errors.contraseña.msg %></div>
+                  <div class="text-denger"><%= errors.contraseña.msg %></div>
                   <% } %>
                 </div>
                 <p class="texto">
