@@ -12,6 +12,7 @@ const validations = [
       .isEmail()
       .withMessage("Debes escribir un formato de correo electronico valido"),
     body("contraseña").notEmpty().withMessage("Debe escirbir su contraseña"),
+    body("passwordRepit").notEmpty().withMessage("Debe escirbir su contraseña"),
     /*body("image").custom((value, { req }) => {
       let file = req.file;
       let acceptedExtensions = [".jpg", ".png", ".gif"];
