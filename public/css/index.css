@@ -84,6 +84,8 @@ body {
   background-color: #e5890a;
   padding: 10px;
   align-items: center;
+  color: white;
+  border-bottom: #e19122 1px solid;
 }
 .navbar li a {
   color: white;
@@ -323,6 +325,7 @@ se agregan estilos comunies de detalle de producto
     padding: 5px 20px;
     display: flex;
     justify-content: space-between;
+    
   }
 
   .menu {
