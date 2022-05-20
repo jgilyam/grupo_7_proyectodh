@@ -4,7 +4,7 @@ const path = require("path");
 const userFilePath = path.join(__dirname, "../data/users.json");
 const users = JSON.parse(fs.readFileSync(userFilePath, "utf-8"));
 
-const User = {
+/*const User = {
   fileName: "./data/users.json",
 
   getData: function () {
@@ -44,4 +44,4 @@ const User = {
   },
 };
 
-module.exports = User;
+module.exports = User;*/

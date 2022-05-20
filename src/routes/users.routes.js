@@ -25,7 +25,7 @@ const upload = multer({ storage: storage });
 const validations = [
   body("first_name").notEmpty().withMessage("Debe escribir el nombre"),
   body("last_name").notEmpty().withMessage("Debe escribir el apellido"),
-  body("image").notEmpty().withMessage("Debe subir una imagen"),
+  //body("image").notEmpty().withMessage("Debe subir una imagen"),
   body("email")
     .notEmpty()
     .withMessage("Debe escribir su email")
@@ -33,7 +33,7 @@ const validations = [
     .isEmail()
     .withMessage("Debes escribir un formato de correo electronico valido"),
   body("contraseña").notEmpty().withMessage("Debe escirbir su contraseña"),
-  body("image").custom((value, { req }) => {
+  /*body("image").custom((value, { req }) => {
     let file = req.file;
     let acceptedExtensions = [".jpg", ".png", ".gif"];
 
@@ -48,7 +48,7 @@ const validations = [
       }
     }
     return true;
-  }),
+  }),*/
 ];
 
 router.get("/register", controllersUser.register);
@@ -57,7 +57,7 @@ router.post(
   "/register",
   upload.single("image"),
   validations,
-  controllersUser.processRegister
+  controllersUser.createUser
 );
 
 router.get("/login", controllersUser.login);
