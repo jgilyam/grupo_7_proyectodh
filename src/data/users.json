@@ -1,14 +1,14 @@
 [
 	{
 		"id": 1,
-		"first_name": "julieta",
-		"last_name": "intentoConExito",
-		"date": "2010-12-15",
+		"first_name": "carla",
+		"last_name": "asdaskdjas",
+		"date": "",
 		"email": "nadia@nadia.com",
-		"contraseña": ["12345678", "12345678"],
+		"contraseña": "$2a$10$jXCfpD8VIqEp38XMvXqpquZoa0tLzDCMTAdKWmxBYrx9ZvuYHtJCe",
+		"passwordRepit": "$2a$10$hm0R12ehJ794k6UMqd7ecelBUqiWfyV7qRKWgtDHE86z/A0GZkP8i",
 		"boxTerminos": "on",
 		"boxInfo": "on",
-		"imageUsuario": "1653053460473-Sent messages _Isometric.png"
+		"imageUsuario": "default-image.png"
 	}
-	
 ]
