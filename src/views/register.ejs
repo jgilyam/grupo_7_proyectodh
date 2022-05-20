@@ -114,8 +114,8 @@
                     id="password"
                     name="contraseña"
                     placeholder="Contraseña"
-                    pattern=".{8,}"
-                    title="8 letras minusculas"
+                    pattern=".{12,}"
+                    title="min 12 letras alfanumericas"
                   />
                   <% if (locals.errors && errors.contraseña) { %>
                   <div class="text-denger"><%= errors.contraseña.msg %></div>
@@ -126,10 +126,10 @@
                   <input
                     type="password"
                     id="password"
-                    name="contraseña"
+                    name="passwordRepit"
                     placeholder="Repetir contraseña"
-                    pattern=".{8,}"
-                    title="8 letras minusculas"
+                    pattern=".{12,}"
+                    title="min 12 letras alfanumericas"
                   />
                   <% if (locals.errors && errors.contraseña) { %>
                   <div class="text-denger"><%= errors.contraseña.msg %></div>
