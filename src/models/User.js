@@ -40,12 +40,15 @@ const user = {
       imageFinal = image.filename
     }
 
+
     let newUser = {
       id: this.generarId(),
       ...userData,
-      /* constraseña : bcryptjs.hashSync(userData.contraseña,10), */
+      contraseña : bcryptjs.hashSync(userData.contraseña,10),
+      passwordRepit : bcryptjs.hashSync(userData.passwordRepit,10),
       imageUsuario : imageFinal
     };
+
 
     allUsers.push(newUser)// luego de esto vamos a escrbirlo en el archivo JSON
     fs.writeFileSync(this.fileName,JSON.stringify(allUsers,null, ""))//el write te pide ¿donde lo vas a escribir? en este caso en nuestro valor fileName mas arriba que tiene nuestro JSON//despues le pasamos en formato JSOn con stringify//si quiero mantener el formato edl JSON original pasar dos parametros mas null y un espacio;
