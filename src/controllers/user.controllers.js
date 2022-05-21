@@ -27,6 +27,10 @@ controllersUser.login = (req, res) => {
     res.cookie("recordame", mail, { maxAge: 60000 });
     console.log("Se seteo la cookie");
   }
+  res.redirect("/home");
+};
+
+controllersUser.formLogin = (req, res) => {
   res.render("login");
 };
 
