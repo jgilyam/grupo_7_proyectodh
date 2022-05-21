@@ -35,7 +35,7 @@ body {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  width: 300px;
+  width: 500px;
   justify-content: space-around;
 }
 /*Modificaciones*/
@@ -86,6 +86,20 @@ body {
   align-items: center;
   color: white;
   border-bottom: #e19122 1px solid;
+}
+.log-usuario {
+  justify-content: space-between;
+  background-color: #e5890a;
+  padding: 10px;
+  align-items: center;
+  color: white;
+  border-bottom: #e19122 1px solid; 
+}
+.log-mail{
+  color: white;
+  font-size: 12px;
+  align-self: center;
+  padding: 0px 10px;
 }
 .navbar li a {
   color: white;
@@ -280,6 +294,7 @@ se agregan estilos comunies de detalle de producto
   box-shadow: 0px 0px 10px rgb(100 100 100);
 }
 
+
 @media (min-width: 361px) {
   .nav-medio {
     font-size: 15px;
@@ -296,6 +311,9 @@ se agregan estilos comunies de detalle de producto
   .logo-patocrearte {
     width: 80px;
     border-radius: 100%;
+  }
+  .log-usuario{
+    display: none;
   }
   /* .navbar {
     padding: 1rem;

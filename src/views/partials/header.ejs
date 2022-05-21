@@ -69,6 +69,9 @@
         <i class="fa-solid fa-bars"></i>
       </div>
       <div class="iniciar-sesion">
+        <% if (!typeof(user)== "undefined") { %>
+        <p class="log-mail">sebasrodriguez@gmail.com</p>
+        <% } %>
         <a href="/user/login" class="ancla-login">
           <i class="fa-solid fa-user"></i>
         </a>
@@ -80,7 +83,10 @@
       </div>
     </div>
   </nav>
-  <div class="navbar">
-    <p>Enviar a Sebastian - Av Argentina 1345 sur</p>
+
+  <% if (!typeof(user)== "undefined") { %>
+  <div class="log-usuario">
+    <p>Enviar a Sesbastian - Av Argentina 1345 sur</p>
   </div>
+  <% } %>
 </header>
