@@ -19,7 +19,7 @@ const TIEMPO_COKKIE = 60000;
 
 const controllersUser = {};
 
-controllersUser.login = (req, res) => {
+/*controllersUser.login = (req, res) => {
   const mail = "juan@gmial.com"; // Variable que luego debe se reemplazada por el mail del usiario que se loogueo.
 
   //Maga, para indicar que el usuario se logueo usar esta variable en session "usuarioLogueado", si le pones otro nombre avisame para cambiar algo en el middleware ed la cookie
@@ -29,7 +29,7 @@ controllersUser.login = (req, res) => {
     res.cookie("recordame", mail, { maxAge: TIEMPO_COKKIE });
   }
   res.redirect("/home");
-};
+};*/
 
 controllersUser.formLogin = (req, res) => {
   res.render("login");
@@ -62,7 +62,34 @@ controllersUser.createUser = (req, res) => {
   return res.redirect("../home");
 };
 
-module.exports = controllersUser;
+(controllersUser.proccessLogin = (req, res) => {
+  let userToLogin = user.findByEmail(req.body.email);
+
+  if (userToLogin) {
+    let isOkThePassword = bcryptjs.compareSync(
+      req.body.password,
+      userToLogin.password
+    );
+    if (isOkThePassword) {
+      return res.redirect("../home");
+    }
+    return res.render("login", {
+      errors: {
+        email: {
+          msg: "Los datos son invalidos",
+        },
+      },
+    });
+  }
+  return res.render("login", {
+    errors: {
+      email: {
+        msg: "No se encuentra este email registrado",
+      },
+    },
+  });
+}),
+  (module.exports = controllersUser);
 
 //realizado por Jose
 /* let id = users[users.length - 1].id + 1;
