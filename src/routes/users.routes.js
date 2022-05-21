@@ -30,7 +30,7 @@ router.post(
   controllersUser.createUser
 );
 
-router.get("/formlogin", controllersUser.formLogin);
+router.get("/login", controllersUser.formLogin);
 
 router.post("/login", controllersUser.login);
 
