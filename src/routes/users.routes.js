@@ -32,7 +32,9 @@ router.post(
 
 router.get("/login", controllersUser.formLogin);
 
-router.post("/login", controllersUser.login);
+/*router.post("/login", controllersUser.login);*/
+
+router.post("/login", controllersUser.proccessLogin);
 
 router.get("/formconsultas", controllersUser.formconsultas);
 
