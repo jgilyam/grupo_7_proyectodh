@@ -16,8 +16,10 @@
               placeholder="Email@email.com"
               class="input1"
               name="email"
-              required
             />
+            <% if (locals.errors && errors.email) { %>
+            <div class="text-denger"><%= errors.email.msg %></div>
+            <% } %>
           </div>
           <div class="input2-group">
             <input
