@@ -14,6 +14,9 @@ const bcryptjs = require("bcryptjs");
 //requiero express-validator
 const { validationResult, body } = require("express-validator");
 
+//Tiempo de expiración de cookie
+const TIEMPO_COKKIE = 60000;
+
 const controllersUser = {};
 
 controllersUser.login = (req, res) => {
@@ -21,12 +24,9 @@ controllersUser.login = (req, res) => {
 
   //Maga, para indicar que el usuario se logueo usar esta variable en session "usuarioLogueado"
 
-  console.log("Entre eb .login");
-  console.log(req.body);
   //se setea la cookie
   if (req.body.recordar != undefined) {
-    res.cookie("recordame", mail, { maxAge: 60000 });
-    console.log("Se seteo la cookie");
+    res.cookie("recordame", mail, { maxAge: TIEMPO_COKKIE });
   }
   res.redirect("/home");
 };
