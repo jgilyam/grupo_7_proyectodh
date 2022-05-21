@@ -22,6 +22,7 @@ controllersUser.login = (req, res) => {
   //Maga, para indicar que el usuario se logueo usar esta variable en session "usuarioLogueado"
 
   console.log("Entre eb .login");
+  console.log(req.body);
   //se setea la cookie
   if (req.body.recordar != undefined) {
     res.cookie("recordame", mail, { maxAge: 60000 });
