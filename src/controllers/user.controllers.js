@@ -5,11 +5,11 @@ const fs = require("fs");
 const userFilePath = path.join(__dirname, "../data/users.json");
 //PASANDO ARCHIVO JSON-USER A ARRAY
 const users = JSON.parse(fs.readFileSync(userFilePath, "utf-8"));
-//requiero user 
-const user = require("../models/user.js")
+//requiero user
+const user = require("../models/user.js");
 
 //requiero bcryptjs pra cuando el proceso de login lo necesite
-const bcryptjs = require("bcryptjs")
+const bcryptjs = require("bcryptjs");
 
 //requiero express-validator
 const { validationResult, body } = require("express-validator");
@@ -17,6 +17,16 @@ const { validationResult, body } = require("express-validator");
 const controllersUser = {};
 
 controllersUser.login = (req, res) => {
+  const mail = "juan@gmial.com"; // Variable que luego debe se reemplazada por el mail del usiario que se loogueo.
+
+  //Maga, para indicar que el usuario se logueo usar esta variable en session "usuarioLogueado"
+
+  console.log("Entre eb .login");
+  //se setea la cookie
+  if (req.body.recordar != undefined) {
+    res.cookie("recordame", mail, { maxAge: 60000 });
+    console.log("Se seteo la cookie");
+  }
   res.render("login");
 };
 
@@ -31,7 +41,8 @@ controllersUser.formconsultas = (req, res) => {
 controllersUser.preguntasFrecuentes = (req, res) => {
   res.render("pregFrecuentes");
 };
-controllersUser.createUser = (req, res) => {//proceso de registro de usuario
+controllersUser.createUser = (req, res) => {
+  //proceso de registro de usuario
   let resultValidation = validationResult(req);
   if (resultValidation.errors.length > 0) {
     return res.render("register", {
@@ -41,17 +52,12 @@ controllersUser.createUser = (req, res) => {//proceso de registro de usuario
   }
 
   user.create(req.body, req.file);
- 
-/*  return res.send ("se guardo el usuario") */
- return  res.redirect("../home");
+
+  /*  return res.send ("se guardo el usuario") */
+  return res.redirect("../home");
 };
 
 module.exports = controllersUser;
-
-
-
-
-
 
 //realizado por Jose
 /* let id = users[users.length - 1].id + 1;

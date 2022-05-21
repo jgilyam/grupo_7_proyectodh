@@ -4,7 +4,7 @@ const path = require("path");
 //modulos de terceros
 const express = require("express");
 const methodOverride = require("method-override");
-//requiero express-validator
+const cookieParser = require("cookie-parser");
 const { body } = require("express-validator");
 
 //modulos propios
@@ -24,6 +24,7 @@ const PORT = 4000; //puerto en el que el servidor escuchara
 app.use(express.static(path.resolve(__dirname, "../public")));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(cookieParser());
 
 //motor de plantillas ejs
 app.set("view engine", "ejs");
