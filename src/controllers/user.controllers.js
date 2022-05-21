@@ -22,7 +22,7 @@ const controllersUser = {};
 controllersUser.login = (req, res) => {
   const mail = "juan@gmial.com"; // Variable que luego debe se reemplazada por el mail del usiario que se loogueo.
 
-  //Maga, para indicar que el usuario se logueo usar esta variable en session "usuarioLogueado"
+  //Maga, para indicar que el usuario se logueo usar esta variable en session "usuarioLogueado", si le pones otro nombre avisame para cambiar algo en el middleware ed la cookie
 
   //se setea la cookie
   if (req.body.recordar != undefined) {
