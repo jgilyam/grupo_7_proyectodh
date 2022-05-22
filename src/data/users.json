@@ -1,47 +1,14 @@
 [
   {
     "id": 1,
-    "first_name": "carla",
-    "last_name": "asdaskdjas",
+    "first_name": "jusdfjas",
+    "last_name": "kjdkfjasju",
     "date": "",
-    "email": "nadia@nadia.com",
-    "contraseña": "$2a$10$jXCfpD8VIqEp38XMvXqpquZoa0tLzDCMTAdKWmxBYrx9ZvuYHtJCe",
-    "passwordRepit": "$2a$10$hm0R12ehJ794k6UMqd7ecelBUqiWfyV7qRKWgtDHE86z/A0GZkP8i",
+    "email": "carla@carla.com",
+    "password": "$2a$10$jFVyV51ASjF4sbDjXPxacO6m.XORN1dPo2gh2Yqe38H7TpLV9ISF6",
+    "passwordRepit": "$2a$10$QHHFFVTOMAhvwgeuCH4F2.FpFFDwdA1Bo3Ej2vi.LlHPdmh0a8ihi",
     "boxTerminos": "on",
     "boxInfo": "on",
-    "imageUsuario": "default-image.png"
-  },
-  {
-    "id": 2,
-    "first_name": "Sebastian",
-    "last_name": "Rodriguez",
-    "date": "1988-04-22",
-    "email": "juampi88@gmail.com",
-    "contraseña": "$2a$10$JVOO4jW8Nqz/1qmnQDpKpexlbfOdidpp3lZkIe9XWrMDixTVqIdHO",
-    "passwordRepit": "$2a$10$urD4iauZvDsgcXQ0HiPPu.lPb8EhZ.K93mqTElhuVHh/iI4o5cr1W",
-    "boxTerminos": "on",
-    "imageUsuario": "1653227245735-Captura de pantalla 2022-03-27 - 00.13.59.png"
-  },
-  {
-    "id": 3,
-    "first_name": "Florencia",
-    "last_name": "Gil",
-    "date": "1970-02-12",
-    "email": "flor@gmail.com",
-    "contraseña": "$2a$10$Axt25VVqrm26czc2mhPnOunxotdPjlxtS/9NeuSM/0mWJIw9MDiTq",
-    "passwordRepit": "$2a$10$w9MWGISReLx.TaPHsDOwo.qg4LS8hJim1TsxFr32xvbauuUXnFFO.",
-    "boxTerminos": "on",
-    "imageUsuario": "1653227416962-mem1.png"
-  },
-  {
-    "id": 4,
-    "first_name": "Carla",
-    "last_name": "Fernandez",
-    "date": "1988-01-01",
-    "email": "carla@gmail.com",
-    "contraseña": "$2a$10$02zPn6mIVRbobpHwrh5xBOInVMAxxiFGtssWFUsK..0ARb0wePXBm",
-    "passwordRepit": "$2a$10$aiykoUDQDf7rJRFcr7TALOZITjAHUdGM6xo/7QTy3dt3ahvj9hk6a",
-    "boxTerminos": "on",
     "imageUsuario": "default-image.png"
   }
 ]
