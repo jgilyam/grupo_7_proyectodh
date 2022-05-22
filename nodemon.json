@@ -1,0 +1,6 @@
+{
+  "watch": ["src/app.js"],
+  "ext": "js",
+  "ignore": ["products_DATA.json", "users.json"],
+  "delay": "1"
+}
