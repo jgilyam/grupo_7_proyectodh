@@ -4,6 +4,7 @@ const controllersUser = require("../controllers/user.controllers");
 const multer = require("multer");
 const path = require("path");
 const validations = require("../middleware/validationRegister");
+const validacionesLogin = require("../middleware/validationLogin");
 //requiero express-validator
 const { body } = require("express-validator");
 
@@ -34,7 +35,7 @@ router.get("/login", controllersUser.formLogin);
 
 /*router.post("/login", controllersUser.login);*/
 
-router.post("/login", controllersUser.proccessLogin);
+router.post("/login", validacionesLogin, controllersUser.proccessLogin);
 
 router.get("/formconsultas", controllersUser.formconsultas);
 
