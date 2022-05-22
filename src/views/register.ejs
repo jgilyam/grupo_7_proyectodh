@@ -108,17 +108,18 @@
                   <% } %>
                 </div>
                 <div class="password campo1">
-                  <label for="contraseña"></label>
+                  <label for="password"></label>
                   <input
                     type="password"
                     id="password"
-                    name="contraseña"
+                    name="password"
                     placeholder="Contraseña"
-                    pattern=".{12,}"
-                    title="min 12 letras alfanumericas"
+                    pattern=".{8,}"
+                    title="min 8 letras alfanumericas"
+                    maxlength="8"
                   />
-                  <% if (locals.errors && errors.contraseña) { %>
-                  <div class="text-denger"><%= errors.contraseña.msg %></div>
+                  <% if (locals.errors && errors.password) { %>
+                  <div class="text-denger"><%= errors.password.msg %></div>
                   <% } %>
                 </div>
                 <div class="repetir-password campo1">
@@ -128,11 +129,12 @@
                     id="password"
                     name="passwordRepit"
                     placeholder="Repetir contraseña"
-                    pattern=".{12,}"
-                    title="min 12 letras alfanumericas"
+                    pattern=".{8,}"
+                    title="min 8 letras alfanumericas"
+                    maxlength="8"
                   />
-                  <% if (locals.errors && errors.contraseña) { %>
-                  <div class="text-denger"><%= errors.contraseña.msg %></div>
+                  <% if (locals.errors && errors.passwordRepit) { %>
+                  <div class="text-denger"><%= errors.passwordRepit.msg %></div>
                   <% } %>
                 </div>
                 <p class="texto">
@@ -140,11 +142,12 @@
                 </p>
               </div>
               <div class="noticias-condiciones">
-                <input type="checkbox" name="boxTerminos"/>He leido y acepto los terminos y
-                condiciones
+                <input type="checkbox" name="boxTerminos" />He leido y acepto
+                los terminos y condiciones
               </div>
               <div class="noticias-condiciones">
-                <input type="checkbox" name="boxInfo"/>Me gustaria recibir noticias
+                <input type="checkbox" name="boxInfo" />Me gustaria recibir
+                noticias
               </div>
               <div class="boton-enviar">
                 <input type="submit" value="ENVIAR" />
