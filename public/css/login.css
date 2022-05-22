@@ -175,6 +175,15 @@ body {
 .btn-enviar-formulario:hover {
   background-color: #ff9500;
 }
+.text-denger{
+  font-size: 10px;
+  font-weight: bold;
+  color: #F55353;
+  padding: 12px 0px;
+  text-align: center;
+  font-size: 15px;
+
+}
 
 @media (min-width: 361px) {
   .nav-medio {

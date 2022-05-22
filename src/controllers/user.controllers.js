@@ -77,8 +77,6 @@ controllersUser.createUser = (req, res) => {
 
 controllersUser.proccessLogin = (req, res) => {
   let userToLogin = user.findByEmail(req.body.email);
-  //console.log(userToLogin);
-
   /* console.log("pas usuario");
   console.log(req.body.password);
   console.log("pas usuario");
@@ -89,7 +87,6 @@ controllersUser.proccessLogin = (req, res) => {
       req.body.password,
       userToLogin.password
     );
-    /*  console.log(`El pass es ok? ${isOkThePassword}`) */
     if (isOkThePassword) {
       delete userToLogin.password;
       delete userToLogin.passwordRepit; // lo hago apra borrar la contra ya que en esta instancia no quiero que se vea
