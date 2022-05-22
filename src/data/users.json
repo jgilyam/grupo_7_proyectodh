@@ -10,5 +10,16 @@
     "boxTerminos": "on",
     "boxInfo": "on",
     "imageUsuario": "default-image.png"
+  },
+  {
+    "id": 2,
+    "first_name": "Juan",
+    "last_name": "Gilyam",
+    "date": "1988-12-31",
+    "email": "juampi88@gmail.com",
+    "password": "$2a$10$Jo5zB3Q83C2ccIuqIpfxrODlWEhrpSJFtSsVSNbRyc7sxkT7ieyLK",
+    "passwordRepit": "$2a$10$e7Ha5.p1y0hjRXE20THFz.r06YjLx1OvvoCDnc3ipYnpUgIArBGje",
+    "boxTerminos": "on",
+    "imageUsuario": "1653257182086-mem1.png"
   }
 ]

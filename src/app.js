@@ -6,6 +6,7 @@ const express = require("express");
 const methodOverride = require("method-override");
 const cookieParser = require("cookie-parser");
 const { body } = require("express-validator");
+const session = require("express-session");
 
 //modulos propios
 const routeMain = require("../src/routes/index.routes");
