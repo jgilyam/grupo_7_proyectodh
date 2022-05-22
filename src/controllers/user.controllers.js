@@ -93,9 +93,13 @@ controllersUser.proccessLogin = (req, res) => {
     if (isOkThePassword) {
       delete userToLogin.password;
       delete userToLogin.passwordRepit; // lo hago apra borrar la contra ya que en esta instancia no quiero que se vea
-      /* req.session.userLoger = userToLogin; //genero una propiedad en session llamda userloger(usuario logiado ) y le asigno el usertologin
-      console.log("funciona sesion:", req.session.userLoger) */
-      console.log("credenciales ok");
+      req.session.userLoger = userToLogin; //genero una propiedad en session llamda userloger(usuario logiado ) y le asigno el usertologin
+      console.log("funciona sesion:", req.session.userLoger);
+
+      //Se setea la cookie para recordar el usuario.
+      if (req.body.recordar != undefined) {
+        res.cookie("mailUsuario", mail, { maxAge: TIEMPO_COKKIE });
+      }
       return res.redirect("../home");
     }
     return res.render("login", {
