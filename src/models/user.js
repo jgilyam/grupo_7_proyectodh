@@ -49,7 +49,7 @@ const user = {
     let newUser = {
       id: this.generarId(),
       ...userData,
-      contraseña: bcryptjs.hashSync(userData.contraseña, 10),
+      password: bcryptjs.hashSync(userData.password, 10),
       passwordRepit: bcryptjs.hashSync(userData.passwordRepit, 10),
       imageUsuario: imageFinal,
     };
