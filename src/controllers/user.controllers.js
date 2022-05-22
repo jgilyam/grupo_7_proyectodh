@@ -87,12 +87,12 @@ controllersUser.proccessLogin = (req, res) => {
       req.body.password,
       userToLogin.password
     );
-
     if (isOkThePassword) {
       delete userToLogin.password;
       delete userToLogin.passwordRepit; // lo hago apra borrar la contra ya que en esta instancia no quiero que se vea
       /* req.session.userLoger = userToLogin; //genero una propiedad en session llamda userloger(usuario logiado ) y le asigno el usertologin
       console.log("funciona sesion:", req.session.userLoger) */
+      console.log("credenciales ok");
       return res.redirect("../home");
     }
     return res.render("login", {
