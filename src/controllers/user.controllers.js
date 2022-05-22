@@ -95,7 +95,7 @@ controllersUser.proccessLogin = (req, res) => {
 
       //Se setea la cookie para recordar el usuario.
       if (req.body.recordar != undefined) {
-        res.cookie("mailUsuario", mail, { maxAge: TIEMPO_COKKIE });
+        res.cookie("mailUsuario", userToLogin.email, { maxAge: TIEMPO_COKKIE });
       }
       return res.redirect("../home");
     }
