@@ -64,12 +64,19 @@ controllersUser.createUser = (req, res) => {
 
 (controllersUser.proccessLogin = (req, res) => {
   let userToLogin = user.findByEmail(req.body.email);
+  console.log(userToLogin);
+
+  console.log("pas usuario");
+  console.log(req.body.password);
+  console.log("pas usuario");
+  console.log(userToLogin.contraseña);
 
   if (userToLogin) {
     let isOkThePassword = bcryptjs.compareSync(
       req.body.password,
-      userToLogin.password
+      userToLogin.contraseña
     );
+    console.log(`El pass es ok? ${isOkThePassword}`);
     if (isOkThePassword) {
       return res.redirect("../home");
     }
