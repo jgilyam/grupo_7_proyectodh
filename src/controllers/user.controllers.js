@@ -56,33 +56,50 @@ controllersUser.createUser = (req, res) => {
     });
   }
 
+  let userEnBaseDeDato = user.findByEmail(req.body.email); //lo hago para buscar si ya existe ese email
+  if (userEnBaseDeDato) {
+    //si existe entra al if y tira el error
+    return res.render("register", {
+      errors: {
+        email: {
+          msg: "Este email ya está registrado",
+        },
+      },
+      oldData: req.body,
+    });
+  }
+
   user.create(req.body, req.file);
 
   /*  return res.send ("se guardo el usuario") */
   return res.redirect("../home");
 };
 
-(controllersUser.proccessLogin = (req, res) => {
+controllersUser.proccessLogin = (req, res) => {
   let userToLogin = user.findByEmail(req.body.email);
   console.log(userToLogin);
 
-  console.log("pas usuario");
+  /* console.log("pas usuario");
   console.log(req.body.password);
   console.log("pas usuario");
-  console.log(userToLogin.contraseña);
+  console.log(userToLogin.contraseña); */
 
   if (userToLogin) {
     let isOkThePassword = bcryptjs.compareSync(
       req.body.password,
-      userToLogin.contraseña
+      userToLogin.password
     );
-    console.log(`El pass es ok? ${isOkThePassword}`);
+   /*  console.log(`El pass es ok? ${isOkThePassword}`) */;
     if (isOkThePassword) {
+      delete userToLogin.password;
+      delete userToLogin.passwordRepit; // lo hago apra borrar la contra ya que en esta instancia no quiero que se vea
+      /* req.session.userLoger = userToLogin; //genero una propiedad en session llamda userloger(usuario logiado ) y le asigno el usertologin
+      console.log("funciona sesion:", req.session.userLoger) */
       return res.redirect("../home");
     }
     return res.render("login", {
       errors: {
-        email: {
+        password: {
           msg: "Los datos son invalidos",
         },
       },
@@ -95,8 +112,9 @@ controllersUser.createUser = (req, res) => {
       },
     },
   });
-}),
-  (module.exports = controllersUser);
+};
+
+module.exports = controllersUser;
 
 //realizado por Jose
 /* let id = users[users.length - 1].id + 1;
