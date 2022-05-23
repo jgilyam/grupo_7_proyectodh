@@ -132,7 +132,9 @@ body {
   border-top-left-radius: 10px;
   padding-left: 10px;
 }
-.iniciar-sesion {
+.iniciar-sesion,
+.carrito-de-compra,
+.deslogeo {
   display: none;
 }
 .ancla-login,
@@ -353,7 +355,7 @@ se agregan estilos comunies de detalle de producto
     color:white
   }
   
-  .iniciar-sesion {
+  .iniciar-sesion,.carrito-de-compra, .deslogeo {
     display: flex;
   }
   #buscador {
