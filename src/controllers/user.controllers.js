@@ -90,14 +90,14 @@ controllersUser.proccessLogin = (req, res) => {
     if (isOkThePassword) {
       delete userToLogin.password;
       delete userToLogin.passwordRepit; // lo hago apra borrar la contra ya que en esta instancia no quiero que se vea
-      req.session.userLoger = userToLogin; //genero una propiedad en session llamda userloger(usuario logiado ) y le asigno el usertologin
-      console.log("funciona sesion:", req.session.userLoger);
+      req.session.userLogged = userToLogin; //genero una propiedad en session llamda userlogged(usuario logiado ) y le asigno el usertologin
+      /* console.log("funciona sesion:", req.session.userLogged); */
 
       //Se setea la cookie para recordar el usuario.
-      if (req.body.recordar != undefined) {
-        res.cookie("mailUsuario", userToLogin.email, { maxAge: TIEMPO_COKKIE });
+      if (req.body.recordar) {
+        res.cookie("mailUsuario", req.body.email, { maxAge: 1000 * 60 });
       }
-      return res.redirect("../home");
+      return res.redirect("../home"); //aca deberia de redireccionar a profile//iñaki
     }
     return res.render("login", {
       errors: {
@@ -114,6 +114,12 @@ controllersUser.proccessLogin = (req, res) => {
       },
     },
   });
+};
+
+controllersUser.logout = (req, res) => {
+  res.clearCookie("mailUsuario"); //para borrar la cookie de la base y te desloguea automaticamente
+  req.session.destroy(); //eso hace es borrar todo lo que este en session de
+  return res.redirect("/");
 };
 
 module.exports = controllersUser;
