@@ -1,0 +1,60 @@
+<head>
+  <%- include ("./partials/head") %>
+  <title>perfil Usuario</title>
+  <link rel="stylesheet" href="/css/perfil.css" />
+</head>
+
+<body>
+  <%- include("./partials/header") %>
+  <main>
+    <form action="" class="formOla">
+      <div class="first_name">
+        <label for="first_name">nombre de Usuario</label>
+        <input type="text" />
+      </div>
+      <div class="last_name">
+        <label for="last_name">nombre de Usuario</label>
+        <input type="text" />
+      </div>
+      <div class="email">
+        <label for="email">email</label>
+        <input type="email" name="email" id="email" />
+      </div>
+      <div class="password">
+        <label for="password">contraseña</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Contraseña"
+          pattern=".{8,}"
+          title="min 8 letras alfanumericas"
+          maxlength="8"
+        />
+      </div>
+      <div class="password1">
+        <label for="password">contraseña</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Contraseña"
+          pattern=".{8,}"
+          title="min 8 letras alfanumericas"
+          maxlength="8"
+        />
+      </div>
+      <div class="avatar">
+        <img src="" alt="" />
+        <label for="avatar"></label>
+        <input type="file" name="" id="" />
+      </div>
+      <div class="date">
+        <label for="date"></label>
+        <input type="month" name="" id="" />
+      </div>
+    </form>
+  </main>
+
+  <%- include ("./partials/footer") %>
+</body>

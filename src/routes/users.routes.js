@@ -36,6 +36,7 @@ router.get("/login", controllersUser.formLogin);
 /*router.post("/login", controllersUser.login);*/
 
 router.post("/login", validacionesLogin, controllersUser.proccessLogin);
+router.get("/perfil",controllersUser.perfil)
 
 router.get("/formconsultas", controllersUser.formconsultas);
 

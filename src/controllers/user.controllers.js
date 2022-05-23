@@ -38,6 +38,9 @@ controllersUser.formLogin = (req, res) => {
 controllersUser.register = (req, res) => {
   res.render("register");
 };
+controllersUser.perfil = (req,res)=>{
+  res.render("perfil")
+}
 
 controllersUser.formconsultas = (req, res) => {
   res.render("formconsultas");
@@ -123,6 +126,7 @@ controllersUser.proccessLogin = (req, res) => {
       },
     },
   });
+
 };
 
 controllersUser.logout = (req, res) => {
