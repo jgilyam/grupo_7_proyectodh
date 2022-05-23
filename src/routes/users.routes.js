@@ -40,5 +40,6 @@ router.post("/login", validacionesLogin, controllersUser.proccessLogin);
 router.get("/formconsultas", controllersUser.formconsultas);
 
 router.get("/pregFrecuentes", controllersUser.preguntasFrecuentes);
+router.get("/logout", controllersUser.logout);
 
 module.exports = router;
