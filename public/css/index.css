@@ -26,7 +26,8 @@ body {
 }
 .carrito-de-compra,
 .iniciar-sesion,
-.burger-container {
+.burger-container,
+.deslogeo {
   font-size: 20px;
   color: black;
 }
@@ -293,7 +294,14 @@ se agregan estilos comunies de detalle de producto
 .main-recomend-product:hover {
   box-shadow: 0px 0px 10px rgb(100 100 100);
 }
+.crearCuenta,.ingresarLogin{
+  display: none
+}
 
+.deslogeo > a{
+  text-decoration: none;
+  color: #fff;
+}
 
 @media (min-width: 361px) {
   .nav-medio {
@@ -328,6 +336,23 @@ se agregan estilos comunies de detalle de producto
   .burger-container {
     display: none;
   }
+  .crearCuenta,.ingresarLogin{
+    display: flex;
+  }
+  .crearCuenta >a ,.ingresarLogin > a {
+    text-decoration: none;
+    color: #FFFFFF;
+    transition: all 300ms ease;
+    padding: 15px 23px;
+  }
+
+  .crearCuenta >a:hover,.ingresarLogin >a:hover{
+    transform: scale(1.1);
+    background-color: #ff9500;
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 50%);
+    color:white
+  }
+  
   .iniciar-sesion {
     display: flex;
   }
@@ -432,7 +457,8 @@ se agregan estilos comunies de detalle de producto
     margin-right: 12px;
   }
   .iniciar-sesion:hover,
-  .carrito-de-compra:hover {
+  .carrito-de-compra:hover,
+  .deslogeo:hover {
     transition: all 300ms ease;
     transform: scale(1.1);
     background-color: #ff9500;
@@ -440,7 +466,8 @@ se agregan estilos comunies de detalle de producto
   }
 
   .iniciar-sesion:hover i,
-  .carrito-de-compra:hover i {
+  .carrito-de-compra:hover i,
+  .deslogeo:hover i {
     padding: 10px;
   }
 
