@@ -32,5 +32,17 @@
 		"passwordRepit": "$2a$10$L9MdVZ.8APaRSoWMPmcI7.If9Yzx89vlu.DKQt0qtNQQeVNMcDDmu",
 		"boxTerminos": "on",
 		"imageUsuario": "default-image.png"
+	},
+	{
+		"id": 4,
+		"first_name": "asfasf",
+		"last_name": "fdasfdas",
+		"date": "",
+		"email": "nadia@nadia.com",
+		"password": "$2a$10$V53LD.M9iWzXnXVoeTsVFulDlKFyDhgT.kI7cOFybWAPcxRF1lKMu",
+		"passwordRepit": "$2a$10$TLpGNwiAaFf9lEG7FQhTe.bVzC/ddEGydf2QhiGYbDwDEDuVmsm6e",
+		"boxTerminos": "on",
+		"boxInfo": "on",
+		"imageUsuario": "default-image.png"
 	}
 ]

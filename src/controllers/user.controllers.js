@@ -68,7 +68,16 @@ controllersUser.createUser = (req, res) => {
       oldData: req.body,
     });
   }
-
+  if(req.body.password != req.body.passwordRepit){
+    return res.render("register", {
+      errors: {
+        email: {
+          msg: "Las contraseñas NO coinciden",
+        },
+      },
+      oldData: req.body,
+    });
+  }
   user.create(req.body, req.file);
 
   /*  return res.send ("se guardo el usuario") */
