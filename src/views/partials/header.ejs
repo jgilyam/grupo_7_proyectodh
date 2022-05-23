@@ -44,15 +44,6 @@
         </nav>
       </div>
     </div>
-    <!-- <div class="nav-medio">
-        <ul class="nav-medio-ul">
-          <li class="nav-medio-li"><a href="#">INICIO</a></li>
-          <li class="nav-medio-li"><a href="#">PRODUCTOS</a></li>
-          <li class="nav-medio-li">
-            <a href="#"> CORPORATIVO</a>
-          </li>
-        </ul>
-      </div> -->
     <div class="navbar-derecho">
       <form action="/search" method="GET" id="buscador">
         <input
@@ -68,11 +59,10 @@
       <div class="burger-container">
         <i class="fa-solid fa-bars"></i>
       </div>
+      <% if(locals.isLogged) { %>
       <div class="iniciar-sesion">
-        <% if (!typeof(user)== "undefined") { %>
-        <p class="log-mail">sebasrodriguez@gmail.com</p>
-        <% } %>
-        <a href="/user/login" class="ancla-login">
+        <a href="/user/login" class="ancla-login"
+          >Mi perfil
           <i class="fa-solid fa-user"></i>
         </a>
       </div>
@@ -81,12 +71,29 @@
           ><i class="fa-solid fa-cart-arrow-down"></i
         ></a>
       </div>
+      <div class="deslogeo">
+        <a href="/user/logout"
+          >Salir <i class="fa-solid fa-arrow-right-from-bracket"></i
+        ></a>
+      </div>
+      <%} else{ %>
+      <div class="crearCuenta">
+        <a href="/user/register"
+          >Registrate<i class="fa-solid fa-address-card"></i
+        ></a>
+      </div>
+      <div class="ingresarLogin">
+        <a href="/user/login"
+          >Ingresá <i class="fa-solid fa-arrow-right-to-bracket"></i
+        ></a>
+      </div>
+      <% } %>
     </div>
   </nav>
 
-  <% if (!typeof(user)== "undefined") { %>
+  <!--   <% if (locals.isLogged) { %>
   <div class="log-usuario">
     <p>Enviar a Sesbastian - Av Argentina 1345 sur</p>
   </div>
-  <% } %>
+  <% } %> -->
 </header>
