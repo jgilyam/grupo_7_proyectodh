@@ -62,7 +62,7 @@
       <% if(locals.isLogged) { %>
       <div class="iniciar-sesion">
         <a href="/user/login" class="ancla-login"
-          >Mi perfil
+          > <%= locals.userLogged.first_name %>
           <i class="fa-solid fa-user"></i>
         </a>
       </div>
@@ -90,10 +90,4 @@
       <% } %>
     </div>
   </nav>
-
-  <!--   <% if (locals.isLogged) { %>
-  <div class="log-usuario">
-    <p>Enviar a Sesbastian - Av Argentina 1345 sur</p>
-  </div>
-  <% } %> -->
 </header>

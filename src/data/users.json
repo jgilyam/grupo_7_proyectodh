@@ -1,36 +1,36 @@
 [
-  {
-    "id": 1,
-    "first_name": "jusdfjas",
-    "last_name": "kjdkfjasju",
-    "date": "",
-    "email": "carla@carla.com",
-    "password": "$2a$10$jFVyV51ASjF4sbDjXPxacO6m.XORN1dPo2gh2Yqe38H7TpLV9ISF6",
-    "passwordRepit": "$2a$10$QHHFFVTOMAhvwgeuCH4F2.FpFFDwdA1Bo3Ej2vi.LlHPdmh0a8ihi",
-    "boxTerminos": "on",
-    "boxInfo": "on",
-    "imageUsuario": "default-image.png"
-  },
-  {
-    "id": 2,
-    "first_name": "Juan",
-    "last_name": "Gilyam",
-    "date": "1988-12-31",
-    "email": "juampi88@gmail.com",
-    "password": "$2a$10$Jo5zB3Q83C2ccIuqIpfxrODlWEhrpSJFtSsVSNbRyc7sxkT7ieyLK",
-    "passwordRepit": "$2a$10$e7Ha5.p1y0hjRXE20THFz.r06YjLx1OvvoCDnc3ipYnpUgIArBGje",
-    "boxTerminos": "on",
-    "imageUsuario": "1653257182086-mem1.png"
-  },
-  {
-    "id": 3,
-    "first_name": "Juan",
-    "last_name": "Gilyam",
-    "date": "1988-12-31",
-    "email": "jua@asd.com",
-    "password": "$2a$10$24LUd8dm/TQ.oSbDWoxiFuuu61Gq708jR6837TRUxWPVuxjcGnHOW",
-    "passwordRepit": "$2a$10$L9MdVZ.8APaRSoWMPmcI7.If9Yzx89vlu.DKQt0qtNQQeVNMcDDmu",
-    "boxTerminos": "on",
-    "imageUsuario": "default-image.png"
-  }
+	{
+		"id": 1,
+		"first_name": "Julieta",
+		"last_name": "kjdkfjasju",
+		"date": "",
+		"email": "carla@carla.com",
+		"password": "$2a$10$jFVyV51ASjF4sbDjXPxacO6m.XORN1dPo2gh2Yqe38H7TpLV9ISF6",
+		"passwordRepit": "$2a$10$QHHFFVTOMAhvwgeuCH4F2.FpFFDwdA1Bo3Ej2vi.LlHPdmh0a8ihi",
+		"boxTerminos": "on",
+		"boxInfo": "on",
+		"imageUsuario": "default-image.png"
+	},
+	{
+		"id": 2,
+		"first_name": "Juan",
+		"last_name": "Gilyam",
+		"date": "1988-12-31",
+		"email": "juampi88@gmail.com",
+		"password": "$2a$10$Jo5zB3Q83C2ccIuqIpfxrODlWEhrpSJFtSsVSNbRyc7sxkT7ieyLK",
+		"passwordRepit": "$2a$10$e7Ha5.p1y0hjRXE20THFz.r06YjLx1OvvoCDnc3ipYnpUgIArBGje",
+		"boxTerminos": "on",
+		"imageUsuario": "1653257182086-mem1.png"
+	},
+	{
+		"id": 3,
+		"first_name": "Juan",
+		"last_name": "Gilyam",
+		"date": "1988-12-31",
+		"email": "jua@asd.com",
+		"password": "$2a$10$24LUd8dm/TQ.oSbDWoxiFuuu61Gq708jR6837TRUxWPVuxjcGnHOW",
+		"passwordRepit": "$2a$10$L9MdVZ.8APaRSoWMPmcI7.If9Yzx89vlu.DKQt0qtNQQeVNMcDDmu",
+		"boxTerminos": "on",
+		"imageUsuario": "default-image.png"
+	}
 ]
