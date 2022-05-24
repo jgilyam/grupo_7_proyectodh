@@ -5,6 +5,11 @@ const multer = require("multer");
 const path = require("path");
 const validations = require("../middleware/validationRegister");
 const validacionesLogin = require("../middleware/validationLogin");
+
+//si estas registrado no podes ir a tal ruta
+const authMiddleware = require("../middleware/authMiddleware")
+//si no estas registrado no podes ir a tal ruta
+const guestMiddleware = require("../middleware/guestMiddleware");
 //requiero express-validator
 const { body } = require("express-validator");
 
@@ -22,7 +27,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-router.get("/register", controllersUser.register);
+router.get("/register", guestMiddleware,controllersUser.register);
 
 router.post(
   "/register",
@@ -31,16 +36,16 @@ router.post(
   controllersUser.createUser
 );
 
-router.get("/login", controllersUser.formLogin);
+router.get("/login",guestMiddleware,controllersUser.formLogin);
 
 /*router.post("/login", controllersUser.login);*/
 
 router.post("/login", validacionesLogin, controllersUser.proccessLogin);
-router.get("/perfil",controllersUser.perfil)
+router.get("/perfil",authMiddleware,controllersUser.perfil);
 
 router.get("/formconsultas", controllersUser.formconsultas);
 
 router.get("/pregFrecuentes", controllersUser.preguntasFrecuentes);
-router.get("/logout", controllersUser.logout);
+router.get("/logout",authMiddleware, controllersUser.logout);
 
 module.exports = router;
