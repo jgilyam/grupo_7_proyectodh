@@ -13,6 +13,7 @@ const bcryptjs = require("bcryptjs");
 
 //requiero express-validator
 const { validationResult, body } = require("express-validator");
+const { Console } = require("console");
 
 //Tiempo de expiración de cookie
 const TIEMPO_COKKIE = 60000;
@@ -38,9 +39,6 @@ controllersUser.formLogin = (req, res) => {
 controllersUser.register = (req, res) => {
   res.render("register");
 };
-controllersUser.perfil = (req,res)=>{
-  res.render("perfil")
-}
 
 controllersUser.formconsultas = (req, res) => {
   res.render("formconsultas");
@@ -71,7 +69,7 @@ controllersUser.createUser = (req, res) => {
       oldData: req.body,
     });
   }
-  if(req.body.password != req.body.passwordRepit){
+  if (req.body.password != req.body.passwordRepit) {
     return res.render("register", {
       errors: {
         email: {
@@ -85,6 +83,11 @@ controllersUser.createUser = (req, res) => {
 
   /*  return res.send ("se guardo el usuario") */
   return res.redirect("../home");
+};
+controllersUser.perfil = (req, res) => {
+  res.render("perfil", {
+    user: req.session.userLogged,
+  });
 };
 
 controllersUser.proccessLogin = (req, res) => {
@@ -109,7 +112,7 @@ controllersUser.proccessLogin = (req, res) => {
       if (req.body.recordar) {
         res.cookie("mailUsuario", req.body.email, { maxAge: 1000 * 60 });
       }
-      return res.redirect("../home"); //aca deberia de redireccionar a profile//iñaki
+      return res.redirect("/user/perfil");
     }
     return res.render("login", {
       errors: {
@@ -126,7 +129,6 @@ controllersUser.proccessLogin = (req, res) => {
       },
     },
   });
-
 };
 
 controllersUser.logout = (req, res) => {

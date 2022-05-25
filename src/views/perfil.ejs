@@ -7,53 +7,27 @@
 <body>
   <%- include("./partials/header") %>
   <main>
-    <form action="" class="formOla">
-      <div class="first_name">
-        <label for="first_name">nombre de Usuario</label>
-        <input type="text" />
+   <h1>PERFIL DE USUARIO</h1>
+    <section>
+      <img src="../../img/users/<%= user.imageUsuario %> " alt="">
+    </section>
+    <section>
+      <div>
+        <input type="text" placeholder="name">
       </div>
-      <div class="last_name">
-        <label for="last_name">nombre de Usuario</label>
-        <input type="text" />
+      <div> 
+        <input type="text" placeholder="apellido">
       </div>
-      <div class="email">
-        <label for="email">email</label>
-        <input type="email" name="email" id="email" />
+    </section>
+    <section>
+      <div>
+        <input type="email" name="" id="" placeholder="email">
       </div>
-      <div class="password">
-        <label for="password">contraseña</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          placeholder="Contraseña"
-          pattern=".{8,}"
-          title="min 8 letras alfanumericas"
-          maxlength="8"
-        />
+      <div>
+        <input type="date">
       </div>
-      <div class="password1">
-        <label for="password">contraseña</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          placeholder="Contraseña"
-          pattern=".{8,}"
-          title="min 8 letras alfanumericas"
-          maxlength="8"
-        />
-      </div>
-      <div class="avatar">
-        <img src="" alt="" />
-        <label for="avatar"></label>
-        <input type="file" name="" id="" />
-      </div>
-      <div class="date">
-        <label for="date"></label>
-        <input type="month" name="" id="" />
-      </div>
-    </form>
+    </section>
+    
   </main>
 
   <%- include ("./partials/footer") %>
