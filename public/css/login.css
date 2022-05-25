@@ -121,7 +121,22 @@ body {
   position: absolute;
   right: 25px;
   width: 30px;
-  height: 30px;
+  height: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.fa-eye{
+  display: none;
+}
+.fa-eye-slash{
+  display: flex;
+}
+
+#ojoLogin.active >.fa-eye{
+  display: flex
+}
+#ojoLogin.active >.fa-eye-slash{
+  display: none
 }
 
 .contra-olvidada {
