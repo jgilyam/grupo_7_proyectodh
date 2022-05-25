@@ -56,13 +56,37 @@
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </form>
-      <div class="burger-container">
+      <!-- <div class="burger-container">
         <i class="fa-solid fa-bars"></i>
+      </div> -->
+      <div class="containerNavMenu" id="containerNavMenu">
+        <div id="navMenu">
+          <span ></span>
+          <span ></span>
+          <span ></span>
+        </div>
+      <% if(locals.isLogged) { %>
+        <div class="barras-navMenu">
+        <p><a href="/user/perfil"><%= locals.userLogged.first_name %></a>  <i class="fa-solid fa-user"></i></p>
+        <p><a href="/producto/carrito">Carrito</a>  <i class="fa-solid fa-cart-arrow-down"></i
+          ></p>
+        <p><a href="/user/logout">Salir</a>  <i class="fa-solid fa-arrow-right-from-bracket"></i
+          ></p>
       </div>
+      <%} else{ %>
+        <div class="barras-navMenu">
+          <p><a href="/user/register">Registrate</a>  <i class="fa-solid fa-address-card"></i
+            ></p>
+          <p><a href="/user/login">Ingresá</a>  <i class="fa-solid fa-arrow-right-to-bracket"></i
+            ></p>
+        </div>
+        <% } %>
+      </div>
+      <!--   --------------------------------------- -->
       <% if(locals.isLogged) { %>
       <div class="iniciar-sesion">
-        <a href="/user/perfil" class="ancla-login"
-          > <%= locals.userLogged.first_name %>
+        <a href="/user/perfil" class="ancla-login"><%= locals.userLogged.first_name %></a>
+          
           <i class="fa-solid fa-user"></i>
         </a>
       </div>
@@ -91,3 +115,13 @@
     </div>
   </nav>
 </header>
+<script>
+  const navMenu = document.querySelector("#navMenu");
+const containerMenu = document.querySelector("#containerNavMenu");
+
+navMenu.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+  containerMenu.classList.toggle("active");
+});
+
+</script>

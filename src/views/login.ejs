@@ -31,8 +31,13 @@
               title="min 8 letras alfanumericas"
               name="password"
               maxlength="8"
+              id="password"
             />
-            <img src="/img/ojo.png" alt="" class="img-ojo" />
+            <div class="img-ojo" id="ojoLogin">
+              <i class="fa-regular fa-eye-slash"></i>
+              <i class="fa-regular fa-eye"></i>
+            </div>
+            <!-- <img src="/img/ojo.png" alt="" class="img-ojo" /> -->
           </div>
           <% if (locals.errors && errors.password) { %>
           <div class="text-denger"><%= errors.password.msg %></div>
@@ -62,5 +67,18 @@
       </form>
     </main>
     <%- include ("./partials/footer") %>
+    <script>
+      const ojoLogin = document.querySelector("#ojoLogin");
+      const tipo = document.getElementById("password");
+
+      ojoLogin.addEventListener("click", () => {
+        if (tipo.type == "password") {
+          tipo.type = "text";
+        } else {
+          tipo.type = "password";
+        }
+        ojoLogin.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>
