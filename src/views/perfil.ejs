@@ -7,27 +7,26 @@
 <body>
   <%- include("./partials/header") %>
   <main>
-   <h1>PERFIL DE USUARIO</h1>
-    <section>
-      <img src="../../img/users/<%= user.imageUsuario %> " alt="">
-    </section>
-    <section>
-      <div>
-        <input type="text" placeholder="name">
-      </div>
-      <div> 
-        <input type="text" placeholder="apellido">
-      </div>
-    </section>
-    <section>
-      <div>
-        <input type="email" name="" id="" placeholder="email">
-      </div>
-      <div>
-        <input type="date">
-      </div>
-    </section>
-    
+    <div>
+      <section class="section1a">
+        <img class = "avatar" src="../../img/users/<%= user.imageUsuario %> " alt="" />
+      </section>
+      <section>
+        <article class="name">
+          <h3><%= user.first_name %></h3>
+        </article>
+        <article class="name">
+          <h3><%= user.last_name %> </h3>
+        </article>
+        <article>
+          <h3><%= user.email %></h3>
+        </article>
+        <article>
+          <h3><%=  user.date %> </h3>
+        </article>
+      </section>
+      
+    </div>
   </main>
 
   <%- include ("./partials/footer") %>

@@ -1,0 +1,25 @@
+main div section{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-align: center;
+}
+main div section article{
+    width: 100%;
+}
+main div section article.name{
+    width: 50%;
+}
+main div section h3{
+    padding: 20px;
+}
+.section1a{
+    place-content: center;
+    background: cornflowerblue;
+}
+.avatar{
+    border-radius: 100%;
+    width: 120;
+    height: 120px;
+    border: 4px lavender solid;
+}
