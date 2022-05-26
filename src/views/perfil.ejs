@@ -29,7 +29,7 @@
           <div>
             <i class="fas fa-user"></i>
 
-            <h3 class="a"><%= user.first_name %> <%= user.last_name %></h3>
+            <h3 class="b"><%= user.first_name %> <%= user.last_name %></h3>
           </div>
         </article>
 
@@ -43,16 +43,20 @@
           <% if (user.date != '') { %>
           <div>
             <i class="far fa-calendar-alt"></i>
-            <h3 class="a"><%= user.date %></h3>
+            <h3 class="b"><%= user.date %></h3>
           </div>
 
           <% }else{ %>
-          <h3>no configuro su fecha</h3>
+            <div>
+              <i class="far fa-calendar-alt"></i>
+              <h3 class="b">no configuro su fecha</h3>
+            </div>
+          
           <% } %>
         </article>
       </section>
     </div>
   </main>
 
-  <%- include ("./partials/footer") %>
+  
 </body>
