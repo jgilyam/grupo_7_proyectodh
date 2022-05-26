@@ -1,18 +1,3 @@
-main div section{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    text-align: center;
-}
-main div section article{
-    width: 100%;
-}
-main div section article.name{
-    width: 50%;
-}
-main div section h3{
-    padding: 20px;
-}
 .section1a{
     place-content: center;
     background: cornflowerblue;
@@ -23,3 +8,24 @@ main div section h3{
     height: 120px;
     border: 4px lavender solid;
 }
+main div section{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-align: center;
+}
+main div section article{
+    width: 100%;
+}
+main div section h3{
+    
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border: 1px black solid;
+    width: 100%;
+    
+    justify-content: center;
+}
+
