@@ -47,3 +47,22 @@ Hacer menos.
 
 Dejar de hacer:
 No adelantarse tanto a la tarea asignada.
+
+Sprint 5
+
+Comenzar a hacer:
+Mejorar la planificación del sprint 6
+
+Hacer más:
+A la hora de planificar las tareas, tratar de definir un tiempo, para que las tareas que sean correlativas puedan realizarse sin problema.
+
+Continuar haciendo
+Entre dos del equipo van a juntarse primero y transformar los puntos del sprint en tareas y asignarlos a los otros participantes.
+Seguir con comunicación fluida, y compromiso para completar las tereas del proyecto.
+
+Hacer menos:
+Nos costo coordinar dias para juntarnos, debemos mejorar esto
+
+Dejar de hacer:
+No adelantarse tanto a la tarea asignada.
+La planificacioń de este sprint fue mala, no repartimos bien las tareas y trabamos mucho el avance de cada inegrante.
