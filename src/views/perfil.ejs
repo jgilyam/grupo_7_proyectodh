@@ -9,33 +9,48 @@
   <main>
     <div>
       <section class="section1a">
-       <% if (user.imageUsuario != 'default-image.png') { %>
-        <img class = "avatar" src="../../img/users/<%= user.imageUsuario %> " alt="avatar" />
-       <% }else{%>
-       
-        <img class = "avatar" src="../../img/users/userAvatar2.png" alt="avatar" />
-        <% } %> 
+        <% if (user.imageUsuario != 'default-image.png') { %>
+        <img
+          class="avatar"
+          src="../../img/users/<%= user.imageUsuario %> "
+          alt="avatar"
+        />
+        <% }else{%>
+
+        <img
+          class="avatar"
+          src="../../img/users/userAvatar2.png"
+          alt="avatar"
+        />
+        <% } %>
       </section>
       <section>
-        <article class="ola">
-          <h3>
-            <%= user.first_name %>  
-            <%= user.last_name %> 
-          </h3>
-        </article>
-        
         <article>
-          <h3><%= user.email %></h3>
+          <div>
+            <i class="fas fa-user"></i>
+
+            <h3 class="a"><%= user.first_name %> <%= user.last_name %></h3>
+          </div>
+        </article>
+
+        <article>
+          <div>
+            <i class="fas fa-envelope"></i>
+            <h3 class="b"><%= user.email %></h3>
+          </div>
         </article>
         <article>
           <% if (user.date != '') { %>
-            <h3><%=  user.date %> </h3>
+          <div>
+            <i class="far fa-calendar-alt"></i>
+            <h3 class="a"><%= user.date %></h3>
+          </div>
+
           <% }else{ %>
-            <h3>no configuro su fecha </h3>
-          <% } %> 
+          <h3>no configuro su fecha</h3>
+          <% } %>
         </article>
       </section>
-      
     </div>
   </main>
 

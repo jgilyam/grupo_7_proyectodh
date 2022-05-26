@@ -8,24 +8,32 @@
     height: 120px;
     border: 4px lavender solid;
 }
-main div section{
+main div section {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     text-align: center;
 }
-main div section article{
+main div section article {
     width: 100%;
-}
-main div section h3{
-    
-    padding: 20px;
+    border: 1px black solid;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    border: 1px black solid;
-    width: 100%;
+}
+main div section article div{
     
-    justify-content: center;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 11px;
+    
+}
+.a{
+    width: 96%;
+
+}
+.b{
+    width: 94%;
 }
 
