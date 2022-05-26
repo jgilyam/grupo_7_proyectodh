@@ -1,6 +1,7 @@
 .section1a{
     place-content: center;
     background: cornflowerblue;
+    padding: 20px;
 }
 .avatar{
     border-radius: 100%;
@@ -19,6 +20,7 @@ main div section article {
     border: 1px black solid;
     display: flex;
     flex-wrap: wrap;
+    padding: 20px;
 }
 main div section article div{
     
@@ -36,7 +38,11 @@ main div section article div{
 .b{
     width: 94%;
 }
-.c{
-    
+
+.fas{
+    font-size: 18px;
 }
 
+.far{
+    font-size: 18px;
+}
