@@ -9,8 +9,11 @@ const productRecomen = require("../models/baseProducts");
 const extractRandom = require("../utils/extractRandom");
 const paginar = require("../utils/paginar");
 
+//base de datos JSON
 const productosJson = path.join(__dirname, "../data/products_DATA");
 
+//base de datos sequelize
+const db = require("../../database/models");
 //controloador a exportar
 const productControllers = {};
 
@@ -35,9 +38,10 @@ productControllers.form = (req, res) => {
   res.render("productForm");
 };
 //index, productos separados en 3 secciones, nuevo, ofertas, masVendido
-productControllers.index = (req, res) => {
+productControllers.index = async (req, res) => {
   //lectura de base de datos JSON
-  const products = JSON.parse(fs.readFileSync(basePath, "utf-8"));
+  //const products = JSON.parse(fs.readFileSync(basePath, "utf-8"));
+  const products = await db.Product.findAll();
   res.render("products", { products });
 };
 
