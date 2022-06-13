@@ -32,4 +32,5 @@ module.exports = function (sequelize, DataTypes) {
   };
 
   const Direction = sequelize.define(alias, cols, config);
+  return Direction;
 };

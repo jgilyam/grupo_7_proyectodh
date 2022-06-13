@@ -22,4 +22,5 @@ module.exports = function (sequelize, DataTypes) {
   };
 
   const Product_bills = sequelize.define(alias, cols, config);
+  return Product_bills;
 };
