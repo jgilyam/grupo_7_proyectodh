@@ -1,7 +1,7 @@
 module.exports = (sequelize, DataTypes) => {
   // definicion del modelo
   const cols = {
-    id_prodcut: {
+    id_product: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
       primaryKey: true,
@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: true,
     },
     product_image: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING(100),
       allowNull: true,
     },
     price: {
@@ -46,5 +46,6 @@ module.exports = (sequelize, DataTypes) => {
   };
 
   const Product = sequelize.define("Product", cols, config);
+
   return Product;
 };
