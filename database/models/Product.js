@@ -53,5 +53,12 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  Product.associate = (modelos) => {
+    Product.hasMany(modelos.Typess, {
+      as: "tipos",
+      foreignKey: id_type,
+    });
+  };
+
   return Product;
 };

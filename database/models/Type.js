@@ -16,5 +16,13 @@ module.exports = function (sequelize, DataTypes) {
   };
 
   const Typess = sequelize.define(alias, cols, config);
+
+  Typess.associate = (modelos) => {
+    Typess.belongsTo(modelos.Product, {
+      as: "productos",
+      foreignKey: id_type,
+    });
+  };
+
   return Typess;
 };
