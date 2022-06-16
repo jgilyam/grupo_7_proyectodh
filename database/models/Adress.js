@@ -1,20 +1,20 @@
 module.exports = function (sequelize, DataTypes) {
   let alias = "Adress";
   let cols = {
-    id_direction: {
+    id_adress: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
     },
-    street: {
+    name: {
       type: DataTypes.STRING(100),
       allowNull: false,
     },
-    height: {
+    number: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    location: {
+    locality: {
       type: DataTypes.STRING(100),
       allowNull: false,
     },
@@ -27,10 +27,10 @@ module.exports = function (sequelize, DataTypes) {
     },
   };
   let config = {
-    tableName: "Direccion",
+    tableName: "adress",
     timestamps: false,
   };
 
-  const Direction = sequelize.define(alias, cols, config);
-  return Direction;
+  const Adress = sequelize.define(alias, cols, config);
+  return Adress;
 };
