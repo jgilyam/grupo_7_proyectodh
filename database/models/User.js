@@ -41,5 +41,12 @@ module.exports = (sequelize, DataTypes) => {
   };
 
   const User = sequelize.define("User", cols, config);
+  User.associate = (modelos) => {
+    User.belongsTo(modelos.Adress, {
+      as: "direcciones",
+      foreignKey: id_user,
+    });
+  };
+
   return User;
 };
