@@ -1,7 +1,8 @@
 module.exports = function (sequelize, DataTypes) {
   let alias = "Bill";
+  // definicion del modelo
   let cols = {
-    id_bills: {
+    id_bill: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
@@ -19,6 +20,7 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING,
     },
   };
+  //configuraciones adicionales
   let config = {
     tableName: "bill",
     timestamps: false,
@@ -26,6 +28,7 @@ module.exports = function (sequelize, DataTypes) {
 
   const Bill = sequelize.define(alias, cols, config);
 
+   //Relaciones entre las tablas
   Bill.associate = (modelos) => {
     Bill.hasMany(modelos.User, {
       as: "usuarios",
@@ -39,6 +42,13 @@ module.exports = function (sequelize, DataTypes) {
       foreignKey: "id_adress",
     });
   };
+
+  Product.associate = (modelos) => {
+    Product.belongsTo(modelos.Products_bill,{
+      as:"Products_bill",
+      foreignKey:"id_bill"
+    })
+  }
 
   return Bill;
 };

@@ -1,5 +1,6 @@
 module.exports = function (sequelize, DataTypes) {
   let alias = "Adress";
+  // definicion del modelo
   let cols = {
     id_adress: {
       type: DataTypes.INTEGER,
@@ -26,12 +27,15 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.INTEGER,
     },
   };
+  //configuraciones adicionales
   let config = {
     tableName: "adress",
     timestamps: false,
   };
 
   const Adress = sequelize.define(alias, cols, config);
+
+   //Relaciones entre las tablas
   Adress.associate = (modelos) => {
     Adress.hasMany(modelos.User, {
       as: "usuarios",

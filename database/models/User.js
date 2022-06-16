@@ -41,6 +41,8 @@ module.exports = (sequelize, DataTypes) => {
   };
 
   const User = sequelize.define("User", cols, config);
+
+   //Relaciones entre las tablas
   User.associate = (modelos) => {
     User.belongsTo(modelos.Adress, {
       as: "direcciones",

@@ -1,5 +1,6 @@
 module.exports = function (sequelize, DataTypes) {
   let alias = "Products_bill";
+  // definicion del modelo
   let cols = {
     id_product_bills: {
       type: DataTypes.INTEGER,
@@ -16,11 +17,28 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.DECIMAL(10, 2),
     },
   };
+  //configuraciones adicionales
   let config = {
     tableName: "products_bill",
     timestamps: false,
   };
 
   const ProductsBill = sequelize.define(alias, cols, config);
+
+   //Relaciones entre las tablas
+  Product.associate = (modelos) => {
+    Product.hasMany(modelos.Product,{
+      as:"Product",
+      foreignKey:"id_product"
+    })
+  }
+  Product.associate = (modelos) => {
+    Product.hasMany(modelos.Bill,{
+      as:"Bill",
+      foreignKey:"id_bill"
+    })
+  }
+
   return ProductsBill;
+
 };

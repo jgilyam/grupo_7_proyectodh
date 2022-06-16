@@ -1,5 +1,6 @@
 module.exports = function (sequelize, DataTypes) {
   let alias = "Typess";
+  // definicion del modelo
   let cols = {
     id_type: {
       type: DataTypes.INTEGER,
@@ -10,6 +11,7 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING(100),
     },
   };
+  //configuraciones adicionales
   let config = {
     tableName: "typess",
     timestamps: false,
@@ -17,6 +19,7 @@ module.exports = function (sequelize, DataTypes) {
 
   const Typess = sequelize.define(alias, cols, config);
 
+   //Relaciones entre las tablas
   Typess.associate = (modelos) => {
     Typess.belongsTo(modelos.Product, {
       as: "productos",

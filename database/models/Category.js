@@ -1,5 +1,6 @@
 module.exports = function (sequelize, DataTypes) {
   let alias = "Category";
+  // definicion del modelo
   let cols = {
     id_category: {
       type: DataTypes.INTEGER,
@@ -10,12 +11,15 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING(100),
     },
   };
+  //configuraciones adicionales
   let config = {
     tableName: "category",
     timestamps: false,
   };
 
   const Category = sequelize.define(alias, cols, config);
+
+   //Relaciones entre las tablas
   Category.associate = (modelos) => {
     Category.belongsTo(modelos.Product, {
       as: "productos",

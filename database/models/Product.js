@@ -46,6 +46,8 @@ module.exports = (sequelize, DataTypes) => {
   };
 
   const Product = sequelize.define("Product", cols, config);
+
+  //Relaciones entre las tablas
   Product.associate = (modelos) => {
     Product.hasMany(modelos.Category, {
       as: "categorias",
@@ -59,6 +61,13 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: "id_type",
     });
   };
+
+  Product.associate = (modelos) => {
+    Product.belongsTo(modelos.Products_bill,{
+      as:"Products_bill",
+      foreignKey:"id_product"
+    })
+  }
 
   return Product;
 };
