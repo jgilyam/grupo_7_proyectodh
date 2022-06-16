@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-  let alias = "Product_bills";
+  let alias = "Products_bill";
   let cols = {
     id_product_bills: {
       type: DataTypes.INTEGER,
@@ -9,18 +9,18 @@ module.exports = function (sequelize, DataTypes) {
     id_product: {
       type: DataTypes.INTEGER,
     },
-    amount: {
-      type: DataTypes.DECIMAL(5, 2),
+    quantity: {
+      type: DataTypes.INTEGER,
     },
-    unit_price: {
-      type: DataTypes.DECIMAL(2, 2),
+    price_unit: {
+      type: DataTypes.DECIMAL(10, 2),
     },
   };
   let config = {
-    tableName: "Productos_factura",
+    tableName: "products_bill",
     timestamps: false,
   };
 
-  const Product_bills = sequelize.define(alias, cols, config);
-  return Product_bills;
+  const ProductsBill = sequelize.define(alias, cols, config);
+  return ProductsBill;
 };
