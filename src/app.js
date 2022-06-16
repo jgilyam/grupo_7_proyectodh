@@ -1,7 +1,9 @@
 // modulos nativos requeridos
+
 const path = require("path");
 
 //modulos de terceros
+require("dotenv").config();
 const express = require("express");
 const methodOverride = require("method-override");
 const { body } = require("express-validator");
