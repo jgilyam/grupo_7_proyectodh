@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-  let alias = "Type";
+  let alias = "Typess";
   let cols = {
     id_type: {
       type: DataTypes.INTEGER,
@@ -11,10 +11,10 @@ module.exports = function (sequelize, DataTypes) {
     },
   };
   let config = {
-    tableName: "Tipos",
+    tableName: "typess",
     timestamps: false,
   };
 
-  const Type = sequelize.define(alias, cols, config);
-  return Type;
+  const Typess = sequelize.define(alias, cols, config);
+  return Typess;
 };
