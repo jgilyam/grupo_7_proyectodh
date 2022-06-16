@@ -20,7 +20,7 @@ module.exports = function (sequelize, DataTypes) {
   Typess.associate = (modelos) => {
     Typess.belongsTo(modelos.Product, {
       as: "productos",
-      foreignKey: id_type,
+      foreignKey: "id_type",
     });
   };
 

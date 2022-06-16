@@ -44,14 +44,14 @@ module.exports = (sequelize, DataTypes) => {
   User.associate = (modelos) => {
     User.belongsTo(modelos.Adress, {
       as: "direcciones",
-      foreignKey: id_user,
+      foreignKey: "id_user",
     });
   };
 
   User.associate = (modelos) => {
     User.belongsTo(modelos.Bill, {
       as: "facturas",
-      foreignKey: id_user,
+      foreignKey: "id_user",
     });
   };
 

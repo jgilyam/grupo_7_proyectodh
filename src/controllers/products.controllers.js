@@ -42,6 +42,8 @@ productControllers.index = async (req, res) => {
   //lectura de base de datos JSON
   //const products = JSON.parse(fs.readFileSync(basePath, "utf-8"));
   const products = await db.Product.findAll();
+  const users = await db.User.findAll();
+  console.log(users);
   res.render("products", { products });
 };
 

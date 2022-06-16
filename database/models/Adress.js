@@ -35,13 +35,13 @@ module.exports = function (sequelize, DataTypes) {
   Adress.associate = (modelos) => {
     Adress.hasMany(modelos.User, {
       as: "usuarios",
-      foreignKey: id_user,
+      foreignKey: "id_user",
     });
   };
   Adress.associate = (modelos) => {
     Adress.belongsTo(modelos.Bill, {
       as: "facturas",
-      foreignKey: id_adress,
+      foreignKey: "id_adress",
     });
   };
 

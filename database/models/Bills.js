@@ -29,14 +29,14 @@ module.exports = function (sequelize, DataTypes) {
   Bill.associate = (modelos) => {
     Bill.hasMany(modelos.User, {
       as: "usuarios",
-      foreignKey: id_user,
+      foreignKey: "id_user",
     });
   };
 
   Bill.associate = (modelos) => {
     Bill.hasMany(modelos.Adress, {
       as: "direcciones",
-      foreignKey: id_adress,
+      foreignKey: "id_adress",
     });
   };
 
