@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-  let alias = "Bills";
+  let alias = "Bill";
   let cols = {
     id_bills: {
       type: DataTypes.INTEGER,
@@ -9,21 +9,21 @@ module.exports = function (sequelize, DataTypes) {
     id_user: {
       type: DataTypes.INTEGER,
     },
-    id_direction: {
+    id_adress: {
       type: DataTypes.INTEGER,
     },
     total: {
       type: DataTypes.DECIMAL(2, 2),
     },
     date: {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING,
     },
   };
   let config = {
-    tableName: "Facturas",
+    tableName: "bill",
     timestamps: false,
   };
 
-  const Bills = sequelize.define(alias, cols, config);
-  return Bills;
+  const Bill = sequelize.define(alias, cols, config);
+  return Bill;
 };
