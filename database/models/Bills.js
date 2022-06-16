@@ -25,5 +25,13 @@ module.exports = function (sequelize, DataTypes) {
   };
 
   const Bill = sequelize.define(alias, cols, config);
+
+  Bill.associate = (modelos) => {
+    Bill.hasMany(modelos.User, {
+      as: "usuarios",
+      foreignKey: id_user,
+    });
+  };
+
   return Bill;
 };

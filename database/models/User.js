@@ -48,5 +48,12 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  User.associate = (modelos) => {
+    User.belongsTo(modelos.Bill, {
+      as: "facturas",
+      foreignKey: id_user,
+    });
+  };
+
   return User;
 };
