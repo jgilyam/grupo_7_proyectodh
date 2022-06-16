@@ -33,5 +33,12 @@ module.exports = function (sequelize, DataTypes) {
     });
   };
 
+  Bill.associate = (modelos) => {
+    Bill.hasMany(modelos.Adress, {
+      as: "direcciones",
+      foreignKey: id_adress,
+    });
+  };
+
   return Bill;
 };
