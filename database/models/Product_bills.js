@@ -26,14 +26,14 @@ module.exports = function (sequelize, DataTypes) {
   const ProductsBill = sequelize.define(alias, cols, config);
 
    //Relaciones entre las tablas
-  Product.associate = (modelos) => {
-    Product.hasMany(modelos.Product,{
+   ProductsBill.associate = (modelos) => {
+    ProductsBill.hasMany(modelos.Product,{
       as:"Product",
       foreignKey:"id_product"
     })
   }
-  Product.associate = (modelos) => {
-    Product.hasMany(modelos.Bill,{
+  ProductsBill.associate = (modelos) => {
+    ProductsBill.hasMany(modelos.Bill,{
       as:"Bill",
       foreignKey:"id_bill"
     })

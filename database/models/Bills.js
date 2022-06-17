@@ -43,8 +43,8 @@ module.exports = function (sequelize, DataTypes) {
     });
   };
 
-  Product.associate = (modelos) => {
-    Product.belongsTo(modelos.Products_bill,{
+  Bill.associate = (modelos) => {
+    Bill.belongsTo(modelos.Products_bill,{
       as:"Products_bill",
       foreignKey:"id_bill"
     })
