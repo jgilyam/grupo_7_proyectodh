@@ -66,3 +66,24 @@ Nos costo coordinar dias para juntarnos, debemos mejorar esto
 Dejar de hacer:
 No adelantarse tanto a la tarea asignada.
 La planificacioń de este sprint fue mala, no repartimos bien las tareas y trabamos mucho el avance de cada inegrante.
+
+Sprint 6
+
+Comenzar a hacer:
+Planificar las tareas del sprint 7 con mas anticipación.
+
+Hacer más:
+A la hora de planificar las tareas, tratar de definir un tiempo, para que las tareas que sean correlativas puedan realizarse sin problema.
+
+Asignar con tiempo las tareas en el tablero de trello.
+
+Continuar haciendo:
+
+Entre dos del equipo van a juntarse primero y transformar los puntos del sprint en tareas y asignarlos a los otros participantes.
+
+Hacer menos:
+Nos costo coordinar dias para juntarnos, debemos mejorar esto.
+
+Dejar de hacer:
+
+La planificacioń de este sprint no fue realizada con tiempo,como se habia planteado.
