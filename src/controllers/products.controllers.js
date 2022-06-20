@@ -14,14 +14,11 @@ const productosJson = path.join(__dirname, "../data/products_DATA");
 
 //base de datos sequelize
 const db = require("../../database/models");
-//controloador a exportar
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
+const Movie = require("../../database/models/Product");
+
 const productControllers = {};
-
-//manejo de archivos para levantar base JSON
-const basePath = path.resolve(__dirname, "../data/products_DATA.json");
-
-const products = JSON.parse(fs.readFileSync(basePath, "utf-8"));
-
 productControllers.cart = (req, res) => {
   res.render("productCart");
 };
@@ -37,6 +34,7 @@ productControllers.detail = (req, res) => {
 productControllers.form = (req, res) => {
   res.render("productForm");
 };
+
 //index, productos separados en 3 secciones, nuevo, ofertas, masVendido
 productControllers.index = async (req, res) => {
   //lectura de base de datos JSON
@@ -65,56 +63,113 @@ productControllers.page = (req, res) => {
     pages,
   });
 };
-// CREAT
-productControllers.store = (req, res) => {
-  let id = products[products.length - 1].id + 1;
-  let image = "default-image.png";
-  if (req.file) {
-    image = req.file.filename;
-  }
 
-  let newProduct = {
-    id,
-    ...req.body,
-    image,
-  };
-  products.push(newProduct);
-  fs.writeFileSync(basePath, JSON.stringify(products));
-  res.redirect("producto");
+//CREAR
+
+productControllers.form = (req, res) => {
+  db.Product.findAll().then(function (products) {
+    return res.render("productForm", { products: products });
+  });
+};
+productControllers.store = (req, res) => {
+  db.Product.create({
+    name: req.body.name,
+    product_image: req.body.image,
+    price: req.body.price,
+    description: req.body.description,
+    //seccion: req.body.types,
+    id_category: req.body.category,
+    id_type: req.body.types,
+    stock: req.body.stock,
+    discount: req.body.discount,
+  })
+    .then(() => {
+      return res.redirect("/");
+    })
+    .catch((e) => {
+      console.log(e);
+      console.log("Changos!");
+    });
+};
+
+// // CREAT
+// productControllers.store = (req, res) => {
+//   let id = products[products.length - 1].id + 1;
+//   let image = "default-image.png";
+//   if (req.file) {
+//     image = req.file.filename;
+//   }
+
+//   let newProduct = {
+//     id,
+//     ...req.body,
+//     image,
+//   };
+//   products.push(newProduct);
+//   fs.writeFileSync(basePath, JSON.stringify(products));
+//   res.redirect("producto");
+// };
+
+//EDIT
+productControllers.edit = (req, res) => {
+  db.Product.findByPk(req.params.id).then(function (products) {
+    return res.render("productEditForm", { products: products });
+  });
+};
+productControllers.update = (req, res) => {
+  db.Product.update(
+    {
+      //id_prodct:,
+      name: req.body.name,
+      product_image: req.body.image,
+      descpription: req.body.descpription,
+      seccion: req.body.types,
+      price: req.body.price,
+      //id_category:,
+      // id_type:,
+      // stock:,
+      discount: req.body.discount,
+    },
+    {
+      where: {
+        id: req.params.id,
+      },
+    }
+  );
+  res.redirect("/producto/" + req.params.id);
 };
 
 // GET-EDIT
 
-productControllers.edit = (req, res) => {
-  const productId = req.params.id;
-  const productToEdit = products.find((p) => p.id === Number(productId));
+// productControllers.edit = (req, res) => {
+//   const productId = req.params.id;
+//   const productToEdit = products.find((p) => p.id === Number(productId));
 
-  res.render("product-edit-form", { productToEdit });
-};
+//   res.render("product-edit-form", { productToEdit });
+// };
 
-productControllers.update = (req, res) => {
-  const productId = Number(req.params.id);
-  let productToEdit = products.find((p) => p.id === productId);
+// productControllers.update = (req, res) => {
+//   const productId = Number(req.params.id);
+//   let productToEdit = products.find((p) => p.id === productId);
 
-  let image = productToEdit.image;
-  if (req.file) {
-    image = req.file.filename;
-  }
-  productToEdit = {
-    id: productId,
-    ...req.body,
-    image,
-  };
-  const updateProducts = products.map((p) => {
-    if (p.id === productToEdit.id) {
-      return (p = { ...productToEdit });
-    }
-    return p;
-  });
-  fs.writeFileSync(basePath, JSON.stringify(updateProducts), "utf-8");
-  res.redirect("/home");
-};
-
+//   let image = productToEdit.image;
+//   if (req.file) {
+//     image = req.file.filename;
+//   }
+//   productToEdit = {
+//     id: productId,
+//     ...req.body,
+//     image,
+//   };
+//   const updateProducts = products.map((p) => {
+//     if (p.id === productToEdit.id) {
+//       return (p = { ...productToEdit });
+//     }
+//     return p;
+//   });
+//   fs.writeFileSync(basePath, JSON.stringify(updateProducts), "utf-8");
+//   res.redirect("/home");
+// };
 // ELIMINAR
 productControllers.destroy = (req, res) => {
   const productAeliminar = req.params.id;
