@@ -14,7 +14,7 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.INTEGER,
     },
     total: {
-      type: DataTypes.DECIMAL(2, 2),
+      type: DataTypes.DECIMAL(10, 2),
     },
     date: {
       type: DataTypes.STRING,
