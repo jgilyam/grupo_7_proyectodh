@@ -42,16 +42,16 @@ module.exports = (sequelize, DataTypes) => {
 
   const User = sequelize.define("User", cols, config);
 
-   //Relaciones entre las tablas
+  //Relaciones entre las tablas
   User.associate = (modelos) => {
-    User.belongsTo(modelos.Adress, {
+    User.hasMany(modelos.Adress, {
       as: "direcciones",
       foreignKey: "id_user",
     });
   };
 
   User.associate = (modelos) => {
-    User.belongsTo(modelos.Bill, {
+    User.hasMany(modelos.Bill, {
       as: "facturas",
       foreignKey: "id_user",
     });

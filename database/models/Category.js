@@ -19,9 +19,9 @@ module.exports = function (sequelize, DataTypes) {
 
   const Category = sequelize.define(alias, cols, config);
 
-   //Relaciones entre las tablas
+  //Relaciones entre las tablas
   Category.associate = (modelos) => {
-    Category.belongsTo(modelos.Product, {
+    Category.hasMany(modelos.Product, {
       as: "productos",
       foreignKey: "id_category",
     });

@@ -19,9 +19,9 @@ module.exports = function (sequelize, DataTypes) {
 
   const Typess = sequelize.define(alias, cols, config);
 
-   //Relaciones entre las tablas
+  //Relaciones entre las tablas
   Typess.associate = (modelos) => {
-    Typess.belongsTo(modelos.Product, {
+    Typess.hasMany(modelos.Product, {
       as: "productos",
       foreignKey: "id_type",
     });

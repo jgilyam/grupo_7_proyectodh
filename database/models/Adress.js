@@ -35,15 +35,15 @@ module.exports = function (sequelize, DataTypes) {
 
   const Adress = sequelize.define(alias, cols, config);
 
-   //Relaciones entre las tablas
+  //Relaciones entre las tablas
   Adress.associate = (modelos) => {
-    Adress.hasMany(modelos.User, {
+    Adress.belongsTo(modelos.User, {
       as: "usuarios",
       foreignKey: "id_user",
     });
   };
   Adress.associate = (modelos) => {
-    Adress.belongsTo(modelos.Bill, {
+    Adress.hasMany(modelos.Bill, {
       as: "facturas",
       foreignKey: "id_adress",
     });

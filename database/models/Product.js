@@ -49,25 +49,25 @@ module.exports = (sequelize, DataTypes) => {
 
   //Relaciones entre las tablas
   Product.associate = (modelos) => {
-    Product.hasMany(modelos.Category, {
+    Product.belongsTo(modelos.Category, {
       as: "categorias",
       foreignKey: "id_category",
     });
   };
 
   Product.associate = (modelos) => {
-    Product.hasMany(modelos.Typess, {
-      as: "tipos",
+    Product.belongsTo(modelos.Typess, {
+      as: "tipo",
       foreignKey: "id_type",
     });
   };
 
   Product.associate = (modelos) => {
-    Product.belongsTo(modelos.Products_bill,{
-      as:"Products_bill",
-      foreignKey:"id_product"
-    })
-  }
+    Product.belongsTo(modelos.Products_bill, {
+      as: "Products_bill",
+      foreignKey: "id_product",
+    });
+  };
 
   return Product;
 };
