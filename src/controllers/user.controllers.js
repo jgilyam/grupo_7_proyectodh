@@ -100,11 +100,10 @@ controllersUser.createUser = async (req, res) => {
     date: req.body.date,
     user_image: image,
     email: req.body.email,
-    password: req.body.password,
+    password: bcryptjs.hashSync(req.body.password, 10),
     box_info: boxInfoo,
   });
 
-  /*  return res.send ("se guardo el usuario") */
   return res.redirect("../home");
 };
 controllersUser.perfil = (req, res) => {
