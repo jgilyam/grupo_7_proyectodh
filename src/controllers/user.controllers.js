@@ -50,7 +50,7 @@ controllersUser.formconsultas = (req, res) => {
 controllersUser.preguntasFrecuentes = (req, res) => {
   res.render("pregFrecuentes");
 };
-controllersUser.createUser = async(req, res) => {
+controllersUser.createUser = async (req, res) => {
   //proceso de registro de usuario
   let resultValidation = validationResult(req);
   if (resultValidation.errors.length > 0) {
@@ -60,7 +60,9 @@ controllersUser.createUser = async(req, res) => {
     });
   }
 
-  let userEnBaseDeDato = await db.User.findOne({where:{email:req.body.email}}); //lo hago para buscar si ya existe ese email
+  let userEnBaseDeDato = await db.User.findOne({
+    where: { email: req.body.email },
+  }); //lo hago para buscar si ya existe ese email
   if (userEnBaseDeDato != null) {
     //si existe entra al if y tira el error
     return res.render("register", {
@@ -82,19 +84,26 @@ controllersUser.createUser = async(req, res) => {
       oldData: req.body,
     });
   }
-  let image = "userAvatar2.png"
+  let image = "userAvatar2.png";
   if (req.file) {
     image = req.file.filename;
   }
-  let boxInfoo
-  if(req.body.boxInfo == null){
-    boxInfoo = "off"
-  }else{
-    boxInfoo = "on"
+  let boxInfoo;
+  if (req.body.boxInfo == null) {
+    boxInfoo = "off";
+  } else {
+    boxInfoo = "on";
   }
-  db.User.create({firs_name: req.body.first_name, last_name: req.body.last_name, date: req.body.date,user_image: image, email: req.body.email, password: req.body.password, box_info: boxInfoo});
-
-  /*  return res.send ("se guardo el usuario") */
+  db.User.create({
+    firs_name: req.body.first_name,
+    last_name: req.body.last_name,
+    date: req.body.date,
+    user_image: image,
+    email: req.body.email,
+    password: bcryptjs.hashSync(req.body.password, 10),
+    box_info: boxInfoo,
+  });
+  
   return res.redirect("../home");
 };
 controllersUser.perfil = (req, res) => {
@@ -103,15 +112,14 @@ controllersUser.perfil = (req, res) => {
   });
 };
 
-controllersUser.proccessLogin = async(req, res) => {
-  
-  let abc = await db.User.findOne({where:{email:req.body.email}});
-  
-  let userToLogin = abc
+controllersUser.proccessLogin = async (req, res) => {
+  let abc = await db.User.findOne({ where: { email: req.body.email } });
+
+  let userToLogin = abc;
   /* console.log(userToLogin) */
   /* let userToLogin = user.findByEmail(req.body.email) */
-  
-  if(userToLogin == null){
+
+  if (userToLogin == null) {
     return res.render("login", {
       errors: {
         email: {
@@ -119,38 +127,38 @@ controllersUser.proccessLogin = async(req, res) => {
         },
       },
     });
-  }else if(userToLogin !=null){
-    let userToLogin = abc.dataValues
-    let isOkThePassword = req.body.password
-  if (userToLogin) {
-    /* let isOkThePassword = bcryptjs.compareSync(
+  } else if (userToLogin != null) {
+    let userToLogin = abc.dataValues;
+    let isOkThePassword = req.body.password;
+    if (userToLogin) {
+      /* let isOkThePassword = bcryptjs.compareSync(
       req.body.password,
       userToLogin.password
     ); */
-    
-    if (isOkThePassword == userToLogin.password) {
-      delete userToLogin.password;
-      /* delete userToLogin.passwordRepit */; // lo hago apra borrar la contra ya que en esta instancia no quiero que se vea
-      req.session.userLogged = userToLogin; //genero una propiedad en session llamda userlogged(usuario logiado ) y le asigno el usertologin
-      console.log(req.session.userLogged);
 
-      //Se setea la cookie para recordar el usuario.
-      if (req.body.recordar) {
-        res.cookie("mailUsuario", req.body.email, { maxAge: 1000 * 60 });
+      if (isOkThePassword == userToLogin.password) {
+        delete userToLogin.password; // lo hago apra borrar la contra ya que en esta instancia no quiero que se vea
+        /* delete userToLogin.passwordRepit */ req.session.userLogged =
+          userToLogin; //genero una propiedad en session llamda userlogged(usuario logiado ) y le asigno el usertologin
+        console.log(req.session.userLogged);
+
+        //Se setea la cookie para recordar el usuario.
+        if (req.body.recordar) {
+          res.cookie("mailUsuario", req.body.email, { maxAge: 1000 * 60 });
+        }
+        return res.redirect("/user/perfil/" + req.session.userLogged.id_user);
       }
-      return res.redirect("/user/perfil/"+req.session.userLogged.id_user);
-    }
-    return res.render("login", {
-      errors: {
-        password: {
-          msg: "Los datos son invalidos",
+      return res.render("login", {
+        errors: {
+          password: {
+            msg: "Los datos son invalidos",
+          },
         },
-      },
-    });
-  }
+      });
+    }
   }
 
- /*  console.log(userToLogin.password) */
+  /*  console.log(userToLogin.password) */
   /* console.log("pas usuario");
   console.log(req.body.password);
   console.log("pas usuario");
@@ -164,8 +172,6 @@ controllersUser.proccessLogin = async(req, res) => {
     },
   }); */
 };
-
-
 
 controllersUser.logout = (req, res) => {
   res.clearCookie("mailUsuario"); //para borrar la cookie de la base y te desloguea automaticamente
