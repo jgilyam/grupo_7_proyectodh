@@ -23,11 +23,36 @@ productControllers.cart = (req, res) => {
   res.render("productCart");
 };
 //conotrolador que se encarga de mostrar el producto elegido por id en detalle
-productControllers.detail = (req, res) => {
+productControllers.detail = async (req, res) => {
   const productId = req.params.id;
-  const product = products.find((p) => p.id === Number(productId));
+  //const product = products.find((p) => p.id === Number(productId));
+  const product = await db.Product.findOne(
+    {
+      where: {
+        id_product: productId,
+      },
+    },
+    {
+      include: {
+        association: "tipo",
+      },
+    }
+  );
+  console.log(product.tipo.name);
+  //const products = await db.Product.findAll();
 
-  let productsInSale = extractRandom(products, 4, "ofertas");
+  const productsInSale = await db.Product.findAll(
+    {
+      where: {
+        id_category: 3,
+      },
+    },
+    {
+      limit: 4,
+    }
+  );
+
+  //let productsInSale = extractRandom(productosJson, 4, "ofertas");
   res.render("productDetail", { product, productsInSale });
 };
 
@@ -74,9 +99,14 @@ productControllers.form = async (req, res) => {
 };
 
 productControllers.store = (req, res) => {
+  let image = "";
+  if (req.file) {
+    image = req.file.filename;
+  }
+
   db.Product.create({
     name: req.body.name,
-    product_image: req.body.image,
+    product_image: image,
     price: req.body.price,
     description: req.body.description,
     //seccion: req.body.types,
@@ -114,18 +144,25 @@ productControllers.store = (req, res) => {
 
 //EDIT
 productControllers.edit = (req, res) => {
-  db.Product.findByPk(req.params.id).then(function (products) {
-    return res.render("productEditForm", { products: products });
+  console.log("entre a edit");
+  db.Product.findByPk(req.params.id).then(function (productToEdit) {
+    return res.render("product-edit-form", { productToEdit });
   });
 };
-productControllers.update = (req, res) => {
-  db.Product.update(
+productControllers.update = async (req, res) => {
+  console.log("entre a update");
+  let image = "";
+  if (req.file) {
+    image = req.file.filename;
+    console.log(image);
+  }
+  await db.Product.update(
     {
       //id_prodct:,
       name: req.body.name,
-      product_image: req.body.image,
+      product_image: image,
       descpription: req.body.descpription,
-      seccion: req.body.types,
+      //seccion: req.body.types,
       price: req.body.price,
       //id_category:,
       // id_type:,
@@ -134,7 +171,7 @@ productControllers.update = (req, res) => {
     },
     {
       where: {
-        id: req.params.id,
+        id_product: req.params.id,
       },
     }
   );
@@ -173,11 +210,15 @@ productControllers.update = (req, res) => {
 //   res.redirect("/home");
 // };
 // ELIMINAR
-productControllers.destroy = (req, res) => {
-  const productAeliminar = req.params.id;
-  const finalProducts = products.filter((p) => p.id != productAeliminar);
+productControllers.destroy = async (req, res) => {
+  const idToDelete = req.params.id;
+  //const finalProducts = products.filter((p) => p.id != idToDelete);
 
-  fs.writeFileSync(basePath, JSON.stringify(finalProducts), "utf-8");
+  //fs.writeFileSync(basePath, JSON.stringify(finalProducts), "utf-8");
+
+  await db.Product.destroy({
+    where: { id_product: idToDelete },
+  });
   res.redirect("/");
 };
 module.exports = productControllers;
