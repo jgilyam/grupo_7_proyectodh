@@ -38,7 +38,7 @@ productControllers.detail = async (req, res) => {
       },
     }
   );
-  console.log(product.tipo.name);
+  /* console.log(product.Typess.name); */
   //const products = await db.Product.findAll();
 
   const productsInSale = await db.Product.findAll(
@@ -52,8 +52,14 @@ productControllers.detail = async (req, res) => {
     }
   );
 
+  const typeProduct = await db.Typess.findAll();
+
   //let productsInSale = extractRandom(productosJson, 4, "ofertas");
-  res.render("productDetail", { product, productsInSale });
+  res.render("productDetail", {
+    product,
+    productsInSale,
+    typeProduct,
+  });
 };
 
 /* productControllers.form = (req, res) => {
@@ -151,7 +157,7 @@ productControllers.edit = (req, res) => {
 };
 productControllers.update = async (req, res) => {
   console.log("entre a update");
-  let image = "";
+  let image = "default-image.png";
   if (req.file) {
     image = req.file.filename;
     console.log(image);
