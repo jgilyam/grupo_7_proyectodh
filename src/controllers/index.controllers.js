@@ -8,6 +8,7 @@ const extractRandom = require("../utils/extractRandom");
 //lectura de archivo JSON
 const basePath = path.resolve(__dirname, "../data/products_DATA.json");
 const products = JSON.parse(fs.readFileSync(basePath, "utf-8"));
+const db = require("../../database/models");
 
 const controllerPrincipal = {};
 
@@ -15,9 +16,31 @@ const controllerPrincipal = {};
   res.render("index");
 }; */
 
-controllerPrincipal.home = (req, res) => {
-  let productsInSale = extractRandom(products, 4, "ofertas");
-  let productsTopSale = extractRandom(products, 4, "masVendido");
+controllerPrincipal.home = async (req, res) => {
+  //let productsInSale = extractRandom(products, 4, "ofertas");
+  //let productsTopSale = extractRandom(products, 4, "masVendido");
+  const productsInSale = await db.Product.findAll(
+    {
+      where: {
+        id_category: 3,
+      },
+    },
+    {
+      limit: 4,
+    }
+  );
+
+  const productsTopSale = await db.Product.findAll(
+    {
+      where: {
+        id_category: 2,
+      },
+    },
+    {
+      limit: 4,
+    }
+  );
+
   res.render("home", { productsTopSale, productsInSale });
 };
 controllerPrincipal.nosotros = (req, res) => {
