@@ -1,0 +1,56 @@
+<head>
+  <%- include ("./partials/head") %>
+  <title>perfil Usuario</title>
+  <link rel="stylesheet" href="/css/perfil.css" />
+</head>
+
+<body>
+  <%- include("./partials/header") %>
+  <main>
+    <div>
+      <section class="section1a">
+        <% if (userToEdit.user_image != 'default-image.png') { %>
+        <img
+          class="avatar"
+          src="/img/users/<%= userToEdit.user_image %> "
+          alt="avatar"
+        />
+        <% }else{%>
+
+        <img class="avatar" src="/img/users/userAvatar2.png" alt="avatar" />
+        <% } %>
+      </section>
+      <section>
+        <article>
+          <div>
+            <i class="fas fa-user"></i>
+
+            <h3 class="b"><%= userToEdit.first_name %> <%= userToEdit.last_name %></h3>
+          </div>
+        </article>
+
+        <article>
+          <div>
+            <i class="fas fa-envelope"></i>
+            <h3 class="b"><%= userToEdit.email %></h3>
+          </div>
+        </article>
+        <article>
+          <% if (userToEdit.date != '') { %>
+          <div>
+            <i class="far fa-calendar-alt"></i>
+            <h3 class="b"><%= userToEdit.date %></h3>
+          </div>
+
+          <% }else{ %>
+          <div>
+            <i class="far fa-calendar-alt"></i>
+            <h3 class="b">no configuro su fecha</h3>
+          </div>
+
+          <% } %>
+        </article>
+      </section>
+    </div>
+  </main>
+</body>
