@@ -7,7 +7,7 @@ const validations = require("../middleware/validationRegister");
 const validacionesLogin = require("../middleware/validationLogin");
 
 //si estas registrado no podes ir a tal ruta
-const authMiddleware = require("../middleware/authMiddleware")
+const authMiddleware = require("../middleware/authMiddleware");
 //si no estas registrado no podes ir a tal ruta
 const guestMiddleware = require("../middleware/guestMiddleware");
 //requiero express-validator
@@ -27,7 +27,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-router.get("/register", guestMiddleware,controllersUser.register);
+router.get("/register", guestMiddleware, controllersUser.register);
 
 router.post(
   "/register",
@@ -36,16 +36,22 @@ router.post(
   controllersUser.createUser
 );
 
-router.get("/login",guestMiddleware,controllersUser.formLogin);
+router.get("/login", guestMiddleware, controllersUser.formLogin);
 
 /*router.post("/login", controllersUser.login);*/
 
 router.post("/login", validacionesLogin, controllersUser.proccessLogin);
-router.get("/perfil/:id",authMiddleware,controllersUser.perfil);
+router.get("/perfil/:id", authMiddleware, controllersUser.perfil);
 
 router.get("/formconsultas", controllersUser.formconsultas);
 
 router.get("/pregFrecuentes", controllersUser.preguntasFrecuentes);
-router.get("/logout",authMiddleware, controllersUser.logout);
+router.get("/logout", authMiddleware, controllersUser.logout);
+
+///user/:id/edit (GET) Formulario de edición de productos
+router.get("/edit/:id", controllersUser.edit);
+
+///user/:id (PUT) Acción de edición (a donde se envía el formulario):
+router.put("/edit/:id", upload.single("imagen"), controllersUser.update);
 
 module.exports = router;
