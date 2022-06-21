@@ -34,7 +34,7 @@ footer {
 
 .navbar-derecho {
   flex-wrap: wrap;
-  width: 300px;
+  
   justify-content: space-around;
 }
 

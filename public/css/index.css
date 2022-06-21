@@ -245,6 +245,8 @@ se agregan estilos comunies de detalle de producto
   color: #e5890a;
   align-self: center;
   width: 30%;
+  padding-left: 10px;
+  text-align: center;
 }
 .detail-finance {
   color: #e5890a;
