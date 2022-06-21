@@ -9,19 +9,15 @@
   <main>
     <div>
       <section class="section1a">
-        <% if (user.imageUsuario != 'default-image.png') { %>
+        <% if (user.user_image != 'default-image.png') { %>
         <img
           class="avatar"
-          src="../../img/users/<%= user.imageUsuario %> "
+          src="/img/users/<%= user.user_image %> "
           alt="avatar"
         />
         <% }else{%>
 
-        <img
-          class="avatar"
-          src="../../img/users/userAvatar2.png"
-          alt="avatar"
-        />
+        <img class="avatar" src="/img/users/userAvatar2.png" alt="avatar" />
         <% } %>
       </section>
       <section>
@@ -29,7 +25,7 @@
           <div>
             <i class="fas fa-user"></i>
 
-            <h3 class="b"><%= user.first_name %> <%= user.last_name %></h3>
+            <h3 class="b"><%= user.firs_name %> <%= user.last_name %></h3>
           </div>
         </article>
 
@@ -47,16 +43,14 @@
           </div>
 
           <% }else{ %>
-            <div>
-              <i class="far fa-calendar-alt"></i>
-              <h3 class="b">no configuro su fecha</h3>
-            </div>
-          
+          <div>
+            <i class="far fa-calendar-alt"></i>
+            <h3 class="b">no configuro su fecha</h3>
+          </div>
+
           <% } %>
         </article>
       </section>
     </div>
   </main>
-
-  
 </body>

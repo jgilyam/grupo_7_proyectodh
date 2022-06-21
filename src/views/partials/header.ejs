@@ -67,7 +67,7 @@
         </div>
       <% if(locals.isLogged) { %>
         <div class="barras-navMenu">
-        <p><a href="/user/perfil"><%= locals.userLogged.first_name %></a>  <i class="fa-solid fa-user"></i></p>
+        <p><a href="/user/perfil/<%= locals.userLogged.id_user %>"><%= locals.userLogged.firs_name %></a>  <i class="fa-solid fa-user"></i></p>
         <p><a href="/producto/carrito">Carrito</a>  <i class="fa-solid fa-cart-arrow-down"></i
           ></p>
         <p><a href="/user/logout">Salir</a>  <i class="fa-solid fa-arrow-right-from-bracket"></i
@@ -85,7 +85,7 @@
       <!--   --------------------------------------- -->
       <% if(locals.isLogged) { %>
       <div class="iniciar-sesion">
-        <a href="/user/perfil" class="ancla-login"><%= locals.userLogged.first_name %></a>
+        <a href="/user/perfil/<%= locals.userLogged.id_user %>" class="ancla-login"><%= locals.userLogged.firs_name %></a>
           
           <i class="fa-solid fa-user"></i>
         </a>

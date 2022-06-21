@@ -41,7 +41,7 @@ router.get("/login",guestMiddleware,controllersUser.formLogin);
 /*router.post("/login", controllersUser.login);*/
 
 router.post("/login", validacionesLogin, controllersUser.proccessLogin);
-router.get("/perfil",authMiddleware,controllersUser.perfil);
+router.get("/perfil/:id",authMiddleware,controllersUser.perfil);
 
 router.get("/formconsultas", controllersUser.formconsultas);
 
