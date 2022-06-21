@@ -1,9 +1,9 @@
 <article class="main-recomend-product">
-  <a href="/producto/<%= product.id %> "
-    ><img src="/img/<%= product.image%>" alt="Producto1" class="img-detail" />
+  <a href="/producto/<%= product.id_product %> "
+    ><img src="/img/<%= product.product_image%>" alt="Producto1" class="img-detail" />
   </a>
   <h4><%= product.types %></h4>
-  <a href="/producto/<%= product.id %>"><h3><%= product.name%></h3></a>
+  <a href="/producto/<%= product.id_product %>"><h3><%= product.name%></h3></a>
   <p class="detail-price2">$<%= product.price%></p>
   <% if (product.discount!==null) { %>
   <p class="detail-discount"><%= product.discount%>%OFF</p>
