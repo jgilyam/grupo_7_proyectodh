@@ -25,7 +25,7 @@
       <div class="contenedor-form">
         <form
           class="form"
-          action="/producto/edit/<%= productToEdit.id %>?_method=PUT "
+          action="/producto/edit/<%= productToEdit.id_product %>?_method=PUT "
           enctype="multipart/form-data"
           method="post"
         >
@@ -109,7 +109,7 @@
           </div>
         </form>
         <form
-          action="/producto/<%= productToEdit.id %>?_method=DELETE"
+          action="/producto/<%= productToEdit.id_product %>?_method=DELETE"
           method="POST" class="delete"
         >
           <button type>Eliminar</button>
