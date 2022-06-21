@@ -16,7 +16,7 @@ const productosJson = path.join(__dirname, "../data/products_DATA");
 const db = require("../../database/models");
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
-const Movie = require("../../database/models/Product");
+const Product = require("../../database/models/Product");
 
 const productControllers = {};
 productControllers.cart = (req, res) => {
@@ -31,9 +31,9 @@ productControllers.detail = (req, res) => {
   res.render("productDetail", { product, productsInSale });
 };
 
-productControllers.form = (req, res) => {
+/* productControllers.form = (req, res) => {
   res.render("productForm");
-};
+}; */
 
 //index, productos separados en 3 secciones, nuevo, ofertas, masVendido
 productControllers.index = async (req, res) => {
@@ -41,7 +41,7 @@ productControllers.index = async (req, res) => {
   //const products = JSON.parse(fs.readFileSync(basePath, "utf-8"));
   const products = await db.Product.findAll();
   const users = await db.User.findAll();
-  console.log(users);
+  /* console.log(users); */
   res.render("products", { products });
 };
 
@@ -66,11 +66,13 @@ productControllers.page = (req, res) => {
 
 //CREAR
 
-productControllers.form = (req, res) => {
-  db.Product.findAll().then(function (products) {
-    return res.render("productForm", { products: products });
-  });
+productControllers.form = async (req, res) => {
+  const category = await db.Category.findAll().then((category) => category); //sin el then tambien funciona;
+  const typess = await db.Typess.findAll().then((typess) => typess);
+
+  return res.render("productForm", { category, typess });
 };
+
 productControllers.store = (req, res) => {
   db.Product.create({
     name: req.body.name,
