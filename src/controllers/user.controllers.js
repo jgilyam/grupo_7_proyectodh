@@ -12,7 +12,7 @@ const user = require("../models/user.js");
 const db = require("../../database/models");
 
 //requiero bcryptjs pra cuando el proceso de login lo necesite
-const bcryptjs = require("bcryptjs");
+let bcryptjs = require("bcryptjs");
 
 //requiero express-validator
 const { validationResult, body } = require("express-validator");
@@ -94,17 +94,20 @@ controllersUser.createUser = async (req, res) => {
   } else {
     boxInfoo = "on";
   }
-  db.User.create({
+  let passwordEncriptada = await bcryptjs.hash(req.body.password, 10);
+  let crearUsuario = {
     firs_name: req.body.first_name,
     last_name: req.body.last_name,
     date: req.body.date,
     user_image: image,
     email: req.body.email,
-    password: bcryptjs.hashSync(req.body.password, 10),
+    password: passwordEncriptada,
     box_info: boxInfoo,
-  });
+  };
 
-  return res.redirect("../home");
+  await db.User.create(crearUsuario);
+
+  return res.redirect("login");
 };
 controllersUser.perfil = (req, res) => {
   res.render("perfil", {
@@ -113,40 +116,31 @@ controllersUser.perfil = (req, res) => {
 };
 
 controllersUser.proccessLogin = async (req, res) => {
-  let abc = await db.User.findOne({ where: { email: req.body.email } });
-
-  let userToLogin = abc;
-  /* console.log(userToLogin) */
-  /* let userToLogin = user.findByEmail(req.body.email) */
+  let userToLogin = await db.User.findOne({ where: { email: req.body.email } });
 
   if (userToLogin == null) {
     return res.render("login", {
       errors: {
-        email: {
-          msg: "No se encuentra este email registrado",
+        password: {
+          msg: "Los datos son invalidos",
         },
       },
     });
-  } else if (userToLogin != null) {
-    let userToLogin = abc.dataValues;
-    let isOkThePassword = req.body.password;
+  } else {
     if (userToLogin) {
-      /* let isOkThePassword = bcryptjs.compareSync(
-      req.body.password,
-      userToLogin.password
-    ); */
-
-      if (isOkThePassword == userToLogin.password) {
-        delete userToLogin.password; // lo hago apra borrar la contra ya que en esta instancia no quiero que se vea
-        /* delete userToLogin.passwordRepit */ req.session.userLogged =
-          userToLogin; //genero una propiedad en session llamda userlogged(usuario logiado ) y le asigno el usertologin
-        console.log(req.session.userLogged);
-
+      let isOkThePassword = bcryptjs.compareSync(
+        req.body.password,
+        userToLogin.password
+      );
+      if (isOkThePassword) {
+        delete userToLogin.password;
+        //genero una propiedad en session llamda userlogged(usuario logiado ) y le asigno el usertologin
+        req.session.userLogged = userToLogin;
         //Se setea la cookie para recordar el usuario.
         if (req.body.recordar) {
           res.cookie("mailUsuario", req.body.email, { maxAge: 1000 * 60 });
         }
-        return res.redirect("/user/perfil/" + req.session.userLogged.id_user);
+        return res.redirect("/user/perfil/" + userToLogin.id_user);
       }
       return res.render("login", {
         errors: {
@@ -156,21 +150,14 @@ controllersUser.proccessLogin = async (req, res) => {
         },
       });
     }
-  }
-
-  /*  console.log(userToLogin.password) */
-  /* console.log("pas usuario");
-  console.log(req.body.password);
-  console.log("pas usuario");
-  console.log(userToLogin.contraseña); */
-
-  /* return res.render("login", {
-    errors: {
-      email: {
-        msg: "No se encuentra este email registrado",
+    return res.render("login", {
+      errors: {
+        email: {
+          msg: "No se encuentra este email registrado",
+        },
       },
-    },
-  }); */
+    });
+  }
 };
 
 controllersUser.logout = (req, res) => {
@@ -208,6 +195,7 @@ controllersUser.update = async (req, res) => {
   res.redirect("/perfil/" + req.params.id);
 };
 module.exports = controllersUser;
+<<<<<<< HEAD
 
 //realizado por Jose
 /* let id = users[users.length - 1].id + 1;
@@ -230,3 +218,5 @@ if (usersData == "") {
 user.push(createUser);
 usersJSON = JSON.stringify(user);
 fs.writeFileSync(userFilePath, usersJSON); */
+=======
+>>>>>>> 5a075b5133e21e465c658b020710a4ec470654ee

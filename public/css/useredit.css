@@ -244,6 +244,8 @@ h1{
         padding-top: 60px;
         justify-content:space-between
 }
+
+
 /* PONER AL CONTENEDOR DE LA DESCRIPCION HEIGHT 10 REM Y AL TEXTAREA 6REM */
 @media (min-width: 768px){
     .contenedor-form{
