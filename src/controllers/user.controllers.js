@@ -12,7 +12,7 @@ const user = require("../models/user.js");
 const db = require("../../database/models");
 
 //requiero bcryptjs pra cuando el proceso de login lo necesite
-const bcryptjs = require("bcryptjs");
+let bcryptjs = require("bcryptjs");
 
 //requiero express-validator
 const { validationResult, body } = require("express-validator");
@@ -94,17 +94,20 @@ controllersUser.createUser = async (req, res) => {
   } else {
     boxInfoo = "on";
   }
-  db.User.create({
+  let passwordEncriptada = await bcryptjs.hash(req.body.password, 10);
+  let crearUsuario = {
     firs_name: req.body.first_name,
     last_name: req.body.last_name,
     date: req.body.date,
     user_image: image,
     email: req.body.email,
-    password: bcryptjs.hashSync(req.body.password, 10),
+    password: passwordEncriptada,
     box_info: boxInfoo,
-  });
+  };
 
-  return res.redirect("../home");
+  await db.User.create(crearUsuario);
+
+  return res.redirect("login");
 };
 controllersUser.perfil = (req, res) => {
   res.render("perfil", {
@@ -118,8 +121,8 @@ controllersUser.proccessLogin = async (req, res) => {
   if (userToLogin == null) {
     return res.render("login", {
       errors: {
-        email: {
-          msg: "No se encuentra este email registrado",
+        password: {
+          msg: "Los datos son invalidos",
         },
       },
     });
