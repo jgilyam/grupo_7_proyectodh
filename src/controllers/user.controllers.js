@@ -211,19 +211,15 @@ module.exports = controllersUser;
 
 //realizado por Jose
 /* let id = users[users.length - 1].id + 1;
-
 let image = "default-image.png";
-
 if (req.file) {
   image = req.file.filename;
 }
-
 let createUser = {
   id,
   ...req.body,
   image,
 };
-
 const usersData = fs.readFileSync(userFilePath, "utf-8");
 let user;
 if (usersData == "") {

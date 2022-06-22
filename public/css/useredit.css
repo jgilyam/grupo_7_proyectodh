@@ -1,0 +1,651 @@
+.section1a{
+    place-content: center;
+    background: cornflowerblue;
+    padding: 20px;
+}
+.avatar{
+    border-radius: 100%;
+    width: 120;
+    height: 120px;
+    border: 4px lavender solid;
+}
+main div section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-align: center;
+}
+main div section article {
+    width: 100%;
+    border: 1px black solid;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+main div section article div{
+    
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 11px;
+    
+}
+.a{
+    width: 96%;
+
+}
+.b{
+    width: 94%;
+}
+
+.fas{
+    font-size: 18px;
+}
+
+.far{
+    font-size: 18px;
+}
+
+.form{
+    width: 100%;
+    font-size: 18px;
+}
+.contenedor-form{
+    width: 80%;
+    margin: 10% auto;
+    border: 1px solid rgb(209, 173, 105);
+    padding: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 0px 5px rgb(150, 107, 52);
+}
+.contenedor-hijo{
+    width: 90%;
+    margin:15px auto;
+    border: 1px solid rgb(209, 173, 105);
+    padding: 10px;
+    box-shadow: 0px 0px 5px rgb(150, 107, 52);
+    border-radius: 5px;
+    height: 6rem;
+}
+.contenedor-hijo input, label{
+    font-size: 17px;
+    width: 90%;
+    margin: 2px;
+}
+.contenedor-hijo img{
+    width: 100%;
+}
+.boton-img{
+    margin: 5px;
+}
+.descripcion textarea{
+    width: 100%;
+    height: 6rem;
+    margin: 2px auto;
+}
+.titulo{
+    display: block;
+    padding: 3px 3px 3px 0px;
+    font-size: 1rem;
+    color: #cf7f0e;
+}
+.titulo-form{
+    width: 100%;
+    display: block;
+    padding: 10px;
+    height: 4rem;
+}
+h1{
+    font-size: 22px;
+    width: 100%;
+    height: 30px;
+    text-decoration: underline;
+    text-decoration-color: rgb(201, 196, 193);
+    text-align: center;
+}
+.contenedor-hijo-a{ 
+    width: 90%;
+    margin:5px 5%;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+}
+.contenedor-hijo-a div{
+    margin: 5px;
+}
+
+.contenedor-hijo-c{
+    display: flex;
+    width: 90%;
+    margin:5px 5%;
+    justify-content: space-around;
+}
+.contenedor-hijo-c button{
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #e5890a;
+    color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 5px rgb(150, 107, 52);
+    border: 1px solid rgb(209, 173, 105);
+    transition: all, 0.6s;
+    width: 200px;
+    margin: 5px;
+}
+.contenedor-hijo-c button:hover{
+    background-color: #f89304;
+}
+.contenedor-hijo-b{
+    width: 90%;
+    margin:15px 5%;
+    border: 1px solid rgb(209, 173, 105);
+    padding: 10px;
+    box-shadow: 0px 0px 5px rgb(150, 107, 52);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+}
+.precio{
+    width: 100%;
+}
+.contenedor-hijo-b label{
+    display: inline;
+}
+
+.admin{
+    font-size: 14px;
+    margin-left: 20px;
+}
+
+
+.burguer{
+    margin-right: 30px;
+    font-size: 20px;
+    color: rgb(236, 233, 233);
+    cursor: pointer;
+}
+.menu-items{
+    position: fixed;
+    width: 100%;
+    height: calc(100% - 3rem);
+    background-color: #be7714;
+    top:-100%;
+    text-align: center;
+    flex-direction: column;
+}
+.burguer{
+    display: inline-flex;
+}
+.titulo-form h1{
+    font-size: 18px;
+}
+.titulo-form h1 i{
+    font-size: 15px;
+}
+.col-12-col-md-6{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    background-color: white;
+}
+.contenedor-opc{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    padding: 10px;
+    margin: 2px 6px;
+}
+.form-input{
+    height: 25px;
+    border: 1px solid rgb(209, 173, 105);
+    box-shadow: 0px 0px 5px rgb(150, 107, 52);
+    background-color: white;
+
+}
+
+.delete{
+    margin: 5px auto;
+}
+.delete button{
+    font-size: 20px;
+    padding: 5px ;
+    border-radius: 5px;
+    background-color: #e5890a;
+    color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 5px rgb(150, 107, 52);
+    border: 1px solid rgb(209, 173, 105);
+    transition: all, 0.6s;
+    width: 200px;
+    margin: 5px;
+}
+.delete button:hover{
+    background-color: #f89304;
+}
+.titulo-form-c{
+    width: 100%;
+    display: block;
+    padding: 10px;
+    height: 2rem;
+}
+.form-label{
+    margin-bottom: 5px;
+}
+
+.botones{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        padding-top: 60px;
+        justify-content:space-between
+}
+/* PONER AL CONTENEDOR DE LA DESCRIPCION HEIGHT 10 REM Y AL TEXTAREA 6REM */
+@media (min-width: 768px){
+    .contenedor-form{
+        width: 60%;
+        margin: 5% auto;
+    }
+    .contenedor-hijo{
+        text-align: center;
+        width: 80%;
+    }
+  
+  
+    .titulo{
+        margin: 5px auto;
+        font-size: 21px;
+    }
+    .contenedor-hijo-b{
+        width: 65%;
+        margin: 10px auto;
+        text-align: center;
+    }
+  
+    .contenedor-hijo-a div{
+        margin: 10px 10px 10px 35px;
+    }
+    .contenedor-hijo-a{
+        font-size: 18px;
+    }
+    .contenedor-hijo-a .titulo{
+        font-size: 22px;
+    }
+    .titulo-form h1{
+        font-size: 25px;
+    }
+    .titulo-form h1 i {
+        font-size: 20px;
+    }
+    .contenedor-hijo-c input{
+        width: 30%;
+    }
+    .contenedor-hijo-c{
+        padding: 10px;
+    }
+    .admin{
+        margin-left: 30px;
+        font-size: 20px;
+    }
+    .nombre-producto{
+        margin-top: 6px;
+    }
+    .contenedor-hijo input, label {
+        font-size: 18px;
+    }
+    .form-input {
+        height: 32px;
+        border-radius: 5px;
+        font-size: 17px;
+    }
+    .contenedor-opc{
+        margin: 15px 30px;
+    }
+}
+
+@media (min-width: 1024px){
+    .contenedor-hijo img{
+        width: 90%;
+    }
+    .menu-items{
+        position: static;
+        display: flex;
+        width: auto;
+        height: 3rem;
+        background-color: #cf7f0e;
+        flex-direction: row;
+        text-align: center;
+    }
+    .menu-items li{
+        margin: 0 10px;
+        font-size: 18px;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    .menu-items li a{
+        padding: 5px 10px;
+        text-decoration: none;
+        color: rgb(250, 246, 246);
+        display: block;
+    }
+    .menu-items li:hover{
+        background-color: #be7714;
+        transition: 0.5s;
+    }
+    .burguer{
+        display: none;
+    }
+    .nav-list{
+        justify-content: space-around;
+        height: 4rem;
+    }
+    .precio-final{
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 10px 7%;
+        height: 90px;
+        
+    }
+    .contenedor-hijo-b{
+        width: 45%;
+    }
+    .contenedor-opc{
+         margin: 15px 69px;
+    }
+    .delete button{
+        width: 200px;
+        height: 45px;
+    }
+    .contenedor-hijo-c button{
+        width: 200px;
+        height: 45px;
+    }
+}
+
+
+
+
+
+
+/* .section1a{
+    place-content: center;
+    background: cornflowerblue;
+    padding: 20px;
+}
+.avatar{
+    border-radius: 100%;
+    width: 120;
+    height: 120px;
+    border: 4px lavender solid;
+}
+main div section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-align: center;
+}
+main div section article {
+    width: 100%;
+    border: 1px black solid;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+main div section article div{
+    
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 11px;
+    
+}
+.a{
+    width: 96%;
+
+}
+.b{
+    width: 94%;
+}
+
+.fas{
+    font-size: 18px;
+}
+
+.far{
+    font-size: 18px;
+}
+
+.form{
+    width: 100%;
+    font-size: 18px;
+}
+.contenedor-form{
+    width: 80%;
+    margin: 10% auto;
+    border: 1px solid rgb(209, 173, 105);
+    padding: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 0px 5px rgb(150, 107, 52);
+}
+.contenedor-hijo{
+    width: 90%;
+    margin:15px auto;
+    border: 1px solid rgb(209, 173, 105);
+    padding: 10px;
+    box-shadow: 0px 0px 5px rgb(150, 107, 52);
+    border-radius: 5px;
+    height: 6rem;
+}
+.contenedor-hijo input, label{
+    font-size: 17px;
+    width: 90%;
+    margin: 2px;
+}
+.contenedor-hijo img{
+    width: 100%;
+}
+
+.contenedor-hijo-c{
+    display: flex;
+    width: 90%;
+    margin:5px 5%;
+    justify-content: space-around;
+}
+.contenedor-hijo-c button{
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #e5890a;
+    color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 5px rgb(150, 107, 52);
+    border: 1px solid rgb(209, 173, 105);
+    transition: all, 0.6s;
+    width: 200px;
+    margin: 5px;
+}
+.contenedor-hijo-c button:hover{
+    background-color: #f89304;
+}
+.contenedor-hijo-b{
+    width: 90%;
+    margin:15px 5%;
+    border: 1px solid rgb(209, 173, 105);
+    padding: 10px;
+    box-shadow: 0px 0px 5px rgb(150, 107, 52);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+}
+
+.delete{
+    margin: 5px auto;
+}
+.delete button{
+    font-size: 20px;
+    padding: 5px ;
+    border-radius: 5px;
+    background-color: #e5890a;
+    color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 5px rgb(150, 107, 52);
+    border: 1px solid rgb(209, 173, 105);
+    transition: all, 0.6s;
+    width: 200px;
+    margin: 5px;
+}
+.delete button:hover{
+    background-color: #f89304;
+}
+.titulo-form-c{
+    width: 100%;
+    display: block;
+    padding: 10px;
+    height: 2rem;
+}
+
+
+
+
+@media (min-width: 768px){
+    .contenedor-form{
+        width: 60%;
+        margin: 5% auto;
+    }
+    .contenedor-hijo{
+        text-align: center;
+        width: 80%;
+    }
+    .contenedor-hijo-descripcion{
+        text-align: center;
+        width: 80%;
+    }
+    .descripcion{
+        margin: 0 auto;
+        width: 90%;
+        margin-top: -12px;
+        padding: 5px;
+    }
+    .titulo{
+        margin: 5px auto;
+        font-size: 21px;
+    }
+    .contenedor-hijo-b{
+        width: 65%;
+        margin: 10px auto;
+        text-align: center;
+    }
+    .precio{
+        width: 60%;
+        font-size: 18px;
+        padding: 5px;
+    } 
+    .contenedor-hijo-a div{
+        margin: 10px 10px 10px 35px;
+    }
+    .contenedor-hijo-a{
+        font-size: 18px;
+    }
+    .contenedor-hijo-a .titulo{
+        font-size: 22px;
+    }
+    .titulo-form h1{
+        font-size: 25px;
+    }
+    .titulo-form h1 i {
+        font-size: 20px;
+    }
+    .contenedor-hijo-c input{
+        width: 30%;
+    }
+    .contenedor-hijo-c{
+        padding: 10px;
+    }
+    .admin{
+        margin-left: 30px;
+        font-size: 20px;
+    }
+    .nombre-producto{
+        margin-top: 6px;
+    }
+    .contenedor-hijo input, label {
+        font-size: 18px;
+    }
+    .form-input {
+        height: 32px;
+        border-radius: 5px;
+        font-size: 17px;
+    }
+    .contenedor-opc{
+        margin: 15px 30px;
+    }
+}
+
+@media (min-width: 1024px){
+    .contenedor-hijo img{
+        width: 90%;
+    }
+    .menu-items{
+        position: static;
+        display: flex;
+        width: auto;
+        height: 3rem;
+        background-color: #cf7f0e;
+        flex-direction: row;
+        text-align: center;
+    }
+    .menu-items li{
+        margin: 0 10px;
+        font-size: 18px;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    .menu-items li a{
+        padding: 5px 10px;
+        text-decoration: none;
+        color: rgb(250, 246, 246);
+        display: block;
+    }
+    .menu-items li:hover{
+        background-color: #be7714;
+        transition: 0.5s;
+    }
+    .burguer{
+        display: none;
+    }
+    .nav-list{
+        justify-content: space-around;
+        height: 4rem;
+    }
+    .precio-final{
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 10px 7%;
+        height: 90px;
+        
+    }
+    .contenedor-hijo-b{
+        width: 45%;
+    }
+    .contenedor-opc{
+         margin: 15px 69px;
+    }
+    .delete button{
+        width: 200px;
+        height: 45px;
+    }
+    .contenedor-hijo-c button{
+        width: 200px;
+        height: 45px;
+    }
+} */

@@ -1,14 +1,82 @@
 <head>
   <%- include ("./partials/head") %>
-  <title>perfil Usuario</title>
-  <link rel="stylesheet" href="/css/perfil.css" />
+  <title>Perfil Usuario</title>
+  <link rel="stylesheet" href="/css/useredit.css" />
 </head>
 
 <body>
   <%- include("./partials/header") %>
   <main>
     <div>
-      <section class="section1a">
+      <div class="contenedor-form">
+          <section class="section1a">
+            <% if (userToEdit.user_image != 'default-image.png') { %>
+              <img
+                class="avatar"
+                src="/img/users/<%= userToEdit.user_image %> "
+                alt="avatar"
+              />
+              <% }else{%>
+      
+              <img class="avatar" src="/img/users/userAvatar2.png" alt="avatar" />
+              <% } %>
+            </section>
+        <form
+          class="form"
+          action="/user/edit/<%= userToEdit.id_user %>?_method=PUT "
+          enctype="multipart/form-data"
+          method="post"
+        >
+          <div class="titulo-form">
+            <h1>
+              Editar Perfil <br />
+              <i><%= userToEdit.first_name %> </i>
+            </h1>
+          </div>
+          <div class="contenedor-hijo">
+            <label class="titulo" for="">Nombre del Usuario</label>
+            <input type="text" name="name" value="<%= userToEdit.first_name %> <%= userToEdit.last_name %>" />
+          </div>
+          <div class="contenedor-hijo">
+            <label class="titulo" for="">Email</label>
+            <input type="email" name="name" value="<%= userToEdit.email %>" />
+          </div>
+          <div class="contenedor-hijo">
+            <h3>Fecha de Nacimiento</h3>
+            <label for="date"></label>
+            <input
+              type="date"
+              name="date"
+              id="date"
+              placeholder="dd"
+              value="<%= userToEdit.date %>"
+            />
+          </form>
+          <section class="botones">
+            <div class="contenedor-hijo-c">
+              <button type="submit">Editar</button>
+        </div>
+
+          <form
+            action="/user/<%= userToEdit.id_user %>?_method=DELETE"
+            method="POST" class="delete"
+          >
+            <button type>Eliminar</button>
+          </form>
+        </section>
+        </div>
+      </div>
+         
+
+
+
+
+
+
+
+
+
+      <!-- <section class="section1a">
         <% if (userToEdit.user_image != 'default-image.png') { %>
         <img
           class="avatar"
@@ -50,7 +118,7 @@
 
           <% } %>
         </article>
-      </section>
+      </section> -->
     </div>
   </main>
 </body>
