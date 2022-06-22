@@ -117,7 +117,7 @@ controllersUser.perfil = (req, res) => {
 
 controllersUser.proccessLogin = async (req, res) => {
   let userToLogin = await db.User.findOne({ where: { email: req.body.email } });
-  console.log(userToLogin);
+
   if (userToLogin == null) {
     return res.render("login", {
       errors: {
