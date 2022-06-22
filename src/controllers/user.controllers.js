@@ -131,14 +131,13 @@ controllersUser.proccessLogin = async (req, res) => {
       );
       if (isOkThePassword) {
         delete userToLogin.password;
-        req.session.userLogged = userToLogin; //genero una propiedad en session llamda userlogged(usuario logiado ) y le asigno el usertologin
-        /* console.log("funciona sesion:", req.session.userLogged); */
-
+        //genero una propiedad en session llamda userlogged(usuario logiado ) y le asigno el usertologin
+        req.session.userLogged = userToLogin;
         //Se setea la cookie para recordar el usuario.
         if (req.body.recordar) {
           res.cookie("mailUsuario", req.body.email, { maxAge: 1000 * 60 });
         }
-        return res.redirect("/user/perfil");
+        return res.redirect("/user/perfil/" + userToLogin.id_user);
       }
       return res.render("login", {
         errors: {

@@ -7,7 +7,7 @@ CREATE TABLE Users (`id_user` int  AUTO_INCREMENT,
   `last_name` varchar(50) NOT NULL,
   `date` varchar(50) NOT NULL,
   `email` varchar(100) not null,
-  `password` varchar(50) NOT NULL,
+  `password` varchar(200) NOT NULL,
   `user_image` varchar(100) DEFAULT NULL,
   `box_info` varchar(50) NOT NULL,
   PRIMARY KEY (id_user)
