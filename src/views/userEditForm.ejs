@@ -51,22 +51,33 @@
               placeholder="dd"
               value="<%= userToEdit.date %>"
             />
+            <div class="contenedor-hijo">
+              <h3>Imagen Avatar</h3>
+              <label for="image"></label>
+              <input
+                type="file"
+                name="image"
+                id="image"
+                value="<%= userToEdit.user_image %>"
+              />
           </form>
           <section class="botones">
             <div class="contenedor-hijo-c">
               <button type="submit">Editar</button>
         </div>
 
-          <form
-            action="/user/<%= userToEdit.id_user %>?_method=DELETE"
+          <div
+            action="/login/<%= userToEdit.id_user %>?_method=DELETE"
             method="POST" class="delete"
           >
             <button type>Eliminar</button>
-          </form>
+      </div>
         </section>
         </div>
       </div>
-         
+    </div>
+  </main>
+</body> 
 
 
 
@@ -119,6 +130,4 @@
           <% } %>
         </article>
       </section> -->
-    </div>
-  </main>
-</body>
+

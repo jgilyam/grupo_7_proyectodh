@@ -195,28 +195,3 @@ controllersUser.update = async (req, res) => {
   res.redirect("/perfil/" + req.params.id);
 };
 module.exports = controllersUser;
-<<<<<<< HEAD
-
-//realizado por Jose
-/* let id = users[users.length - 1].id + 1;
-let image = "default-image.png";
-if (req.file) {
-  image = req.file.filename;
-}
-let createUser = {
-  id,
-  ...req.body,
-  image,
-};
-const usersData = fs.readFileSync(userFilePath, "utf-8");
-let user;
-if (usersData == "") {
-  user = [];
-} else {
-  user = JSON.parse(usersData);
-}
-user.push(createUser);
-usersJSON = JSON.stringify(user);
-fs.writeFileSync(userFilePath, usersJSON); */
-=======
->>>>>>> 5a075b5133e21e465c658b020710a4ec470654ee
