@@ -113,12 +113,8 @@ controllersUser.perfil = (req, res) => {
 };
 
 controllersUser.proccessLogin = async (req, res) => {
-  let abc = await db.User.findOne({ where: { email: req.body.email } });
-
-  let userToLogin = abc;
-  /* console.log(userToLogin) */
-  /* let userToLogin = user.findByEmail(req.body.email) */
-
+  let userToLogin = await db.User.findOne({ where: { email: req.body.email } });
+  console.log(userToLogin);
   if (userToLogin == null) {
     return res.render("login", {
       errors: {
@@ -127,26 +123,22 @@ controllersUser.proccessLogin = async (req, res) => {
         },
       },
     });
-  } else if (userToLogin != null) {
-    let userToLogin = abc.dataValues;
-    let isOkThePassword = req.body.password;
+  } else {
     if (userToLogin) {
-      /* let isOkThePassword = bcryptjs.compareSync(
-      req.body.password,
-      userToLogin.password
-    ); */
-
-      if (isOkThePassword == userToLogin.password) {
-        delete userToLogin.password; // lo hago apra borrar la contra ya que en esta instancia no quiero que se vea
-        /* delete userToLogin.passwordRepit */ req.session.userLogged =
-          userToLogin; //genero una propiedad en session llamda userlogged(usuario logiado ) y le asigno el usertologin
-        console.log(req.session.userLogged);
+      let isOkThePassword = bcryptjs.compareSync(
+        req.body.password,
+        userToLogin.password
+      );
+      if (isOkThePassword) {
+        delete userToLogin.password;
+        req.session.userLogged = userToLogin; //genero una propiedad en session llamda userlogged(usuario logiado ) y le asigno el usertologin
+        /* console.log("funciona sesion:", req.session.userLogged); */
 
         //Se setea la cookie para recordar el usuario.
         if (req.body.recordar) {
           res.cookie("mailUsuario", req.body.email, { maxAge: 1000 * 60 });
         }
-        return res.redirect("/user/perfil/" + req.session.userLogged.id_user);
+        return res.redirect("/user/perfil");
       }
       return res.render("login", {
         errors: {
@@ -156,21 +148,14 @@ controllersUser.proccessLogin = async (req, res) => {
         },
       });
     }
-  }
-
-  /*  console.log(userToLogin.password) */
-  /* console.log("pas usuario");
-  console.log(req.body.password);
-  console.log("pas usuario");
-  console.log(userToLogin.contraseña); */
-
-  /* return res.render("login", {
-    errors: {
-      email: {
-        msg: "No se encuentra este email registrado",
+    return res.render("login", {
+      errors: {
+        email: {
+          msg: "No se encuentra este email registrado",
+        },
       },
-    },
-  }); */
+    });
+  }
 };
 
 controllersUser.logout = (req, res) => {
@@ -208,29 +193,3 @@ controllersUser.update = async (req, res) => {
   res.redirect("/perfil/" + req.params.id);
 };
 module.exports = controllersUser;
-
-//realizado por Jose
-/* let id = users[users.length - 1].id + 1;
-
-let image = "default-image.png";
-
-if (req.file) {
-  image = req.file.filename;
-}
-
-let createUser = {
-  id,
-  ...req.body,
-  image,
-};
-
-const usersData = fs.readFileSync(userFilePath, "utf-8");
-let user;
-if (usersData == "") {
-  user = [];
-} else {
-  user = JSON.parse(usersData);
-}
-user.push(createUser);
-usersJSON = JSON.stringify(user);
-fs.writeFileSync(userFilePath, usersJSON); */
