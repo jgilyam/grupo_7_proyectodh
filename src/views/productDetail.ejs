@@ -14,12 +14,10 @@
 
     <main class="main-pd">
       <!-- Detalle de producto -->
-      <h2>
-        <%= typeProduct.name%> <% for (let i = 0; i < typeProduct.length; i++) {
-        %> <%if(typeProduct[i].id_type == product.id_type){ %>
-        <h2><%=typeProduct[i].name%></h2>
-        <%}%> <%}%>
-      </h2>
+      <% for (let i = 0; i < typeProduct.length; i++) { %>
+      <%if(typeProduct[i].id_type == product.id_type){ %>
+      <h2 class="type-arriba"><%=typeProduct[i].name%></h2>
+      <%}%> <%}%>
       <section class="main-detail">
         <article class="main-detail-product">
           <img

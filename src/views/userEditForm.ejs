@@ -35,11 +35,15 @@
           </div>
           <div class="contenedor-hijo">
             <label class="titulo" for="">Nombre del Usuario</label>
-            <input type="text" name="name" value="<%= userToEdit.first_name %> <%= userToEdit.last_name %>" />
+            <input type="text" name="firs_name" value="<%= userToEdit.firs_name %>" />
+          </div>
+          <div class="contenedor-hijo">
+            <label class="titulo" for="">Apellido del usuario</label>
+            <input type="text" name="last_name" value="<%= userToEdit.last_name %>" />
           </div>
           <div class="contenedor-hijo">
             <label class="titulo" for="">Email</label>
-            <input type="email" name="name" value="<%= userToEdit.email %>" />
+            <input type="email" name="email" value="<%= userToEdit.email %>" />
           </div>
           <div class="contenedor-hijo">
             <h3>Fecha de Nacimiento</h3>
@@ -51,42 +55,25 @@
               placeholder="dd"
               value="<%= userToEdit.date %>"
             />
+            </div>
             <div class="contenedor-hijo">
-              <h3>Imagen Avatar</h3>
-              <label for="image"></label>
-              <input
-                type="file"
-                name="image"
-                id="image"
-                value="<%= userToEdit.user_image %>"
-              />
+              <label class="titulo" for="">Imagen Avatar</label>
+              <input class="boton-img" type="file" name="imagen" />
+            </div>
           </form>
           <section class="botones">
             <div class="contenedor-hijo-c">
               <button type="submit">Editar</button>
-        </div>
-
-          <div
-            action="/login/<%= userToEdit.id_user %>?_method=DELETE"
-            method="POST" class="delete"
-          >
-            <button type>Eliminar</button>
-      </div>
+            </div>
+          <div class="contenedor-hijo-c">
+            <button type="reset">Eliminar</button>
+          </div>
         </section>
         </div>
       </div>
     </div>
   </main>
 </body> 
-
-
-
-
-
-
-
-
-
       <!-- <section class="section1a">
         <% if (userToEdit.user_image != 'default-image.png') { %>
         <img
