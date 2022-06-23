@@ -178,22 +178,19 @@ controllersUser.update = async (req, res) => {
   if (req.file) {
     image = req.file.filename;
   }
-
-  await db.User.update(
-    {
-      firs_name: req.body.firs_name,
-      last_name: req.body.last_name,
-      date: req.body.date,
-      email: req.body.email,
-      user_image: image,
+  const userUpdated = {
+    firs_name: req.body.firs_name,
+    last_name: req.body.last_name,
+    date: req.body.date,
+    email: req.body.email,
+    user_image: image,
+  };
+  await db.User.update(userUpdated, {
+    where: {
+      id_user: req.params.id,
     },
-    {
-      where: {
-        id_user: req.params.id,
-      },
-    }
-  );
-  
+  });
+  req.session.userLogged = userUpdated;
   res.redirect("/user/perfil/" + req.params.id);
 };
 module.exports = controllersUser;
