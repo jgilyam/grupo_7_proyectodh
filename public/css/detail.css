@@ -142,6 +142,9 @@ h1 {
   color: #e5890a;
 }
 
+.type-arriba{
+  color: rgba(94, 91, 91, 0.883)
+}
 /*Clases de la sección te recomendamos*/
 
 @media (min-width: 361px) {
