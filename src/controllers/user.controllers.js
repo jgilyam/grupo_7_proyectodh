@@ -172,19 +172,20 @@ controllersUser.edit = (req, res) => {
   });
 };
 controllersUser.update = async (req, res) => {
-  let image = "default-image.png";
+  const userToEdit = await db.User.findByPk(req.params.id);
+
+  let image = userToEdit.user_image;
   if (req.file) {
     image = req.file.filename;
   }
+
   await db.User.update(
     {
       firs_name: req.body.firs_name,
       last_name: req.body.last_name,
       date: req.body.date,
       email: req.body.email,
-      password: req.body.password,
       user_image: image,
-      box_info: req.body.box_info,
     },
     {
       where: {
@@ -192,6 +193,7 @@ controllersUser.update = async (req, res) => {
       },
     }
   );
-  res.redirect("/perfil/" + req.params.id);
+  
+  res.redirect("/user/perfil/" + req.params.id);
 };
 module.exports = controllersUser;
