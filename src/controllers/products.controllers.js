@@ -104,7 +104,7 @@ productControllers.form = async (req, res) => {
   return res.render("productForm", { category, typess });
 };
 
-productControllers.store = (req, res) => {
+productControllers.store = async (req, res) => {
   let image = "";
   if (req.file) {
     image = req.file.filename;
@@ -149,15 +149,18 @@ productControllers.store = (req, res) => {
 // };
 
 //EDIT
-productControllers.edit = (req, res) => {
+productControllers.edit = async (req, res) => {
   console.log("entre a edit");
-  db.Product.findByPk(req.params.id).then(function (productToEdit) {
-    return res.render("product-edit-form", { productToEdit });
-  });
+  const productToEdit = await db.Product.findByPk(req.params.id);
+  const category = await db.Category.findAll().then((category) => category); //sin el then tambien funciona;
+  const typess = await db.Typess.findAll().then((typess) => typess);
+
+  return res.render("product-edit-form", { category, typess, productToEdit });
 };
 productControllers.update = async (req, res) => {
+  const productToEdit = await db.Product.findByPk(req.params.id);
   console.log("entre a update");
-  let image = "default-image.png";
+  let image = productToEdit.product_image;
   if (req.file) {
     image = req.file.filename;
     console.log(image);
@@ -167,12 +170,12 @@ productControllers.update = async (req, res) => {
       //id_prodct:,
       name: req.body.name,
       product_image: image,
-      descpription: req.body.descpription,
-      //seccion: req.body.types,
       price: req.body.price,
-      //id_category:,
-      // id_type:,
-      // stock:,
+      description: req.body.description,
+      //seccion: req.body.types,
+      id_category: req.body.category,
+      id_type: req.body.types,
+      stock: req.body.stock,
       discount: req.body.discount,
     },
     {
