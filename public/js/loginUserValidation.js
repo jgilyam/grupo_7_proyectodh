@@ -8,10 +8,8 @@ window.addEventListener("load", function () {
     let campoPassword = document.querySelector("input.password");
 
     if (campoEmail.value == "") {
-      errores.push("El campo de nombre debe estar completo");
-    } else if (
-      campoEmail.value != /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test
-    ) {
+      errores.push("El campo de email debe estar completo");
+    } else if (campoEmail.value.validity.typeMismatch) {
       errores.push("Debe ser un email valido ");
     }
 
@@ -22,9 +20,12 @@ window.addEventListener("load", function () {
     if (errores.length > 0) {
       e.preventDefault();
       let ulErrores = document.querySelector("div.errores ul");
-      for (let index = 0; index < errores.length; index++) {
+      for (let i = 0; i < errores.length; i++) {
         ulErrores.innerHTML += "<li>" + errores[i] + "</li>";
       }
+    } else {
+      alert("La validación fué exitosa");
+      form.submit();
     }
   });
 });

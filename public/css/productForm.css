@@ -209,6 +209,12 @@ h1{
     border-radius: 5px;
     height: 10rem;
 }
+
+div.errores{
+    text-align: center;
+    margin-top: 50px;
+    color: #F55353;
+  }
 /* PONER AL CONTENEDOR DE LA DESCRIPCION HEIGHT 10 REM Y AL TEXTAREA 6REM */
 @media (min-width: 768px){
     .contenedor-form{

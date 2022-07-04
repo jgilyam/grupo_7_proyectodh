@@ -201,6 +201,8 @@ body {
 }
 
 div.errores{
+  text-align: center;
+  margin-top: 50px;
   color: #F55353;
 }
 
