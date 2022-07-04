@@ -180,13 +180,14 @@ se agregan estilos comunies de detalle de producto
 
 .titulos {
   color: darkgreen;
-  font-size: 30px;
+  font-size: 20px;
   text-transform: uppercase;
   text-align: center;
   box-shadow: 0px 0px 1px rgb(100 100 100);
   padding: 10px;
   background-color: #f5f5f5;
   margin: 30px;
+  width: 100%;
 }
 .main-recomend {
   max-width: 90vw;
@@ -558,7 +559,7 @@ se agregan estilos comunies de detalle de producto
   .main-recomend {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
   }
   .main-recomend-product {
     max-width: 45%;
@@ -575,6 +576,11 @@ se agregan estilos comunies de detalle de producto
   transform: scale(1.1);
   background-color: #e8e8e8;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.container-article-busqueda{
+  display: flex;
+  flex-wrap: wrap;
 }
 
 @media (min-width: 1200px) {
