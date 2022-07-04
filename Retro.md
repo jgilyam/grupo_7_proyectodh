@@ -87,3 +87,19 @@ Nos costo coordinar dias para juntarnos, debemos mejorar esto.
 Dejar de hacer:
 
 La planificacioń de este sprint no fue realizada con tiempo,como se habia planteado.
+
+Sprint 7
+
+Comenzar a hacer:
+Poner una fecha anterior a la de la entrega para poder resolver problemas de ultimos momentos ,si los hubiese.
+
+Hacer más:
+A la hora de planificar las tareas, tratar de definir un tiempo, para que las tareas que sean correlativas puedan realizarse sin problema.
+
+Continuar haciendo:
+
+Entre dos del equipo van a juntarse primero y transformar los puntos del sprint en tareas y asignarlos a los otros participantes.
+
+Dejar de hacer:
+
+Terminar con el sprint muy sobre la fecha.
