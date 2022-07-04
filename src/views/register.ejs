@@ -38,6 +38,7 @@
             action="/user/register"
             method="POST"
             enctype="multipart/form-data"
+            id="form"
           >
             <div class="Register">
               <div>
@@ -51,6 +52,7 @@
                     placeholder="Nombre"
                     value="<%= locals.oldData && oldData.first_name %>"
                   />
+                  <div class="text-denger" id="danger-firstName"></div>
                   <% if (locals.errors && errors.first_name) { %>
                   <div class="text-denger"><%= errors.first_name.msg %></div>
                   <% } %>
@@ -64,6 +66,7 @@
                     placeholder="Apellido"
                     value="<%= locals.oldData && oldData.last_name %>"
                   />
+                  <div class="text-denger" id="danger-lastName"></div>
                   <% if (locals.errors && errors.last_name) { %>
                   <div class="text-denger"><%= errors.last_name.msg %></div>
                   <% } %>
@@ -91,6 +94,7 @@
               <div>
                 <input type="file" name="image" id="image" />
               </div>
+              <div class="text-denger" id="danger-image"></div>
 
               <h3>Datos de Acceso</h3>
               <div class="user-info">
@@ -103,6 +107,7 @@
                     placeholder="email@gmail.com"
                     value="<%= locals.oldData && oldData.email %>"
                   />
+                  <div class="text-denger" id="danger-email"></div>
                   <% if (locals.errors && errors.email) { %>
                   <div class="text-denger"><%= errors.email.msg %></div>
                   <% } %>
@@ -118,6 +123,7 @@
                     title="min 8 letras alfanumericas"
                     maxlength="8"
                   />
+                  <div class="text-denger" id="danger-password"></div>
                   <% if (locals.errors && errors.password) { %>
                   <div class="text-denger"><%= errors.password.msg %></div>
                   <% } %>
@@ -126,13 +132,14 @@
                   <label for="password"></label>
                   <input
                     type="password"
-                    id="password"
+                    id="passwordRepit"
                     name="passwordRepit"
                     placeholder="Repetir contraseña"
                     pattern=".{8,}"
                     title="min 8 letras alfanumericas"
                     maxlength="8"
                   />
+                  <div class="text-denger" id="danger-password2"></div>
                   <% if (locals.errors && errors.passwordRepit) { %>
                   <div class="text-denger"><%= errors.passwordRepit.msg %></div>
                   <% } %>
@@ -142,15 +149,15 @@
                 </p>
               </div>
               <div class="noticias-condiciones">
-                <input type="checkbox" name="boxTerminos" />He leido y acepto
-                los terminos y condiciones
+                <input type="checkbox" name="boxTerminos" checked />He leido y
+                acepto los terminos y condiciones
               </div>
               <div class="noticias-condiciones">
-                <input type="checkbox" name="boxInfo" />Me gustaria recibir
-                noticias
+                <input type="checkbox" name="boxInfo" checked />Me gustaria
+                recibir noticias
               </div>
               <div class="boton-enviar">
-                <input type="submit" value="ENVIAR" />
+                <input type="submit" value="ENVIAR" id="btnSubmit" />
               </div>
             </div>
           </form>
@@ -158,5 +165,6 @@
       </div>
     </main>
     <%- include ("./partials/footer") %>
+    <script src="/js/registerValidation.js"></script>
   </body>
 </html>
