@@ -25,6 +25,7 @@
       <div class="contenedor-form">
         <form
           class="form"
+          id="form-product-edit"
           action="/producto/edit/<%= productToEdit.id_product %>?_method=PUT "
           enctype="multipart/form-data"
           method="post"
@@ -37,11 +38,16 @@
           </div>
           <div class="contenedor-hijo">
             <label class="titulo" for="">Nombre del Producto</label>
-            <input type="text" name="name" value="<%= productToEdit.name %> " />
+            <input
+              type="text"
+              name="name"
+              id="name"
+              value="<%= productToEdit.name %> "
+            />
           </div>
           <div class="contenedor-hijo-descripcion">
             <label class="titulo" for="">Breve descripción</label>
-            <div class="descripcion">
+            <div class="descripcion" id="descripcion">
               <textarea
                 name="descripcion"
                 id=""
@@ -55,7 +61,7 @@
           </div>
           <div class="contenedor-hijo">
             <label class="titulo" for="">Imagen del producto</label>
-            <input class="boton-img" type="file" name="imagen" />
+            <input class="boton-img" type="file" name="imagen" id="imagen" />
           </div>
           <div class="contenedor-opc">
             <div class="col-12-col-md-6">

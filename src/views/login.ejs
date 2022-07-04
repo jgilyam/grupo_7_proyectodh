@@ -8,7 +8,10 @@
   <body>
     <%- include("./partials/header") %>
     <main>
-      <form class="form-login" action="/user/login" method="POST">
+      <div class="errores">
+        <ul></ul>
+      </div>
+      <form class="form-login" id="form-log" action="/user/login" method="POST">
         <div class="container-input">
           <div class="input1-group">
             <input
@@ -16,6 +19,7 @@
               placeholder="Email@email.com"
               class="input1"
               name="email"
+              id="email"
             />
             <% if (locals.errors && errors.email) { %>
             <div class="text-denger"><%= errors.email.msg %></div>

@@ -200,6 +200,10 @@ body {
 
 }
 
+div.errores{
+  color: #F55353;
+}
+
 @media (min-width: 361px) {
   .nav-medio {
     font-size: 15px;
