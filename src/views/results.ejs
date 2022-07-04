@@ -7,10 +7,17 @@
   <body>
     <%- include("./partials/header") %>
     <main>
-      <h3 class="titulos">Resltado de busqueda para: <%= keyword %></h3>
       <section class="main-recomend">
-        <% results.forEach(product => { %>
-        <%-include("./partials/product2",{product:product}) %> <% }); %>
+        <% if (results != "") { %>
+          <h3 class="titulos" id="titulos">Resultado de busqueda para:<br>"<%= keyword %>"</h3>
+          <div class="container-article-busqueda">
+           <% results.forEach(product => { %>
+            <%-include("./partials/product2",{product:product}) %> <% }) %>
+          </div>
+          <% }else{%>
+            <h3 class="titulos" id="titulos">No se encontraron resultados para: <br>" <%= keyword %>"</h3>
+          <% } %>
+        
       </section>
     </main>
     <%- include ("./partials/footer") %>

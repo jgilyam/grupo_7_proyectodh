@@ -60,7 +60,7 @@ controllerPrincipal.search = async (req, res) => {
 
   const results =  await db.Product.findAll({
     where: {
-      name:{[Op.like]:`%${keyword.toLowerCase()}%`}
+      name:{[Op.like]:`${keyword.toLowerCase()}%`}
     }
   })
 
