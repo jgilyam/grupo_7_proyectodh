@@ -25,13 +25,26 @@ const storage = multer.diskStorage({
   },
 });
 
+const fileFilter = (req, file, cb) => {
+  let extension = path.extname(file.originalname);
+  if (extension !== ".jpg") {
+    return cb(new Error("Only images are allowed"));
+  }
+  cb(null, true);
+};
+
 const upload = multer({ storage: storage });
 
 router.get("/register", guestMiddleware, controllersUser.register);
 
 router.post(
   "/register",
+
   upload.single("image"),
+  (req, res, next) => {
+    req.body.image = req.file.filename;
+    next();
+  },
   validations,
   controllersUser.createUser
 );
