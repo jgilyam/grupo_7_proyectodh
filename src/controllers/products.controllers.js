@@ -3,7 +3,7 @@ const path = require("path");
 const fs = require("fs");
 
 //modulos de terceros
-
+const { validationResult } = require("express-validator");
 //modulos propios
 const productRecomen = require("../models/baseProducts");
 const extractRandom = require("../utils/extractRandom");
@@ -105,6 +105,18 @@ productControllers.form = async (req, res) => {
 };
 
 productControllers.store = async (req, res) => {
+  const category = await db.Category.findAll().then((category) => category); //sin el then tambien funciona;
+  const typess = await db.Typess.findAll().then((typess) => typess);
+  let resultValidation = validationResult(req);
+  if (resultValidation.errors.length > 0) {
+    return res.render("productForm", {
+      errors: resultValidation.mapped(),
+      oldData: req.body,
+      category: category,
+      typess: typess,
+    });
+  }
+
   let image = "";
   if (req.file) {
     image = req.file.filename;
