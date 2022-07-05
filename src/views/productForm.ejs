@@ -23,9 +23,6 @@
       </nav>
 
       <div class="contenedor-form">
-        <div class="errores">
-          <ul></ul>
-        </div>
         <form
           class="form"
           id="form-create"
@@ -46,6 +43,11 @@
                 placeholder="NombreProducto"
                 maxlength="30"
               />
+              <div class="text-denger" id="danger-name"></div>
+              <% if (locals.errors && errors.name) { %>
+              <div class="text-denger"><%= errors.name.msg %></div>
+              <% } %>
+            </div>
             </div>
           </div>
           <div class="contenedor-hijo-descripcion">
@@ -57,11 +59,17 @@
                 cols="30"
                 rows="10"
               ></textarea>
+              <div class="text-denger" id="danger-description"></div>
+              <% if (locals.errors && errors.description) { %>
+              <div class="text-denger"><%= errors.description.msg %></div>
+              <% } %>
+            </div>
             </div>
           </div>
           <div class="contenedor-hijo">
             <label class="titulo" for="">Imagen del producto</label>
             <input class="boton-img" type="file" name="image" id="image" />
+            <div class="text-denger" id="danger-image"></div>
           </div>
           <div class="contenedor-opc">
             <div class="col-12-col-md-6">
@@ -96,6 +104,11 @@
                 placeholder="Ej. 100"
                 min="1.00"
               />$
+              <div class="text-denger" id="danger-price"></div>
+              <% if (locals.errors && errors.price) { %>
+              <div class="text-denger"><%= errors.price.msg %></div>
+              <% } %>
+            </div>
             </div>
             <div class="contenedor-hijo-b">
               <label class="titulo">Descuento:</label>
@@ -106,6 +119,11 @@
                 name="discount"
                 placeholder="Ej. 10"
               />%
+              <div class="text-denger" id="danger-discount"></div>
+              <% if (locals.errors && errors.discount) { %>
+              <div class="text-denger"><%= errors.discount.msg %></div>
+              <% } %>
+            </div>
             </div>
             <div class="contenedor-hijo-b">
               <label class="titulo">Stock:</label>
@@ -116,10 +134,15 @@
                 name="stock"
                 placeholder="Ej. 10"
               />Uni
+              <div class="text-denger" id="stock"></div>
+              <% if (locals.errors && errors.stock) { %>
+              <div class="text-denger"><%= errors.stock.msg %></div>
+              <% } %>
+            </div>
             </div>
           </section>
           <div class="contenedor-hijo-c">
-            <button type="submit">Crear</button>
+            <button type="submit" id="btnSubmit">Crear</button>
             <button type="reset">Cancelar</button>
           </div>
         </form>

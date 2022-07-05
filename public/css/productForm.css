@@ -215,6 +215,13 @@ div.errores{
     margin-top: 50px;
     color: #F55353;
   }
+.text-denger{
+  font-size: 10px;
+  font-weight: bold;
+  color: #F55353;
+  padding: 3px 0px;
+  font-size: 12px;
+}
 /* PONER AL CONTENEDOR DE LA DESCRIPCION HEIGHT 10 REM Y AL TEXTAREA 6REM */
 @media (min-width: 768px){
     .contenedor-form{

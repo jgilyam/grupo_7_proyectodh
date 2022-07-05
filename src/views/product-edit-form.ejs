@@ -23,9 +23,6 @@
       </nav>
 
       <div class="contenedor-form">
-        <div class="errores">
-          <ul></ul>
-        </div>
         <form
           class="form"
           id="form-product-edit"
@@ -47,6 +44,11 @@
               id="name"
               value="<%= productToEdit.name %> "
             />
+            <div class="text-denger" id="danger-name"></div>
+            <% if (locals.errors && errors.name) { %>
+            <div class="text-denger"><%= errors.name.msg %></div>
+            <% } %>
+          </div>
           </div>
           <div class="contenedor-hijo-descripcion">
             <label class="titulo" for="">Breve descripción</label>
@@ -60,11 +62,17 @@
               >
  <%=  productToEdit.description %> </textarea
               >
+              <div class="text-denger" id="danger-description"></div>
+              <% if (locals.errors && errors.description) { %>
+              <div class="text-denger"><%= errors.description.msg %></div>
+              <% } %>
+            </div>
             </div>
           </div>
           <div class="contenedor-hijo">
             <label class="titulo" for="">Imagen del producto</label>
             <input class="boton-img" type="file" name="imagen" id="imagen" />
+            <div class="text-denger" id="danger-image"></div>
           </div>
           <div class="contenedor-opc">
             <div class="col-12-col-md-6">
@@ -98,6 +106,11 @@
                 name="price"
                 value="<%=  productToEdit.price%>"
               />$
+              <div class="text-denger" id="danger-price"></div>
+              <% if (locals.errors && errors.price) { %>
+              <div class="text-denger"><%= errors.price.msg %></div>
+              <% } %>
+            </div>
             </div>
             <div class="contenedor-hijo-b">
               <label class="titulo" for="discount">Descuento:</label>
@@ -119,10 +132,15 @@
                 placeholder="Ej. 10"
                 value="<%=  productToEdit.stock%>"
               />Uni
+              <div class="text-denger" id="stock"></div>
+              <% if (locals.errors && errors.stock) { %>
+              <div class="text-denger"><%= errors.stock.msg %></div>
+              <% } %>
+            </div>
             </div>
           </section>
           <div class="contenedor-hijo-c">
-            <button type="submit">Guardar producto</button>
+            <button type="submit"  id="btnSubmit"></button>>Guardar producto</button>
           </div>
         </form>
         <form

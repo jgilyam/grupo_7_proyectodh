@@ -1,31 +1,33 @@
 window.addEventListener("load", function () {
+  buttom = document.querySelector(".btn-enviar-formulario");
+
   let formulario = document.querySelector(".form-login");
-  //   let buttom = document.querySelector(".btn-enviar-formulario");
 
-  formulario.addEventListener("submit", function (e) {
-    let errores = [];
-    let campoEmail = document.querySelector("#email");
-    let campoPassword = document.querySelector("input.password");
+  let campoEmail = document.querySelector("#email");
+  let dangerEmail = document.querySelector("#danger-email");
+  let campoPassword = document.querySelector("input.password");
+  let dangerPassword = document.querySelector("#danger-password");
 
-    if (campoEmail.value == "") {
-      errores.push("El campo de email debe estar completo");
-    } else if (campoEmail.value.validity.typeMismatch) {
-      errores.push("Debe ser un email valido ");
+  buttom.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    let errores = {};
+
+    if (email.value == "") {
+      errores.mail = "El campo del email esta vacio";
+    } else if (!email.checkValidity()) {
+      errores.mail = "Tiene que ser un e-mail valido";
     }
 
-    if (campoPassword == "") {
-      errores.push("La contraseña es obligatoria");
+    if (password.value.length < 8) {
+      errores.contrasena = "Deberá tener al menos 8 caracteres";
     }
 
-    if (errores.length > 0) {
-      e.preventDefault();
-      let ulErrores = document.querySelector("div.errores ul");
-      for (let i = 0; i < errores.length; i++) {
-        ulErrores.innerHTML += "<li>" + errores[i] + "</li>";
-      }
+    if (Object.keys(errores).length) {
+      dangerPassword.innerHTML = errores.contrasena ? errores.contrasena : "";
+      dangerEmail.innerHTML = errores.mail ? errores.mail : "";
     } else {
-      alert("La validación fué exitosa");
-      form.submit();
+      formulario.submit();
     }
   });
 });
