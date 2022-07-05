@@ -7,7 +7,7 @@
   <body>
     <div class="contenedor">
       <nav class="nav-list">
-        <div class="admin">Administrador</div>
+        <p class="admin">Administrador</p>
         <ul class="menu-items">
           <li><a href="#">Administrar Pedido</a></li>
           <li><a href="#">Administrar Usuarios</a></li>
@@ -21,7 +21,6 @@
           <i class="fas fa-bars"></i>
         </span>
       </nav>
-
       <div class="contenedor-form">
         <form
           class="form"
@@ -48,7 +47,6 @@
               <div class="text-denger"><%= errors.name.msg %></div>
               <% } %>
             </div>
-            </div>
           </div>
           <div class="contenedor-hijo-descripcion">
             <label class="titulo" for="">Breve descripción</label>
@@ -58,12 +56,12 @@
                 id="description-ta"
                 cols="30"
                 rows="10"
-              ></textarea>
+              >
+              </textarea>
               <div class="text-denger" id="danger-description"></div>
               <% if (locals.errors && errors.description) { %>
               <div class="text-denger"><%= errors.description.msg %></div>
               <% } %>
-            </div>
             </div>
           </div>
           <div class="contenedor-hijo">
@@ -109,7 +107,6 @@
               <div class="text-denger"><%= errors.price.msg %></div>
               <% } %>
             </div>
-            </div>
             <div class="contenedor-hijo-b">
               <label class="titulo">Descuento:</label>
               <input
@@ -124,7 +121,6 @@
               <div class="text-denger"><%= errors.discount.msg %></div>
               <% } %>
             </div>
-            </div>
             <div class="contenedor-hijo-b">
               <label class="titulo">Stock:</label>
               <input
@@ -138,7 +134,6 @@
               <% if (locals.errors && errors.stock) { %>
               <div class="text-denger"><%= errors.stock.msg %></div>
               <% } %>
-            </div>
             </div>
           </section>
           <div class="contenedor-hijo-c">
