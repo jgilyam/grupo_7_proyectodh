@@ -21,7 +21,6 @@
           <i class="fas fa-bars"></i>
         </span>
       </nav>
-
       <div class="contenedor-form">
         <form
           class="form"
@@ -49,7 +48,6 @@
             <div class="text-denger"><%= errors.name.msg %></div>
             <% } %>
           </div>
-          </div>
           <div class="contenedor-hijo-descripcion">
             <label class="titulo" for="">Breve descripción</label>
             <div class="descripcion" id="descripcion">
@@ -60,13 +58,12 @@
                 rows="10"
                 name="description"
               >
- <%=  productToEdit.description %> </textarea
+                    <%=  productToEdit.description %> </textarea
               >
               <div class="text-denger" id="danger-description"></div>
               <% if (locals.errors && errors.description) { %>
               <div class="text-denger"><%= errors.description.msg %></div>
               <% } %>
-            </div>
             </div>
           </div>
           <div class="contenedor-hijo">
@@ -111,7 +108,6 @@
               <div class="text-denger"><%= errors.price.msg %></div>
               <% } %>
             </div>
-            </div>
             <div class="contenedor-hijo-b">
               <label class="titulo" for="discount">Descuento:</label>
               <input
@@ -137,10 +133,9 @@
               <div class="text-denger"><%= errors.stock.msg %></div>
               <% } %>
             </div>
-            </div>
           </section>
           <div class="contenedor-hijo-c">
-            <button type="submit"  id="btnSubmit"></button>>Guardar producto</button>
+            <button type="submit" id="btnSubmit">Guardar producto</button>
           </div>
         </form>
         <form

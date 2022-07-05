@@ -9,7 +9,7 @@ window.addEventListener("load", function () {
   let campoImagen = document.querySelector("#image");
   let dangerImage = document.querySelector("#danger-image");
   let campoPrecio = document.querySelector("#price");
-  let dangerPrice = document.querySelector("#danger-image");
+  let dangerPrice = document.querySelector("#danger-price");
   let campoDescuento = document.querySelector("#descuento");
   let dangerDiscount = document.querySelector("#danger-discount");
   let campoStock = document.querySelector("#stock");
