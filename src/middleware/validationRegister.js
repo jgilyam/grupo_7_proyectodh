@@ -44,7 +44,12 @@ const validations = [
     .custom((value) => {
       let extension = path.extname(value);
       console.log(extension);
-      if (extension == ".png") {
+      if (
+        extension == ".jpg" ||
+        extension == ".jpeg" ||
+        extension == ".png" ||
+        extension == ".gif"
+      ) {
         return true;
       } else {
         return false;
