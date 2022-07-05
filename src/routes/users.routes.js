@@ -5,6 +5,7 @@ const multer = require("multer");
 const path = require("path");
 const validations = require("../middleware/validationRegister");
 const validacionesLogin = require("../middleware/validationLogin");
+const validationExtensionFile = require("../middleware/validationExtensionFIle");
 
 //si estas registrado no podes ir a tal ruta
 const authMiddleware = require("../middleware/authMiddleware");
@@ -41,12 +42,7 @@ router.post(
   "/register",
 
   upload.single("image"),
-  (req, res, next) => {
-    if (req.file) {
-      req.body.image = req.file.filename;
-    }
-    next();
-  },
+  validationExtensionFile,
   validations,
   controllersUser.createUser
 );

@@ -9,6 +9,7 @@ const multer = require("multer");
 //modulos propios
 const productControllers = require("../controllers/products.controllers");
 const validationProduct = require("../middleware/validationProduct");
+const validationExtensionFile = require("../middleware/validationExtensionFIle");
 
 //------------configuración de multer
 const storage = multer.diskStorage({
@@ -40,6 +41,7 @@ router.get("/:id", productControllers.detail);
 router.post(
   "/",
   upload.single("image"),
+  validationExtensionFile,
   validationProduct,
   productControllers.store
 );
@@ -51,6 +53,7 @@ router.get("/edit/:id", productControllers.edit);
 router.put(
   "/edit/:id",
   upload.single("imagen"),
+  validationExtensionFile,
   validationProduct,
   productControllers.update
 );

@@ -17,6 +17,22 @@ const validationProduct = [
     .withMessage("Descripcion requerida")
     .isLength({ min: MIN_LENGTH_DESCRIPTION })
     .withMessage(MIN_LENGTH_MESSAGE_DESCRIPTION),
+  body("image")
+    .custom((value) => {
+      let extension = path.extname(value);
+      console.log(extension);
+      if (
+        extension == ".jpg" ||
+        extension == ".jpeg" ||
+        extension == ".png" ||
+        extension == ".gif"
+      ) {
+        return true;
+      } else {
+        return false;
+      }
+    })
+    .withMessage("extensiones validas jpg, jpeg, png, gif"),
 ];
 
 module.exports = validationProduct;
