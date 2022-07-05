@@ -38,15 +38,7 @@
     height: 6rem;
     margin: 2px auto;
 }
-.text-denger{
-    font-size: 10px;
-    font-weight: bold;
-    color: #F55353;
-    padding: 0px 0px;
-    text-align: center;
-    font-size: 15px;
-  
-  }
+
 .titulo{
     display: block;
     padding: 3px 3px 3px 0px;
@@ -228,7 +220,7 @@ div.errores{
   font-size: 10px;
   font-weight: bold;
   color: #F55353;
-  padding: 3px 0px;
+  padding: 0px 0px;
   font-size: 12px;
 }
 /* PONER AL CONTENEDOR DE LA DESCRIPCION HEIGHT 10 REM Y AL TEXTAREA 6REM */
