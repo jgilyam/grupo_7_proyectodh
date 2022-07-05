@@ -69,6 +69,9 @@
             <label class="titulo" for="">Imagen del producto</label>
             <input class="boton-img" type="file" name="image" id="image" />
             <div class="text-denger" id="danger-image"></div>
+            <% if (locals.errors && errors.image) { %>
+              <div class="text-denger"><%= errors.image.msg %></div>
+              <% } %>
           </div>
           <div class="contenedor-opc">
             <div class="col-12-col-md-6">
