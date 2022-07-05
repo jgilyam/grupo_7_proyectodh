@@ -49,7 +49,7 @@
             <div class="text-denger"><%= errors.name.msg %></div>
             <% } %>
           </div>
-          </div>
+
           <div class="contenedor-hijo-descripcion">
             <label class="titulo" for="">Breve descripción</label>
             <div class="descripcion" id="descripcion">
@@ -67,8 +67,8 @@
               <div class="text-denger"><%= errors.description.msg %></div>
               <% } %>
             </div>
-            </div>
           </div>
+
           <div class="contenedor-hijo">
             <label class="titulo" for="">Imagen del producto</label>
             <input class="boton-img" type="file" name="imagen" id="imagen" />
@@ -111,7 +111,7 @@
               <div class="text-denger"><%= errors.price.msg %></div>
               <% } %>
             </div>
-            </div>
+
             <div class="contenedor-hijo-b">
               <label class="titulo" for="discount">Descuento:</label>
               <input
@@ -137,21 +137,22 @@
               <div class="text-denger"><%= errors.stock.msg %></div>
               <% } %>
             </div>
-            </div>
           </section>
           <div class="contenedor-hijo-c">
-            <button type="submit"  id="btnSubmit"></button>>Guardar producto</button>
+            <button type="submit" id="btnSubmit">Guardar producto</button>
+
+            <form
+              action="/producto/<%= productToEdit.id_product %>?_method=DELETE"
+              method="POST"
+              class="delete"
+            >
+              <button type>Eliminar</button>
+            </form>
           </div>
-        </form>
-        <form
-          action="/producto/<%= productToEdit.id_product %>?_method=DELETE"
-          method="POST"
-          class="delete"
-        >
-          <button type>Eliminar</button>
+
+          <script src="/js/productEditValidation.js"></script>
         </form>
       </div>
     </div>
-    <script src="/js/productEditValidation.js"></script>
   </body>
 </html>

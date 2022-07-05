@@ -10,14 +10,14 @@ window.addEventListener("load", function () {
   let dangerImage = document.querySelector("#danger-image");
   let campoPrecio = document.querySelector("#price");
   let dangerPrice = document.querySelector("#danger-image");
-  campoStock = document.querySelector("#stock");
+  let campoStock = document.querySelector("#stock");
   let dangerStock = document.querySelector("#danger-stock");
 
   button.addEventListener("click", function (e) {
     e.preventDefault();
     let pathImage = campoImagen.value;
     let validacionImage = /(.jpg|.jpeg|.png|.gif)$/i;
-    errores = {};
+    let errores = {};
 
     if (campoName.value.trim() == "") {
       console.log(campoName);
