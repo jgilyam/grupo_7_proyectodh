@@ -95,7 +95,9 @@
                 <input type="file" name="image" id="image" />
               </div>
               <div class="text-denger" id="danger-image"></div>
-
+              <% if (locals.errors && errors.image) { %>
+              <div class="text-denger"><%= errors.image.msg %></div>
+              <% } %>
               <h3>Datos de Acceso</h3>
               <div class="user-info">
                 <div class="email campo1">

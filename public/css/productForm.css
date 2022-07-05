@@ -38,6 +38,15 @@
     height: 6rem;
     margin: 2px auto;
 }
+.text-denger{
+    font-size: 10px;
+    font-weight: bold;
+    color: #F55353;
+    padding: 0px 0px;
+    text-align: center;
+    font-size: 15px;
+  
+  }
 .titulo{
     display: block;
     padding: 3px 3px 3px 0px;

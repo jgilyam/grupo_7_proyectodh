@@ -41,11 +41,12 @@
                 name="name"
                 placeholder="NombreProducto"
                 maxlength="30"
+                value="<%= locals.oldData && oldData.name %>"
               />
               <div class="text-denger" id="danger-name"></div>
-              <% if (locals.errors && errors.name) { %>
-              <div class="text-denger"><%= errors.name.msg %></div>
-              <% } %>
+                  <% if (locals.errors && errors.name) { %>
+                  <div class="text-denger"><%= errors.name.msg %></div>
+                  <% } %>
             </div>
           </div>
           <div class="contenedor-hijo-descripcion">
@@ -56,12 +57,12 @@
                 id="description-ta"
                 cols="30"
                 rows="10"
-              >
-              </textarea>
+                value="<%= locals.oldData && oldData.description %>"
+              ></textarea>
               <div class="text-denger" id="danger-description"></div>
-              <% if (locals.errors && errors.description) { %>
-              <div class="text-denger"><%= errors.description.msg %></div>
-              <% } %>
+                  <% if (locals.errors && errors.description) { %>
+                  <div class="text-denger"><%= errors.description.msg %></div>
+                  <% } %>
             </div>
           </div>
           <div class="contenedor-hijo">
