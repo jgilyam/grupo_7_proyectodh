@@ -42,7 +42,9 @@ router.post(
 
   upload.single("image"),
   (req, res, next) => {
-    req.body.image = req.file.filename;
+    if (req.file) {
+      req.body.image = req.file.filename;
+    }
     next();
   },
   validations,
