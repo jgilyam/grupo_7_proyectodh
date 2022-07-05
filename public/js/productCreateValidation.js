@@ -40,8 +40,7 @@ window.addEventListener("load", function () {
     if (campoPrecio.value < 100) {
       errores.precio = "Debe tener precio";
     }
-    console.log(campoPrecio);
-    if ((campoStock.value = "")) {
+    if (campoStock.value >= 0) {
       errores.stock = "Debe indicar el stock";
     }
     if (Object.keys(errores).length) {

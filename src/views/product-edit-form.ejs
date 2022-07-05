@@ -48,7 +48,7 @@
             <div class="text-denger"><%= errors.name.msg %></div>
             <% } %>
           </div>
-          
+
           <div class="contenedor-hijo-descripcion">
             <label class="titulo" for="">Breve descripción</label>
             <div class="descripcion" id="descripcion">
@@ -95,6 +95,8 @@
               </select>
             </div>
           </div>
+          <div class="text-denger" id="danger-price"></div>
+          <div class="text-denger" id="danger-stock"></div>
           <section class="precio-final">
             <div class="contenedor-hijo-b">
               <label class="titulo" for="price">Precio:</label>
@@ -104,9 +106,7 @@
                 id="price"
                 name="price"
                 value="<%=  productToEdit.price%>"
-              />$
-              <div class="text-denger" id="danger-price"></div>
-              <% if (locals.errors && errors.price) { %>
+              />$ <% if (locals.errors && errors.price) { %>
               <div class="text-denger"><%= errors.price.msg %></div>
               <% } %>
             </div>
@@ -129,9 +129,7 @@
                 name="stock"
                 placeholder="Ej. 10"
                 value="<%=  productToEdit.stock%>"
-              />Uni
-              <div class="text-denger" id="stock"></div>
-              <% if (locals.errors && errors.stock) { %>
+              />Uni <% if (locals.errors && errors.stock) { %>
               <div class="text-denger"><%= errors.stock.msg %></div>
               <% } %>
             </div>
