@@ -8,6 +8,7 @@ const multer = require("multer");
 
 //modulos propios
 const productControllers = require("../controllers/products.controllers");
+const validationProduct = require("../middleware/validationProduct");
 
 //------------configuración de multer
 const storage = multer.diskStorage({
@@ -36,13 +37,23 @@ router.get("/create", productControllers.form);
 router.get("/:id", productControllers.detail);
 
 //products (POST) Acción de creación (a donde se envía el formulario)
-router.post("/", upload.single("image"), productControllers.store);
+router.post(
+  "/",
+  upload.single("image"),
+  validationProduct,
+  productControllers.store
+);
 
 ///products/:id/edit (GET) Formulario de edición de productos
 router.get("/edit/:id", productControllers.edit);
 
 ///products/:id (PUT) Acción de edición (a donde se envía el formulario):
-router.put("/edit/:id", upload.single("imagen"), productControllers.update);
+router.put(
+  "/edit/:id",
+  upload.single("imagen"),
+  validationProduct,
+  productControllers.update
+);
 
 ///products/:id (DELETE) Acción de borrado
 router.delete("/:id", productControllers.destroy);
