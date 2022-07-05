@@ -9,7 +9,7 @@ window.addEventListener("load", function () {
   let campoImagen = document.querySelector("#imagen");
   let dangerImage = document.querySelector("#danger-image");
   let campoPrecio = document.querySelector("#price");
-  let dangerPrice = document.querySelector("#danger-image");
+  let dangerPrice = document.querySelector("#danger-price");
   let campoStock = document.querySelector("#stock");
   let dangerStock = document.querySelector("#danger-stock");
 
@@ -27,7 +27,7 @@ window.addEventListener("load", function () {
     }
 
     if (campoDescripcion.value.trim() <= 20) {
-      errores.descrpicion = "Debe tener almenos 20 caracteres";
+      errores.descripcion = "Debe tener almenos 20 caracteres";
     }
 
     if (!campoImagen.value == /.(jpg)|(gif)|(png)|(jpeg)$/) {

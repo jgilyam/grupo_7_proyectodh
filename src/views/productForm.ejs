@@ -91,6 +91,8 @@
               </select>
             </div>
           </div>
+          <div class="text-denger" id="danger-price"></div>
+          <div class="text-denger" id="danger-stock"></div>
           <section class="precio-final">
             <div class="contenedor-hijo-b">
               <label class="titulo">Precio:</label>
@@ -101,12 +103,11 @@
                 name="price"
                 placeholder="Ej. 100"
                 min="1.00"
-              />$
-              <div class="text-denger" id="danger-price"></div>
-              <% if (locals.errors && errors.price) { %>
+              />$ <% if (locals.errors && errors.price) { %>
               <div class="text-denger"><%= errors.price.msg %></div>
               <% } %>
             </div>
+
             <div class="contenedor-hijo-b">
               <label class="titulo">Descuento:</label>
               <input
@@ -129,9 +130,7 @@
                 id="stock"
                 name="stock"
                 placeholder="Ej. 10"
-              />Uni
-              <div class="text-denger" id="stock"></div>
-              <% if (locals.errors && errors.stock) { %>
+              />Uni <% if (locals.errors && errors.stock) { %>
               <div class="text-denger"><%= errors.stock.msg %></div>
               <% } %>
             </div>
