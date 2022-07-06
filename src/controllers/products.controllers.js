@@ -108,7 +108,6 @@ productControllers.store = async (req, res) => {
   const category = await db.Category.findAll().then((category) => category); //sin el then tambien funciona;
   const typess = await db.Typess.findAll().then((typess) => typess);
   let resultValidation = validationResult(req);
-  console.log(resultValidation);
   if (resultValidation.errors.length > 0) {
     return res.render("productForm", {
       errors: resultValidation.mapped(),
