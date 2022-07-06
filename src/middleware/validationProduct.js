@@ -1,4 +1,5 @@
 //vamos a requerir express-validator
+const path = require("path");
 
 const { body } = require("express-validator");
 const MIN_LENGTH_DESCRIPTION = 20;
@@ -19,17 +20,20 @@ const validationProduct = [
     .withMessage(MIN_LENGTH_MESSAGE_DESCRIPTION),
   body("image")
     .custom((value) => {
-      let extension = path.extname(value);
-      console.log(extension);
-      if (
-        extension == ".jpg" ||
-        extension == ".jpeg" ||
-        extension == ".png" ||
-        extension == ".gif"
-      ) {
+      if (value == undefined) {
         return true;
       } else {
-        return false;
+        let extension = path.extname(value);
+        if (
+          extension == ".jpg" ||
+          extension == ".jpeg" ||
+          extension == ".png" ||
+          extension == ".gif"
+        ) {
+          return true;
+        } else {
+          return false;
+        }
       }
     })
     .withMessage("extensiones validas jpg, jpeg, png, gif"),
