@@ -42,17 +42,20 @@ const validations = [
     .withMessage(MIN_LENGTH_MESSAGE_PASSWORD),
   body("image")
     .custom((value) => {
-      let extension = path.extname(value);
-      console.log(extension);
-      if (
-        extension == ".jpg" ||
-        extension == ".jpeg" ||
-        extension == ".png" ||
-        extension == ".gif"
-      ) {
+      if (value == undefined) {
         return true;
       } else {
-        return false;
+        let extension = path.extname(value);
+        if (
+          extension == ".jpg" ||
+          extension == ".jpeg" ||
+          extension == ".png" ||
+          extension == ".gif"
+        ) {
+          return true;
+        } else {
+          return false;
+        }
       }
     })
     .withMessage("extensiones validas jpg, jpeg, png, gif"),
