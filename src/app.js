@@ -15,6 +15,7 @@ const routeMain = require("../src/routes/index.routes");
 const routeProducts = require("../src/routes/products.routes");
 const routeUsers = require("../src/routes/users.routes");
 const userLogged = require("./middleware/userLogged");
+const apiuser = require("./routes/api/users.router");
 
 //instancia express
 const app = express();
@@ -44,6 +45,7 @@ app.use(methodOverride("_method"));
 app.use("/", routeMain);
 app.use("/producto", routeProducts);
 app.use("/user", routeUsers);
+app.use("/api/user", apiuser);
 
 //Servidor
 app.listen(PORT, () => {
