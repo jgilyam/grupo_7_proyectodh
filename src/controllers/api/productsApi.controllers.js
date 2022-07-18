@@ -1,27 +1,38 @@
 const db = require("../../../database/models");
 
 const productsApiController = {
-  list: (req, res) => {
-    db.Product.findAll().then((productos) => {
-      let response = {
-        status: 200,
-        count: productos.length,
-        countByCategory: [],
-        productos: [],
-      };
+  list: async (req, res) => {
+    const category = await db.Category.findAll().then((category) => category);
+    const typess = await db.Typess.findAll().then((typess) => typess);
+    const products = await db.Product.findAll().then((product) => product);
 
-      productos.forEach((producto) => {
-        response.productos.push({
-          name: producto.name,
+    let response = {
+      count: products.length,
+      countByCategory: [],
+      tipos: [],
+      productos: [],
+    };
 
-          description: producto.description,
-
-          detail: `${req.originalUrl}/${producto.id_product}`,
-        });
+    products.forEach((producto) => {
+      response.productos.push({
+        id: producto.id_product,
+        name: producto.name,
+        description: producto.description,
+        detail: `${req.originalUrl}/${producto.id_product}`,
       });
-
-      return res.status(200).json([response]);
     });
+    typess.forEach((tipo) => {
+      response.countByCategory.push({
+        name: tipo.name,
+      });
+    });
+    category.forEach((categoria) => {
+      response.tipos.push({
+        name: categoria.name,
+      });
+    });
+
+    return res.status(200).json([response]);
   },
 };
 
