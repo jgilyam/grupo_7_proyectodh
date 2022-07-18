@@ -13,11 +13,48 @@ const productsApiController = {
       productos: [],
     };
 
+    let categoriaHelp = (expr) => {
+      switch (expr) {
+        case 1:
+          return "pizzera";
+          break;
+        case 2:
+          return "tabla";
+          break;
+        case 3:
+          return "Posa vasos";
+          break;
+        case 4:
+          return "Platos";
+          break;
+        case 5:
+          return "cuencos";
+          break;
+        case 6:
+          return "Bowls";
+          break;
+        case 7:
+          return "Tabla corta";
+          break;
+        case 8:
+          return "Tabla larga";
+          break;
+        case 9:
+          return "asado";
+          break;
+
+        default:
+          return `no hay categoria disponible ${expr}`;
+          break;
+      }
+    };
     products.forEach((producto) => {
       response.productos.push({
         id: producto.id_product,
         name: producto.name,
         description: producto.description,
+        categoria: categoriaHelp(producto.id_type),
+
         detail: `${req.originalUrl}/${producto.id_product}`,
       });
     });
@@ -26,6 +63,7 @@ const productsApiController = {
         name: tipo.name,
       });
     });
+
     category.forEach((categoria) => {
       response.tipos.push({
         name: categoria.name,
