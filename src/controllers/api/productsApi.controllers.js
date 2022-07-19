@@ -77,25 +77,23 @@ const productsApiController = {
     let types
     db.Category.findAll().then((category)=>{
       categoria= category
-    }),
+    });
     db.Typess.findAll().then((type)=>{
       types = type
-    }),
-    db.Product.findByPk(req.params.id/* , {include:"categorias"} */).then((productos) => {
-    /* const b = db.Category.findAll() */
-      let abc
+    });
+    db.Product.findByPk(req.params.id).then((productos) => {
+      let categoriaProducto
       for (const a of categoria) {
         if(a.id_category == productos.id_category){
-            abc = a.name
+          categoriaProducto = a.name
         }
-      }
-      let abcd
+      };
+      let typeProducto
       for (const b of types) {
         if(b.id_type == productos.id_type){
-            abcd = b.name
+          typeProducto = b.name
         }
-      }
-
+      };
         res.json({
         meta: { status: 200},
         data: {
@@ -105,7 +103,7 @@ const productsApiController = {
             description: productos.description,
             stock:productos.stock,
             discount:productos.discount,
-            relation:{Category:[{id :productos.id_category, name: abc}],Type:[{id:productos.id_type, name:abcd}]},
+            relation:{Category:[{id :productos.id_category, name: categoriaProducto}],Type:[{id:productos.id_type, name:typeProducto}]},
             imagen: `/api/products/imagen/${productos.product_image}`
           },
         },
