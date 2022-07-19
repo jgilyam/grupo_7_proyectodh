@@ -72,6 +72,54 @@ const productsApiController = {
 
     return res.status(200).json([response]);
   },
+  detail: (req, res) => {
+    let categoria
+    let types
+    db.Category.findAll().then((category)=>{
+      categoria= category
+    }),
+    db.Typess.findAll().then((type)=>{
+      types = type
+    }),
+    db.Product.findByPk(req.params.id/* , {include:"categorias"} */).then((productos) => {
+    /* const b = db.Category.findAll() */
+      let abc
+      for (const a of categoria) {
+        if(a.id_category == productos.id_category){
+            abc = a.name
+        }
+      }
+      let abcd
+      for (const b of types) {
+        if(b.id_type == productos.id_type){
+            abcd = b.name
+        }
+      }
+
+        res.json({
+        meta: { status: 200},
+        data: {
+          producto: {
+            name: productos.name,
+            price: productos.price,
+            description: productos.description,
+            stock:productos.stock,
+            discount:productos.discount,
+            relation:{Category:[{id :productos.id_category, name: abc}],Type:[{id:productos.id_type, name:abcd}]},
+            imagen: `/api/products/imagen/${productos.product_image}`
+          },
+        },
+      });
+      })
+  },
+  imageProduct: (req, res) => {
+    const pathImage = path.join(
+      __dirname,
+      `../../../public/img/${req.params.imagen}`
+    );
+    res.sendFile(pathImage);
+  }
+
 };
 
 module.exports = productsApiController;
