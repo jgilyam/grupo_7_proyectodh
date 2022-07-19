@@ -17,6 +17,7 @@ const routeUsers = require("../src/routes/users.routes");
 const userLogged = require("./middleware/userLogged");
 const apiuser = require("./routes/api/users.router");
 const apiProduct = require("./routes/api/productsApi.routes")
+const apiTypes = require("./routes/api/types.routes")
 
 //instancia express
 const app = express();
@@ -48,6 +49,7 @@ app.use("/producto", routeProducts);
 app.use("/user", routeUsers);
 app.use("/api/user", apiuser);
 app.use("/api/products",apiProduct)
+app.use("/api/types",apiTypes)
 
 //Servidor
 app.listen(PORT, () => {
