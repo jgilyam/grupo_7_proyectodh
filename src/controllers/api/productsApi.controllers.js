@@ -1,4 +1,5 @@
 const db = require("../../../database/models");
+const path = require("path");
 
 const productsApiController = {
   list: async (req, res) => {
