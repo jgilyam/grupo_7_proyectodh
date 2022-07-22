@@ -9,6 +9,10 @@ const methodOverride = require("method-override");
 const { body } = require("express-validator");
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
+//CORS policy: No 'Access-Control-Allow-Origin' - FIXED!
+const cors = require('cors');
+
+
 
 //modulos propios
 const routeMain = require("../src/routes/index.routes");
@@ -28,6 +32,7 @@ const PORT = 4000; //puerto en el que el servidor escuchara
 //-----Configuración de express
 
 // se decalra la carpeta public para servir archivos estaticos
+app.use(cors());
 app.use(express.static(path.resolve(__dirname, "../public")));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
