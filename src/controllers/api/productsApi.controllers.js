@@ -56,7 +56,7 @@ const productsApiController = {
         description: producto.description,
         categoria: categoriaHelp(producto.id_type),
 
-        detail: `${req.originalUrl}/${producto.id_product}`,
+        detail: `http://localhost:4000${req.originalUrl}/${producto.id_product}`,
       });
     });
     typess.forEach((tipo) => {
