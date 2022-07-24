@@ -105,7 +105,7 @@ const productsApiController = {
             stock:productos.stock,
             discount:productos.discount,
             relation:{Category:[{id :productos.id_category, name: categoriaProducto}],Type:[{id:productos.id_type, name:typeProducto}]},
-            imagen: `/api/products/imagen/${productos.product_image}`
+            imagen: `http://localhost:4000/api/products/imagen/${productos.product_image}`
           },
         },
       });
