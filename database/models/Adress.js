@@ -41,8 +41,7 @@ module.exports = function (sequelize, DataTypes) {
       as: "usuarios",
       foreignKey: "id_user",
     });
-  };
-  Adress.associate = (modelos) => {
+
     Adress.hasMany(modelos.Bill, {
       as: "facturas",
       foreignKey: "id_adress",
