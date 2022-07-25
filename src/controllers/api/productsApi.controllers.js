@@ -8,23 +8,54 @@ GROUP BY t.name;`;
 
 const productsApiController = {
   list: async (req, res) => {
+    let { page, size } = req.query;
+    page = Number(page);
+    size = Number(size);
+    if (!page) {
+      page = 0;
+    }
+    if (!size) {
+      size = 5;
+    }
+
     const products = await db.Product.findAll({
+      offset: page * size,
+      limit: size,
       include: ["bills", "categoria", "tipo"],
-    }).then((product) => product);
+    });
 
     const [results] = await db.sequelize.query(RAW_QUERY);
-
+    let total = await db.Product.count();
+    let cantPaginas = Math.ceil(total / size);
+    let next =
+      page + 1 > cantPaginas
+        ? "Fin"
+        : `http://localhost:4000/api/products/?page=${page + 1}&size=5`;
+    let previous =
+      page - 1 < 0
+        ? "Inicio"
+        : `http://localhost:4000/api/products/?page=${page - 1}&size=5`;
     let response = {
-      count: products.length,
-      countByCategory: {},
-      productos: [],
+      data: {
+        count: total,
+        countByCategory: {},
+        productos: [],
+      },
+      paginado: {
+        page: page,
+        size: size,
+        totalItems: total,
+        cantPaginas,
+        next,
+        previous,
+      },
     };
     results.forEach((result) => {
-      response.countByCategory[result.name] = result.cant;
+      response.data.countByCategory[result.name] = result.cant;
     });
 
     products.forEach((producto, i) => {
-      response.productos.push({
+      response.data.productos.push({
         id: producto.id_product,
         name: producto.name,
         description: producto.description,
@@ -32,7 +63,7 @@ const productsApiController = {
         detail: `${req.originalUrl}${producto.id_product}`,
       });
       producto.bills.forEach((bill) => {
-        response.productos[i].bills.push(bill);
+        response.data.productos[i].bills.push(bill);
       });
     });
 
