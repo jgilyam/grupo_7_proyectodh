@@ -60,7 +60,7 @@ const productsApiController = {
         name: producto.name,
         description: producto.description,
         bills: [],
-        detail: `${req.originalUrl}${producto.id_product}`,
+        detail: `http://localhost:4000${req.originalUrl}/${producto.id_product}`,
       });
       producto.bills.forEach((bill) => {
         response.data.productos[i].bills.push(bill);
@@ -70,27 +70,8 @@ const productsApiController = {
     return res.status(200).json([response]);
   },
   detail: (req, res) => {
-    let categoria;
-    let types;
-    db.Category.findAll().then((category) => {
-      categoria = category;
-    });
-    db.Typess.findAll().then((type) => {
-      types = type;
-    });
-    db.Product.findByPk(req.params.id).then((productos) => {
-      let categoriaProducto;
-      for (const a of categoria) {
-        if (a.id_category == productos.id_category) {
-          categoriaProducto = a.name;
-        }
-      }
-      let typeProducto;
-      for (const b of types) {
-        if (b.id_type == productos.id_type) {
-          typeProducto = b.name;
-        }
-      }
+    db.Product.findByPk(req.params.id, {include: ["categoria", "tipo"]}).then((productos) => {
+      
       res.json({
         meta: { status: 200 },
         data: {
@@ -101,10 +82,10 @@ const productsApiController = {
             stock: productos.stock,
             discount: productos.discount,
             relation: {
-              Category: [
-                { id: productos.id_category, name: categoriaProducto },
+              category: [
+                { id: productos.categoria.id_category, name: productos.categoria.name },
               ],
-              Type: [{ id: productos.id_type, name: typeProducto }],
+              type: [{ id: productos.tipo.id_type, name: productos.tipo.name }],
             },
             imagen: `http://localhost:4000/img/${productos.product_image}`,
           },
