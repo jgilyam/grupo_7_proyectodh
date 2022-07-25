@@ -29,24 +29,24 @@ module.exports = function (sequelize, DataTypes) {
   const Bill = sequelize.define(alias, cols, config);
 
   //Relaciones entre las tablas
-  Bill.associate = (modelos) => {
-    Bill.belongsTo(modelos.User, {
-      as: "usuarios",
-      foreignKey: "id_user",
-    });
-  };
 
   Bill.associate = (modelos) => {
+    Bill.belongsToMany(modelos.Product, {
+      as: "productos",
+      through: "products_bill",
+      foreignKey: "id_bill",
+      otherKey: "id_product",
+      timestamps: false,
+    });
+
     Bill.belongsTo(modelos.Adress, {
       as: "direcciones",
       foreignKey: "id_adress",
     });
-  };
 
-  Bill.associate = (modelos) => {
-    Bill.belongsTo(modelos.Products_bill, {
-      as: "Products_bill",
-      foreignKey: "id_bill",
+    Bill.belongsTo(modelos.User, {
+      as: "usuarios",
+      foreignKey: "id_user",
     });
   };
 

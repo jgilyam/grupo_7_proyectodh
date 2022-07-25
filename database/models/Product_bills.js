@@ -10,6 +10,9 @@ module.exports = function (sequelize, DataTypes) {
     id_product: {
       type: DataTypes.INTEGER,
     },
+    id_bill: {
+      type: DataTypes.INTEGER,
+    },
     quantity: {
       type: DataTypes.INTEGER,
     },
@@ -25,20 +28,18 @@ module.exports = function (sequelize, DataTypes) {
 
   const ProductsBill = sequelize.define(alias, cols, config);
 
-   //Relaciones entre las tablas
-   ProductsBill.associate = (modelos) => {
-    ProductsBill.hasMany(modelos.Product,{
-      as:"Product",
-      foreignKey:"id_product"
-    })
-  }
+  //Relaciones entre las tablas
   ProductsBill.associate = (modelos) => {
-    ProductsBill.hasMany(modelos.Bill,{
-      as:"Bill",
-      foreignKey:"id_bill"
-    })
-  }
+    ProductsBill.hasMany(modelos.Product, {
+      as: "Product",
+      foreignKey: "id_product",
+    });
+
+    ProductsBill.hasMany(modelos.Bill, {
+      as: "Bill",
+      foreignKey: "id_bill",
+    });
+  };
 
   return ProductsBill;
-
 };
