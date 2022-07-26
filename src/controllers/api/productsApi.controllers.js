@@ -38,7 +38,7 @@ const productsApiController = {
     let response = {
       data: {
         count: total,
-        countByCategory: {},
+        countByCategory: [],//{}
         productos: [],
       },
       paginado: {
@@ -51,7 +51,9 @@ const productsApiController = {
       },
     };
     results.forEach((result) => {
-      response.data.countByCategory[result.name] = result.cant;
+      response.data.countByCategory.push({nameCategory:result.name,
+        cantidad:result.cant});
+        /* response.data.countByCategory[result.name] = result.cant; */
     });
 
     products.forEach((producto, i) => {
