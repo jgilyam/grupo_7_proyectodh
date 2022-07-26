@@ -60,6 +60,7 @@ const productsApiController = {
         name: producto.name,
         description: producto.description,
         bills: [],
+        image:`http://localhost:4000/img/${producto.product_image}`,
         detail: `http://localhost:4000/api/products/${producto.id_product}`,
       });
       producto.bills.forEach((bill) => {
