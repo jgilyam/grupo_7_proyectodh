@@ -86,18 +86,11 @@ const productsApiController = {
               description: productos.description,
               stock: productos.stock,
               discount: productos.discount,
-              relation: {
-                category: [
-                  {
-                    id: productos.categoria.id_category,
-                    name: productos.categoria.name,
-                  },
-                ],
-                type: [
-                  { id: productos.tipo.id_type, name: productos.tipo.name },
-                ],
-              },
+              category:productos.categoria.name,
+              type:productos.tipo.name,
               imagen: `http://localhost:4000/img/${productos.product_image}`,
+              relation:{category : productos.categoria,
+              type:productos.categoria}
             },
           },
         });
