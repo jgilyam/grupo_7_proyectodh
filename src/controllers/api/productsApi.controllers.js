@@ -1,10 +1,9 @@
 const db = require("../../../database/models");
 const path = require("path");
 const RAW_QUERY = `
-SELECT t.name, COUNT(*) as cant
-FROM products p
-INNER JOIN typess t ON p.id_type = t.id_type
-GROUP BY t.name;`;
+SELECT t.name,t.id_type, 
+COUNT(*) as cant FROM products p INNER JOIN typess t
+ ON p.id_type = t.id_type GROUP BY t.name;`;
 
 const productsApiController = {
   list: async (req, res) => {
@@ -38,7 +37,7 @@ const productsApiController = {
     let response = {
       data: {
         count: total,
-        countByCategory: [],//{}
+        countByCategory: [], //{}
         productos: [],
       },
       paginado: {
@@ -51,9 +50,12 @@ const productsApiController = {
       },
     };
     results.forEach((result) => {
-      response.data.countByCategory.push({nameCategory:result.name,
-        cantidad:result.cant});
-        /* response.data.countByCategory[result.name] = result.cant; */
+      response.data.countByCategory.push({
+        nameCategory: result.name,
+        cantidad: result.cant,
+        idType: result.id_type,
+      });
+      /* response.data.countByCategory[result.name] = result.cant; */
     });
 
     products.forEach((producto, i) => {
@@ -62,7 +64,7 @@ const productsApiController = {
         name: producto.name,
         description: producto.description,
         bills: [],
-        image:`http://localhost:4000/img/${producto.product_image}`,
+        image: `http://localhost:4000/img/${producto.product_image}`,
         detail: `http://localhost:4000/api/products/${producto.id_product}`,
       });
       producto.bills.forEach((bill) => {
