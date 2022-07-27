@@ -8,11 +8,10 @@ const extractRandom = require("../utils/extractRandom");
 //lectura de archivo JSON
 const basePath = path.resolve(__dirname, "../data/products_DATA.json");
 const products = JSON.parse(fs.readFileSync(basePath, "utf-8"));
-const db = require("../../database/models"); 
+const db = require("../../database/models");
 const { Op } = require("sequelize");
 const sequelize = db.sequelize;
 const Product = require("../../database/models/Product");
-
 
 const controllerPrincipal = {};
 
@@ -58,13 +57,13 @@ controllerPrincipal.search = async (req, res) => {
   // });
   // res.render("results", { results, keyword });
 
-  const results =  await db.Product.findAll({
+  const results = await db.Product.findAll({
     where: {
-      name:{[Op.like]:`${keyword.toLowerCase()}%`}
-    }
-  })
+      name: { [Op.substring]: keyword.toLowerCase() },
+    },
+  });
 
-res.render("results",{results,keyword})
+  res.render("results", { results, keyword });
 };
 
 module.exports = controllerPrincipal;
