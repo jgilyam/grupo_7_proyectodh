@@ -1,14 +1,25 @@
-<article class="main-recomend-product">
+<article class="main-recomend-product" id="main-recomend-product">
   <a href="/producto/<%= product.id_product %> "
-    ><img src="/img/<%= product.product_image%>" alt="Producto1" class="img-detail" />
+    ><img
+      src="/img/<%= product.product_image%>"
+      alt="Producto1"
+      class="img-detail"
+    />
   </a>
   <h4><%= product.types %></h4>
-  <a href="/producto/<%= product.id_product %>"><h3><%= product.name%></h3></a>
+  <a class="titleCard" href="/producto/<%= product.id_product %>"
+    ><h3><%= product.name%></h3></a
+  >
   <p class="detail-price2">$<%= product.price%></p>
   <% if (product.discount!==null) { %>
   <p class="detail-discount"><%= product.discount%>%OFF</p>
   <% } %>
-  <button type="submit" class="button-submit">
+  <button
+    type="submit"
+    class="button-submit"
+    id="button-product"
+    value="<%= product.id_product %>"
+  >
     Agregar al carrito<i class="fa-solid fa-cart-arrow-down"></i>
   </button>
 </article>
