@@ -18,7 +18,17 @@ window.addEventListener("load", () => {
     let itemToEdit = document.querySelector(`#card-n${i}`);
     let title = itemToEdit.querySelector(".parrafo1");
     let img = itemToEdit.querySelector(`#card-n${i} img`);
-    img.setAttribute("src", producto.img);
+    let precio = itemToEdit.querySelector(`#card-n${i} .caja1-precio p`);
+    let cantidad = itemToEdit.querySelector(
+      `#card-n${i} .caja1-cantidad input`
+    );
+    let subtotal = itemToEdit.querySelector(`#card-n${i} .caja1-subtotal p`);
+
     title.innerText = producto.title;
+    img.setAttribute("src", producto.img);
+    precio.innerText = producto.price.split(".")[0];
+    cantidad.setAttribute("value", producto.cantidad);
+    //console.log(producto.price.split("$")[1] * 100);
+    subtotal.innerText = "$" + producto.price.split("$")[1] * producto.cantidad;
   });
 });
