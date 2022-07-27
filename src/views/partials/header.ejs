@@ -77,6 +77,8 @@
         <div class="barras-navMenu">
           <p><a href="/user/register">Registrate</a>  <i class="fa-solid fa-address-card"></i
             ></p>
+            <p><a href="/producto/carrito">Carrito</a>  <i class="fa-solid fa-cart-arrow-down"></i
+              ></p>
           <p><a href="/user/login">Ingresá</a>  <i class="fa-solid fa-arrow-right-to-bracket"></i
             ></p>
         </div>
@@ -84,16 +86,16 @@
       </div>
       <!--   --------------------------------------- -->
       <% if(locals.isLogged) { %>
+        <div class="carrito-de-compra">
+          <a href="/producto/carrito" class="ancla-carrito"
+            ><i class="fa-solid fa-cart-arrow-down"></i
+          ></a>
+        </div>
       <div class="iniciar-sesion">
         <a href="/user/perfil/<%= locals.userLogged.id_user %>" class="ancla-login"><%= locals.userLogged.firs_name %></a>
           
           <i class="fa-solid fa-user"></i>
         </a>
-      </div>
-      <div class="carrito-de-compra">
-        <a href="/producto/carrito" class="ancla-carrito"
-          ><i class="fa-solid fa-cart-arrow-down"></i
-        ></a>
       </div>
       <div class="deslogeo">
         <a href="/user/logout"
@@ -101,6 +103,11 @@
         ></a>
       </div>
       <%} else{ %>
+        <div class="carrito-de-compra">
+          <a href="/producto/carrito" class="ancla-carrito"
+            ><i class="fa-solid fa-cart-arrow-down"></i
+          ></a>
+        </div>
       <div class="crearCuenta">
         <a href="/user/register"
           >Registrate<i class="fa-solid fa-address-card"></i

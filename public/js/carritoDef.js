@@ -34,23 +34,32 @@ window.addEventListener("load", () => {
     updateNewItemTotal();
 
     function updateNewItemTotal() {
-      let total = 0;
+      /*  let subTotalCaja = 0; */
       const newItemTotal = document.querySelector(".total-monto");
-      cartItems = document.querySelectorAll(".conteiner-caja");
 
-      cartItems.forEach((cartItems) => {
+      /* const cartItems = document.querySelectorAll(".conteiner-caja"); */
+
+      /* cartItems.forEach((cartItems) => {
         const cartItemsPriceElement = cartItems.querySelector(".caja1-precio");
 
         const cartItemsPrice = Number(
           cartItemsPriceElement.textContent.replace("$", "")
         );
+
         const cartItemsCant = document.querySelector("#cantidad");
 
         cartItemsCantValor = Number(cartItemsCant.value);
         total = total + cartItemsPrice * cartItemsCant;
       });
+ */
+      /* newItemTotal.innerHTML = `$${total}`; */
 
-      newItemTotal.innerHTML = `${total}$`;
+      const subTotalCaja = productosEnCarrito.reduce(
+        (acc, producto) =>
+          acc + producto.cantidad * producto.price.split("$")[1],
+        0
+      );
+      newItemTotal.textContent = `$ ${subTotalCaja}`;
     }
 
     newItem.querySelector(".deleted").addEventListener("click", removeNewItem);
