@@ -50,6 +50,10 @@ controllerPrincipal.nosotros = (req, res) => {
   res.render("nosotros");
 };
 
+controllerPrincipal.notFound = (req, res) => {
+  res.render("notFound");
+};
+
 controllerPrincipal.search = async (req, res) => {
   let keyword = req.query.keywords;
   // const results = products.filter((product) => {
