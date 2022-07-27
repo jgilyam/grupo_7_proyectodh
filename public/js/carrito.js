@@ -53,7 +53,17 @@ window.addEventListener("load", function () {
         "🚀 ~ file: carrito.js ~ line 34 ~ addToCardClick ~ productosEnCarrito",
         productosEnCarrito
       );
-      productosEnCarrito.push(cartGuardada);
+
+      let idToupdate = productosEnCarrito.findIndex((producto) => {
+        console.log(producto.value + "hola");
+        console.log(cartGuardada.value + "hola2");
+        return producto.value == cartGuardada.value;
+      });
+      if (idToupdate == -1) {
+        productosEnCarrito.push(cartGuardada);
+      } else {
+        productosEnCarrito[idToupdate].cantidad++;
+      }
       cartTotales = [...productosEnCarrito];
     }
 
