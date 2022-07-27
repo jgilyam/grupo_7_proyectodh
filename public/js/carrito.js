@@ -8,14 +8,21 @@ window.addEventListener("load", function () {
   addbotton.forEach((addToCardButton) => {
     addToCardButton.addEventListener("click", addToCardClick);
   });
+  let cartTotales = [];
+  if (JSON.parse(localStorage.getItem("Productos Guardados")) == undefined) {
+    localStorage.setItem("Productos Guardados", JSON.stringify(cartTotales));
+  }
+  const productosEnCarrito = JSON.parse(
+    localStorage.getItem("Productos Guardados")
+  );
 
   function addToCardClick(event) {
     event.preventDefault();
     const button = event.target;
     /* console.log(
-    "🚀 ~ file: carrito.js ~ line 13 ~ addToCardClick ~ button",
-    button.id.slice(15, button.id.length)
-  ); */
+        "🚀 ~ file: carrito.js ~ line 13 ~ addToCardClick ~ button",
+        button.id.slice(15, button.id.length)
+        ); */
     const itemCard = button.closest("#main-recomend-product");
     /* console.log("🚀 ~ file: carrito.js ~ line 11 ~ addToCardClick ~ itemCard", itemCard)
      */
@@ -24,7 +31,6 @@ window.addEventListener("load", function () {
     const imgCart = itemCard.querySelector(".img-detail").src;
     const value = itemCard.querySelector("#button-product").value;
     /* addItemToCard(titleCart, priceCart, imgCart); */
-    let cartTotales = [];
 
     const cartGuardada = {
       title: titleCart,
@@ -40,13 +46,10 @@ window.addEventListener("load", function () {
     );
     /*   cartTotales.push(cartGuardada); */
 
-    const productosEnCarrito = JSON.parse(
-      localStorage.getItem("Productos Guardados")
-    );
     /* console.log(
       "🚀 ~ file: carrito.js ~ line 46 ~ addToCardClick ~ productosEnCarrito",
       productosEnCarrito
-    ); */
+      ); */
 
     if (productosEnCarrito) {
       console.log(
@@ -55,8 +58,6 @@ window.addEventListener("load", function () {
       );
 
       let idToupdate = productosEnCarrito.findIndex((producto) => {
-        console.log(producto.value + "hola");
-        console.log(cartGuardada.value + "hola2");
         return producto.value == cartGuardada.value;
       });
       if (idToupdate == -1) {
@@ -65,8 +66,7 @@ window.addEventListener("load", function () {
         productosEnCarrito[idToupdate].cantidad++;
       }
       cartTotales = [...productosEnCarrito];
+      localStorage.setItem("Productos Guardados", JSON.stringify(cartTotales));
     }
-
-    localStorage.setItem("Productos Guardados", JSON.stringify(cartTotales));
   }
 });
