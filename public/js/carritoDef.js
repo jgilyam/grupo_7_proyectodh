@@ -30,5 +30,12 @@ window.addEventListener("load", () => {
     cantidad.setAttribute("value", producto.cantidad);
     //console.log(producto.price.split("$")[1] * 100);
     subtotal.innerText = "$" + producto.price.split("$")[1] * producto.cantidad;
+
+    newItem.querySelector(".deleted").addEventListener("click", removeNewItem);
+
+    function removeNewItem(event) {
+      const buttonClicked = event.target;
+      buttonClicked.closest(".conteiner-caja").remove();
+    }
   });
 });

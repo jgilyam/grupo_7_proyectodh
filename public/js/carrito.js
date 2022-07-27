@@ -59,4 +59,13 @@ window.addEventListener("load", function () {
 
     localStorage.setItem("Productos Guardados", JSON.stringify(cartTotales));
   }
+
+  // shoppingCardItemContainer
+  //   .querySelector(".deleted")
+  //   .addEventListener("click", removeShoppingCardItem);
+
+  // function removeItem(event) {
+  //   const buttonClicked = event.target;
+  //   buttonClicked.closest(".item").remove();
+  // }
 });
