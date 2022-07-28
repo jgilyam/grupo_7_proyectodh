@@ -41,13 +41,10 @@ window.addEventListener("load", () => {
 
       /* cartItems.forEach((cartItems) => {
         const cartItemsPriceElement = cartItems.querySelector(".caja1-precio");
-
         const cartItemsPrice = Number(
           cartItemsPriceElement.textContent.replace("$", "")
         );
-
         const cartItemsCant = document.querySelector("#cantidad");
-
         cartItemsCantValor = Number(cartItemsCant.value);
         total = total + cartItemsPrice * cartItemsCant;
       });
@@ -63,48 +60,49 @@ window.addEventListener("load", () => {
     }
 
     newItem.querySelector(".deleted").addEventListener("click", removeNewItem);
+    const finalizarCompra = document.querySelector(".finalizarCompra");
+    finalizarCompra.addEventListener("click", finalizarCompraClicked);
+
+    function removeNewItem(event) {
+      const buttonClicked = event.target;
+      const caja = buttonClicked.closest(".conteiner-caja");
+      const parrafo = caja.querySelector(".parrafo1").textContent;
+
+      //agregar funcion que te da el total del carrito para que cuando borras se borre el total
+
+      let storageProductos = JSON.parse(
+        localStorage.getItem("Productos Guardados")
+      );
+      const arrayNuevo = storageProductos.filter(
+        (product) => product.title !== parrafo
+      );
+      console.log("que trae?:", arrayNuevo);
+      const nuevoStorage = [...arrayNuevo];
+      localStorage.setItem("Productos Guardados", JSON.stringify(nuevoStorage));
+      caja.remove();
+    }
+    function finalizarCompraClicked(req, res) {
+      carrito.innerHTML = "";
+      swal("Compra Realizada", "Gracias!", "success");
+
+      let data = {
+        arrayProductos: [productosEnCarrito],
+        user: "",
+      };
+
+      fetch("http://localhost:4000/producto/confirmar-compra", {
+        method: "POST",
+        body: data,
+      })
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (data) {
+          console.log(data);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    }
   });
-
-  const finalizarCompra = document.querySelector(".finalizarCompra");
-  finalizarCompra.addEventListener("click", finalizarCompraClicked);
-
-  function removeNewItem(event) {
-    event.preventDefault();
-    const buttonClicked = event.target;
-    buttonClicked.closest(".conteiner-caja").remove();
-    //agregar funcion que te da el total del carrito para que cuando borras se borre el total
-
-    // const productosEnCarrito = JSON.parse(
-    //   localStorage.getItem("Productos Guardados")
-    // );
-    // cartTotales = [...productosEnCarrito];
-    // let cardId = document.querySelector("#card-n0");
-
-    // productosEnCarrito.filter((producto) => producto.cardId !== cardId);
-    // localStorage.setItem("Productos guardados", JSON.stringify(cartTotales));
-  }
-
-  function finalizarCompraClicked(req, res) {
-    carrito.innerHTML = "";
-    swal("Compra Realizada", "Gracias!", "success");
-
-    let data = {
-      arrayProductos: [productosEnCarrito],
-      user: "",
-    };
-
-    fetch("../producto/confirmar-compra", {
-      method: "POST",
-      body: data,
-    })
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (data) {
-        console.log(data);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  }
 });

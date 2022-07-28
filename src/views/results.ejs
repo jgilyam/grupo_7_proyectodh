@@ -7,6 +7,10 @@
   <body>
     <%- include("./partials/header") %>
     <main>
+      <div id="toast" class="">
+        <div id="img"><i class="far fa-check-square"></i></div>
+        <div id="desc">     Producto Guardado</div>
+      </div>
       <section class="main-recomend">
         <% if (results != "") { %>
           <h3 class="titulos" id="titulos">Resultado de busqueda para:<br>"<%= keyword %>"</h3>

@@ -8,7 +8,10 @@
   </head>
   <body>
     <%- include("./partials/header") %>
-
+    <div id="toastRed" class="">
+      <div id="img"><i class="fa-solid fa-trash-can"></i></div>
+      <div id="desc">     Producto Eliminado</div>
+    </div>
     <h3></h3>
     <section class="section-desktop">
       <div class="tabla-cabezera">
@@ -23,7 +26,7 @@
           <div class="caja1">
             <div class="producto-prueba-1">
               <a class="deleted" id="deleted" href="#"
-                ><i
+              onclick="launch_toastRed()"><i
                   class="far fa-times-circle"
                   class="deleted"
                   id="deleted"
