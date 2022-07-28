@@ -7,6 +7,10 @@
   <body>
     <%- include("./partials/header") %>
     <main>
+      <div id="toast" class="">
+        <div id="img"><i class="far fa-check-square"></i></div>
+        <div id="desc">     Producto Guardado</div>
+      </div>
       <h3 class="titulos">Estos son todos nuestros productos!</h3>
       <section class="main-recomend">
         <% products.forEach(product => { %>
