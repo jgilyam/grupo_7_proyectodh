@@ -28,81 +28,85 @@ window.addEventListener("load", () => {
     img.setAttribute("src", producto.img);
     precio.innerText = producto.price.split(".")[0];
     cantidad.setAttribute("value", producto.cantidad);
-    //console.log(producto.price.split("$")[1] * 100);
     subtotal.innerText = "$" + producto.price.split("$")[1] * producto.cantidad;
 
     updateNewItemTotal();
 
-    function updateNewItemTotal() {
-      /*  let subTotalCaja = 0; */
-      const newItemTotal = document.querySelector(".total-monto");
-
-      /* const cartItems = document.querySelectorAll(".conteiner-caja"); */
-
-      /* cartItems.forEach((cartItems) => {
-        const cartItemsPriceElement = cartItems.querySelector(".caja1-precio");
-        const cartItemsPrice = Number(
-          cartItemsPriceElement.textContent.replace("$", "")
-        );
-        const cartItemsCant = document.querySelector("#cantidad");
-        cartItemsCantValor = Number(cartItemsCant.value);
-        total = total + cartItemsPrice * cartItemsCant;
-      });
- */
-      /* newItemTotal.innerHTML = `$${total}`; */
-
-      const subTotalCaja = productosEnCarrito.reduce(
-        (acc, producto) =>
-          acc + producto.cantidad * producto.price.split("$")[1],
-        0
-      );
-      newItemTotal.textContent = `$ ${subTotalCaja}`;
-    }
-
     newItem.querySelector(".deleted").addEventListener("click", removeNewItem);
-    const finalizarCompra = document.querySelector(".finalizarCompra");
-    finalizarCompra.addEventListener("click", finalizarCompraClicked);
-
-    function removeNewItem(event) {
-      const buttonClicked = event.target;
-      const caja = buttonClicked.closest(".conteiner-caja");
-      const parrafo = caja.querySelector(".parrafo1").textContent;
-
-      //agregar funcion que te da el total del carrito para que cuando borras se borre el total
-
-      let storageProductos = JSON.parse(
-        localStorage.getItem("Productos Guardados")
-      );
-      const arrayNuevo = storageProductos.filter(
-        (product) => product.title !== parrafo
-      );
-      console.log("que trae?:", arrayNuevo);
-      const nuevoStorage = [...arrayNuevo];
-      localStorage.setItem("Productos Guardados", JSON.stringify(nuevoStorage));
-      caja.remove();
-    }
-    function finalizarCompraClicked(req, res) {
-      carrito.innerHTML = "";
-      swal("Compra Realizada", "Gracias!", "success");
-
-      let data = {
-        arrayProductos: [productosEnCarrito],
-        user: "",
-      };
-
-      fetch("http://localhost:4000/producto/confirmar-compra", {
-        method: "POST",
-        body: data,
-      })
-        .then(function (response) {
-          return response.json();
-        })
-        .then(function (data) {
-          console.log(data);
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
-    }
   });
+
+  const finalizarCompra = document.querySelector(".finalizarCompra");
+  finalizarCompra.addEventListener("click", finalizarCompraClicked);
+
+  function updateNewItemTotal() {
+    /*  let subTotalCaja = 0; */
+    const newItemTotal = document.querySelector(".total-monto");
+
+    /* const cartItems = document.querySelectorAll(".conteiner-caja"); */
+
+    /* cartItems.forEach((cartItems) => {
+      const cartItemsPriceElement = cartItems.querySelector(".caja1-precio");
+      const cartItemsPrice = Number(
+        cartItemsPriceElement.textContent.replace("$", "")
+      );
+      const cartItemsCant = document.querySelector("#cantidad");
+      cartItemsCantValor = Number(cartItemsCant.value);
+      total = total + cartItemsPrice * cartItemsCant;
+    });
+*/
+    /* newItemTotal.innerHTML = `$${total}`; */
+
+    const subTotalCaja = productosEnCarrito.reduce(
+      (acc, producto) => acc + producto.cantidad * producto.price.split("$")[1],
+      0
+    );
+    newItemTotal.textContent = `$ ${subTotalCaja}`;
+  }
+  function finalizarCompraClicked(event) {
+    event.preventDefault();
+    carrito.innerHTML = "";
+    swal("Compra Realizada", "Gracias!", "success");
+
+    let data = {
+      arrayProductos: productosEnCarrito,
+      user: "",
+    };
+    console.log(data);
+    fetch("http://localhost:4000/producto/confirmar-compra", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        localStorage.removeItem("Productos Guardados");
+        console.log(data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
+  function removeNewItem(event) {
+    const buttonClicked = event.target;
+    const caja = buttonClicked.closest(".conteiner-caja");
+    const parrafo = caja.querySelector(".parrafo1").textContent;
+
+    //agregar funcion que te da el total del carrito para que cuando borras se borre el total
+
+    let storageProductos = JSON.parse(
+      localStorage.getItem("Productos Guardados")
+    );
+    const arrayNuevo = storageProductos.filter(
+      (product) => product.title !== parrafo
+    );
+    console.log("que trae?:", arrayNuevo);
+    const nuevoStorage = [...arrayNuevo];
+    localStorage.setItem("Productos Guardados", JSON.stringify(nuevoStorage));
+    caja.remove();
+  }
 });
