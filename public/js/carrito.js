@@ -30,6 +30,7 @@ window.addEventListener("load", function () {
     const priceCart = itemCard.querySelector(".detail-price2").textContent;
     const imgCart = itemCard.querySelector(".img-detail").src;
     const value = itemCard.querySelector("#button-product").value;
+    const numberIcon = document.querySelector("#numDinamico");
     /* addItemToCard(titleCart, priceCart, imgCart); */
 
     const cartGuardada = {
@@ -40,18 +41,17 @@ window.addEventListener("load", function () {
       value: value,
     };
 
-    console.log(
+    /* console.log(
       "🚀 ~ file: carrito.js ~ line 31 ~ addToCardClick ~ cartGuardada",
       cartGuardada
-    );
-    /*   cartTotales.push(cartGuardada); */
-
-    /* console.log(
-      "🚀 ~ file: carrito.js ~ line 46 ~ addToCardClick ~ productosEnCarrito",
-      productosEnCarrito
       ); */
 
-    if (productosEnCarrito) {
+    /* console.log(
+          "🚀 ~ file: carrito.js ~ line 46 ~ addToCardClick ~ productosEnCarrito",
+          productosEnCarrito
+          ); */ 
+          
+          if (productosEnCarrito) {
       console.log(
         "🚀 ~ file: carrito.js ~ line 34 ~ addToCardClick ~ productosEnCarrito",
         productosEnCarrito
@@ -60,6 +60,11 @@ window.addEventListener("load", function () {
       let idToupdate = productosEnCarrito.findIndex((producto) => {
         return producto.value == cartGuardada.value;
       });
+      let acc = 0;
+      productosEnCarrito.forEach((producto) => {
+        acc += producto.cantidad;
+      });
+      numberIcon.textContent = acc + 1;
       if (idToupdate == -1) {
         productosEnCarrito.push(cartGuardada);
       } else {
