@@ -31,6 +31,8 @@ window.addEventListener("load", () => {
     //console.log(producto.price.split("$")[1] * 100);
     subtotal.innerText = "$" + producto.price.split("$")[1] * producto.cantidad;
 
+<<<<<<< HEAD
+=======
     updateNewItemTotal();
 
     function updateNewItemTotal() {
@@ -62,16 +64,31 @@ window.addEventListener("load", () => {
       newItemTotal.textContent = `$ ${subTotalCaja}`;
     }
 
+>>>>>>> 321a223fd617b270d5c62e25d73a18e0d34fb2a8
     newItem.querySelector(".deleted").addEventListener("click", removeNewItem);
-
-    function removeNewItem(event) {
-      const buttonClicked = event.target;
-      buttonClicked.closest(".conteiner-caja").remove();
-      //agregar funcion que te da el total del carrito para que cuando borras se borre el total
-
-      // let storageProductos = JSON.parse(localStorage.getItem("Productos Guardados"));
-      // let productos = storageProductos.filter(product => product.productId !== productId );
-      // localStorage.setItem("Productos guardados", JSON.stringify(cartTotales));
-    }
   });
+
+  const finalizarCompra = document.querySelector(".finalizarCompra");
+  finalizarCompra.addEventListener("click", finalizarCompraClicked);
+
+  function removeNewItem(event) {
+    event.preventDefault();
+    const buttonClicked = event.target;
+    buttonClicked.closest(".conteiner-caja").remove();
+    //agregar funcion que te da el total del carrito para que cuando borras se borre el total
+
+    // const productosEnCarrito = JSON.parse(
+    //   localStorage.getItem("Productos Guardados")
+    // );
+    // cartTotales = [...productosEnCarrito];
+    // let cardId = document.querySelector("#card-n0");
+
+    // productosEnCarrito.filter((producto) => producto.cardId !== cardId);
+    // localStorage.setItem("Productos guardados", JSON.stringify(cartTotales));
+  }
+
+  function finalizarCompraClicked(req, res) {
+    carrito.innerHTML = "";
+    swal("Compra Realizada", "Gracias!", "success");
+  }
 });
