@@ -231,7 +231,16 @@ se agregan estilos comunies de detalle de producto
   cursor: pointer;
 }
 .numDinamico{
-  padding-left: 10px;
+  padding: 5px;
+  background-color: #ff00007a;
+  width: 20px;
+  height: 20px;
+  margin-top: 20px;
+  margin-left: 23px;
+  border-radius: 30px;
+  position: absolute;
+  font-size: 13px;
+  text-align: center;
 }
 .img-detail {
   width: 100%;

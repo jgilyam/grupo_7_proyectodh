@@ -64,6 +64,7 @@ window.addEventListener("load", function () {
       productosEnCarrito.forEach((producto) => {
         acc += producto.cantidad;
       });
+      numberIcon.classList.add("numDinamico")
       numberIcon.textContent = acc + 1;
       if (idToupdate == -1) {
         productosEnCarrito.push(cartGuardada);
