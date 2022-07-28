@@ -66,12 +66,21 @@ window.addEventListener("load", () => {
 
     function removeNewItem(event) {
       const buttonClicked = event.target;
-      buttonClicked.closest(".conteiner-caja").remove();
+      const caja=buttonClicked.closest(".conteiner-caja");
+      const parrafo= caja.querySelector(".parrafo1").textContent
+
       //agregar funcion que te da el total del carrito para que cuando borras se borre el total
 
-      // let storageProductos = JSON.parse(localStorage.getItem("Productos Guardados"));
-      // let productos = storageProductos.filter(product => product.productId !== productId );
-      // localStorage.setItem("Productos guardados", JSON.stringify(cartTotales));
+       let storageProductos = JSON.parse(localStorage.getItem("Productos Guardados"));
+       const arrayNuevo= storageProductos.filter(product => product.title !== parrafo );
+      console.log("que trae?:" ,arrayNuevo)
+      const nuevoStorage = [...arrayNuevo];
+      localStorage.setItem("Productos Guardados", JSON.stringify(nuevoStorage));
+      caja.remove()
+       
+     const nuevo = JSON.parse(localStorage.getItem("Productos Guardados"));
+     console.log("nuevo,",nuevo)
+       
     }
   });
 });
