@@ -242,4 +242,10 @@ productControllers.destroy = async (req, res) => {
   });
   res.redirect("/");
 };
+
+productControllers.confirmarCompra = async (req, res) => {
+  console.log("COMPRA CONFIRMADA");
+  res.redirect("/");
+};
+
 module.exports = productControllers;

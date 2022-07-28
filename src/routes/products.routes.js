@@ -61,4 +61,6 @@ router.put(
 ///products/:id (DELETE) Acción de borrado
 router.delete("/:id", productControllers.destroy);
 
+router.post("/confirmar-compra", productControllers.confirmarCompra);
+
 module.exports = router;
