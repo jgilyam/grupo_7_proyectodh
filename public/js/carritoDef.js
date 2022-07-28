@@ -31,8 +31,6 @@ window.addEventListener("load", () => {
     //console.log(producto.price.split("$")[1] * 100);
     subtotal.innerText = "$" + producto.price.split("$")[1] * producto.cantidad;
 
-<<<<<<< HEAD
-=======
     updateNewItemTotal();
 
     function updateNewItemTotal() {
@@ -64,7 +62,6 @@ window.addEventListener("load", () => {
       newItemTotal.textContent = `$ ${subTotalCaja}`;
     }
 
->>>>>>> 321a223fd617b270d5c62e25d73a18e0d34fb2a8
     newItem.querySelector(".deleted").addEventListener("click", removeNewItem);
   });
 
