@@ -210,6 +210,105 @@ white-space: nowrap;
   from {bottom: 30px; opacity: 1;}
   to {bottom: 60px; opacity: 0;}
 }
+/* toast red */
+#toastRed {
+  visibility: hidden;
+  max-width: 50px;
+  height: 50px;
+  /*margin-left: -125px;*/
+  margin: auto;
+  
+  background-color: rgb(124, 0, 0);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  border-radius: 2px;
+
+  position: fixed;
+  z-index: 1;
+  left: 0;right:0;
+  bottom: 30px;
+  font-size: 17px;
+  white-space: nowrap;
+}
+#toastRed #img{
+width: 50px;
+height: 50px;
+  
+  float: left;
+  
+  padding-top: 16px;
+  padding-bottom: 16px;
+  
+  box-sizing: border-box;
+
+  
+  background-color: rgba(158, 10, 10, 0.678);
+  color: rgb(255, 255, 255);
+}
+#toastRed #desc{
+
+  
+  color: rgb(255, 255, 255);
+ 
+  padding: 16px;
+  
+  overflow: hidden;
+white-space: nowrap;
+}
+
+#toastRed.show {
+  visibility: visible;
+  -webkit-animation: fadeinRed 0.5s, expandRed 0.5s 0.5s,stayRed 3s 1s, shrinkRed 0.5s 2s, fadeoutRed 0.5s 2.5s;
+  animation: fadeinRed 0.5s, expandRed 0.5s 0.5s,stayRed 3s 1s, shrinkRed 0.5s 4s, fadeoutRed 0.5s 4.5s;
+}
+
+@-webkit-keyframes fadeinRed {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadeinRed {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes expandRed {
+  from {min-width: 50px} 
+  to {min-width: 350px}
+}
+
+@keyframes expandRed {
+  from {min-width: 50px}
+  to {min-width: 350px}
+}
+@-webkit-keyframes stayRed {
+  from {min-width: 350px} 
+  to {min-width: 350px}
+}
+
+@keyframes stayRed {
+  from {min-width: 350px}
+  to {min-width: 350px}
+}
+@-webkit-keyframes shrinkRed {
+  from {min-width: 350px;} 
+  to {min-width: 50px;}
+}
+
+@keyframes shrinkRed {
+  from {min-width: 350px;} 
+  to {min-width: 50px;}
+}
+
+@-webkit-keyframes fadeoutRed {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 60px; opacity: 0;}
+}
+
+@keyframes fadeoutRed {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 60px; opacity: 0;}
+}
 .img-nav {
   width: 30px;
   cursor: pointer;

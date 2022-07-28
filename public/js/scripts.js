@@ -3,3 +3,8 @@ function launch_toast() {
     x.className = "show";
     setTimeout(function(){ x.className = x.className.replace("show", ""); }, 5000);
 }
+function launch_toastRed() {
+    var x = document.getElementById("toastRed")
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 5000);
+}
