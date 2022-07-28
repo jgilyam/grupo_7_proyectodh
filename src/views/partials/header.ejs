@@ -44,6 +44,7 @@
         </nav>
       </div>
     </div>
+    
     <div class="navbar-derecho">
       <form action="/search" method="GET" id="buscador">
         <input
@@ -56,6 +57,13 @@
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </form>
+      <div class="carrito-de-compra">
+        <a href="/producto/carrito" class="ancla-carrito"
+          ><i class="fa-solid fa-cart-arrow-down"></i
+        ></a>
+        <div class="ico" id="numDinamico"> 
+        </div>
+      </div>
       <!-- <div class="burger-container">
         <i class="fa-solid fa-bars"></i>
       </div> -->
@@ -65,11 +73,10 @@
           <span ></span>
           <span ></span>
         </div>
+        
       <% if(locals.isLogged) { %>
         <div class="barras-navMenu">
         <p><a href="/user/perfil/<%= locals.userLogged.id_user %>"><%= locals.userLogged.firs_name %></a>  <i class="fa-solid fa-user"></i></p>
-        <p><a href="/producto/carrito">Carrito</a>  <i class="fa-solid fa-cart-arrow-down"></i
-          ></p>
         <p><a href="/user/logout">Salir</a>  <i class="fa-solid fa-arrow-right-from-bracket"></i
           ></p>
       </div>
@@ -86,14 +93,8 @@
       <% if(locals.isLogged) { %>
       <div class="iniciar-sesion">
         <a href="/user/perfil/<%= locals.userLogged.id_user %>" class="ancla-login"><%= locals.userLogged.firs_name %></a>
-          
           <i class="fa-solid fa-user"></i>
         </a>
-      </div>
-      <div class="carrito-de-compra">
-        <a href="/producto/carrito" class="ancla-carrito"
-          ><i class="fa-solid fa-cart-arrow-down"></i
-        ></a>
       </div>
       <div class="deslogeo">
         <a href="/user/logout"
@@ -115,3 +116,4 @@
     </div>
   </nav>
 </header>
+

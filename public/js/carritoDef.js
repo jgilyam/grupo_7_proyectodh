@@ -31,6 +31,40 @@ window.addEventListener("load", () => {
     //console.log(producto.price.split("$")[1] * 100);
     subtotal.innerText = "$" + producto.price.split("$")[1] * producto.cantidad;
 
+<<<<<<< HEAD
+=======
+    updateNewItemTotal();
+
+    function updateNewItemTotal() {
+      /*  let subTotalCaja = 0; */
+      const newItemTotal = document.querySelector(".total-monto");
+
+      /* const cartItems = document.querySelectorAll(".conteiner-caja"); */
+
+      /* cartItems.forEach((cartItems) => {
+        const cartItemsPriceElement = cartItems.querySelector(".caja1-precio");
+
+        const cartItemsPrice = Number(
+          cartItemsPriceElement.textContent.replace("$", "")
+        );
+
+        const cartItemsCant = document.querySelector("#cantidad");
+
+        cartItemsCantValor = Number(cartItemsCant.value);
+        total = total + cartItemsPrice * cartItemsCant;
+      });
+ */
+      /* newItemTotal.innerHTML = `$${total}`; */
+
+      const subTotalCaja = productosEnCarrito.reduce(
+        (acc, producto) =>
+          acc + producto.cantidad * producto.price.split("$")[1],
+        0
+      );
+      newItemTotal.textContent = `$ ${subTotalCaja}`;
+    }
+
+>>>>>>> 321a223fd617b270d5c62e25d73a18e0d34fb2a8
     newItem.querySelector(".deleted").addEventListener("click", removeNewItem);
   });
 
