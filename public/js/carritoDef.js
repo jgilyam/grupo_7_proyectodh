@@ -4,7 +4,7 @@ window.addEventListener("load", () => {
   let item = document.querySelector(".conteiner-caja");
   let HTMLitem = item.innerHTML;
   item.remove();
-  const productosEnCarrito = JSON.parse(
+  let productosEnCarrito = JSON.parse(
     localStorage.getItem("Productos Guardados")
   );
   console.log(productosEnCarrito);
@@ -39,23 +39,11 @@ window.addEventListener("load", () => {
   finalizarCompra.addEventListener("click", finalizarCompraClicked);
 
   function updateNewItemTotal() {
-    /*  let subTotalCaja = 0; */
+    console.log("llegue a update");
+    productosEnCarrito = JSON.parse(
+      localStorage.getItem("Productos Guardados")
+    );
     const newItemTotal = document.querySelector(".total-monto");
-
-    /* const cartItems = document.querySelectorAll(".conteiner-caja"); */
-
-    /* cartItems.forEach((cartItems) => {
-      const cartItemsPriceElement = cartItems.querySelector(".caja1-precio");
-      const cartItemsPrice = Number(
-        cartItemsPriceElement.textContent.replace("$", "")
-      );
-      const cartItemsCant = document.querySelector("#cantidad");
-      cartItemsCantValor = Number(cartItemsCant.value);
-      total = total + cartItemsPrice * cartItemsCant;
-    });
-*/
-    /* newItemTotal.innerHTML = `$${total}`; */
-
     const subTotalCaja = productosEnCarrito.reduce(
       (acc, producto) => acc + producto.cantidad * producto.price.split("$")[1],
       0
@@ -83,12 +71,14 @@ window.addEventListener("load", () => {
         return response.json();
       })
       .then(function (data) {
-        localStorage.removeItem("Productos Guardados");
         console.log(data);
       })
       .catch(function (error) {
         console.log(error);
       });
+    localStorage.removeItem("Productos Guardados");
+    const newItemTotal = document.querySelector(".total-monto");
+    newItemTotal.innerText = "-";
   }
 
   function removeNewItem(event) {
@@ -108,5 +98,6 @@ window.addEventListener("load", () => {
     const nuevoStorage = [...arrayNuevo];
     localStorage.setItem("Productos Guardados", JSON.stringify(nuevoStorage));
     caja.remove();
+    updateNewItemTotal();
   }
 });
