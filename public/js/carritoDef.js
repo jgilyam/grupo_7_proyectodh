@@ -78,9 +78,6 @@ window.addEventListener("load", () => {
       localStorage.setItem("Productos Guardados", JSON.stringify(nuevoStorage));
       caja.remove()
        
-     const nuevo = JSON.parse(localStorage.getItem("Productos Guardados"));
-     console.log("nuevo,",nuevo)
-       
     }
   });
 });
