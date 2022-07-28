@@ -63,7 +63,9 @@ window.addEventListener("load", () => {
     }
 
     newItem.querySelector(".deleted").addEventListener("click", removeNewItem);
-
+    const finalizarCompra = document.querySelector(".finalizarCompra");
+  finalizarCompra.addEventListener("click", finalizarCompraClicked);
+  
     function removeNewItem(event) {
       const buttonClicked = event.target;
       const caja=buttonClicked.closest(".conteiner-caja");
@@ -79,5 +81,10 @@ window.addEventListener("load", () => {
       caja.remove()
        
     }
+    function finalizarCompraClicked(req, res) {
+      carrito.innerHTML = "";
+      swal("Compra Realizada", "Gracias!", "success");
+    } 
+    
   });
 });
