@@ -12,6 +12,10 @@
   <body>
     <%- include("./partials/header") %>
 
+    <div id="toast" class="">
+      <div id="img"><i class="far fa-check-square"></i></div>
+      <div id="desc">     Producto Guardado</div>
+    </div>
     <main class="main-pd" id="main-recomend-product">
       <!-- Detalle de producto -->
       <% for (let i = 0; i < typeProduct.length; i++) { %>
@@ -54,6 +58,7 @@
               class="button-submit-estatico"
               id="button-product"
               value="<%= product.id_product %>"
+              onclick="launch_toast()"
             >
               Agregar al carrito<i class="fa-solid fa-cart-arrow-down"></i>
             </button>
