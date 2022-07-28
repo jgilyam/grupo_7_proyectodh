@@ -228,6 +228,10 @@ se agregan estilos comunies de detalle de producto
 .main-recomend-product .button-submit {
   width: 100%;
   margin-top: 10px;
+  cursor: pointer;
+}
+.numDinamico{
+  padding-left: 10px;
 }
 .img-detail {
   width: 100%;
@@ -262,6 +266,7 @@ se agregan estilos comunies de detalle de producto
   width: 70%;
   font-weight: 500;
   font-size: 16px;
+  cursor: pointer;
 }
 .button-submit {
   border-radius: 10px;
