@@ -49,9 +49,9 @@ window.addEventListener("load", function () {
     /* console.log(
           "🚀 ~ file: carrito.js ~ line 46 ~ addToCardClick ~ productosEnCarrito",
           productosEnCarrito
-          ); */ 
-          
-          if (productosEnCarrito) {
+          ); */
+
+    if (productosEnCarrito) {
       console.log(
         "🚀 ~ file: carrito.js ~ line 34 ~ addToCardClick ~ productosEnCarrito",
         productosEnCarrito
@@ -64,7 +64,7 @@ window.addEventListener("load", function () {
       productosEnCarrito.forEach((producto) => {
         acc += producto.cantidad;
       });
-      numberIcon.classList.add("numDinamico")
+      numberIcon.classList.add("numDinamico");
       numberIcon.textContent = acc + 1;
       if (idToupdate == -1) {
         productosEnCarrito.push(cartGuardada);
