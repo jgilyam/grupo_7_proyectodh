@@ -31,38 +31,30 @@ window.addEventListener("load", () => {
     //console.log(producto.price.split("$")[1] * 100);
     subtotal.innerText = "$" + producto.price.split("$")[1] * producto.cantidad;
 
-    updateNewItemTotal();
-
-    function updateNewItemTotal() {
-      let total = 0;
-      const newItemTotal = document.querySelector(".total-monto");
-      cartItems = document.querySelectorAll(".conteiner-caja");
-
-      cartItems.forEach((cartItems) => {
-        const cartItemsPriceElement = cartItems.querySelector(".caja1-precio");
-
-        const cartItemsPrice = Number(
-          cartItemsPriceElement.textContent.replace("$", "")
-        );
-        const cartItemsCant = document.querySelector("#cantidad");
-
-        cartItemsCantValor = Number(cartItemsCant.value);
-        total = total + cartItemsPrice * cartItemsCant;
-      });
-
-      newItemTotal.innerHTML = `${total}$`;
-    }
-
     newItem.querySelector(".deleted").addEventListener("click", removeNewItem);
-
-    function removeNewItem(event) {
-      const buttonClicked = event.target;
-      buttonClicked.closest(".conteiner-caja").remove();
-      //agregar funcion que te da el total del carrito para que cuando borras se borre el total
-
-      // let storageProductos = JSON.parse(localStorage.getItem("Productos Guardados"));
-      // let productos = storageProductos.filter(product => product.productId !== productId );
-      // localStorage.setItem("Productos guardados", JSON.stringify(cartTotales));
-    }
   });
+
+  const finalizarCompra = document.querySelector(".finalizarCompra");
+  finalizarCompra.addEventListener("click", finalizarCompraClicked);
+
+  function removeNewItem(event) {
+    event.preventDefault();
+    const buttonClicked = event.target;
+    buttonClicked.closest(".conteiner-caja").remove();
+    //agregar funcion que te da el total del carrito para que cuando borras se borre el total
+
+    // const productosEnCarrito = JSON.parse(
+    //   localStorage.getItem("Productos Guardados")
+    // );
+    // cartTotales = [...productosEnCarrito];
+    // let cardId = document.querySelector("#card-n0");
+
+    // productosEnCarrito.filter((producto) => producto.cardId !== cardId);
+    // localStorage.setItem("Productos guardados", JSON.stringify(cartTotales));
+  }
+
+  function finalizarCompraClicked(req, res) {
+    carrito.innerHTML = "";
+    swal("Compra Realizada", "Gracias!", "success");
+  }
 });
